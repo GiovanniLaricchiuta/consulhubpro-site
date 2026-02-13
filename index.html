@@ -1,932 +1,1164 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>ConsulHub Pro | Servizi premium e formazione finanziata per Studi di Consulenza del Lavoro</title>
-  <meta name="description" content="ConsulHub Pro: servizi premium, formazione finanziata, strumenti operativi e supporto specialistico per Studi di Consulenza del Lavoro.">
-  <meta name="robots" content="index,follow"/>
-  <meta name="theme-color" content="#0B1020"/>
+  <meta name="description" content="ConsulHub Pro supporta Studi di Consulenza del Lavoro e Commercialisti con 3 pilastri chiari e servizi complementari erogati da partner premium. Formazione finanziata attivabile subito per le PMI dei clienti, senza numero minimo di partecipanti. Delivery gestita senza appesantire lo Studio." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#f6f8fb" />
 
-  <meta property="og:title" content="ConsulHub Pro"/>
-  <meta property="og:description" content="Servizi premium e formazione finanziata per Studi di Consulenza del Lavoro."/>
-  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="ConsulHub Pro | Servizi premium e formazione finanziata per Studi" />
+  <meta property="og:description" content="3 pilastri chiari e servizi complementari con partner premium. Formazione finanziata attivabile subito per le PMI, senza numero minimo di partecipanti. Delivery gestita senza appesantire lo Studio." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo-chp.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-      :root{
-        --bg1:#070A14;
-        --bg2:#0B1020;
-        --card:#0F1630;
-        --card2:#0B132A;
-        --text:#EAF0FF;
-        --muted:#A9B4D0;
-        --line:rgba(255,255,255,.10);
-        --aqua:#25E5D6;
-        --blue:#4B7BFF;
-        --gold:#F6C56D;
-        --shadow: 0 18px 60px rgba(0,0,0,.35);
-        --radius: 22px;
-        --radius2: 18px;
-      }
-
-      *{box-sizing:border-box}
-      html,body{height:100%}
-      body{
-        margin:0;
-        font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-        color:var(--text);
-        background:
-          radial-gradient(1000px 600px at 15% -10%, rgba(37,229,214,.20), transparent 60%),
-          radial-gradient(1000px 600px at 90% 0%, rgba(75,123,255,.18), transparent 60%),
-          radial-gradient(900px 600px at 60% 110%, rgba(246,197,109,.12), transparent 60%),
-          linear-gradient(180deg, var(--bg1), var(--bg2));
-      }
-
-      a{color:inherit; text-decoration:none}
-      .container{
-        width:min(1120px, calc(100% - 40px));
-        margin:0 auto;
-      }
-
-      header{
-        position:sticky;
-        top:0;
-        z-index:50;
-        backdrop-filter: blur(14px);
-        background: rgba(7,10,20,.58);
-        border-bottom: 1px solid rgba(255,255,255,.08);
-      }
-
-      .nav{
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
-        padding:14px 0;
-        gap:18px;
-      }
-
-      .brand{
-        display:flex;
-        align-items:center;
-        gap:12px;
-        min-width: 230px;
-      }
-
-      .brand img{
-        width:54px;
-        height:54px;
-        object-fit:contain;
-        filter: drop-shadow(0 10px 20px rgba(0,0,0,.35));
-      }
-
-      .brand .name{
-        display:flex;
-        flex-direction:column;
-        line-height:1.05;
-      }
-      .brand .name b{font-size:16px; letter-spacing:-0.02em}
-      .brand .name span{font-size:12px; color:var(--muted)}
-
-      nav ul{
-        list-style:none;
-        padding:0;
-        margin:0;
-        display:flex;
-        gap:18px;
-        align-items:center;
-      }
-
-      nav a{
-        font-size:13px;
-        color:rgba(234,240,255,.86);
-        padding:10px 12px;
-        border-radius:999px;
-        transition:.18s ease;
-        border: 1px solid transparent;
-      }
-
-      nav a:hover{
-        background: rgba(255,255,255,.06);
-        border-color: rgba(255,255,255,.08);
-      }
-
-      .cta{
-        display:flex;
-        align-items:center;
-        gap:10px;
-      }
-
-      .btn{
-        display:inline-flex;
-        align-items:center;
-        justify-content:center;
-        gap:10px;
-        padding:12px 16px;
-        border-radius:999px;
-        border: 1px solid rgba(255,255,255,.14);
-        background: rgba(255,255,255,.06);
-        color: var(--text);
-        font-weight:800;
-        font-size:13px;
-        letter-spacing:-0.01em;
-        cursor:pointer;
-        transition: .18s ease;
-        user-select:none;
-      }
-      .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.10); }
-
-      .btn.primary{
-        border:0;
-        background: linear-gradient(135deg, var(--aqua), var(--blue));
-        color:#081022;
-        box-shadow: 0 18px 50px rgba(37,229,214,.18);
-      }
-
-      .btn.primary:hover{ box-shadow: 0 22px 60px rgba(75,123,255,.20); }
-
-      .menuBtn{
-        display:none;
-        width:42px;
-        height:42px;
-        border-radius:12px;
-        border: 1px solid rgba(255,255,255,.14);
-        background: rgba(255,255,255,.06);
-        align-items:center;
-        justify-content:center;
-        cursor:pointer;
-      }
-
-      .mobilePanel{
-        display:none;
-        border-top: 1px solid rgba(255,255,255,.08);
-        padding: 12px 0 18px;
-      }
-
-      .mobilePanel a{
-        display:block;
-        padding:12px 14px;
-        border-radius:14px;
-        margin-top:8px;
-        background: rgba(255,255,255,.05);
-        border: 1px solid rgba(255,255,255,.08);
-      }
-
-      .hero{
-        padding: 54px 0 30px;
-      }
-      .heroGrid{
-        display:grid;
-        grid-template-columns: 1.1fr .9fr;
-        gap: 28px;
-        align-items:stretch;
-      }
-
-      .kicker{
-        display:inline-flex;
-        gap:10px;
-        align-items:center;
-        padding: 9px 12px;
-        border-radius:999px;
-        border: 1px solid rgba(255,255,255,.12);
-        background: rgba(255,255,255,.05);
-        color: rgba(234,240,255,.90);
-        font-size: 12px;
-        width: fit-content;
-        box-shadow: 0 14px 40px rgba(0,0,0,.18);
-      }
-      .dot{
-        width:10px; height:10px; border-radius:50%;
-        background: linear-gradient(135deg, var(--aqua), var(--blue));
-        box-shadow: 0 0 0 5px rgba(37,229,214,.12);
-      }
-
-      h1{
-        margin: 16px 0 12px;
-        font-size: clamp(34px, 4.2vw, 54px);
-        letter-spacing: -0.03em;
-        line-height: 1.05;
-      }
-      .lead{
-        margin: 0 0 18px;
-        color: rgba(234,240,255,.82);
-        font-size: 16px;
-        line-height: 1.55;
-        max-width: 60ch;
-      }
-
-      .heroActions{
-        display:flex;
-        gap:12px;
-        flex-wrap:wrap;
-        margin-top: 18px;
-      }
-
-      .badges{
-        display:flex;
-        gap:10px;
-        flex-wrap:wrap;
-        margin-top: 18px;
-      }
-      .badge{
-        display:inline-flex;
-        gap:10px;
-        align-items:center;
-        padding:10px 12px;
-        border-radius: 999px;
-        background: rgba(255,255,255,.05);
-        border: 1px solid rgba(255,255,255,.10);
-        font-size:12px;
-        color: rgba(234,240,255,.88);
-      }
-      .badge b{ color: var(--gold) }
-
-      .heroCard{
-        border-radius: var(--radius);
-        background:
-          radial-gradient(900px 600px at 30% 20%, rgba(37,229,214,.18), transparent 55%),
-          radial-gradient(800px 500px at 90% 10%, rgba(75,123,255,.22), transparent 55%),
-          linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-        border: 1px solid rgba(255,255,255,.10);
-        box-shadow: var(--shadow);
-        overflow:hidden;
-        position:relative;
-        min-height: 360px;
-      }
-
-      .heroCardInner{
-        padding: 18px;
-        height:100%;
-        display:flex;
-        flex-direction:column;
-        gap: 12px;
-      }
-
-      .videoWrap{
-        position:relative;
-        border-radius: 18px;
-        overflow:hidden;
-        border: 1px solid rgba(255,255,255,.12);
-        background: rgba(0,0,0,.35);
-        flex: 1;
-        min-height: 210px;
-      }
-      .videoWrap video{
-        width:100%;
-        height:100%;
-        object-fit:cover;
-        display:block;
-      }
-
-      .videoOverlay{
-        position:absolute;
-        inset:0;
-        background: linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.45));
-        pointer-events:none;
-      }
-
-      .miniCards{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-      }
-
-      .mini{
-        border-radius: 16px;
-        padding: 12px 12px;
-        background: rgba(255,255,255,.05);
-        border: 1px solid rgba(255,255,255,.10);
-        min-height: 92px;
-      }
-      .mini h3{
-        margin:0 0 6px;
-        font-size: 13px;
-        letter-spacing:-0.01em;
-      }
-      .mini p{
-        margin:0;
-        font-size: 12px;
-        color: rgba(234,240,255,.78);
-        line-height: 1.45;
-      }
-
-      .section{
-        padding: 46px 0;
-      }
-
-      .sectionTitle{
-        display:flex;
-        align-items:flex-end;
-        justify-content:space-between;
-        gap: 18px;
-        margin-bottom: 18px;
-      }
-      .sectionTitle h2{
-        margin:0;
-        font-size: 28px;
-        letter-spacing:-0.02em;
-      }
-      .sectionTitle p{
-        margin:0;
-        color: rgba(234,240,255,.75);
-        max-width: 54ch;
-        line-height:1.45;
-        font-size: 13px;
-      }
-
-      .grid3{
-        display:grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-      }
-      .card{
-        border-radius: var(--radius);
-        background: rgba(255,255,255,.05);
-        border: 1px solid rgba(255,255,255,.10);
-        padding: 18px;
-        box-shadow: 0 16px 45px rgba(0,0,0,.25);
-      }
-      .card h3{
-        margin:0 0 8px;
-        font-size: 15px;
-        letter-spacing:-0.01em;
-      }
-      .card p{
-        margin:0;
-        color: rgba(234,240,255,.78);
-        font-size: 13px;
-        line-height:1.5;
-      }
-
-      .list{
-        margin-top: 12px;
-        display:grid;
-        gap: 8px;
-      }
-      .li{
-        display:flex;
-        gap: 10px;
-        align-items:flex-start;
-        padding: 10px 12px;
-        border-radius: 14px;
-        background: rgba(0,0,0,.18);
-        border: 1px solid rgba(255,255,255,.08);
-      }
-      .check{
-        width: 22px; height: 22px;
-        border-radius: 8px;
-        background: rgba(37,229,214,.15);
-        border: 1px solid rgba(37,229,214,.25);
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        flex: 0 0 auto;
-        margin-top: 1px;
-      }
-      .check svg{ width: 14px; height: 14px; fill: var(--aqua); }
-
-      .split{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 18px;
-        align-items:stretch;
-      }
-
-      .callout{
-        border-radius: var(--radius);
-        padding: 22px;
-        border: 1px solid rgba(255,255,255,.10);
-        background:
-          radial-gradient(900px 600px at 0% 0%, rgba(246,197,109,.16), transparent 55%),
-          radial-gradient(900px 600px at 100% 0%, rgba(37,229,214,.16), transparent 55%),
-          linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-        box-shadow: var(--shadow);
-      }
-      .callout h2{ margin:0 0 10px; font-size: 24px; letter-spacing:-0.02em; }
-      .callout p{ margin:0 0 14px; color: rgba(234,240,255,.78); line-height:1.55; font-size: 13px; }
-      .callout .btnRow{ display:flex; gap: 12px; flex-wrap:wrap; margin-top: 14px; }
-
-      .faq{
-        display:grid;
-        gap: 10px;
-      }
-      details{
-        border-radius: 16px;
-        border: 1px solid rgba(255,255,255,.10);
-        background: rgba(255,255,255,.05);
-        padding: 12px 14px;
-      }
-      summary{
-        cursor:pointer;
-        font-weight:800;
-        font-size: 13px;
-        letter-spacing:-0.01em;
-        color: rgba(234,240,255,.92);
-      }
-      details p{
-        margin: 10px 0 0;
-        color: rgba(234,240,255,.76);
-        line-height:1.55;
-        font-size: 13px;
-      }
-
-      footer{
-        padding: 28px 0 34px;
-        border-top: 1px solid rgba(255,255,255,.08);
-        margin-top: 20px;
-        color: rgba(234,240,255,.72);
-        font-size: 12px;
-      }
-      .footerGrid{
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        gap: 18px;
-        flex-wrap:wrap;
-      }
-      .footerLinks{
-        display:flex;
-        gap: 14px;
-        flex-wrap:wrap;
-      }
-      .footerLinks a{
-        padding: 8px 10px;
-        border-radius: 999px;
-        border: 1px solid rgba(255,255,255,.10);
-        background: rgba(255,255,255,.04);
-      }
-
-      .floatBtn{
-        position: fixed;
-        right: 18px;
-        bottom: 18px;
-        z-index: 60;
-        width: 54px;
-        height: 54px;
-        border-radius: 18px;
-        border: 0;
-        cursor:pointer;
-        background: linear-gradient(135deg, var(--aqua), var(--blue));
-        box-shadow: 0 18px 60px rgba(37,229,214,.20);
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        color:#081022;
-        font-weight:900;
-      }
-      .floatBtn:hover{ transform: translateY(-1px); }
-
-      .toast{
-        position: fixed;
-        left: 50%;
-        bottom: 22px;
-        transform: translateX(-50%);
-        background: rgba(8,16,34,.92);
-        border: 1px solid rgba(255,255,255,.14);
-        color: rgba(234,240,255,.92);
-        padding: 12px 14px;
-        border-radius: 14px;
-        box-shadow: 0 18px 60px rgba(0,0,0,.35);
-        z-index: 80;
-        opacity:0;
-        pointer-events:none;
-        transition: .22s ease;
-        font-size: 13px;
-        max-width: min(520px, calc(100% - 40px));
-        text-align:center;
-      }
-      .toast.show{ opacity:1; transform: translateX(-50%) translateY(-2px); }
-
-      .hidden{ display:none !important; }
-
-      @media (max-width: 980px){
-        .heroGrid{ grid-template-columns: 1fr; }
-        .split{ grid-template-columns: 1fr; }
-        .grid3{ grid-template-columns: 1fr; }
-        .miniCards{ grid-template-columns: 1fr; }
-        nav ul{ display:none; }
-        .menuBtn{ display:flex; }
-        .mobilePanel{ display:block; }
-        .brand{ min-width: 0; }
-      }
-
-      /* Legal */
-      .legal .legal-card{
-        background: rgba(255,255,255,.85);
-        border: 1px solid rgba(0,0,0,.06);
-        border-radius: 20px;
-        padding: 28px;
-        box-shadow: 0 18px 50px rgba(0,0,0,.08);
-      }
-      .legal .legal-card h2{
-        margin: 0 0 14px;
-        font-size: 34px;
-        letter-spacing: -0.02em;
-      }
-      .legal .legal-card p{
-        margin: 10px 0;
-        color: #2b3442;
-        line-height: 1.6;
-      }
-      .legal .legal-card a{ color: inherit; }
-      .legal .legal-note{
-        margin-top: 18px;
-        color: #6b778a;
-        font-size: 13px;
-      }
-
-      /* Cookie notice */
-      .cookie-notice{
-        position: fixed;
-        left: 18px;
-        right: 18px;
-        bottom: 18px;
-        z-index: 9999;
-        display: none;
-      }
-      .cookie-notice.show{ display: block; }
-      .cookie-inner{
-        max-width: 980px;
-        margin: 0 auto;
-        background: rgba(255,255,255,.92);
-        border: 1px solid rgba(0,0,0,.08);
-        border-radius: 18px;
-        box-shadow: 0 18px 60px rgba(0,0,0,.12);
-        padding: 14px 16px;
-        display: flex;
-        gap: 14px;
-        align-items: center;
-        justify-content: space-between;
-        backdrop-filter: blur(10px);
-      }
-      .cookie-text{
-        font-size: 14px;
-        color: #2b3442;
-        line-height: 1.4;
-      }
-      .cookie-text a{ text-decoration: underline; }
-      .cookie-btn{
-        border: 0;
-        padding: 10px 16px;
-        border-radius: 999px;
-        background: linear-gradient(135deg, var(--aqua), var(--blue));
-        color: #0b1320;
-        font-weight: 800;
-        cursor: pointer;
-        white-space: nowrap;
-      }
-    </style>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="ConsulHub Pro | Servizi premium e formazione finanziata per Studi" />
+  <meta name="twitter:description" content="3 pilastri chiari e servizi complementari con partner premium. Formazione finanziata attivabile subito per le PMI, senza numero minimo di partecipanti." />
+  <meta name="twitter:image" content="logo-chp.png" />
 
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "ConsulHub Pro",
-      "url": "https://www.consulhubpro.it",
-      "email": "info@consulhubpro.it",
-      "description": "Servizi premium e formazione finanziata per Studi di Consulenza del Lavoro."
-    }
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "name":"ConsulHub Pro",
+        "logo":"logo-chp.png",
+        "email":"info@consulhubpro.it",
+        "contactPoint":[
+          {
+            "@type":"ContactPoint",
+            "contactType":"info",
+            "email":"info@consulhubpro.it",
+            "availableLanguage":["it"]
+          }
+        ]
+      },
+      {
+        "@type":"WebSite",
+        "name":"ConsulHub Pro",
+        "inLanguage":"it",
+        "publisher":{"@type":"Organization","name":"ConsulHub Pro"}
+      }
+    ]
+  }
   </script>
+
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --bg2:#ffffff;
+
+      --text:#0b1220;
+      --muted:rgba(11,18,32,.70);
+
+      --line:rgba(11,18,32,.14);
+      --soft:rgba(11,18,32,.06);
+
+      --accent:#66e3c4;
+      --accent2:#7aa8ff;
+
+      --shadow:0 18px 60px rgba(11,18,32,.12);
+      --shadow2:0 12px 34px rgba(11,18,32,.10);
+
+      --r:18px;
+      --r2:26px;
+
+      --max:1120px;
+      --pad:clamp(18px,3.2vw,34px);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      *{transition:none!important;animation:none!important}
+    }
+
+    body{
+      margin:0;
+      color:var(--text);
+      background:
+        radial-gradient(900px 520px at 12% -6%, rgba(122,168,255,.18), transparent 60%),
+        radial-gradient(900px 520px at 92% 14%, rgba(102,227,196,.16), transparent 55%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.5;
+      overflow-x:hidden;
+    }
+
+    a{color:inherit;text-decoration:none}
+    a:focus,button:focus,input:focus,textarea:focus,summary:focus{
+      outline:3px solid rgba(122,168,255,.45);
+      outline-offset:2px;
+      border-radius:10px;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 var(--pad);
+    }
+
+    .skip{
+      position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden
+    }
+    .skip:focus{
+      left:var(--pad);top:14px;width:auto;height:auto;
+      padding:10px 12px;border-radius:12px;z-index:9999;
+      background:rgba(11,18,32,.92);color:rgba(255,255,255,.96);
+      border:1px solid rgba(255,255,255,.22);
+    }
+
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(10px);
+      background:linear-gradient(180deg, rgba(255,255,255,.82) 0%, rgba(255,255,255,.72) 100%);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:18px;padding:14px 0;
+    }
+
+    .brand{display:flex;align-items:center;gap:12px;min-width:220px}
+    .brand img{
+      height:46px;width:auto;display:block;
+      filter:drop-shadow(0 12px 18px rgba(11,18,32,.14));
+    }
+    .brand .name{display:flex;flex-direction:column;gap:2px}
+    .brand .name strong{font-size:15px;letter-spacing:.2px}
+    .brand .name span{font-size:12.5px;color:var(--muted)}
+
+    .links{
+      display:flex;align-items:center;gap:16px;
+      color:var(--muted);font-size:14px;white-space:nowrap;
+    }
+    .links a{
+      padding:8px 10px;border-radius:999px;
+      transition:background .2s ease,color .2s ease;
+    }
+    .links a:hover{background:rgba(11,18,32,.06);color:rgba(11,18,32,.92)}
+
+    .actions{display:flex;align-items:center;gap:10px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:11px 14px;border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(11,18,32,.04);
+      color:rgba(11,18,32,.92);
+      font-weight:900;font-size:14px;letter-spacing:.2px;
+      transition:transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+      cursor:pointer;user-select:none;
+    }
+    .btn:hover{
+      transform:translateY(-1px);
+      background:rgba(11,18,32,.06);
+      border-color:rgba(11,18,32,.18);
+      box-shadow:0 10px 26px rgba(11,18,32,.08);
+    }
+    .btn.primary{
+      background:linear-gradient(135deg, rgba(102,227,196,.95) 0%, rgba(122,168,255,.90) 100%);
+      border-color:rgba(11,18,32,.10);
+      color:rgba(9,14,26,.96);
+      box-shadow:0 18px 45px rgba(102,227,196,.16), 0 18px 45px rgba(122,168,255,.12);
+    }
+    .btn.secondary{
+      background:rgba(255,255,255,.82);
+      border-color:var(--line);
+    }
+
+    .menu{
+      display:none;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.74);
+      border-radius:12px;padding:10px 12px;
+      color:rgba(11,18,32,.92);
+      cursor:pointer;font-weight:950;
+    }
+
+    @media (max-width:920px){
+      .brand .name{display:none}
+      .links{display:none}
+      .menu{display:inline-flex;align-items:center;gap:10px}
+    }
+
+    .mobile{
+      display:none;
+      border-top:1px solid var(--line);
+      background:rgba(255,255,255,.94);
+    }
+    .mobile.open{display:block}
+    .mobile .inner{
+      padding:12px 0 16px 0;
+      display:flex;flex-direction:column;gap:10px;
+    }
+    .mobile a{
+      padding:10px 12px;border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(11,18,32,.03);
+      font-weight:950;
+    }
+
+    main{padding-bottom:70px}
+    section{padding:34px 0}
+
+    .hero{padding:clamp(26px,4.4vw,46px) 0 22px 0}
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:clamp(18px,3vw,28px);
+      align-items:stretch;
+    }
+    @media (max-width:980px){
+      .hero-grid{grid-template-columns:1fr}
+    }
+
+    .panel{
+      border-radius:var(--r2);
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,.94) 0%, rgba(255,255,255,.84) 100%);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .hero-copy{padding:clamp(20px,3.2vw,34px)}
+    .kicker{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:8px 12px;border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(11,18,32,.04);
+      color:rgba(11,18,32,.86);
+      font-size:13px;letter-spacing:.2px;font-weight:950;
+    }
+
+    h1{
+      margin:14px 0 10px 0;
+      font-size:clamp(28px,3.2vw,44px);
+      line-height:1.12;letter-spacing:-.6px;
+      color:rgba(11,18,32,.96);
+    }
+
+    .lead{
+      margin:0 0 16px 0;
+      color:var(--muted);
+      font-size:clamp(15px,1.35vw,17px);
+      max-width:62ch;
+    }
+
+    .bullets{
+      margin:18px 0 0 0;
+      padding:0;list-style:none;
+      display:grid;gap:12px;
+    }
+    .bullets li{
+      display:flex;gap:12px;align-items:flex-start;
+      padding:12px 12px;border-radius:16px;
+      border:1px solid var(--line);
+      background:rgba(11,18,32,.03);
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      margin-top:6px;flex:0 0 auto;
+      background:linear-gradient(135deg, rgba(102,227,196,1) 0%, rgba(122,168,255,1) 100%);
+      box-shadow:0 10px 20px rgba(122,168,255,.18);
+    }
+    .bullets strong{
+      display:block;
+      font-size:15px;letter-spacing:.2px;margin-bottom:3px;
+      color:rgba(11,18,32,.94);font-weight:950;
+    }
+    .bullets span{
+      display:block;
+      color:var(--muted);
+      font-size:14px;line-height:1.45;
+    }
+
+    .hero-ctas{
+      margin-top:18px;
+      display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+    }
+    .note{margin-top:12px;color:rgba(11,18,32,.66);font-size:13px}
+
+    .check{
+      margin-top:14px;
+      padding:12px 12px;border-radius:16px;
+      border:1px dashed rgba(11,18,32,.22);
+      background:rgba(255,255,255,.72);
+    }
+    .check strong{
+      display:block;margin-bottom:8px;
+      font-size:13.5px;letter-spacing:.2px;font-weight:950;
+      color:rgba(11,18,32,.92);
+    }
+    .check ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+    .check li{display:flex;gap:10px;align-items:flex-start;color:rgba(11,18,32,.72);font-size:13.5px;line-height:1.45}
+    .mini-dot{width:8px;height:8px;border-radius:50%;margin-top:6px;background:rgba(11,18,32,.30);flex:0 0 auto}
+
+    .video-wrap{
+      position:relative;
+      min-height:340px;height:100%;
+      border-radius:var(--r2);
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.90);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+    @media (max-width:980px){.video-wrap{min-height:280px}}
+
+    .video-label{
+      position:absolute;top:14px;left:14px;z-index:2;
+      display:inline-flex;align-items:center;gap:10px;
+      padding:8px 12px;border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.82);
+      color:rgba(11,18,32,.90);
+      font-size:13px;font-weight:950;
+      backdrop-filter:blur(10px);
+    }
+
+    video{width:100%;height:100%;object-fit:cover;display:block}
+    .hidden{display:none!important}
+
+    .placeholder{
+      position:absolute;inset:0;
+      display:flex;align-items:flex-end;justify-content:flex-start;
+      padding:18px;
+      background-image:
+        linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(11,18,32,.22) 70%, rgba(11,18,32,.42) 100%),
+        url('hero-poster.jpg'),
+        url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1400&q=70');
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+
+    .fake-play{
+      display:flex;align-items:center;gap:12px;
+      padding:12px 14px;border-radius:16px;
+      border:1px solid rgba(255,255,255,.32);
+      background:rgba(255,255,255,.84);
+      backdrop-filter:blur(10px);
+      max-width:520px;
+      box-shadow:0 14px 34px rgba(11,18,32,.18);
+    }
+    .play{
+      width:44px;height:44px;border-radius:14px;
+      background:linear-gradient(135deg, rgba(102,227,196,.95) 0%, rgba(122,168,255,.90) 100%);
+      display:grid;place-items:center;
+      box-shadow:0 18px 45px rgba(122,168,255,.14);
+      flex:0 0 auto;
+    }
+    .tri{
+      width:0;height:0;
+      border-top:8px solid transparent;
+      border-bottom:8px solid transparent;
+      border-left:12px solid rgba(9,14,26,.92);
+      margin-left:2px;
+    }
+    .fake-play strong{display:block;font-size:14px;letter-spacing:.2px;margin-bottom:2px;color:rgba(11,18,32,.92);font-weight:950}
+    .fake-play span{display:block;font-size:13px;color:rgba(11,18,32,.70)}
+
+    .head{
+      display:flex;align-items:flex-end;justify-content:space-between;
+      gap:18px;margin-bottom:18px;
+    }
+    .head h2{
+      margin:0;
+      font-size:clamp(22px,2.2vw,30px);
+      letter-spacing:-.3px;line-height:1.2;
+      color:rgba(11,18,32,.96);font-weight:980;
+    }
+    .head p{margin:0;color:var(--muted);max-width:70ch;font-size:15px}
+    @media (max-width:900px){.head{flex-direction:column;align-items:flex-start}}
+
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width:980px){.grid3{grid-template-columns:1fr}}
+
+    .card{
+      border-radius:var(--r);
+      background:rgba(255,255,255,.90);
+      border:1px solid var(--line);
+      padding:18px;
+      box-shadow:var(--shadow2);
+    }
+    .card h3{margin:0 0 6px 0;font-size:16px;letter-spacing:.2px;color:rgba(11,18,32,.94);font-weight:980}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    .split{display:grid;grid-template-columns:1.05fr .95fr;gap:16px;align-items:stretch}
+    @media (max-width:980px){.split{grid-template-columns:1fr}}
+
+    .media{
+      border-radius:var(--r2);
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.90);
+      box-shadow:var(--shadow);
+      position:relative;
+      min-height:320px;
+    }
+    @media (max-width:980px){.media{min-height:240px}}
+    .media img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.03) contrast(1.02)}
+    .media::after{
+      content:"";
+      position:absolute;inset:0;
+      background:linear-gradient(180deg, rgba(255,255,255,.02) 0%, rgba(11,18,32,.34) 100%);
+      pointer-events:none;
+    }
+    .cap{
+      position:absolute;left:16px;right:16px;bottom:16px;
+      padding:12px 14px;border-radius:16px;
+      border:1px solid rgba(255,255,255,.26);
+      background:rgba(255,255,255,.84);
+      backdrop-filter:blur(10px);
+      box-shadow:0 14px 30px rgba(11,18,32,.16);
+    }
+    .cap strong{display:block;font-size:14px;letter-spacing:.2px;margin-bottom:2px;color:rgba(11,18,32,.92);font-weight:980}
+    .cap span{display:block;font-size:13px;color:rgba(11,18,32,.70)}
+
+    .pillars{
+      border-radius:var(--r2);
+      border:1px solid rgba(11,18,32,.12);
+      background:
+        radial-gradient(700px 260px at 12% 0%, rgba(102,227,196,.14), transparent 60%),
+        radial-gradient(700px 260px at 96% 20%, rgba(122,168,255,.14), transparent 62%),
+        rgba(255,255,255,.90);
+      padding:18px;
+      box-shadow:var(--shadow2);
+    }
+
+    .pill-top{
+      display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:14px;
+    }
+    @media (max-width:900px){.pill-top{flex-direction:column;align-items:flex-start}}
+    .pill-top h3{margin:0;font-size:18px;letter-spacing:-.2px;color:rgba(11,18,32,.96);font-weight:980}
+    .pill-top p{margin:0;color:rgba(11,18,32,.70);max-width:74ch;font-size:14.5px}
+
+    .pill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width:980px){.pill-grid{grid-template-columns:1fr}}
+
+    .pill{
+      border-radius:var(--r);
+      background:rgba(255,255,255,.96);
+      border:1px solid rgba(11,18,32,.14);
+      padding:16px;
+      box-shadow:0 14px 34px rgba(11,18,32,.10);
+      display:flex;flex-direction:column;gap:10px;
+      overflow:hidden;
+    }
+
+    .pill-row{
+      display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+    }
+    .chip{
+      display:inline-flex;align-items:center;
+      padding:7px 10px;border-radius:999px;
+      border:1px solid rgba(11,18,32,.14);
+      background:rgba(11,18,32,.03);
+      color:rgba(11,18,32,.92);
+      font-size:12px;font-weight:980;letter-spacing:.2px;
+      flex:1 1 auto;min-width:0;
+      white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    }
+    .badge{
+      width:44px;height:44px;border-radius:16px;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg, rgba(102,227,196,.92) 0%, rgba(122,168,255,.88) 100%);
+      border:1px solid rgba(11,18,32,.10);
+      box-shadow:0 16px 34px rgba(122,168,255,.12);
+      color:rgba(9,14,26,.96);
+      font-weight:980;letter-spacing:.2px;font-size:14px;
+      flex:0 0 auto;
+    }
+
+    .pill h4{margin:0;font-size:15.5px;letter-spacing:.2px;color:rgba(11,18,32,.96);font-weight:980;line-height:1.28}
+    .pill p{margin:0;color:rgba(11,18,32,.72);font-size:14px;line-height:1.45}
+    .plist{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+    .plist li{display:flex;gap:10px;align-items:flex-start;color:rgba(11,18,32,.74);font-size:13.5px;line-height:1.45}
+
+    .integr{
+      margin-top:16px;padding-top:16px;
+      border-top:1px solid rgba(11,18,32,.12);
+    }
+    .integr h3{margin:0 0 6px 0;font-size:16px;letter-spacing:.2px;color:rgba(11,18,32,.92);font-weight:980}
+    .integr p{margin:0 0 12px 0;color:rgba(11,18,32,.68);font-size:14px;max-width:90ch}
+
+    .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width:980px){.svc-grid{grid-template-columns:1fr}}
+
+    .svc{
+      border-radius:var(--r);
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(11,18,32,.12);
+      padding:14px;
+      box-shadow:0 10px 28px rgba(11,18,32,.08);
+      display:flex;flex-direction:column;gap:6px;
+    }
+    .svc-top{display:flex;align-items:flex-start;gap:10px}
+    .no{
+      width:32px;height:32px;border-radius:14px;
+      display:grid;place-items:center;
+      font-weight:980;font-size:12.5px;
+      color:rgba(9,14,26,.92);
+      background:rgba(11,18,32,.06);
+      border:1px solid rgba(11,18,32,.12);
+      flex:0 0 auto;
+    }
+    .svc h4{margin:0;font-size:14.5px;letter-spacing:.2px;color:rgba(11,18,32,.92);line-height:1.25;font-weight:950}
+    .svc p{margin:0;color:rgba(11,18,32,.70);font-size:13.5px;line-height:1.45}
+
+    details{
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.92);
+      padding:12px 14px;
+      box-shadow:var(--shadow2);
+    }
+    details + details{margin-top:10px}
+    summary{
+      cursor:pointer;list-style:none;
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      font-weight:980;font-size:14px;letter-spacing:.2px;color:rgba(11,18,32,.92);
+      padding:2px 0;
+    }
+    summary::-webkit-details-marker{display:none}
+    .chev{
+      width:26px;height:26px;border-radius:10px;
+      border:1px solid var(--line);
+      background:rgba(11,18,32,.03);
+      display:grid;place-items:center;
+      flex:0 0 auto;
+      transition:transform .18s ease;
+    }
+    details[open] .chev{transform:rotate(180deg)}
+    .chev:before{
+      content:"";
+      width:0;height:0;
+      border-left:6px solid transparent;
+      border-right:6px solid transparent;
+      border-top:7px solid rgba(11,18,32,.62);
+      margin-top:2px;
+    }
+    details p{margin:10px 0 0 0;color:var(--muted);font-size:14px}
+
+    .contact{
+      display:grid;
+      grid-template-columns:1fr .92fr;
+      gap:14px;
+      align-items:start;
+    }
+    @media (max-width:980px){.contact{grid-template-columns:1fr}}
+
+    form{display:grid;gap:10px}
+    .fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media (max-width:680px){.fields{grid-template-columns:1fr}}
+
+    label{
+      display:block;
+      font-size:13px;
+      color:rgba(11,18,32,.78);
+      margin-bottom:6px;
+      letter-spacing:.2px;
+      font-weight:950;
+    }
+    input,textarea{
+      width:100%;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.98);
+      padding:12px 12px;
+      color:rgba(11,18,32,.92);
+      font-size:14px;
+      box-shadow:0 10px 22px rgba(11,18,32,.06) inset;
+    }
+    textarea{min-height:130px;resize:vertical}
+    .hint{color:rgba(11,18,32,.68);font-size:13px;margin-top:4px}
+
+    .contact-card{
+      border-radius:var(--r2);
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.92);
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+    .contact-card h3{margin:0 0 8px 0;font-size:16px;letter-spacing:.2px;color:rgba(11,18,32,.94);font-weight:980}
+    .contact-card p{margin:0 0 12px 0;color:var(--muted);font-size:14px}
+    .row{
+      display:flex;gap:10px;align-items:center;
+      padding:10px 12px;border-radius:16px;
+      border:1px solid var(--line);
+      background:rgba(11,18,32,.03);
+      margin-bottom:10px;
+      overflow:hidden;
+    }
+    .mark{
+      width:34px;height:34px;border-radius:14px;
+      display:grid;place-items:center;
+      background:rgba(122,168,255,.16);
+      border:1px solid rgba(122,168,255,.22);
+      flex:0 0 auto;
+    }
+    .mark:before{
+      content:"";
+      width:12px;height:12px;border-radius:4px;
+      background:linear-gradient(135deg, rgba(102,227,196,.95) 0%, rgba(122,168,255,.90) 100%);
+    }
+    .row span{color:rgba(11,18,32,.86);font-size:14px;word-break:break-word}
+    .link{
+      color:rgba(11,18,32,.92);
+      text-decoration:underline;
+      text-decoration-color:rgba(11,18,32,.28);
+      text-underline-offset:3px;
+      font-weight:980;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      background:rgba(255,255,255,.80);
+    }
+    .foot{
+      padding:22px 0;
+      display:flex;align-items:center;justify-content:space-between;
+      gap:14px;flex-wrap:wrap;
+    }
+    .foot-brand{display:flex;align-items:center;gap:12px}
+    .foot-brand img{
+      height:40px;width:auto;display:block;
+      filter:drop-shadow(0 12px 18px rgba(11,18,32,.12));
+    }
+    .foot-meta{color:rgba(11,18,32,.70);font-size:13px}
+    .foot-links{display:flex;gap:12px;flex-wrap:wrap;color:rgba(11,18,32,.78);font-size:13px}
+    .foot-links a{
+      padding:6px 10px;border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(11,18,32,.03);
+      font-weight:950;
+    }
+
+    .toast{
+      position:fixed;left:50%;bottom:18px;transform:translateX(-50%);
+      z-index:100;
+      background:rgba(11,18,32,.92);
+      border:1px solid rgba(255,255,255,.20);
+      border-radius:16px;
+      padding:12px 14px;
+      color:rgba(255,255,255,.96);
+      box-shadow:0 18px 60px rgba(0,0,0,.22);
+      max-width:min(720px, calc(100% - 36px));
+      display:none;
+      backdrop-filter:blur(10px);
+      font-size:14px;
+      font-weight:750;
+    }
+    .toast.show{display:block}
+  </style>
 </head>
 
 <body>
-<header>
-  <div class="container">
-    <div class="nav">
-      <a class="brand" href="#top" aria-label="ConsulHub Pro home">
-        <img src="logo-chp.png" alt="Logo ConsulHub Pro">
-        <div class="name">
-          <b>ConsulHub Pro</b>
-          <span>Premium network per Studi CDL</span>
+  <a class="skip" href="#contenuto">Vai al contenuto</a>
+
+  <header>
+    <div class="container">
+      <div class="nav" role="navigation" aria-label="Navigazione principale">
+        <a class="brand" href="#top" aria-label="ConsulHub Pro, torna all'inizio">
+          <img src="logo-chp.png" alt="Logo ConsulHub Pro" />
+          <div class="name">
+            <strong>ConsulHub Pro</strong>
+            <span>Per Studi di Consulenza del Lavoro</span>
+          </div>
+        </a>
+
+        <nav class="links" aria-label="Sezioni">
+          <a href="#perche">Perché</a>
+          <a href="#servizi">Servizi</a>
+          <a href="#come-funziona">Come funziona</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contatti">Contatti</a>
+        </nav>
+
+        <div class="actions">
+          <button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
+          <a class="btn primary" href="https://calendly.com/giovanni-laricchiuta/30min" target="_blank" rel="noopener">Prenota call</a>
         </div>
-      </a>
+      </div>
 
-      <nav aria-label="Navigazione principale">
-        <ul>
-          <li><a href="#servizi">Servizi</a></li>
-          <li><a href="#vantaggi">Vantaggi</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contatti">Contatti</a></li>
-        </ul>
-      </nav>
-
-      <div class="cta">
-        <a class="btn primary" href="#contatti">Richiedi informazioni</a>
-        <button class="menuBtn" id="menuBtn" aria-label="Apri menu" aria-expanded="false">☰</button>
+      <div class="mobile" id="mobilePanel" aria-label="Menu mobile">
+        <div class="inner">
+          <a href="#perche">Perché</a>
+          <a href="#servizi">Servizi</a>
+          <a href="#come-funziona">Come funziona</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contatti">Contatti</a>
+        </div>
       </div>
     </div>
+  </header>
 
-    <div class="mobilePanel" id="mobilePanel" aria-label="Menu mobile">
-      <a href="#servizi">Servizi</a>
-      <a href="#vantaggi">Vantaggi</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contatti">Contatti</a>
-    </div>
-  </div>
-</header>
+  <main id="contenuto">
+    <div id="top"></div>
 
-<main id="top">
-  <section class="hero">
-    <div class="container">
-      <div class="heroGrid">
-        <div>
-          <div class="kicker">
-            <span class="dot"></span>
-            Network dedicato agli Studi di Consulenza del Lavoro
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="panel">
+            <div class="hero-copy">
+              <div class="kicker">Rete di partner premium, operatività snella, risultati misurabili</div>
+              <h1 id="hero-title">Lo Studio cresce quando l’offerta è più forte del tempo disponibile</h1>
+              <p class="lead">
+                ConsulHub Pro supporta Studi di Consulenza del Lavoro e Commercialisti con un modello semplice:
+                lo Studio resta il riferimento, la delivery viene gestita dai partner.
+              </p>
+
+              <ul class="bullets">
+                <li>
+                  <div class="dot" aria-hidden="true"></div>
+                  <div>
+                    <strong>Formazione finanziata attivabile subito per le PMI dei clienti, senza numero minimo di partecipanti.</strong>
+                    <span>Percorsi utili, attivabili rapidamente, con impostazione chiara e documentazione ordinata.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="dot" aria-hidden="true"></div>
+                  <div>
+                    <strong>Lo Studio aumenta fatturato senza caricare il team: noi eroghiamo i servizi in autonomia con partner premium e processi trasparenti.</strong>
+                    <span>Meno frizioni operative, più qualità percepita, relazione dello Studio protetta.</span>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="hero-ctas" aria-label="Azioni principali">
+                <a class="btn secondary" href="#contatti">Richiedi informazioni</a>
+                <button class="btn secondary" id="checklistBtn" type="button">Scarica checklist per lo Studio</button>
+              </div>
+
+              <div class="check" aria-label="Contenuti della checklist">
+                <strong>Cosa trovi nella checklist</strong>
+                <ul>
+                  <li><span class="mini-dot" aria-hidden="true"></span><span>Come qualificare i clienti giusti e proporre il pilastro più adatto, senza improvvisazioni.</span></li>
+                  <li><span class="mini-dot" aria-hidden="true"></span><span>Dati minimi, materiali e tempi: cosa serve davvero per partire subito senza caricare lo Studio.</span></li>
+                  <li><span class="mini-dot" aria-hidden="true"></span><span>Schema di presentazione “premium”: messaggi chiari, obiettivi, perimetro e prossimi passi.</span></li>
+                </ul>
+              </div>
+
+              <div class="note">
+                Il pulsante “Prenota call” è sempre disponibile in alto.
+              </div>
+            </div>
           </div>
 
-          <h1>Più valore, più efficienza, più opportunità per il tuo Studio</h1>
-          <p class="lead">
-            ConsulHub Pro integra servizi specialistici, formazione finanziata e strumenti operativi per aiutarti a migliorare i processi interni e ampliare l’offerta ai clienti in modo semplice e scalabile.
-          </p>
+          <div class="video-wrap" aria-label="Area video introduttiva">
+            <div class="video-label">Video di presentazione</div>
 
-          <div class="heroActions">
-            <a class="btn primary" href="#contatti">Richiedi informazioni</a>
-            <a class="btn" id="checklistBtn" href="checklist-studio.pdf" download="checklist-studio.pdf">Scarica checklist per lo Studio</a>
-          </div>
+            <video id="heroVideo" class="hidden" autoplay muted loop playsinline preload="metadata" poster="hero-poster.jpg"></video>
 
-          <div class="badges" aria-label="Punti chiave">
-            <div class="badge"><b>0,30%</b> in busta paga: formazione attivabile subito</div>
-            <div class="badge"><b>Pacchetti</b> flessibili e modulari</div>
-            <div class="badge"><b>Supporto</b> operativo e commerciale</div>
-          </div>
-        </div>
-
-        <aside class="heroCard" aria-label="Panoramica rapida">
-          <div class="heroCardInner">
-            <div class="videoWrap">
-              <video id="heroVideo" autoplay muted loop playsinline preload="metadata" class="hidden" poster="hero-poster.jpg"></video>
-              <div id="heroPlaceholder" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; padding:18px;">
-                <div class="card" style="background: rgba(0,0,0,.28); border-color: rgba(255,255,255,.10); max-width: 420px;">
-                  <h3确保 Una panoramica rapida, in stile premium</h3>
-                  <p style="margin-top:6px;">Se “hero.mp4” è presente nella cartella, viene riprodotto automaticamente.</p>
+            <div id="heroPlaceholder" class="placeholder" aria-hidden="false">
+              <div class="fake-play" aria-hidden="true">
+                <div class="play"><div class="tri"></div></div>
+                <div class="text">
+                  <strong>Una panoramica rapida, in stile premium</strong>
+                  <span>Se “hero.mp4” è presente nella cartella, viene riprodotto automaticamente.</span>
                 </div>
               </div>
-              <div class="videoOverlay"></div>
-            </div>
-
-            <div class="miniCards" aria-label="Highlights">
-              <div class="mini">
-                <h3>Servizi integrati</h3>
-                <p>Payroll outsourcing, HR &amp; compliance, sicurezza, IT, credito e assicurazioni.</p>
-              </div>
-              <div class="mini">
-                <h3>Formazione finanziata</h3>
-                <p>Accesso a percorsi attivabili con strumenti immediati per Micro e PMI.</p>
-              </div>
-            </div>
-          </div>
-        </aside>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="servizi">
-    <div class="container">
-      <div class="sectionTitle">
-        <div>
-          <h2>Servizi</h2>
-          <p>Un portafoglio costruito per dare allo Studio strumenti concreti e opportunità di crescita.</p>
-        </div>
-      </div>
-
-      <div class="grid3">
-        <div class="card">
-          <h3>Payroll Outsourcing</h3>
-          <p>Supporto operativo nella gestione paghe per migliorare efficienza e capacità produttiva.</p>
-          <div class="list">
-            <div class="li">
-              <div class="check">
-                <svg viewBox="0 0 24 24"><path d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-              </div>
-              <div>Riduzione carico interno e picchi</div>
-            </div>
-            <div class="li">
-              <div class="check">
-                <svg viewBox="0 0 24 24"><path d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-              </div>
-              <div>Processo controllato e scalabile</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Formazione finanziata</h3>
-          <p>Attivazione percorsi per clienti Micro e PMI con strumenti concreti e tempi rapidi.</p>
-          <div class="list">
-            <div class="li">
-              <div class="check">
-                <svg viewBox="0 0 24 24"><path d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-              </div>
-              <div>Script e checklist operative per lo Studio</div>
-            </div>
-            <div class="li">
-              <div class="check">
-                <svg viewBox="0 0 24 24"><path d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-              </div>
-              <div>Opportunità concreta per fidelizzare aziende</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Servizi specialistici</h3>
-          <p>HR, compliance, sicurezza, IT, credito e assicurazioni professionali.</p>
-          <div class="list">
-            <div class="li">
-              <div class="check">
-                <svg viewBox="0 0 24 24"><path d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-              </div>
-              <div>Portfolio modulare in base al cliente</div>
-            </div>
-            <div class="li">
-              <div class="check">
-                <svg viewBox="0 0 24 24"><path d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
-              </div>
-              <div>Incremento valore percepito dello Studio</div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <section class="section" id="vantaggi">
-    <div class="container">
-      <div class="split">
-        <div class="callout">
-          <h2>In pratica</h2>
-          <p>ConsulHub Pro ti aiuta a trasformare un’opportunità concreta in un servizio vendibile, replicabile e gestibile senza caos operativo.</p>
-          <div class="btnRow">
-            <a class="btn primary" href="#contatti">Richiedi informazioni</a>
-            <a class="btn" href="#faq">Vedi le FAQ</a>
-          </div>
+    <section id="perche" aria-labelledby="perche-title">
+      <div class="container">
+        <div class="head">
+          <h2 id="perche-title">Perché ConsulHub Pro funziona per lo Studio</h2>
+          <p>
+            Non aggiunge complessità. Rende “vendibile” un’offerta chiara e coerente, con delivery affidata a partner premium
+            e gestione ordinata delle attività.
+          </p>
         </div>
 
-        <div class="card">
-          <h3>Cosa ottieni</h3>
-          <p>Materiali, supporto e servizi per ridurre tempo perso e aumentare conversione.</p>
-          <div class="list">
-            <div class="li">
-              <div class="check"><svg viewBox="0 0 24 24"><path d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
-              <div>Checklist e script pronti per lo Studio</div>
+        <div class="grid3">
+          <div class="card">
+            <h3>Offerta immediatamente comprensibile</h3>
+            <p>3 pilastri ad alta chiarezza + servizi integrati. Lo Studio propone con sicurezza e senza promesse vaghe.</p>
+          </div>
+          <div class="card">
+            <h3>Delivery senza appesantire il team</h3>
+            <p>Il lavoro operativo viene gestito dai partner. Lo Studio mantiene il presidio della relazione con il cliente.</p>
+          </div>
+          <div class="card">
+            <h3>Qualità percepita e controllo</h3>
+            <p>Processi, perimetro e documentazione ordinati. Meno frizioni, più affidabilità, più continuità nel tempo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servizi" aria-labelledby="servizi-title">
+      <div class="container">
+        <div class="head">
+          <h2 id="servizi-title">Servizi</h2>
+          <p>
+            I 3 pilastri sono la base più semplice da proporre. I servizi complementari integrati ampliano l’offerta
+            per rispondere alle esigenze reali delle PMI clienti dello Studio.
+          </p>
+        </div>
+
+        <div class="split">
+          <div class="pillars" aria-label="I 3 pilastri principali">
+            <div class="pill-top">
+              <h3>I 3 pilastri che lo Studio propone con massima facilità</h3>
+              <p>Servizi chiari, immediati e con valore percepito alto. Lo Studio mantiene la relazione, la delivery viene gestita dai partner.</p>
             </div>
-            <div class="li">
-              <div class="check"><svg viewBox="0 0 24 24"><path d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
-              <div>Servizi specialistici già strutturati</div>
+
+            <div class="pill-grid">
+              <article class="pill">
+                <div class="pill-row">
+                  <div class="chip" title="PILASTRO 01">PILASTRO 01</div>
+                  <div class="badge" aria-label="01">01</div>
+                </div>
+                <h4>FORMAZIENDA</h4>
+                <p>Trasforma lo 0,30% INPS già versato in formazione utile e attivabile per le PMI, in modo ordinato e semplice.</p>
+                <ul class="plist">
+                  <li><span class="mini-dot" aria-hidden="true"></span><span>Attivazione rapida, senza numero minimo di partecipanti.</span></li>
+                  <li><span class="mini-dot" aria-hidden="true"></span><span>Percorsi impostati su obiettivi, tempi e impatto.</span></li>
+                  <li><span class="mini-dot" aria-hidden="true"></span><span>Gestione documentale chiara e tracciabile.</span></li>
+                </ul>
+              </article>
+
+              <article class="pill">
+                <div class="pill-row">
+                  <div class="chip" title="PILASTRO 02">PILASTRO 02</div>
+                  <div class="badge" aria-label="02">02</div>
+                </div>
+                <h4>EBILP</h4>
+                <p>Ente bilaterale alternativo: approccio più snello e vantaggioso, con gestione chiara e senza complicazioni inutili.</p>
+                <ul class="plist">
+                  <li><span class="mini-dot" aria-hidden="true"></span><span>Perimetro definito e onboarding guidato.</span></li>
+                  <li><span class="mini-dot" aria-hidden="true"></span><span>Riduzione delle frizioni operative per Studio e azienda.</span></li>
+                  <li><span class="mini-dot" aria-hidden="true"></span><span>Processo lineare e comunicazione ordinata.</span></li>
+                </ul>
+              </article>
+
+              <article class="pill">
+                <div class="pill-row">
+                  <div class="chip" title="PILASTRO 03">PILASTRO 03</div>
+                  <div class="badge" aria-label="03">03</div>
+                </div>
+                <h4>FISAPI</h4>
+                <p>Assistenza sindacale e contrattuale semplice e riconosciuta, utile per gestire la parte “sensibile” senza stress.</p>
+                <ul class="plist">
+                  <li><span class="mini-dot" aria-hidden="true"></span><span>Supporto su tematiche contrattuali con interlocutore strutturato.</span></li>
+                  <li><span class="mini-dot" aria-hidden="true"></span><span>Coerenza, continuità e riduzione dei rischi interpretativi.</span></li>
+                  <li><span class="mini-dot" aria-hidden="true"></span><span>Gestione operativa a carico del partner, con presidio dello Studio.</span></li>
+                </ul>
+              </article>
             </div>
-            <div class="li">
-              <div class="check"><svg viewBox="0 0 24 24"><path d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
-              <div>Approccio premium, chiaro e credibile</div>
+
+            <div class="integr" aria-label="Servizi complementari integrati">
+              <h3>Servizi complementari integrati</h3>
+              <p>
+                Una rete di soluzioni erogate da primarie aziende del proprio settore di riferimento.
+                Servono per ampliare l’offerta ai clienti PMI senza trasformare lo Studio in un reparto operativo.
+              </p>
+
+              <div class="svc-grid" aria-label="Elenco servizi complementari">
+                <div class="svc">
+                  <div class="svc-top"><div class="no">1</div><h4>Strategia aziendale e sviluppo PMI</h4></div>
+                  <p>Analisi, priorità e piano operativo per far crescere l’azienda con obiettivi misurabili.</p>
+                </div>
+
+                <div class="svc">
+                  <div class="svc-top"><div class="no">2</div><h4>Sicurezza sul lavoro</h4></div>
+                  <p>Consulenza e corsi: gestione ordinata degli adempimenti e della formazione.</p>
+                </div>
+
+                <div class="svc">
+                  <div class="svc-top"><div class="no">3</div><h4>AI applicata al business</h4></div>
+                  <p>Progetti pratici e personalizzati per aumentare produttività e qualità dei processi.</p>
+                </div>
+
+                <div class="svc">
+                  <div class="svc-top"><div class="no">4</div><h4>Siti web, social media e contenuti digitali</h4></div>
+                  <p>Presenza online coerente e moderna, orientata alla credibilità e alla generazione contatti.</p>
+                </div>
+
+                <div class="svc">
+                  <div class="svc-top"><div class="no">5</div><h4>Funnel marketing e lead generation</h4></div>
+                  <p>Canali e messaggi per trasformare visibilità in richieste reali e profilate.</p>
+                </div>
+
+                <div class="svc">
+                  <div class="svc-top"><div class="no">6</div><h4>Formazione finanziata e percorsi mirati</h4></div>
+                  <p>Attivazione e gestione dei percorsi, con impostazione chiara e documentazione ordinata.</p>
+                </div>
+
+                <div class="svc">
+                  <div class="svc-top"><div class="no">7</div><h4>Coaching, team building e benessere organizzativo</h4></div>
+                  <p>Interventi concreti su leadership, collaborazione, retention e clima.</p>
+                </div>
+
+                <div class="svc">
+                  <div class="svc-top"><div class="no">8</div><h4>Ricerca personale e consulenza HR</h4></div>
+                  <p>Supporto su selezione, ruoli chiave e impostazione dei processi HR.</p>
+                </div>
+
+                <div class="svc">
+                  <div class="svc-top"><div class="no">9</div><h4>Accesso a fondi, bandi e incentivi fiscali</h4></div>
+                  <p>Valutazione opportunità, requisiti e percorso di attivazione con perimetro chiaro.</p>
+                </div>
+
+                <div class="svc">
+                  <div class="svc-top"><div class="no">10</div><h4>Welfare aziendale e soluzioni FISAPI</h4></div>
+                  <p>Soluzioni strutturate per aziende e dipendenti, con gestione ordinata e supporto dedicato.</p>
+                </div>
+
+                <div class="svc">
+                  <div class="svc-top"><div class="no">11</div><h4>Servizi operativi</h4></div>
+                  <p>Leasing, flotte, sicurezza e digitalizzazione: attivazione e coordinamento tramite partner.</p>
+                </div>
+
+                <div class="svc">
+                  <div class="svc-top"><div class="no">12</div><h4>Audit e adempimenti HSE</h4></div>
+                  <p>Valutazione rischi, DVR, formazione obbligatoria e audit: percorso lineare e tracciabile.</p>
+                </div>
+
+                <div class="svc">
+                  <div class="svc-top"><div class="no">13</div><h4>Servizi assicurativi e gestione del rischio</h4></div>
+                  <p>Coperture coerenti e gestione del rischio con interlocutori affidabili e strutturati.</p>
+                </div>
+
+                <div class="svc">
+                  <div class="svc-top"><div class="no">14</div><h4>Accesso al credito e finanza agevolata</h4></div>
+                  <p>Supporto nella lettura delle opzioni e nel percorso di attivazione, con chiarezza sui requisiti.</p>
+                </div>
+
+                <div class="svc">
+                  <div class="svc-top"><div class="no">15</div><h4>Servizi informatici e soluzioni IT personalizzate</h4></div>
+                  <p>Infrastruttura, sicurezza e strumenti per migliorare operatività e continuità.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="media" aria-label="Immagine contestuale">
+            <img
+              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=70"
+              alt="Contesto di lavoro professionale in ufficio"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="cap">
+              <strong>Offerta più forte, senza aumentare complessità</strong>
+              <span>Lo Studio resta il riferimento. I partner gestiscono delivery e operatività.</span>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="faq">
-    <div class="container">
-      <div class="sectionTitle">
-        <div>
-          <h2>FAQ</h2>
-          <p>Risposte rapide alle domande più comuni.</p>
+    <section id="come-funziona" aria-labelledby="come-title">
+      <div class="container">
+        <div class="head">
+          <h2 id="come-title">Come funziona</h2>
+          <p>Un percorso lineare, pensato per ridurre tempi, frizioni e passaggi inutili.</p>
+        </div>
+
+        <div class="grid3">
+          <div class="card">
+            <h3>1) Selezione del servizio</h3>
+            <p>Individuiamo insieme il pilastro o il servizio complementare più coerente con l’azienda cliente.</p>
+          </div>
+          <div class="card">
+            <h3>2) Kickoff e raccolta dati</h3>
+            <p>Checklist e dati minimi. Perimetro, obiettivi e tempi definiti in modo chiaro.</p>
+          </div>
+          <div class="card">
+            <h3>3) Delivery e aggiornamenti</h3>
+            <p>Il partner opera in autonomia con metodo e reportistica, mantenendo lo Studio sempre informato.</p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="faq">
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="head">
+          <h2 id="faq-title">FAQ</h2>
+          <p>Risposte rapide alle domande più frequenti. Per casi specifici, prenota una call.</p>
+        </div>
+
         <details>
-          <summary>È adatto anche a Studi piccoli?</summary>
-          <p>Sì. La logica è modulare: puoi partire con i servizi più immediati e crescere con il pacchetto.</p>
+          <summary>ConsulHub Pro lavora con le aziende o con gli Studi?<span class="chev" aria-hidden="true"></span></summary>
+          <p>ConsulHub Pro è pensato per Studi di Consulenza del Lavoro e Commercialisti: lo Studio resta il riferimento per l’azienda cliente, mentre la delivery viene gestita dai partner.</p>
         </details>
+
         <details>
-          <summary>Quanto è operativo il supporto?</summary>
-          <p>Il focus è pratico: materiali, check e flussi per ridurre i tempi e aumentare l’efficacia commerciale.</p>
+          <summary>La formazione finanziata richiede un numero minimo di partecipanti?<span class="chev" aria-hidden="true"></span></summary>
+          <p>No. La formazione può essere attivata anche senza numero minimo di partecipanti, con percorso e documentazione ordinati.</p>
         </details>
+
         <details>
-          <summary>Come si attiva la formazione finanziata?</summary>
-          <p>Ti guidiamo con checklist, script e passaggi essenziali, evitando perdite di tempo e tentativi inutili.</p>
+          <summary>Il team dello Studio deve gestire operativamente i servizi?<span class="chev" aria-hidden="true"></span></summary>
+          <p>No. L’operatività viene gestita dai partner. Lo Studio mantiene il presidio della relazione e la regia complessiva.</p>
+        </details>
+
+        <details>
+          <summary>Quanto tempo serve per partire?<span class="chev" aria-hidden="true"></span></summary>
+          <p>Dipende dal servizio e dai dati disponibili. In call definiamo perimetro e tempi, con un percorso chiaro per partire rapidamente.</p>
         </details>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="contatti">
-    <div class="container">
-      <div class="sectionTitle">
-        <div>
-          <h2>Contatti</h2>
-          <p>Compila e invia la richiesta. Si aprirà un’email già pronta da inviare.</p>
+    <section id="contatti" aria-labelledby="contatti-title">
+      <div class="container">
+        <div class="head">
+          <h2 id="contatti-title">Contatti</h2>
+          <p>Richiedi informazioni. Ti rispondiamo con i prossimi passi e, se serve, una call di inquadramento.</p>
+        </div>
+
+        <div class="contact">
+          <div class="card" aria-label="Modulo contatti">
+            <form id="contactForm">
+              <div class="fields">
+                <div>
+                  <label for="nome">Nome e cognome</label>
+                  <input id="nome" name="nome" type="text" autocomplete="name" required />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required />
+                </div>
+              </div>
+
+              <div class="fields">
+                <div>
+                  <label for="studio">Studio</label>
+                  <input id="studio" name="studio" type="text" autocomplete="organization" required />
+                </div>
+                <div>
+                  <label for="telefono">Telefono</label>
+                  <input id="telefono" name="telefono" type="tel" autocomplete="tel" />
+                  <div class="hint">Facoltativo, utile per ricontatto rapido.</div>
+                </div>
+              </div>
+
+              <div>
+                <label for="messaggio">Messaggio</label>
+                <textarea id="messaggio" name="messaggio" required></textarea>
+                <div class="hint">Indica in breve: pilastro/servizio di interesse e tipo di aziende coinvolte.</div>
+              </div>
+
+              <button class="btn primary" type="submit">Invia richiesta</button>
+              <div class="hint">In alternativa: <a class="link" href="mailto:info@consulhubpro.it">info@consulhubpro.it</a></div>
+            </form>
+          </div>
+
+          <aside class="contact-card" aria-label="Contatti diretti">
+            <h3>Contatto diretto</h3>
+            <p>Se preferisci, scrivi via email oppure prenota una call dal pulsante in alto.</p>
+
+            <div class="row">
+              <div class="mark" aria-hidden="true"></div>
+              <span><a class="link" href="mailto:info@consulhubpro.it">info@consulhubpro.it</a></span>
+            </div>
+
+            <div class="row">
+              <div class="mark" aria-hidden="true"></div>
+              <span>Ambito: Studi di Consulenza del Lavoro e Commercialisti</span>
+            </div>
+
+            <div class="row">
+              <div class="mark" aria-hidden="true"></div>
+              <span>Focus: formazione finanziata e servizi premium “chiavi in mano” per le PMI clienti</span>
+            </div>
+          </aside>
         </div>
       </div>
+    </section>
+  </main>
 
-      <div class="card">
-        <form id="contactForm">
-          <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-            <div>
-              <label for="nome" style="font-size:12px; color:rgba(234,240,255,.78);">Nome e Cognome</label>
-              <input id="nome" required style="width:100%; margin-top:6px; padding:12px 12px; border-radius:14px; border:1px solid rgba(255,255,255,.12); background: rgba(0,0,0,.18); color: var(--text);" />
-            </div>
-            <div>
-              <label for="email" style="font-size:12px; color:rgba(234,240,255,.78);">Email</label>
-              <input id="email" type="email" required style="width:100%; margin-top:6px; padding:12px 12px; border-radius:14px; border:1px solid rgba(255,255,255,.12); background: rgba(0,0,0,.18); color: var(--text);" />
-            </div>
-            <div>
-              <label for="studio" style="font-size:12px; color:rgba(234,240,255,.78);">Studio</label>
-              <input id="studio" required style="width:100%; margin-top:6px; padding:12px 12px; border-radius:14px; border:1px solid rgba(255,255,255,.12); background: rgba(0,0,0,.18); color: var(--text);" />
-            </div>
-            <div>
-              <label for="telefono" style="font-size:12px; color:rgba(234,240,255,.78);">Telefono (facoltativo)</label>
-              <input id="telefono" style="width:100%; margin-top:6px; padding:12px 12px; border-radius:14px; border:1px solid rgba(255,255,255,.12); background: rgba(0,0,0,.18); color: var(--text);" />
-            </div>
-          </div>
+  
+    <section id="privacy" aria-labelledby="privacy-title">
+      <div class="container">
+        <div class="head">
+          <h2 id="privacy-title">Privacy Policy</h2>
+          <p>Informativa ai sensi del Regolamento UE 2016/679 (GDPR).</p>
+        </div>
 
-          <div style="margin-top:12px;">
-            <label for="messaggio" style="font-size:12px; color:rgba(234,240,255,.78);">Messaggio</label>
-            <textarea id="messaggio" required rows="4" style="width:100%; margin-top:6px; padding:12px 12px; border-radius:14px; border:1px solid rgba(255,255,255,.12); background: rgba(0,0,0,.18); color: var(--text); resize: vertical;"></textarea>
-          </div>
+        <div class="panel" style="padding:22px">
+          <p><strong>Titolare del trattamento</strong>: ConsulHub Pro. Contatto: <a href="mailto:info@consulhubpro.it">info@consulhubpro.it</a>.</p>
 
-          <div style="display:flex; gap: 12px; align-items:center; justify-content:flex-start; flex-wrap:wrap; margin-top: 14px;">
-            <button class="btn primary" type="submit">Invia richiesta</button>
-            <a class="btn" href="mailto:info@consulhubpro.it">Scrivi direttamente</a>
-          </div>
+          <p><strong>Dati trattati</strong>: nome e cognome, email, studio, telefono (facoltativo), contenuto del messaggio e ogni informazione inviata volontariamente.</p>
 
-          <div style="margin-top:10px; font-size:12px; color: rgba(234,240,255,.72);">
-            Informativa: <a href="#privacy" style="text-decoration:underline;">Privacy Policy</a>
-          </div>
-        </form>
+          <p><strong>Finalità</strong>: rispondere alle richieste di informazioni, organizzare eventuali call, gestire i contatti commerciali e le attività precontrattuali richieste dall’interessato.</p>
+
+          <p><strong>Base giuridica</strong>: esecuzione di misure precontrattuali richieste dall’interessato e legittimo interesse del Titolare a gestire le richieste e tutelarsi in caso di contestazioni.</p>
+
+          <p><strong>Modalità di invio</strong>: il modulo “Contatti” prepara l’email e apre il tuo client di posta. L’invio avviene solo dopo tua conferma (non salviamo automaticamente i dati tramite database nel sito).</p>
+
+          <p><strong>Conservazione</strong>: per il tempo necessario a gestire la richiesta e, se nasce un rapporto, per la durata del rapporto e per gli obblighi di legge applicabili.</p>
+
+          <p><strong>Destinatari</strong>: personale autorizzato e partner incaricati della gestione delle richieste. I dati non vengono ceduti a terzi per finalità di marketing non autorizzato.</p>
+
+          <p><strong>Diritti dell’interessato</strong>: accesso, rettifica, cancellazione, limitazione, opposizione, portabilità (nei limiti applicabili). Per esercitarli scrivi a <a href="mailto:info@consulhubpro.it">info@consulhubpro.it</a>.</p>
+
+          <p><strong>Reclamo</strong>: è possibile proporre reclamo al Garante per la Protezione dei Dati Personali.</p>
+
+          <p style="margin-bottom:0;color:rgba(17,24,39,.72)"><small>Ultimo aggiornamento: 13 febbraio 2026.</small></p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SEZIONI LEGALI -->
-  <section id="privacy" class="section legal">
-    <div class="container">
-      <div class="legal-card">
-        <h2>Privacy Policy</h2>
-        <p><strong>Titolare del trattamento</strong>: ConsulHub Pro. Contatto: <a href="mailto:info@consulhubpro.it">info@consulhubpro.it</a>.</p>
-        <p><strong>Dati trattati</strong>: dati di contatto e informazioni inserite volontariamente (nome, email, studio, telefono facoltativo, messaggio).</p>
-        <p><strong>Finalità</strong>: rispondere alle richieste di informazioni, organizzare eventuali call, gestire i contatti commerciali e precontrattuali.</p>
-        <p><strong>Base giuridica</strong>: esecuzione di misure precontrattuali richieste dall’interessato e legittimo interesse a gestire le richieste. Quando previsto, consenso.</p>
-        <p><strong>Modalità</strong>: il form del sito prepara l’email e apre il tuo client di posta; l’invio avviene solo dopo tua conferma.</p>
-        <p><strong>Conservazione</strong>: per il tempo necessario a gestire la richiesta e per eventuali obblighi di legge o tutela in caso di contestazioni.</p>
-        <p><strong>Destinatari</strong>: personale e partner incaricati della gestione delle richieste. Non cediamo dati a terzi per finalità di marketing non autorizzato.</p>
-        <p><strong>Diritti</strong>: accesso, rettifica, cancellazione, limitazione, opposizione, portabilità (nei limiti applicabili). Per esercitarli scrivi a <a href="mailto:info@consulhubpro.it">info@consulhubpro.it</a>.</p>
-        <p><strong>Reclamo</strong>: è possibile proporre reclamo al Garante per la Protezione dei Dati Personali.</p>
-        <p class="legal-note">Ultimo aggiornamento: 13 febbraio 2026.</p>
+    <section id="cookie" aria-labelledby="cookie-title">
+      <div class="container">
+        <div class="head">
+          <h2 id="cookie-title">Cookie Policy</h2>
+          <p>Informazioni sui cookie e tecnologie similari utilizzate sul sito.</p>
+        </div>
+
+        <div class="panel" style="padding:22px">
+          <p><strong>Cookie tecnici</strong>: questo sito utilizza cookie tecnici necessari al funzionamento e, se presenti, cookie di preferenza per ricordare scelte dell’utente (es. chiusura banner).</p>
+
+          <p><strong>Cookie di profilazione</strong>: al momento non utilizziamo cookie di profilazione pubblicitaria. Se in futuro verranno introdotti strumenti di analisi o marketing, verrà mostrato un banner con richiesta di consenso dedicato.</p>
+
+          <p><strong>Gestione cookie</strong>: puoi gestire o cancellare i cookie dalle impostazioni del browser. La disabilitazione dei cookie tecnici può compromettere alcune funzionalità.</p>
+
+          <p style="margin-bottom:0;color:rgba(17,24,39,.72)"><small>Ultimo aggiornamento: 13 febbraio 2026.</small></p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="cookie" class="section legal">
+<footer>
     <div class="container">
-      <div class="legal-card">
-        <h2>Cookie Policy</h2>
-        <p>Questo sito utilizza cookie tecnici necessari al funzionamento e cookie di preferenza per ricordare eventuali scelte (es. chiusura del banner informativo).</p>
-        <p>Non utilizziamo cookie di profilazione per pubblicità comportamentale. Se in futuro verranno introdotti strumenti di analisi o marketing, verrà richiesto un consenso dedicato.</p>
-        <p>Puoi gestire o cancellare i cookie dalle impostazioni del browser. La disabilitazione dei cookie tecnici può compromettere alcune funzionalità.</p>
-        <p class="legal-note">Ultimo aggiornamento: 13 febbraio 2026.</p>
-      </div>
-    </div>
-  </section>
+      <div class="foot">
+        <div class="foot-brand">
+          <img src="logo-chp.png" alt="Logo ConsulHub Pro" />
+          <div class="foot-meta">
+            <div><strong>ConsulHub Pro</strong></div>
+            <div>info@consulhubpro.it</div>
+          </div>
+        </div>
 
-  <footer>
-    <div class="container">
-      <div class="footerGrid">
-        <div>© <span id="year"></span> ConsulHub Pro. Tutti i diritti riservati.</div>
-        <div class="footerLinks">
+        <div class="foot-links" aria-label="Link rapidi">
+          <a href="#perche">Perché</a>
+          <a href="#servizi">Servizi</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contatti">Contatti</a>
           <a href="#privacy">Privacy</a>
           <a href="#cookie">Cookie</a>
-          <a href="#contatti">Contatti</a>
         </div>
       </div>
     </div>
   </footer>
 
-</main>
-
-<button class="floatBtn" title="Torna ai contatti" onclick="location.hash='#contatti'">IM</button>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <!-- Cookie notice (solo tecnico/preferenze) -->
-  <div id="cookieNotice" class="cookie-notice" role="dialog" aria-live="polite" aria-label="Informativa cookie">
-    <div class="cookie-inner">
-      <div class="cookie-text">
-        Questo sito usa cookie tecnici. Proseguendo accetti l’uso dei cookie necessari. <a href="#cookie">Leggi Cookie Policy</a>
-      </div>
-      <button class="cookie-btn" id="cookieOk" type="button">Ok</button>
-    </div>
-  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
     (function(){
-      document.getElementById('year').textContent = new Date().getFullYear();
-
       const menuBtn = document.getElementById('menuBtn');
       const mobilePanel = document.getElementById('mobilePanel');
 
@@ -954,35 +1186,50 @@
         toastTimer = setTimeout(() => toast.classList.remove('show'), 4200);
       }
 
+      async function resourceExists(url){
+        if(window.location && window.location.protocol === 'file:') return true;
+        try{
+          const r1 = await fetch(url, { method:'HEAD', cache:'no-store' });
+          if(r1.ok) return true;
+        }catch(e){}
+        try{
+          const r2 = await fetch(url, { method:'GET', cache:'no-store' });
+          return r2.ok;
+        }catch(e){
+          return false;
+        }
+      }
+
       const heroVideo = document.getElementById('heroVideo');
       const heroPlaceholder = document.getElementById('heroPlaceholder');
 
-      if(heroVideo && heroPlaceholder){
-        const tryPlay = () => {
-          const p = heroVideo.play();
-          if(p && typeof p.catch === 'function') p.catch(() => {});
-        };
-
-        heroVideo.addEventListener('loadeddata', () => {
-          heroPlaceholder.classList.add('hidden');
+      (async function initHeroVideo(){
+        if(!heroVideo || !heroPlaceholder) return;
+        const ok = await resourceExists('hero.mp4');
+        if(ok){
+          const source = document.createElement('source');
+          source.src = 'hero.mp4';
+          source.type = 'video/mp4';
+          heroVideo.appendChild(source);
           heroVideo.classList.remove('hidden');
-          tryPlay();
-        });
-
-        heroVideo.addEventListener('error', () => {
+          heroPlaceholder.classList.add('hidden');
+          try{ await heroVideo.play(); }catch(e){}
+        }else{
           heroVideo.classList.add('hidden');
           heroPlaceholder.classList.remove('hidden');
-        });
-
-        heroVideo.src = 'hero.mp4';
-        heroVideo.load();
-        tryPlay();
-      }
+        }
+      })();
 
       const checklistBtn = document.getElementById('checklistBtn');
       if(checklistBtn){
-        checklistBtn.setAttribute('href', 'checklist-studio.pdf');
-        checklistBtn.setAttribute('download', 'checklist-studio.pdf');
+        checklistBtn.addEventListener('click', async () => {
+          const ok = await resourceExists('checklist-studio.pdf');
+          if(ok){
+            window.open('checklist-studio.pdf', '_blank', 'noopener');
+          }else{
+            showToast("Checklist non trovata. Aggiungi 'checklist-studio.pdf' nella stessa cartella di index.html.");
+          }
+        });
       }
 
       const form = document.getElementById('contactForm');
@@ -997,31 +1244,16 @@
 
           const subject = encodeURIComponent('Richiesta informazioni ConsulHub Pro');
           const body = encodeURIComponent(
-            "Nome: " + nome + "\\n" +
-            "Email: " + email + "\\n" +
-            "Studio: " + studio + "\\n" +
-            (telefono ? "Telefono: " + telefono + "\\n" : "") +
-            "\\nMessaggio:\\n" + messaggio + "\\n"
+            "Nome: " + nome + "\n" +
+            "Email: " + email + "\n" +
+            "Studio: " + studio + "\n" +
+            (telefono ? "Telefono: " + telefono + "\n" : "") +
+            "\nMessaggio:\n" + messaggio + "\n"
           );
 
           window.location.href = "mailto:info@consulhubpro.it?subject=" + subject + "&body=" + body;
           showToast("Apro l'email con la richiesta pronta da inviare.");
           form.reset();
-        });
-      }
-
-      const notice = document.getElementById('cookieNotice');
-      const okBtn = document.getElementById('cookieOk');
-      const hasConsent = document.cookie.split(';').some(c => c.trim().startsWith('chp_cookie_ok=1'));
-
-      if(notice && okBtn && !hasConsent){
-        notice.classList.add('show');
-        okBtn.addEventListener('click', () => {
-          const days = 180;
-          const d = new Date();
-          d.setTime(d.getTime() + (days*24*60*60*1000));
-          document.cookie = "chp_cookie_ok=1; expires=" + d.toUTCString() + "; path=/; SameSite=Lax";
-          notice.classList.remove('show');
         });
       }
     })();
