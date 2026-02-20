@@ -4,44 +4,108 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- SEO + Social (UNICO, coerente) -->
   <title>ConsulHub Pro | Servizi premium e formazione finanziata per Studi di Consulenza del Lavoro</title>
   <meta name="description" content="ConsulHub Pro supporta Studi di Consulenza del Lavoro e Commercialisti con 3 pilastri chiari e servizi complementari erogati da partner premium. Formazione finanziata attivabile subito per le PMI dei clienti, senza numero minimo di partecipanti. Delivery gestita senza appesantire lo Studio." />
-  <meta name="robots" content="index,follow" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#f6f8fb" />
+  <link rel="canonical" href="https://www.consulhubpro.it/" />
 
-  <meta property="og:title" content="ConsulHub Pro | Servizi premium e formazione finanziata per Studi" />
-  <meta property="og:description" content="3 pilastri chiari e servizi complementari con partner premium. Formazione finanziata attivabile subito per le PMI, senza numero minimo di partecipanti. Delivery gestita senza appesantire lo Studio." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="logo-chp.png" />
+  <meta property="og:site_name" content="ConsulHub Pro" />
+  <meta property="og:title" content="ConsulHub Pro | Servizi premium e formazione finanziata per Studi di Consulenza del Lavoro" />
+  <meta property="og:description" content="3 pilastri chiari e servizi complementari con partner premium. Formazione finanziata attivabile subito per le PMI, senza numero minimo di partecipanti." />
+  <meta property="og:url" content="https://www.consulhubpro.it/" />
+  <meta property="og:image" content="https://www.consulhubpro.it/logo-chp.png" />
 
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="ConsulHub Pro | Servizi premium e formazione finanziata per Studi" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ConsulHub Pro | Servizi premium e formazione finanziata per Studi di Consulenza del Lavoro" />
   <meta name="twitter:description" content="3 pilastri chiari e servizi complementari con partner premium. Formazione finanziata attivabile subito per le PMI, senza numero minimo di partecipanti." />
-  <meta name="twitter:image" content="logo-chp.png" />
+  <meta name="twitter:image" content="https://www.consulhubpro.it/logo-chp.png" />
 
+  <!-- Structured Data (AI friendly + FAQ) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@graph":[
       {
         "@type":"Organization",
+        "@id":"https://www.consulhubpro.it/#organization",
         "name":"ConsulHub Pro",
-        "logo":"logo-chp.png",
+        "url":"https://www.consulhubpro.it/",
+        "logo":"https://www.consulhubpro.it/logo-chp.png",
         "email":"info@consulhubpro.it",
+        "sameAs":[
+          "https://www.facebook.com/profile.php?id=61585127122604",
+          "https://www.linkedin.com/company/consulhub-pro/posts/?feedView=all",
+          "https://www.instagram.com/serviziconsulenzalavoro24?igsh=aG8xcDQ3eDgxd3J2"
+        ],
         "contactPoint":[
           {
             "@type":"ContactPoint",
-            "contactType":"info",
+            "contactType":"customer support",
             "email":"info@consulhubpro.it",
-            "availableLanguage":["it"]
+            "telephone":"+39 338 326 2280",
+            "availableLanguage":["it"],
+            "url":"https://wa.me/393383262280"
           }
         ]
       },
       {
         "@type":"WebSite",
+        "@id":"https://www.consulhubpro.it/#website",
         "name":"ConsulHub Pro",
+        "url":"https://www.consulhubpro.it/",
         "inLanguage":"it",
-        "publisher":{"@type":"Organization","name":"ConsulHub Pro"}
+        "publisher":{"@id":"https://www.consulhubpro.it/#organization"}
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://www.consulhubpro.it/#webpage",
+        "url":"https://www.consulhubpro.it/",
+        "name":"ConsulHub Pro | Servizi premium e formazione finanziata per Studi di Consulenza del Lavoro",
+        "description":"ConsulHub Pro supporta Studi di Consulenza del Lavoro e Commercialisti con 3 pilastri chiari e servizi complementari erogati da partner premium. Formazione finanziata attivabile subito per le PMI dei clienti, senza numero minimo di partecipanti. Delivery gestita senza appesantire lo Studio.",
+        "inLanguage":"it",
+        "isPartOf":{"@id":"https://www.consulhubpro.it/#website"},
+        "about":{"@id":"https://www.consulhubpro.it/#organization"}
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://www.consulhubpro.it/#faq",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"ConsulHub Pro lavora con le aziende o con gli Studi?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"ConsulHub Pro è pensato per Studi di Consulenza del Lavoro e Commercialisti: lo Studio resta il riferimento per l’azienda cliente, mentre la delivery viene gestita dai partner."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"La formazione finanziata richiede un numero minimo di partecipanti?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"No. La formazione può essere attivata anche senza numero minimo di partecipanti, con percorso e documentazione ordinati."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Il team dello Studio deve gestire operativamente i servizi?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"No. L’operatività viene gestita dai partner. Lo Studio mantiene il presidio della relazione e la regia complessiva."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Quanto tempo serve per partire?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Dipende dal servizio e dai dati disponibili. In call definiamo perimetro e tempi, con un percorso chiaro per partire rapidamente."
+            }
+          }
+        ]
       }
     ]
   }
@@ -656,48 +720,49 @@
       font-weight:750;
     }
     .toast.show{display:block}
+
+    /* Social + WhatsApp floating */
+    .social-float{
+      position:fixed;
+      right:18px;
+      bottom:78px;
+      z-index:9999;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    .social-float a{
+      background: rgba(11,18,32,.92);
+      color:#fff;
+      text-decoration:none;
+      padding:10px 12px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:800;
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow:0 10px 26px rgba(11,18,32,.18);
+      backdrop-filter: blur(10px);
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+      text-align:center;
+      min-width:118px;
+    }
+    .social-float a:hover{
+      transform: translateY(-1px);
+      background: rgba(11,18,32,.98);
+      border-color: rgba(255,255,255,.26);
+    }
+    @media (max-width:520px){
+      .social-float{
+        right:12px;
+        bottom:86px;
+      }
+      .social-float a{
+        padding:11px 12px;
+        min-width:110px;
+      }
+    }
   </style>
-  <!-- SEO + Social + AI (ConsulHub Pro) -->
-<title>ConsulHub Pro | Servizi e risorse per Studi di Consulenza del Lavoro</title>
-
-<meta name="description" content="ConsulHub Pro supporta gli Studi di Consulenza del Lavoro con risorse operative, formazione e servizi specialistici: payroll outsourcing, HR & compliance, sicurezza, IT e accesso al credito.">
-
-<link rel="canonical" href="https://www.consulhubpro.it/">
-<meta name="robots" content="index,follow,max-image-preview:large">
-
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="ConsulHub Pro">
-<meta property="og:title" content="ConsulHub Pro | Servizi e risorse per Studi di Consulenza del Lavoro">
-<meta property="og:description" content="Risorse operative, formazione e servizi specialistici per Studi di Consulenza del Lavoro.">
-<meta property="og:url" content="https://www.consulhubpro.it/">
-<meta property="og:image" content="https://www.consulhubpro.it/logo-chp.png">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ConsulHub Pro | Servizi e risorse per Studi di Consulenza del Lavoro">
-<meta name="twitter:description" content="Risorse operative, formazione e servizi specialistici per Studi di Consulenza del Lavoro.">
-<meta name="twitter:image" content="https://www.consulhubpro.it/logo-chp.png">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "ConsulHub Pro",
-  "url": "https://www.consulhubpro.it/",
-  "logo": "https://www.consulhubpro.it/logo-chp.png",
-  "sameAs": [
-    "https://www.facebook.com/profile.php?id=61585127122604",
-    "https://www.linkedin.com/company/consulhub-pro/",
-    "https://www.instagram.com/serviziconsulenzalavoro24/"
-  ],
-  "contactPoint": [{
-    "@type": "ContactPoint",
-    "telephone": "+39 338 326 2280",
-    "contactType": "customer support",
-    "availableLanguage": ["it"],
-    "url": "https://wa.me/393383262280"
-  }]
-}
-</script>
 </head>
 
 <body>
@@ -1122,58 +1187,57 @@
     </section>
   </main>
 
-  
-    <section id="privacy" aria-labelledby="privacy-title">
-      <div class="container">
-        <div class="head">
-          <h2 id="privacy-title">Privacy Policy</h2>
-          <p>Informativa ai sensi del Regolamento UE 2016/679 (GDPR).</p>
-        </div>
-
-        <div class="panel" style="padding:22px">
-          <p><strong>Titolare del trattamento</strong>: ConsulHub Pro. Contatto: <a href="mailto:info@consulhubpro.it">info@consulhubpro.it</a>.</p>
-
-          <p><strong>Dati trattati</strong>: nome e cognome, email, studio, telefono (facoltativo), contenuto del messaggio e ogni informazione inviata volontariamente.</p>
-
-          <p><strong>Finalità</strong>: rispondere alle richieste di informazioni, organizzare eventuali call, gestire i contatti commerciali e le attività precontrattuali richieste dall’interessato.</p>
-
-          <p><strong>Base giuridica</strong>: esecuzione di misure precontrattuali richieste dall’interessato e legittimo interesse del Titolare a gestire le richieste e tutelarsi in caso di contestazioni.</p>
-
-          <p><strong>Modalità di invio</strong>: il modulo “Contatti” prepara l’email e apre il tuo client di posta. L’invio avviene solo dopo tua conferma (non salviamo automaticamente i dati tramite database nel sito).</p>
-
-          <p><strong>Conservazione</strong>: per il tempo necessario a gestire la richiesta e, se nasce un rapporto, per la durata del rapporto e per gli obblighi di legge applicabili.</p>
-
-          <p><strong>Destinatari</strong>: personale autorizzato e partner incaricati della gestione delle richieste. I dati non vengono ceduti a terzi per finalità di marketing non autorizzato.</p>
-
-          <p><strong>Diritti dell’interessato</strong>: accesso, rettifica, cancellazione, limitazione, opposizione, portabilità (nei limiti applicabili). Per esercitarli scrivi a <a href="mailto:info@consulhubpro.it">info@consulhubpro.it</a>.</p>
-
-          <p><strong>Reclamo</strong>: è possibile proporre reclamo al Garante per la Protezione dei Dati Personali.</p>
-
-          <p style="margin-bottom:0;color:rgba(17,24,39,.72)"><small>Ultimo aggiornamento: 13 febbraio 2026.</small></p>
-        </div>
+  <section id="privacy" aria-labelledby="privacy-title">
+    <div class="container">
+      <div class="head">
+        <h2 id="privacy-title">Privacy Policy</h2>
+        <p>Informativa ai sensi del Regolamento UE 2016/679 (GDPR).</p>
       </div>
-    </section>
 
-    <section id="cookie" aria-labelledby="cookie-title">
-      <div class="container">
-        <div class="head">
-          <h2 id="cookie-title">Cookie Policy</h2>
-          <p>Informazioni sui cookie e tecnologie similari utilizzate sul sito.</p>
-        </div>
+      <div class="panel" style="padding:22px">
+        <p><strong>Titolare del trattamento</strong>: ConsulHub Pro. Contatto: <a href="mailto:info@consulhubpro.it">info@consulhubpro.it</a>.</p>
 
-        <div class="panel" style="padding:22px">
-          <p><strong>Cookie tecnici</strong>: questo sito utilizza cookie tecnici necessari al funzionamento e, se presenti, cookie di preferenza per ricordare scelte dell’utente (es. chiusura banner).</p>
+        <p><strong>Dati trattati</strong>: nome e cognome, email, studio, telefono (facoltativo), contenuto del messaggio e ogni informazione inviata volontariamente.</p>
 
-          <p><strong>Cookie di profilazione</strong>: al momento non utilizziamo cookie di profilazione pubblicitaria. Se in futuro verranno introdotti strumenti di analisi o marketing, verrà mostrato un banner con richiesta di consenso dedicato.</p>
+        <p><strong>Finalità</strong>: rispondere alle richieste di informazioni, organizzare eventuali call, gestire i contatti commerciali e le attività precontrattuali richieste dall’interessato.</p>
 
-          <p><strong>Gestione cookie</strong>: puoi gestire o cancellare i cookie dalle impostazioni del browser. La disabilitazione dei cookie tecnici può compromettere alcune funzionalità.</p>
+        <p><strong>Base giuridica</strong>: esecuzione di misure precontrattuali richieste dall’interessato e legittimo interesse del Titolare a gestire le richieste e tutelarsi in caso di contestazioni.</p>
 
-          <p style="margin-bottom:0;color:rgba(17,24,39,.72)"><small>Ultimo aggiornamento: 13 febbraio 2026.</small></p>
-        </div>
+        <p><strong>Modalità di invio</strong>: il modulo “Contatti” prepara l’email e apre il tuo client di posta. L’invio avviene solo dopo tua conferma (non salviamo automaticamente i dati tramite database nel sito).</p>
+
+        <p><strong>Conservazione</strong>: per il tempo necessario a gestire la richiesta e, se nasce un rapporto, per la durata del rapporto e per gli obblighi di legge applicabili.</p>
+
+        <p><strong>Destinatari</strong>: personale autorizzato e partner incaricati della gestione delle richieste. I dati non vengono ceduti a terzi per finalità di marketing non autorizzato.</p>
+
+        <p><strong>Diritti dell’interessato</strong>: accesso, rettifica, cancellazione, limitazione, opposizione, portabilità (nei limiti applicabili). Per esercitarli scrivi a <a href="mailto:info@consulhubpro.it">info@consulhubpro.it</a>.</p>
+
+        <p><strong>Reclamo</strong>: è possibile proporre reclamo al Garante per la Protezione dei Dati Personali.</p>
+
+        <p style="margin-bottom:0;color:rgba(17,24,39,.72)"><small>Ultimo aggiornamento: 13 febbraio 2026.</small></p>
       </div>
-    </section>
+    </div>
+  </section>
 
-<footer>
+  <section id="cookie" aria-labelledby="cookie-title">
+    <div class="container">
+      <div class="head">
+        <h2 id="cookie-title">Cookie Policy</h2>
+        <p>Informazioni sui cookie e tecnologie similari utilizzate sul sito.</p>
+      </div>
+
+      <div class="panel" style="padding:22px">
+        <p><strong>Cookie tecnici</strong>: questo sito utilizza cookie tecnici necessari al funzionamento e, se presenti, cookie di preferenza per ricordare scelte dell’utente (es. chiusura banner).</p>
+
+        <p><strong>Cookie di profilazione</strong>: al momento non utilizziamo cookie di profilazione pubblicitaria. Se in futuro verranno introdotti strumenti di analisi o marketing, verrà mostrato un banner con richiesta di consenso dedicato.</p>
+
+        <p><strong>Gestione cookie</strong>: puoi gestire o cancellare i cookie dalle impostazioni del browser. La disabilitazione dei cookie tecnici può compromettere alcune funzionalità.</p>
+
+        <p style="margin-bottom:0;color:rgba(17,24,39,.72)"><small>Ultimo aggiornamento: 13 febbraio 2026.</small></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
     <div class="container">
       <div class="foot">
         <div class="foot-brand">
@@ -1197,6 +1261,14 @@
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Floating buttons -->
+  <div class="social-float" aria-label="Social ConsulHub Pro">
+    <a href="https://wa.me/393383262280" target="_blank" rel="noopener" aria-label="WhatsApp ConsulHub Pro">WhatsApp</a>
+    <a href="https://www.instagram.com/serviziconsulenzalavoro24?igsh=aG8xcDQ3eDgxd3J2" target="_blank" rel="noopener" aria-label="Instagram ConsulHub Pro">Instagram</a>
+    <a href="https://www.linkedin.com/company/consulhub-pro/posts/?feedView=all" target="_blank" rel="noopener" aria-label="LinkedIn ConsulHub Pro">LinkedIn</a>
+    <a href="https://www.facebook.com/profile.php?id=61585127122604" target="_blank" rel="noopener" aria-label="Facebook ConsulHub Pro">Facebook</a>
+  </div>
 
   <script>
     (function(){
@@ -1299,29 +1371,5 @@
       }
     })();
   </script>
- <!-- Social + WhatsApp (floating) -->
-<style>
-  .social-float{
-    position:fixed;
-    right:18px;
-    bottom:78px;
-    z-index:9999;
-    display:flex;
-    gap:10px;
-    align-items:center;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  }
-  .social-float a{
-    background: rgba(0,0,0,0.75);
-    color:#fff;
-    text-decoration:none;
-    padding:8px 10px;
-    border-radius:999px;
-    font-size:13px;
-    font-weight:600;
-    box-shadow:0 6px 18px rgba(0
 </body>
 </html>
-
-
-
