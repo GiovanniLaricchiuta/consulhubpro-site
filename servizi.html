@@ -1,142 +1,786 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Servizi | ConsulHub Pro</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servizi | ConsulHub Pro</title>
+  <meta name="description" content="Le 5 macroaree di servizi ConsulHub Pro: crescita, HR, marketing, compliance, efficienza operativa e innovazione." />
+  <meta name="theme-color" content="#0f172a" />
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Servizi | ConsulHub Pro" />
+  <meta property="og:description" content="Servizi organizzati in 5 macroaree per Studi di consulenza del lavoro e PMI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.consulhubpro.it/servizi.html" />
+  <meta property="og:image" content="https://www.consulhubpro.it/logo-chp.png" />
 
-<style>
-body{margin:0;font-family:'Inter',sans-serif;background:#f5f7fb;color:#0f172a}
-.container{width:90%;max-width:1200px;margin:auto}
-header{background:#fff;padding:20px 0;border-bottom:1px solid #eee}
-header .nav{display:flex;justify-content:space-between;align-items:center}
-header a{margin:0 10px;text-decoration:none;color:#0f172a;font-weight:500}
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-.hero{padding:100px 0;background:linear-gradient(135deg,#0ea5e9,#6366f1);color:#fff;text-align:center}
-.hero h1{font-size:42px;margin-bottom:20px}
-.hero p{max-width:700px;margin:auto;font-size:18px}
+  <script type="text/javascript" src="https://embeds.iubenda.com/widgets/ff65dfa4-bd4d-478e-bac9-43a70683b4cf.js"></script>
 
-.section{padding:80px 0}
-.section h2{text-align:center;margin-bottom:20px}
-.section p{text-align:center;max-width:700px;margin:0 auto 50px}
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --bg-soft:#eef3fb;
+      --surface:#ffffff;
+      --surface-2:#f8fbff;
+      --text:#0f172a;
+      --muted:#475569;
+      --line:rgba(15,23,42,.08);
+      --line-strong:rgba(15,23,42,.14);
+      --primary:#155eef;
+      --primary-2:#14b8ff;
+      --accent:#7c3aed;
+      --shadow:0 18px 60px rgba(15,23,42,.08);
+      --shadow-lg:0 30px 90px rgba(21,94,239,.14);
+      --radius:24px;
+      --radius-md:18px;
+      --radius-sm:14px;
+      --max:1240px;
+      --header-h:82px;
+    }
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
-.card{background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.05)}
-.card h3{margin-bottom:15px}
-.card ul{padding-left:18px}
-.card li{margin-bottom:8px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Inter',sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(20,184,255,.14), transparent 26%),
+        radial-gradient(circle at 85% 18%, rgba(124,58,237,.10), transparent 24%),
+        linear-gradient(180deg,#f8fbff 0%, #f4f7fc 42%, #f8fbff 100%);
+      color:var(--text);
+      overflow-x:hidden;
+    }
 
-.cta{background:#0f172a;color:#fff;text-align:center;padding:80px 20px}
-.cta h2{margin-bottom:20px}
-.btn{display:inline-block;padding:14px 22px;border-radius:30px;text-decoration:none;margin:10px}
-.btn-primary{background:#0ea5e9;color:#fff}
-.btn-secondary{background:#fff;color:#0f172a}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    video{display:block}
+    .container{width:min(calc(100% - 32px), var(--max));margin:0 auto}
+    .section{padding:96px 0;position:relative}
+    .section-tight{padding:72px 0}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;
+      font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+      color:#0b5dd7;
+      padding:10px 14px;border-radius:999px;
+      background:rgba(21,94,239,.08);
+      border:1px solid rgba(21,94,239,.10);
+      backdrop-filter:blur(8px);
+    }
+    .eyebrow::before{
+      content:"";
+      width:8px;height:8px;border-radius:50%;
+      background:linear-gradient(135deg,var(--primary),var(--primary-2));
+      box-shadow:0 0 0 6px rgba(21,94,239,.08);
+    }
+    .section-head{
+      display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:end;
+      margin-bottom:30px;
+    }
+    .section-head h2{
+      margin:14px 0 0;
+      font-size:clamp(34px,4vw,56px);
+      line-height:1.02;
+      letter-spacing:-.04em;
+    }
+    .section-head p{
+      margin:0;
+      font-size:18px;
+      line-height:1.75;
+      color:var(--muted);
+      max-width:620px;
+    }
 
-footer{background:#111827;color:#fff;padding:40px 0;text-align:center}
-</style>
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:15px 22px;border-radius:999px;font-weight:800;font-size:15px;
+      transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease;
+      border:1px solid transparent;cursor:pointer;white-space:nowrap;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{
+      color:#fff;
+      background:linear-gradient(135deg,var(--primary),var(--primary-2));
+      box-shadow:0 18px 44px rgba(21,94,239,.25);
+    }
+    .btn-secondary{
+      color:var(--text);
+      background:rgba(255,255,255,.8);
+      border:1px solid rgba(15,23,42,.10);
+      backdrop-filter:blur(14px);
+    }
+    .btn-dark{
+      color:#fff;background:#0f172a;border-color:#0f172a;
+      box-shadow:0 16px 34px rgba(15,23,42,.18);
+    }
+
+    .site-header{
+      position:fixed;top:0;left:0;width:100%;z-index:1000;
+      transition:background .25s ease, box-shadow .25s ease, backdrop-filter .25s ease, border-color .25s ease;
+      border-bottom:1px solid transparent;
+    }
+    .site-header.scrolled{
+      background:rgba(255,255,255,.78);
+      backdrop-filter:blur(18px);
+      box-shadow:0 10px 30px rgba(15,23,42,.06);
+      border-color:rgba(15,23,42,.06);
+    }
+    .header-inner{
+      min-height:var(--header-h);
+      display:flex;align-items:center;justify-content:space-between;gap:22px;
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{height:44px;width:auto}
+    .nav{display:flex;align-items:center;gap:20px}
+    .nav a{
+      font-size:15px;font-weight:700;color:#0f172a;opacity:.88;
+      transition:opacity .2s ease,color .2s ease;
+    }
+    .nav a:hover{opacity:1;color:var(--primary)}
+    .header-cta{display:flex;align-items:center;gap:12px}
+    .menu-toggle{display:none}
+
+    .hero{
+      position:relative;
+      min-height:78svh;
+      padding-top:calc(var(--header-h) + 30px);
+      display:flex;align-items:center;
+      overflow:hidden;isolation:isolate;
+    }
+    .hero-bg{
+      position:absolute;inset:0;z-index:-3;overflow:hidden;
+    }
+    .hero-bg video{
+      width:100%;height:100%;object-fit:cover;object-position:center center;
+      filter:saturate(1.05) contrast(1.03);
+    }
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;z-index:-2;
+      background:
+        linear-gradient(115deg, rgba(4,10,25,.80) 0%, rgba(11,22,52,.66) 42%, rgba(17,24,39,.34) 70%, rgba(17,24,39,.58) 100%);
+    }
+    .hero::after{
+      content:"";
+      position:absolute;inset:0;z-index:-1;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(20,184,255,.22), transparent 22%),
+        radial-gradient(circle at 85% 15%, rgba(124,58,237,.20), transparent 24%),
+        radial-gradient(circle at 70% 85%, rgba(21,94,239,.14), transparent 25%);
+      mix-blend-mode:screen;
+      opacity:.9;
+    }
+    .hero-grid{
+      display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;
+      padding:38px 0 54px;
+    }
+    .hero-copy{color:#fff;max-width:760px}
+    .hero-copy .eyebrow{
+      color:#d7ecff;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12)
+    }
+    .hero-copy h1{
+      margin:20px 0 18px;
+      font-size:clamp(44px,6vw,78px);
+      line-height:.98;
+      letter-spacing:-.06em;
+      max-width:820px;
+    }
+    .hero-copy p{
+      font-size:20px;line-height:1.7;color:rgba(255,255,255,.88);
+      margin:0 0 26px;max-width:690px;
+    }
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:22px}
+    .hero-note{
+      display:flex;flex-wrap:wrap;gap:14px;
+      color:rgba(255,255,255,.76);font-size:14px;font-weight:700;
+    }
+    .hero-note span{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 12px;border-radius:999px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(10px);
+    }
+
+    .hero-panel{
+      position:relative;
+      padding:26px;
+      border-radius:28px;
+      background:linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.06));
+      border:1px solid rgba(255,255,255,.14);
+      backdrop-filter:blur(20px);
+      box-shadow:0 30px 80px rgba(0,0,0,.18);
+      color:#fff;
+      justify-self:end;
+      width:min(100%, 470px);
+    }
+    .hero-panel::before{
+      content:"";
+      position:absolute;inset:12px;border-radius:22px;
+      border:1px solid rgba(255,255,255,.10);pointer-events:none;
+    }
+    .hero-panel h3{
+      margin:0 0 12px;font-size:26px;line-height:1.08;letter-spacing:-.03em
+    }
+    .hero-panel p{
+      margin:0 0 18px;color:rgba(255,255,255,.82);line-height:1.75;font-size:16px
+    }
+    .hero-panel ul{
+      list-style:none;padding:0;margin:0;display:grid;gap:10px
+    }
+    .hero-panel li{
+      padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.10);font-weight:700;font-size:14px
+    }
+
+    .card-grid{
+      display:grid;grid-template-columns:repeat(2,1fr);gap:24px;
+    }
+    .service-block{
+      position:relative;
+      background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.88));
+      border:1px solid rgba(15,23,42,.08);
+      box-shadow:var(--shadow);
+      border-radius:30px;
+      overflow:hidden;
+    }
+    .service-top{
+      display:grid;grid-template-columns:1.05fr .95fr;min-height:420px;
+    }
+    .service-copy{
+      padding:34px 32px 30px;
+    }
+    .service-copy h3{
+      margin:14px 0 14px;
+      font-size:34px;line-height:1.02;letter-spacing:-.04em;
+    }
+    .service-copy p{
+      margin:0 0 22px;color:var(--muted);line-height:1.82;font-size:16px;
+    }
+    .service-list{
+      display:grid;gap:12px;margin:22px 0 24px;
+    }
+    .service-list a{
+      display:flex;justify-content:space-between;align-items:center;gap:14px;
+      padding:14px 16px;border-radius:16px;background:#fff;
+      border:1px solid rgba(15,23,42,.08);font-weight:800;
+      transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+    }
+    .service-list a:hover{
+      transform:translateY(-2px);
+      border-color:rgba(21,94,239,.20);
+      box-shadow:0 14px 34px rgba(21,94,239,.10);
+    }
+    .service-list a span:last-child{
+      color:#0b5dd7;font-size:18px;font-weight:900;
+    }
+    .service-actions{
+      display:flex;flex-wrap:wrap;gap:12px;
+    }
+
+    .service-visual{
+      position:relative;
+      min-height:100%;
+      overflow:hidden;
+    }
+    .service-visual::before{
+      content:"";
+      position:absolute;inset:0;
+      background:
+        linear-gradient(160deg, rgba(7,16,40,.30), rgba(7,16,40,.72)),
+        radial-gradient(circle at 18% 20%, rgba(20,184,255,.34), transparent 24%),
+        radial-gradient(circle at 84% 18%, rgba(124,58,237,.26), transparent 22%),
+        radial-gradient(circle at 72% 82%, rgba(21,94,239,.24), transparent 26%);
+    }
+    .service-visual.visual-growth{
+      background:
+        linear-gradient(135deg,#0f172a 0%, #163778 48%, #10214c 100%),
+        url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      background-blend-mode:overlay;
+    }
+    .service-visual.visual-hr{
+      background:
+        linear-gradient(135deg,#0f172a 0%, #163778 48%, #10214c 100%),
+        url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      background-blend-mode:overlay;
+    }
+    .service-visual.visual-marketing{
+      background:
+        linear-gradient(135deg,#0f172a 0%, #163778 48%, #10214c 100%),
+        url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      background-blend-mode:overlay;
+    }
+    .service-visual.visual-compliance{
+      background:
+        linear-gradient(135deg,#0f172a 0%, #163778 48%, #10214c 100%),
+        url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      background-blend-mode:overlay;
+    }
+    .service-visual.visual-innovation{
+      background:
+        linear-gradient(135deg,#0f172a 0%, #163778 48%, #10214c 100%),
+        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      background-blend-mode:overlay;
+    }
+    .visual-content{
+      position:absolute;left:0;right:0;bottom:0;padding:28px;color:#fff;z-index:2;
+    }
+    .visual-note{
+      display:inline-flex;padding:8px 12px;border-radius:999px;
+      background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.14);
+      font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+      margin-bottom:14px;
+    }
+    .visual-content h4{
+      margin:0 0 8px;font-size:28px;line-height:1.04;letter-spacing:-.04em;
+    }
+    .visual-content p{
+      margin:0;color:rgba(255,255,255,.84);line-height:1.7;font-size:15px;
+    }
+
+    .closing{
+      border-radius:34px;overflow:hidden;
+      background:linear-gradient(135deg,#0f172a 0%, #163778 48%, #10214c 100%);
+      color:#fff;padding:40px;border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 30px 80px rgba(15,23,42,.18)
+    }
+    .closing-grid{
+      display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center
+    }
+    .closing h2{
+      margin:0 0 14px;font-size:clamp(34px,4vw,54px);line-height:1;letter-spacing:-.05em
+    }
+    .closing p{
+      margin:0;color:rgba(255,255,255,.84);line-height:1.82;font-size:18px;max-width:720px
+    }
+    .closing-actions{
+      display:flex;flex-wrap:wrap;gap:14px;justify-content:flex-end
+    }
+    .closing .btn-secondary{
+      color:#fff;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14)
+    }
+
+    .footer{
+      padding:34px 0 46px;
+      border-top:1px solid rgba(15,23,42,.08);
+      background:linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,.78));
+      backdrop-filter:blur(12px);
+    }
+    .footer-grid{
+      display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:start
+    }
+    .footer-brand img{height:48px;width:auto;margin-bottom:14px}
+    .footer-brand p{
+      margin:0;max-width:660px;color:var(--muted);line-height:1.78;font-size:15px
+    }
+    .footer-links{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:20px
+    }
+    .footer-links h4{
+      margin:0 0 12px;font-size:14px;text-transform:uppercase;letter-spacing:.10em;color:#0b5dd7
+    }
+    .footer-links a{
+      display:block;margin:0 0 10px;color:#0f172a;font-weight:700;opacity:.82
+    }
+    .footer-links a:hover{opacity:1;color:var(--primary)}
+    .footer-bottom{
+      margin-top:24px;padding-top:20px;border-top:1px solid rgba(15,23,42,.08);
+      display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:14px
+    }
+
+    @media (max-width:1180px){
+      .hero-grid,.section-head,.service-top,.closing-grid,.footer-grid{grid-template-columns:1fr}
+      .hero-panel{justify-self:start;width:min(100%,560px)}
+      .card-grid{grid-template-columns:1fr}
+      .closing-actions{justify-content:flex-start}
+    }
+
+    @media (max-width:920px){
+      .nav,.header-cta{display:none}
+      .menu-toggle{
+        display:inline-flex;align-items:center;justify-content:center;
+        width:48px;height:48px;border-radius:14px;border:1px solid rgba(15,23,42,.08);
+        background:rgba(255,255,255,.84);font-size:20px;font-weight:900;color:#0f172a;cursor:pointer
+      }
+      .mobile-nav{
+        position:fixed;top:calc(var(--header-h) + 8px);left:16px;right:16px;z-index:999;
+        background:rgba(255,255,255,.94);backdrop-filter:blur(18px);
+        border:1px solid rgba(15,23,42,.08);border-radius:24px;box-shadow:var(--shadow);
+        padding:18px;display:none
+      }
+      .mobile-nav.open{display:block}
+      .mobile-nav a{
+        display:block;padding:14px 8px;font-weight:800;border-bottom:1px solid rgba(15,23,42,.06)
+      }
+      .mobile-nav a:last-child{border-bottom:none}
+      .footer-links{grid-template-columns:1fr 1fr}
+    }
+
+    @media (max-width:640px){
+      :root{--header-h:74px}
+      .section{padding:78px 0}
+      .section-tight{padding:62px 0}
+      .container{width:min(calc(100% - 22px), var(--max))}
+      .hero{min-height:auto;padding-top:calc(var(--header-h) + 28px)}
+      .hero-grid{padding:30px 0 44px}
+      .hero-copy p{font-size:17px}
+      .hero-actions{flex-direction:column;align-items:flex-start}
+      .hero-actions .btn{width:100%}
+      .hero-panel{padding:22px}
+      .service-copy,.visual-content,.closing{padding:22px}
+      .footer-links{grid-template-columns:1fr}
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-<div class="container nav">
-<div><strong>ConsulHub Pro</strong></div>
-<div>
-<a href="index.html">Home</a>
-<a href="per-studi.html">Per Studi</a>
-<a href="pilastri.html">Pilastri</a>
-<a href="servizi.html">Servizi</a>
-<a href="blog.html">Blog</a>
-<a href="contatti.html">Contatti</a>
-</div>
-</div>
-</header>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="ConsulHub Pro">
+        <img src="logo-chp.png" alt="ConsulHub Pro">
+      </a>
 
-<section class="hero">
-<div class="container">
-<h1>Servizi organizzati per crescere senza dispersione</h1>
-<p>Non un elenco confuso, ma un sistema strutturato in macroaree. Ogni servizio è pensato per essere attivato in modo chiaro, coordinato e professionale.</p>
-</div>
-</section>
+      <nav class="nav" aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="per-studi.html">Per Studi</a>
+        <a href="pilastri.html">Pilastri</a>
+        <a href="servizi.html">Servizi</a>
+        <a href="blog.html">Blog</a>
+        <a href="contatti.html">Contatti</a>
+      </nav>
 
-<section class="section">
-<div class="container">
+      <div class="header-cta">
+        <a class="btn btn-secondary" href="https://wa.me/393383262280" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a class="btn btn-primary" href="https://calendly.com/giovanni-laricchiuta/" target="_blank" rel="noopener noreferrer">Prenota call</a>
+      </div>
 
-<h2>Le 5 macroaree</h2>
-<p>Ogni area raggruppa servizi coerenti tra loro, per aiutarti a trovare subito la soluzione giusta senza perdere tempo.</p>
+      <button class="menu-toggle" id="menuToggle" aria-label="Apri menu">☰</button>
+    </div>
 
-<div class="grid">
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="per-studi.html">Per Studi</a>
+      <a href="pilastri.html">Pilastri</a>
+      <a href="servizi.html">Servizi</a>
+      <a href="blog.html">Blog</a>
+      <a href="contatti.html">Contatti</a>
+      <a href="https://wa.me/393383262280" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href="https://calendly.com/giovanni-laricchiuta/" target="_blank" rel="noopener noreferrer">Prenota call</a>
+    </div>
+  </header>
 
-<div class="card">
-<h3>Crescita, finanza e sviluppo</h3>
-<ul>
-<li>Bandi e finanza agevolata</li>
-<li>Strategia e sviluppo PMI</li>
-<li>Leasing e flotte</li>
-<li>Servizi assicurativi</li>
-</ul>
-<a class="btn btn-primary" href="crescita-finanza-sviluppo.html">Approfondisci</a>
-</div>
+  <main>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <video autoplay muted loop playsinline poster="logo-chp.png">
+          <source src="hero.mp4" type="video/mp4">
+        </video>
+      </div>
 
-<div class="card">
-<h3>HR e organizzazione</h3>
-<ul>
-<li>Ricerca personale</li>
-<li>Consulenza HR</li>
-<li>Coaching e team building</li>
-</ul>
-<a class="btn btn-primary" href="hr-organizzazione.html">Approfondisci</a>
-</div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Servizi CHP</span>
+          <h1>Servizi organizzati per crescere senza dispersione.</h1>
+          <p>
+            Non una lista piatta, ma un sistema strutturato in 5 macroaree che permette a Studi e PMI di attivare soluzioni utili, leggibili e coerenti con bisogni reali, senza trasformare ogni nuovo servizio in complessità operativa.
+          </p>
 
-<div class="card">
-<h3>Marketing e digitale</h3>
-<ul>
-<li>Siti web</li>
-<li>Social media</li>
-<li>Lead generation</li>
-<li>Funnel marketing</li>
-<li>Contenuti digitali</li>
-</ul>
-<a class="btn btn-primary" href="marketing-digitale.html">Approfondisci</a>
-</div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#macroaree">Vai alle macroaree</a>
+            <a class="btn btn-secondary" href="contatti.html">Richiedi informazioni</a>
+          </div>
 
-<div class="card">
-<h3>Sicurezza, compliance e sostenibilità</h3>
-<ul>
-<li>Sicurezza sul lavoro</li>
-<li>Sostenibilità</li>
-<li>Gestione del rischio</li>
-</ul>
-<a class="btn btn-primary" href="sicurezza-compliance-sostenibilita.html">Approfondisci</a>
-</div>
+          <div class="hero-note">
+            <span>5 macroaree</span>
+            <span>Servizi specialistici</span>
+            <span>Regia unica e partner qualificati</span>
+          </div>
+        </div>
 
-<div class="card">
-<h3>Efficienza operativa e IT</h3>
-<ul>
-<li>AI e automazioni</li>
-<li>Office automation</li>
-<li>IT e digitalizzazione</li>
-</ul>
-<a class="btn btn-primary" href="efficienza-operativa-it.html">Approfondisci</a>
-</div>
+        <aside class="hero-panel">
+          <h3>Il punto non è avere più servizi da elencare.</h3>
+          <p>
+            Il punto è renderli attivabili nel modo giusto, con una logica ordinata, competenze verticali e una struttura che rafforza il valore dello Studio invece di disperderlo.
+          </p>
+          <ul>
+            <li>Lo Studio mantiene la relazione con il cliente</li>
+            <li>ConsulHub Pro coordina attivazione e percorso</li>
+            <li>I partner qualificati erogano il servizio</li>
+            <li>Il cliente ottiene un risultato più leggibile e credibile</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
 
-</div>
+    <section class="section" id="macroaree">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Hub servizi</span>
+            <h2>Cinque macroaree per dare ordine, profondità e vendibilità alla proposta.</h2>
+          </div>
+          <p>
+            I servizi di ConsulHub Pro sono organizzati per aree tematiche, così il sito resta chiaro, autorevole e orientato all’azione. Ogni card ti porta alla pagina di approfondimento dedicata, che andremo a costruire una per una.
+          </p>
+        </div>
 
-</div>
-</section>
+        <div class="card-grid">
 
-<section class="cta">
-<h2>Un sistema ordinato, non un catalogo confuso</h2>
-<p>ConsulHub Pro coordina servizi specializzati per aiutarti a crescere senza aumentare complessità.</p>
-<a class="btn btn-primary" href="https://calendly.com/giovanni-laricchiuta/">Prenota call</a>
-<a class="btn btn-secondary" href="https://wa.me/393383262280">WhatsApp</a>
-</section>
+          <article class="service-block">
+            <div class="service-top">
+              <div class="service-copy">
+                <span class="eyebrow">Macroarea 1</span>
+                <h3>Crescita, finanza e sviluppo</h3>
+                <p>
+                  Molte aziende potrebbero crescere meglio, investire in modo più efficace e accedere a opportunità reali, ma si fermano davanti a complessità, mancanza di struttura o scelte poco guidate. Questa macroarea aiuta a trasformare potenziale e intenzioni in sviluppo più concreto, supportato e leggibile. :contentReference[oaicite:1]{index=1}
+                </p>
 
-<footer>
-<p>© ConsulHub Pro</p>
-</footer>
+                <div class="service-list">
+                  <a href="bandi-finanza-agevolata.html"><span>Bandi e finanza agevolata</span><span>→</span></a>
+                  <a href="strategia-sviluppo-pmi.html"><span>Strategia e sviluppo PMI</span><span>→</span></a>
+                  <a href="coaching-sviluppo-imprenditoriale.html"><span>Coaching e sviluppo imprenditoriale</span><span>→</span></a>
+                </div>
 
+                <div class="service-actions">
+                  <a class="btn btn-primary" href="crescita-finanza-sviluppo.html">Approfondisci macroarea</a>
+                  <a class="btn btn-secondary" href="contatti.html">Richiedi info</a>
+                </div>
+              </div>
+
+              <div class="service-visual visual-growth">
+                <div class="visual-content">
+                  <span class="visual-note">Crescita • finanza • sviluppo</span>
+                  <h4>Più visione. Più opportunità. Più struttura.</h4>
+                  <p>Una macroarea costruita per accompagnare le PMI in percorsi di sviluppo più ordinati e più strategici.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-block">
+            <div class="service-top">
+              <div class="service-copy">
+                <span class="eyebrow">Macroarea 2</span>
+                <h3>Risorse umane e organizzazione</h3>
+                <p>
+                  Le aziende spesso vivono problemi organizzativi, difficoltà nella selezione e una gestione delle persone troppo amministrativa. Questa area aiuta a rafforzare struttura interna, qualità del team e capacità di crescita organizzativa. :contentReference[oaicite:2]{index=2}
+                </p>
+
+                <div class="service-list">
+                  <a href="ricerca-selezione-personale.html"><span>Ricerca e selezione personale</span><span>→</span></a>
+                  <a href="consulenza-hr.html"><span>Consulenza HR</span><span>→</span></a>
+                  <a href="team-building.html"><span>Team building</span><span>→</span></a>
+                </div>
+
+                <div class="service-actions">
+                  <a class="btn btn-primary" href="hr-organizzazione.html">Approfondisci macroarea</a>
+                  <a class="btn btn-secondary" href="contatti.html">Richiedi info</a>
+                </div>
+              </div>
+
+              <div class="service-visual visual-hr">
+                <div class="visual-content">
+                  <span class="visual-note">HR • persone • organizzazione</span>
+                  <h4>Le persone non si gestiscono bene per caso.</h4>
+                  <p>Una struttura organizzativa più solida migliora efficienza, clima interno e qualità della crescita.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-block">
+            <div class="service-top">
+              <div class="service-copy">
+                <span class="eyebrow">Macroarea 3</span>
+                <h3>Marketing, digitale e acquisizione clienti</h3>
+                <p>
+                  Molte aziende lavorano bene ma non riescono a trasformare il proprio valore in percezione di mercato, fiducia e opportunità commerciali. Questa macroarea serve a dare struttura, presenza e risultati concreti alla comunicazione e allo sviluppo commerciale. :contentReference[oaicite:3]{index=3}
+                </p>
+
+                <div class="service-list">
+                  <a href="siti-web.html"><span>Siti web</span><span>→</span></a>
+                  <a href="social-media-contenuti-digitali.html"><span>Social media e contenuti digitali</span><span>→</span></a>
+                  <a href="funnel-marketing.html"><span>Funnel marketing</span><span>→</span></a>
+                  <a href="lead-generation.html"><span>Lead generation</span><span>→</span></a>
+                </div>
+
+                <div class="service-actions">
+                  <a class="btn btn-primary" href="marketing-digitale.html">Approfondisci macroarea</a>
+                  <a class="btn btn-secondary" href="contatti.html">Richiedi info</a>
+                </div>
+              </div>
+
+              <div class="service-visual visual-marketing">
+                <div class="visual-content">
+                  <span class="visual-note">Digitale • marketing • lead</span>
+                  <h4>La visibilità da sola non basta. Serve un sistema.</h4>
+                  <p>Posizionamento, presenza e acquisizione contatti devono lavorare insieme, non in modo casuale.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-block">
+            <div class="service-top">
+              <div class="service-copy">
+                <span class="eyebrow">Macroarea 4</span>
+                <h3>Sicurezza, compliance e sostenibilità</h3>
+                <p>
+                  Ci sono aree che molte imprese affrontano solo quando diventano urgenti, obbligatorie o problematiche. Qui le trasformiamo in servizi ordinati, leggibili e professionalmente presidiati, così da rafforzare tutela, continuità e credibilità aziendale. :contentReference[oaicite:4]{index=4}
+                </p>
+
+                <div class="service-list">
+                  <a href="sicurezza-sul-lavoro.html"><span>Sicurezza sul lavoro</span><span>→</span></a>
+                  <a href="compliance-aziendale.html"><span>Compliance aziendale</span><span>→</span></a>
+                  <a href="sostenibilita-esg.html"><span>Sostenibilità ed ESG</span><span>→</span></a>
+                  <a href="gestione-del-rischio.html"><span>Gestione del rischio</span><span>→</span></a>
+                </div>
+
+                <div class="service-actions">
+                  <a class="btn btn-primary" href="sicurezza-compliance-sostenibilita.html">Approfondisci macroarea</a>
+                  <a class="btn btn-secondary" href="contatti.html">Richiedi info</a>
+                </div>
+              </div>
+
+              <div class="service-visual visual-compliance">
+                <div class="visual-content">
+                  <span class="visual-note">Tutela • conformità • continuità</span>
+                  <h4>Ciò che oggi sembra solo obbligo, domani diventa tenuta dell’impresa.</h4>
+                  <p>Una gestione più ordinata di rischio, sicurezza e conformità rafforza davvero il sistema aziendale.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-block">
+            <div class="service-top">
+              <div class="service-copy">
+                <span class="eyebrow">Macroarea 5</span>
+                <h3>Efficienza operativa e innovazione</h3>
+                <p>
+                  Molte aziende perdono margine, tempo ed energia non per mancanza di lavoro, ma per inefficienze quotidiane, strumenti non integrati, processi lenti e attività ripetitive. Questa macroarea interviene esattamente lì dove si spreca valore ogni giorno. :contentReference[oaicite:5]{index=5}
+                </p>
+
+                <div class="service-list">
+                  <a href="ai-automazioni.html"><span>AI e automazioni</span><span>→</span></a>
+                  <a href="office-automation.html"><span>Office automation</span><span>→</span></a>
+                  <a href="it-infrastruttura.html"><span>IT e infrastruttura</span><span>→</span></a>
+                  <a href="cyber-security.html"><span>Cyber security</span><span>→</span></a>
+                  <a href="leasing-flotte.html"><span>Leasing e flotte</span><span>→</span></a>
+                  <a href="servizi-assicurativi.html"><span>Servizi assicurativi</span><span>→</span></a>
+                </div>
+
+                <div class="service-actions">
+                  <a class="btn btn-primary" href="efficienza-operativa-it.html">Approfondisci macroarea</a>
+                  <a class="btn btn-secondary" href="contatti.html">Richiedi info</a>
+                </div>
+              </div>
+
+              <div class="service-visual visual-innovation">
+                <div class="visual-content">
+                  <span class="visual-note">Innovazione • processi • controllo</span>
+                  <h4>Meno attività ripetitive. Più ordine. Più produttività reale.</h4>
+                  <p>Digitalizzazione, infrastruttura e automazioni servono a lavorare meglio, non a complicare il lavoro.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="closing">
+          <div class="closing-grid">
+            <div>
+              <h2>Non un catalogo generico. Un ecosistema di soluzioni attivabili con criterio.</h2>
+              <p>
+                ConsulHub Pro organizza i servizi in modo che il visitatore capisca subito dove trovare valore, cosa approfondire e perché questa struttura è diversa dal solito approccio dispersivo e improvvisato.
+              </p>
+            </div>
+
+            <div class="closing-actions">
+              <a class="btn btn-primary" href="https://calendly.com/giovanni-laricchiuta/" target="_blank" rel="noopener noreferrer">Prenota una call</a>
+              <a class="btn btn-secondary" href="https://wa.me/393383262280" target="_blank" rel="noopener noreferrer">Scrivici su WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo-chp.png" alt="ConsulHub Pro">
+          <p>
+            ConsulHub Pro è una regia di servizi integrati per Studi di consulenza del lavoro e PMI. Coordina l’attivazione di soluzioni ad alto valore attraverso partner qualificati, con una struttura orientata a efficienza, chiarezza e crescita.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <h4>Navigazione</h4>
+            <a href="index.html">Home</a>
+            <a href="per-studi.html">Per Studi</a>
+            <a href="pilastri.html">Pilastri</a>
+            <a href="servizi.html">Servizi</a>
+          </div>
+
+          <div>
+            <h4>Approfondimenti</h4>
+            <a href="blog.html">Blog</a>
+            <a href="contatti.html">Contatti</a>
+            <a href="checklist-studio.pdf" target="_blank" rel="noopener noreferrer">Checklist Studio</a>
+            <a href="formazione-finanziata.html">Formazione finanziata</a>
+          </div>
+
+          <div>
+            <h4>Contatti e policy</h4>
+            <a href="https://calendly.com/giovanni-laricchiuta/" target="_blank" rel="noopener noreferrer">Prenota call</a>
+            <a href="https://wa.me/393383262280" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://www.linkedin.com/company/consulhub-pro/posts/?feedView=all" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.instagram.com/serviziconsulenzalavoro24/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61585127122604" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.iubenda.com/privacy-policy/78495644" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+            <a href="https://www.iubenda.com/privacy-policy/78495644/cookie-policy" target="_blank" rel="noopener noreferrer">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© ConsulHub Pro. Tutti i diritti riservati.</span>
+        <span>Un unico coordinamento. Più servizi. Più valore. Zero dispersione.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('siteHeader');
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    const onScroll = () => {
+      if(window.scrollY > 18){
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll);
+
+    if(menuToggle){
+      menuToggle.addEventListener('click', () => {
+        mobileNav.classList.toggle('open');
+      });
+    }
+  </script>
 </body>
 </html>
