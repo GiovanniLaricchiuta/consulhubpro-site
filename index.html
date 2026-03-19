@@ -1,218 +1,1094 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ConsulHub Pro</title>
-<link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConsulHub Pro | La piattaforma che amplia il valore dello studio</title>
+  <meta name="description" content="Servizi, supporto e opportunità concrete per studi di consulenza del lavoro che vogliono ampliare il proprio valore." />
+  <meta name="theme-color" content="#f7fbff" />
+  <style>
+    :root {
+      --bg: #f7fbff;
+      --bg2: #edf5fb;
+      --bg3: #f2f8fd;
+      --white: #ffffff;
+      --text: #0f1f33;
+      --muted: #5a6b80;
+      --line: rgba(15,31,51,.10);
+      --line-strong: rgba(15,31,51,.16);
+      --primary: #0f6f9d;
+      --primary-2: #19a6c9;
+      --dark: #0f1726;
+      --dark2: #13253b;
+      --cyan: #54d2f5;
+      --success: #25d366;
+      --shadow-soft: 0 18px 60px rgba(15,31,51,.08);
+      --shadow-deep: 0 28px 90px rgba(15,31,51,.14);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --container: 1240px;
+      --nav-h: 82px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #fbfdff 0%, #f4f8fc 40%, #ffffff 100%);
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img, video { display: block; max-width: 100%; }
+    button, input, textarea { font: inherit; }
+    .container { width: min(var(--container), calc(100% - 32px)); margin: 0 auto; }
+    .section-pad { padding: 108px 0; }
+    .in-view {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity .75s ease, transform .75s cubic-bezier(.2,.8,.2,1);
+    }
+    .in-view.visible { opacity: 1; transform: translateY(0); }
 
-<style>
-body {margin:0;font-family:'Inter',sans-serif;color:#111;background:#fff;}
-section {padding:80px 20px;max-width:1100px;margin:auto;}
-h1,h2 {margin-bottom:20px;}
-p {line-height:1.6;}
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 14px 0; transition: .3s ease;
+    }
+    .site-header.scrolled { padding: 9px 0; }
+    .nav-shell {
+      height: var(--nav-h);
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+      padding: 0 14px 0 18px;
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(255,255,255,.9);
+      backdrop-filter: blur(18px);
+      border-radius: 999px;
+      box-shadow: 0 12px 42px rgba(15,31,51,.08);
+    }
+    .brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
+    .brand img { height: 42px; width: auto; object-fit: contain; }
+    .brand-title { font-size: 18px; font-weight: 800; letter-spacing: -.03em; }
+    .brand-sub { font-size: 12px; color: var(--muted); }
+    .nav-links { display: flex; align-items: center; gap: 24px; color: var(--muted); font-weight: 650; font-size: 15px; }
+    .nav-links a { position: relative; }
+    .nav-links a::after {
+      content: ""; position: absolute; left: 0; bottom: -8px; width: 0; height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-2)); border-radius: 999px; transition: .25s ease;
+    }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-actions { display: flex; align-items: center; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 14px 22px; border-radius: 999px; border: 1px solid transparent;
+      font-weight: 760; font-size: 15px; cursor: pointer;
+      transition: .22s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { color: white; background: linear-gradient(135deg, var(--primary), var(--primary-2)); box-shadow: 0 16px 34px rgba(15,111,157,.22); }
+    .btn-secondary { background: rgba(255,255,255,.86); color: var(--text); border-color: var(--line); }
+    .btn-whatsapp { background: var(--success); color: white; box-shadow: 0 16px 34px rgba(37,211,102,.22); }
+    .mobile-toggle {
+      display: none; width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,.84);
+      border: 1px solid var(--line); align-items: center; justify-content: center; cursor: pointer;
+    }
+    .mobile-toggle span, .mobile-toggle span::before, .mobile-toggle span::after {
+      display: block; width: 18px; height: 2px; background: var(--text); position: relative; border-radius: 999px; transition: .25s ease;
+    }
+    .mobile-toggle span::before, .mobile-toggle span::after { content: ""; position: absolute; left: 0; }
+    .mobile-toggle span::before { top: -6px; }
+    .mobile-toggle span::after { top: 6px; }
+    .mobile-toggle.open span { background: transparent; }
+    .mobile-toggle.open span::before { top: 0; transform: rotate(45deg); }
+    .mobile-toggle.open span::after { top: 0; transform: rotate(-45deg); }
+    .mobile-panel {
+      display: none; margin-top: 12px; background: rgba(255,255,255,.96); backdrop-filter: blur(16px); border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow-soft); padding: 16px;
+    }
+    .mobile-panel.open { display: block; }
+    .mobile-panel nav { display: grid; gap: 8px; }
+    .mobile-panel a { padding: 12px 6px; font-weight: 700; }
 
-.hero {
-position:relative;
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#fff;
-text-align:center;
-}
+    .hero {
+      position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden;
+      padding-top: calc(var(--nav-h) + 56px);
+      background:
+        radial-gradient(circle at 18% 20%, rgba(84,210,245,.18), transparent 18%),
+        radial-gradient(circle at 84% 14%, rgba(25,166,201,.14), transparent 18%),
+        radial-gradient(circle at 50% 76%, rgba(15,111,157,.08), transparent 20%),
+        linear-gradient(180deg, #fcfeff 0%, #f2f8fd 48%, #ffffff 100%);
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(15,31,51,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(15,31,51,.04) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,.74), rgba(0,0,0,.14) 76%, transparent);
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1.02fr .98fr; gap: 38px; align-items: center;
+      padding: 34px 0 90px;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 999px;
+      background: rgba(255,255,255,.78); border: 1px solid rgba(15,31,51,.08); color: var(--primary); font-size: 13px; font-weight: 760;
+      box-shadow: 0 10px 28px rgba(15,31,51,.04);
+    }
+    .eyebrow-dot { width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-2)); }
+    h1 {
+      margin: 24px 0 18px; font-size: clamp(48px, 7vw, 92px); line-height: .92; letter-spacing: -.06em; max-width: 11ch;
+    }
+    .hero-sub { max-width: 680px; color: var(--muted); font-size: clamp(18px, 2vw, 22px); line-height: 1.6; }
+    .hero-actions, .hero-extra-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .hero-actions { margin-top: 30px; }
+    .hero-extra-actions { margin-top: 14px; }
+    .hero-chips { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
+    .chip {
+      padding: 11px 14px; border-radius: 999px; background: rgba(255,255,255,.80); border: 1px solid rgba(15,31,51,.08); color: var(--muted); font-size: 14px; font-weight: 650; box-shadow: 0 12px 24px rgba(15,31,51,.04);
+    }
+    .hero-stage { position: relative; min-height: 700px; }
+    .hero-card {
+      position: absolute; top: 0; right: 0; width: min(100%, 620px); height: 700px;
+      border-radius: 36px; overflow: hidden; background: linear-gradient(180deg, #fcfeff 0%, #e9f7ff 100%);
+      border: 1px solid rgba(255,255,255,.94); box-shadow: var(--shadow-deep);
+    }
+    .hero-card video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .9; }
+    .hero-card::after {
+      content: ""; position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.10) 28%, rgba(10,20,34,.32) 100%),
+        radial-gradient(circle at 20% 18%, rgba(255,255,255,.72), transparent 24%),
+        radial-gradient(circle at 80% 12%, rgba(84,210,245,.26), transparent 18%);
+    }
+    .floating {
+      position: absolute; z-index: 2; background: rgba(255,255,255,.72); border: 1px solid rgba(255,255,255,.78); backdrop-filter: blur(18px);
+      box-shadow: 0 24px 54px rgba(15,31,51,.10); border-radius: 28px; padding: 22px;
+    }
+    .floating.top { top: 24px; left: -28px; width: 280px; }
+    .floating.bottom { right: -18px; bottom: 24px; width: 320px; }
+    .floating small { display: block; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--primary); font-weight: 800; }
+    .floating strong { display: block; margin-top: 10px; font-size: 24px; line-height: 1.08; letter-spacing: -.04em; }
+    .floating span { display: block; margin-top: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .hero-mini-grid {
+      position: absolute; left: 24px; right: 24px; bottom: 24px; z-index: 2; display: grid; grid-template-columns: repeat(3,1fr); gap: 14px;
+    }
+    .mini-tile {
+      border-radius: 22px; padding: 18px 16px; color: white; background: rgba(15,23,38,.36); border: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(14px);
+    }
+    .mini-tile strong { display: block; font-size: 16px; margin-bottom: 4px; }
+    .mini-tile span { font-size: 13px; color: rgba(255,255,255,.82); }
 
-.hero video {
-position:absolute;
-top:0;left:0;
-width:100%;height:100%;
-object-fit:cover;
-z-index:-1;
-}
+    .section-head { display: flex; justify-content: space-between; gap: 28px; align-items: end; margin-bottom: 34px; }
+    .section-kicker { font-size: 12px; text-transform: uppercase; letter-spacing: .22em; color: var(--primary); font-weight: 800; }
+    .section-title { margin: 16px 0 0; font-size: clamp(34px, 4vw, 62px); line-height: .98; letter-spacing: -.05em; max-width: 13ch; }
+    .section-copy { max-width: 640px; color: var(--muted); font-size: 18px; line-height: 1.7; }
 
-.overlay {
-background:rgba(0,0,0,0.6);
-padding:40px;
-border-radius:10px;
-}
+    .impact-grid, .pillar-grid, .proof-grid, .social-grid { display: grid; gap: 20px; }
+    .impact-grid { grid-template-columns: repeat(3,1fr); }
+    .card {
+      border-radius: 30px; padding: 28px; background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(249,252,255,.94));
+      border: 1px solid rgba(15,31,51,.08); box-shadow: var(--shadow-soft);
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-deep); border-color: rgba(25,166,201,.30); }
+    .iconbox {
+      width: 58px; height: 58px; border-radius: 18px; display: inline-flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, rgba(15,111,157,.10), rgba(25,166,201,.18)); color: var(--primary); font-weight: 800; font-size: 22px; margin-bottom: 20px;
+    }
+    .card h3 { margin: 0 0 14px; font-size: 28px; letter-spacing: -.04em; }
+    .card p { margin: 0; color: var(--muted); line-height: 1.65; }
 
-.btn {
-display:inline-block;
-margin:10px;
-padding:14px 28px;
-background:#0A66C2;
-color:#fff;
-text-decoration:none;
-border-radius:6px;
-font-weight:600;
-}
+    .story-wrap { background: linear-gradient(180deg, #ffffff 0%, #f4f9fd 100%); }
+    .story-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 34px; align-items: start; }
+    .story-sticky { position: sticky; top: 118px; padding-top: 20px; }
+    .story-copy { margin-top: 22px; color: var(--muted); font-size: 19px; line-height: 1.75; max-width: 580px; }
+    .story-visual {
+      margin-top: 26px; height: 380px; border-radius: 34px; overflow: hidden; position: relative; background: linear-gradient(135deg, #eef8ff 0%, #dff2fd 60%, #f9fcff 100%); border: 1px solid var(--line);
+    }
+    .story-glow { position: absolute; width: 240px; height: 240px; border-radius: 50%; background: rgba(84,210,245,.45); filter: blur(50px); top: 18%; left: 10%; transition: .55s ease; }
+    .story-panel {
+      position: absolute; border-radius: 28px; background: rgba(255,255,255,.74); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,.78); box-shadow: 0 24px 44px rgba(15,31,51,.08); padding: 18px;
+      transition: .5s ease;
+    }
+    .story-panel.a { top: 28px; left: 28px; width: 220px; }
+    .story-panel.b { right: 30px; top: 90px; width: 250px; }
+    .story-panel.c { left: 92px; right: 34px; bottom: 30px; padding: 22px; }
+    .story-panel small { display: block; color: var(--primary); text-transform: uppercase; letter-spacing: .18em; font-size: 11px; font-weight: 800; }
+    .story-panel strong { display: block; margin-top: 10px; font-size: 22px; line-height: 1.1; letter-spacing: -.03em; }
+    .story-panel span { display: block; margin-top: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .story-steps { display: grid; gap: 18px; }
+    .story-step { min-height: 82vh; display: flex; align-items: center; }
+    .story-card {
+      width: 100%; border-radius: 34px; padding: 34px; background: rgba(255,255,255,.82); border: 1px solid var(--line); box-shadow: var(--shadow-soft); transition: .35s ease;
+    }
+    .story-card.active { transform: scale(1.015); box-shadow: var(--shadow-deep); border-color: rgba(25,166,201,.28); }
+    .story-card .num { font-size: 12px; text-transform: uppercase; letter-spacing: .22em; color: var(--primary); font-weight: 800; }
+    .story-card h3 { margin: 16px 0 10px; font-size: clamp(28px, 3vw, 42px); line-height: 1.03; letter-spacing: -.05em; }
+    .story-card p { margin: 0; color: var(--muted); font-size: 17px; line-height: 1.75; }
 
-.grid {
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
+    .pillar-grid { grid-template-columns: repeat(3,1fr); }
+    .pillar-card {
+      border-radius: 34px; min-height: 460px; background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(241,248,253,.96));
+      border: 1px solid var(--line); box-shadow: var(--shadow-soft); padding: 28px; overflow: hidden; position: relative;
+    }
+    .pillar-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-deep); border-color: rgba(25,166,201,.30); }
+    .pillar-art {
+      height: 190px; border-radius: 26px; position: relative; overflow: hidden; background: linear-gradient(135deg, #0f1f33 0%, #12314e 45%, #178db3 100%); margin-bottom: 24px;
+    }
+    .pillar-art::before {
+      content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 20% 18%, rgba(255,255,255,.22), transparent 18%), radial-gradient(circle at 72% 34%, rgba(84,210,245,.38), transparent 16%), linear-gradient(135deg, rgba(255,255,255,.12), transparent 45%);
+    }
+    .pillar-lines {
+      position: absolute; inset: 0; opacity: .24; background-image: linear-gradient(rgba(255,255,255,.22) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.22) 1px, transparent 1px); background-size: 24px 24px; transform: perspective(1000px) rotateX(74deg) scale(1.6) translateY(30%);
+    }
+    .pillar-orb { position: absolute; width: 220px; height: 220px; right: -30px; top: -40px; border-radius: 50%; background: radial-gradient(circle, rgba(84,210,245,.48), transparent 65%); filter: blur(12px); }
+    .pillar-card h3 { margin: 0 0 14px; font-size: 30px; letter-spacing: -.05em; }
+    .pillar-card p { margin: 0; color: var(--muted); line-height: 1.68; }
+    .pillar-card ul { margin: 18px 0 0; padding-left: 18px; color: var(--muted); line-height: 1.65; }
+    .pillar-tag { display: inline-flex; margin-top: 18px; padding: 9px 13px; border-radius: 999px; background: #e9f8ff; color: var(--primary); font-size: 13px; font-weight: 700; }
 
-.card {
-padding:25px;
-border:1px solid #eee;
-border-radius:10px;
-transition:0.3s;
-}
+    .ecosystem-shell {
+      border-radius: 40px; overflow: hidden; padding: 34px; background: linear-gradient(135deg, #0f1726 0%, #122439 55%, #17334e 100%); color: white; box-shadow: 0 34px 100px rgba(11,22,36,.26);
+    }
+    .ecosystem-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 34px; align-items: center; }
+    .ecosystem-copy p { color: rgba(255,255,255,.76); font-size: 18px; line-height: 1.75; }
+    .ecosystem-stage {
+      position: relative; height: 670px; border-radius: 34px; overflow: hidden; background: radial-gradient(circle at center, rgba(84,210,245,.20), transparent 28%), radial-gradient(circle at center, rgba(255,255,255,.08), transparent 46%), linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border: 1px solid rgba(255,255,255,.08);
+    }
+    .ecosystem-center {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px; height: 200px; border-radius: 50%; display: grid; place-items: center; text-align: center; padding: 24px;
+      background: radial-gradient(circle, rgba(255,255,255,.20), rgba(84,210,245,.14)); border: 1px solid rgba(255,255,255,.22); box-shadow: 0 0 60px rgba(84,210,245,.25);
+    }
+    .ecosystem-center strong { font-size: 30px; line-height: 1.02; letter-spacing: -.04em; }
+    .eco-node {
+      position: absolute; width: 172px; min-height: 96px; padding: 18px; border-radius: 24px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(14px); box-shadow: 0 14px 30px rgba(0,0,0,.18); transition: .28s ease;
+    }
+    .eco-node:hover { transform: translateY(-6px) scale(1.03); background: rgba(255,255,255,.12); border-color: rgba(84,210,245,.38); }
+    .eco-node strong { display: block; font-size: 18px; line-height: 1.12; }
+    .eco-node span { display: block; margin-top: 8px; color: rgba(255,255,255,.74); font-size: 13px; line-height: 1.45; }
+    .eco-line { position: absolute; top: 50%; left: 50%; transform-origin: 0 0; height: 1px; background: linear-gradient(90deg, rgba(84,210,245,.58), rgba(255,255,255,.08)); opacity: .72; }
 
-.card:hover {
-transform:translateY(-5px);
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-}
+    .services-section { background: linear-gradient(180deg, #ffffff 0%, #f5f9fd 100%); }
+    .services-nav-grid {
+      display:grid; grid-template-columns:repeat(3,1fr); gap:16px;
+    }
+    .service-nav-btn {
+      display:block; padding:22px; border-radius:24px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14);
+      backdrop-filter:blur(12px); color:white; box-shadow:0 14px 30px rgba(0,0,0,.16); transition:.24s ease;
+    }
+    .service-nav-btn:hover { transform:translateY(-5px); background:rgba(255,255,255,.13); border-color:rgba(84,210,245,.38); }
+    .service-nav-btn strong { display:block; font-size:20px; line-height:1.1; }
+    .service-nav-btn span { display:block; margin-top:8px; color:rgba(255,255,255,.76); font-size:14px; line-height:1.45; }
+    .services-cloud {
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+      padding: 28px; border-radius: 34px; background: rgba(255,255,255,.94); border: 1px solid var(--line); box-shadow: var(--shadow-soft);
+    }
+    .service-pill {
+      padding: 12px 16px; border-radius: 999px; background: linear-gradient(180deg, #ffffff, #f0f7fc); border: 1px solid rgba(15,31,51,.08); color: var(--text); font-weight: 700; font-size: 14px;
+    }
 
-.dark {
-background:#111;
-color:#fff;
-text-align:center;
-}
+    .service-detail-grid {
+      display:grid; grid-template-columns:repeat(2,1fr); gap:20px;
+    }
+    .service-detail-card {
+      border-radius:30px; padding:28px; background:rgba(255,255,255,.95); border:1px solid var(--line); box-shadow:var(--shadow-soft);
+      scroll-margin-top:120px;
+    }
+    .service-detail-card h3 { margin:0 0 12px; font-size:30px; letter-spacing:-.05em; }
+    .service-detail-card p { margin:0; color:var(--muted); line-height:1.72; }
+    .service-detail-card .detail-links { display:flex; flex-wrap:wrap; gap:12px; margin-top:18px; }
+    .timeline { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; position: relative; }
+    .timeline::before {
+      content: ""; position: absolute; left: 40px; right: 40px; top: 44px; height: 2px; background: linear-gradient(90deg, rgba(15,111,157,.15), rgba(25,166,201,.45), rgba(15,111,157,.15)); z-index: 0;
+    }
+    .timeline-step {
+      position: relative; z-index: 1; border-radius: 28px; padding: 28px; background: rgba(255,255,255,.94); border: 1px solid var(--line); box-shadow: var(--shadow-soft);
+    }
+    .timeline-badge {
+      width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; color: white; font-size: 22px; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--primary-2)); box-shadow: 0 16px 34px rgba(15,111,157,.20); margin-bottom: 22px;
+    }
+    .timeline-step h3 { margin: 0 0 12px; font-size: 24px; letter-spacing: -.04em; }
+    .timeline-step p { margin: 0; color: var(--muted); line-height: 1.7; }
 
-footer {
-background:#000;
-color:#fff;
-padding:40px;
-text-align:center;
-}
-</style>
+    .proof-grid { grid-template-columns: repeat(4,1fr); }
+    .proof-card {
+      border-radius: 30px; padding: 28px; background: rgba(255,255,255,.94); border: 1px solid var(--line); box-shadow: var(--shadow-soft);
+    }
+    .proof-card strong { display: block; font-size: clamp(34px, 3vw, 54px); line-height: .95; letter-spacing: -.05em; }
+    .proof-card span { display: block; margin-top: 12px; color: var(--muted); line-height: 1.6; }
 
+    .video-shell {
+      position: relative; overflow: hidden; border-radius: 40px; border: 1px solid var(--line); box-shadow: var(--shadow-deep); min-height: 680px; background: linear-gradient(135deg, #0f1726 0%, #10233a 52%, #173b57 100%);
+    }
+    .video-shell video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .52;
+    }
+    .video-shell::after {
+      content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,20,34,.14) 0%, rgba(10,20,34,.30) 45%, rgba(10,20,34,.86) 100%);
+    }
+    .video-content { position: relative; z-index: 2; min-height: 680px; display: flex; flex-direction: column; justify-content: space-between; padding: 40px; }
+    .video-top { display: flex; justify-content: space-between; gap: 20px; align-items: start; }
+    .video-title { max-width: 12ch; font-size: clamp(34px, 4vw, 68px); line-height: .95; letter-spacing: -.06em; color: white; }
+    .video-points { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    .video-point {
+      border-radius: 24px; padding: 20px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); backdrop-filter: blur(12px); color: rgba(255,255,255,.84);
+    }
+    .video-point strong { display: block; color: white; font-size: 18px; margin-bottom: 8px; }
+
+    .checklist-band {
+      display: grid; grid-template-columns: 1fr .95fr; gap: 28px; align-items: center;
+      border-radius: 38px; padding: 34px; background: linear-gradient(135deg, #0f1726 0%, #12233a 52%, #153552 100%); color: white; box-shadow: var(--shadow-deep);
+    }
+    .checklist-band p { color: rgba(255,255,255,.76); font-size: 18px; line-height: 1.7; }
+    .checklist-card {
+      border-radius: 28px; padding: 26px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(12px);
+    }
+    .checklist-card ul { margin: 14px 0 0; padding-left: 18px; color: rgba(255,255,255,.86); line-height: 1.75; }
+
+    .contact-grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 24px; }
+    .contact-card, .form-card { border-radius: 34px; padding: 30px; background: rgba(255,255,255,.95); border: 1px solid var(--line); box-shadow: var(--shadow-soft); }
+    .contact-card p { color: var(--muted); line-height: 1.7; }
+    .contact-points { display: grid; gap: 14px; margin-top: 18px; }
+    .contact-point { display: flex; gap: 12px; align-items: start; color: var(--text); }
+    .contact-point i {
+      width: 24px; height: 24px; border-radius: 50%; background: #e9f8ff; display: inline-flex; align-items: center; justify-content: center; color: var(--primary); font-style: normal; font-size: 13px; margin-top: 2px;
+    }
+    .form-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+    .field { display: grid; gap: 8px; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { font-size: 13px; font-weight: 700; color: var(--text); }
+    .field input, .field textarea {
+      width: 100%; border-radius: 16px; border: 1px solid rgba(15,31,51,.12); background: #fbfdff; color: var(--text); padding: 14px 16px; outline: none; transition: .2s ease;
+    }
+    .field input:focus, .field textarea:focus { border-color: rgba(25,166,201,.42); box-shadow: 0 0 0 4px rgba(25,166,201,.08); }
+    .field textarea { min-height: 140px; resize: vertical; }
+    .form-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 18px; }
+
+    .faq-list { display: grid; gap: 16px; }
+    .faq-item { border-radius: 28px; background: rgba(255,255,255,.95); border: 1px solid var(--line); box-shadow: var(--shadow-soft); overflow: hidden; }
+    .faq-q {
+      width: 100%; background: none; border: none; text-align: left; padding: 26px 28px; display: flex; justify-content: space-between; gap: 18px; cursor: pointer; color: var(--text); font-size: 22px; font-weight: 760; letter-spacing: -.03em;
+    }
+    .faq-q span:last-child { color: var(--primary); transition: .25s ease; }
+    .faq-item.open .faq-q span:last-child { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .32s ease; }
+    .faq-a-inner { padding: 0 28px 28px; color: var(--muted); font-size: 17px; line-height: 1.75; }
+
+    .legal-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+    .legal-card {
+      border-radius: 30px; padding: 28px; background: rgba(255,255,255,.94); border: 1px solid var(--line); box-shadow: var(--shadow-soft);
+    }
+    .legal-card h3 { margin: 0 0 14px; font-size: 28px; letter-spacing: -.04em; }
+    .legal-card p { margin: 0; color: var(--muted); line-height: 1.7; }
+
+    .site-footer { padding: 30px 0 46px; background: #ffffff; }
+    .footer-shell {
+      display: grid; grid-template-columns: .95fr 1.05fr; gap: 24px; align-items: center;
+      padding: 24px; border-radius: 30px; background: rgba(255,255,255,.96); border: 1px solid var(--line); box-shadow: var(--shadow-soft);
+    }
+    .footer-brand { display: flex; align-items: center; gap: 14px; }
+    .footer-brand img { height: 38px; }
+    .footer-copy { color: var(--muted); font-size: 14px; }
+    .footer-links, .footer-social { display: flex; flex-wrap: wrap; gap: 14px 18px; }
+    .footer-links a, .footer-social a { color: var(--muted); font-weight: 700; }
+    .footer-right { display: grid; gap: 14px; justify-items: end; }
+
+    @media (max-width: 1180px) {
+      .hero-grid, .story-grid, .ecosystem-grid, .checklist-band, .contact-grid, .footer-shell { grid-template-columns: 1fr; }
+      .hero-stage { min-height: 620px; }
+      .hero-card { position: relative; width: 100%; height: 620px; }
+      .floating.top { left: 18px; }
+      .floating.bottom { right: 18px; }
+      .section-head { align-items: start; flex-direction: column; }
+      .proof-grid { grid-template-columns: repeat(2,1fr); }
+      .ecosystem-stage { height: 780px; }
+      .footer-right { justify-items: start; }
+    }
+    @media (max-width: 980px) {
+      .nav-links, .nav-actions > a { display: none; }
+      .mobile-toggle { display: inline-flex; }
+      .impact-grid, .pillar-grid, .proof-grid, .timeline, .video-points, .legal-grid { grid-template-columns: 1fr; }
+      .timeline::before { display: none; }
+      .story-sticky { position: static; }
+      .story-step { min-height: auto; }
+      .section-pad { padding: 86px 0; }
+      .footer-shell { padding: 20px; }
+    }
+    @media (max-width: 760px) {
+      .hero-grid { padding-bottom: 70px; }
+      h1 { font-size: clamp(40px, 14vw, 62px); max-width: none; }
+      .hero-stage { min-height: 540px; }
+      .hero-card { height: 540px; }
+      .floating.top, .floating.bottom { left: 16px; right: 16px; width: auto; }
+      .hero-mini-grid, .form-grid { grid-template-columns: 1fr; }
+      .ecosystem-stage { height: 920px; }
+      .eco-node { width: 146px; padding: 14px; }
+      .contact-card, .form-card, .legal-card, .card, .pillar-card, .timeline-step, .proof-card { padding: 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
 </head>
-
 <body>
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <div class="nav-shell">
+        <a class="brand" href="#top" aria-label="ConsulHub Pro home">
+          <img src="logo-chp.png" alt="ConsulHub Pro" />
+          <div>
+            <div class="brand-title">ConsulHub Pro</div>
+            <div class="brand-sub">Piattaforma premium per studi professionali</div>
+          </div>
+        </a>
 
-<!-- HERO -->
-<section class="hero">
-<video autoplay muted loop>
-<source src="hero.mp4" type="video/mp4">
-</video>
+        <nav class="nav-links" aria-label="Navigazione principale">
+          <a href="#perche">Perché</a>
+          <a href="#pilastri">Servizi</a>
+          <a href="#come-funziona">Come funziona</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contatti">Contatti</a>
+        </nav>
 
-<div class="overlay">
-<h1>Se il tuo Studio vende solo ciò che ha sempre venduto,<br>sta lasciando valore sul tavolo.</h1>
-<p>ConsulHub Pro amplia l’offerta del tuo Studio con pilastri e servizi già pronti.</p>
+        <div class="nav-actions">
+          <a class="btn btn-whatsapp" href="https://wa.me/393383262280" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-primary" href="https://calendly.com/giovanni-laricchiuta/" target="_blank" rel="noopener">Prenota call</a>
+          <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mobilePanel" aria-label="Apri menu mobile"><span></span></button>
+        </div>
+      </div>
 
-<a href="https://calendly.com/giovanni-laricchiuta/" class="btn">Prenota una call</a>
-<a href="checklist-studio.pdf" class="btn">Scarica checklist</a>
-</div>
-</section>
+      <div class="mobile-panel" id="mobilePanel">
+        <nav>
+          <a href="#perche">Perché</a>
+          <a href="#pilastri">Servizi</a>
+          <a href="#come-funziona">Come funziona</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contatti">Contatti</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/393383262280" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-primary" href="https://calendly.com/giovanni-laricchiuta/" target="_blank" rel="noopener">Prenota call</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-<!-- PROBLEMA -->
-<section>
-<h2>Il problema non è la domanda.</h2>
-<p>Le aziende chiedono sempre più supporto.  
-Molti studi hanno relazioni forti, ma un’offerta troppo stretta.</p>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="in-view">
+          <span class="eyebrow"><span class="eyebrow-dot"></span>ConsulHub Pro per studi di consulenza del lavoro</span>
+          <h1>La piattaforma che amplia il valore dello studio.</h1>
+          <p class="hero-sub">Servizi, supporto e opportunità concrete per studi che vogliono evolvere, ampliare la propria proposta e presentarsi al mercato con un livello superiore.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://calendly.com/giovanni-laricchiuta/" target="_blank" rel="noopener">Prenota una call</a>
+            <a class="btn btn-secondary" href="#contatti">Richiedi informazioni</a>
+          </div>
+          <div class="hero-extra-actions">
+            <a class="btn btn-secondary" href="checklist-studio.pdf" target="_blank" rel="noopener">Scarica la checklist</a>
+          </div>
+          <div class="hero-chips">
+            <span class="chip">Formazione finanziata</span>
+            <span class="chip">Servizi ricorrenti</span>
+            <span class="chip">Supporto operativo</span>
+            <span class="chip">Esperienza premium</span>
+          </div>
+        </div>
 
-<ul>
-<li>Clienti che cercano altrove</li>
-<li>Margini persi</li>
-<li>Servizi mai attivati</li>
-</ul>
-</section>
+        <div class="hero-stage in-view">
+          <div class="hero-card">
+            <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80">
+              <source src="hero.mp4" type="video/mp4" />
+            </video>
 
-<!-- DIFFERENZA -->
-<section>
-<h2>Non siamo un’agenzia. Siamo un sistema.</h2>
-<p>Un hub di partner specialistici coordinati.  
-Tu mantieni il cliente, noi gestiamo il resto.</p>
+            <div class="floating top">
+              <small>Piattaforma</small>
+              <strong>Moderna. Solida. Più evoluta della media.</strong>
+              <span>Un’esperienza digitale pensata per trasmettere struttura, ordine, competenza e visione.</span>
+            </div>
 
-<div class="grid">
-<div class="card">Più offerta senza caos</div>
-<div class="card">Più valore senza lavoro interno</div>
-<div class="card">Più autorevolezza</div>
-</div>
-</section>
+            <div class="floating bottom">
+              <small>Valore percepito</small>
+              <strong>Più autorevolezza per lo studio</strong>
+              <span>CHP coordina servizi, opportunità e supporto con un taglio premium e orientato al business reale.</span>
+            </div>
 
-<!-- PILASTRI -->
-<section>
-<h2>I 3 pilastri</h2>
+            <div class="hero-mini-grid">
+              <div class="mini-tile"><strong>Valore</strong><span>Più utilità percepita per il cliente finale</span></div>
+              <div class="mini-tile"><strong>Struttura</strong><span>Supporto e coordinamento operativo</span></div>
+              <div class="mini-tile"><strong>Crescita</strong><span>Un ecosistema di servizi integrati</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="grid">
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-head in-view">
+          <div>
+            <div class="section-kicker">Posizionamento</div>
+            <h2 class="section-title">Tre messaggi che devono arrivare subito.</h2>
+          </div>
+          <div class="section-copy">ConsulHub Pro deve apparire come una piattaforma ordinata, moderna e utile per studi professionali che vogliono crescere in valore, servizi e posizionamento.</div>
+        </div>
+        <div class="impact-grid">
+          <article class="card in-view"><div class="iconbox">01</div><h3>Più valore per lo studio</h3><p>CHP amplia la proposta senza snaturare il ruolo dello studio. Il risultato è una percezione più forte, più completa e più contemporanea.</p></article>
+          <article class="card in-view"><div class="iconbox">02</div><h3>Più servizi per i clienti</h3><p>Non una singola opportunità, ma un sistema di leve utili che rende la relazione con l’azienda cliente più ricca e più continuativa.</p></article>
+          <article class="card in-view"><div class="iconbox">03</div><h3>Più supporto operativo</h3><p>Dietro il design c’è il messaggio più importante: CHP non improvvisa. Coordina, supporta e rende il modello applicabile nel concreto.</p></article>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<h3>FormaAzienda</h3>
-<p>Valore già pagato che puoi recuperare.</p>
-<a href="formaazienda.html" class="btn">Approfondisci</a>
-</div>
+    <section class="section-pad story-wrap" id="perche">
+      <div class="container story-grid">
+        <div class="story-sticky in-view">
+          <div class="section-kicker">Perché ConsulHub Pro funziona per lo studio</div>
+          <h2 class="section-title">Il mercato sta cambiando. Lo studio deve evolvere.</h2>
+          <p class="story-copy">Questa parte mantiene il senso del sito attuale ma lo rende più immersivo. Il messaggio si costruisce con ordine, non con effetti confusi.</p>
+          <div class="story-visual" id="storyVisual">
+            <div class="story-glow"></div>
+            <div class="story-panel a"><small>Scenario</small><strong id="storyPanelA">Ruolo dello studio</strong><span id="storyPanelAText">Il consulente del lavoro oggi viene percepito sempre più come nodo strategico e non solo come gestore di adempimenti.</span></div>
+            <div class="story-panel b"><small>Domanda</small><strong id="storyPanelB">Più servizi richiesti</strong><span id="storyPanelBText">Le aziende cercano supporto, orientamento e strumenti più ampi, utili e integrabili.</span></div>
+            <div class="story-panel c"><small>Risposta</small><strong id="storyPanelC">ConsulHub Pro</strong><span id="storyPanelCText">Una piattaforma capace di aiutare lo studio a offrire più valore senza appesantire la propria operatività.</span></div>
+          </div>
+        </div>
+        <div class="story-steps">
+          <div class="story-step"><article class="story-card active" data-story="0"><div class="num">Step 01</div><h3>Il ruolo del consulente del lavoro sta cambiando.</h3><p>Le imprese non cercano più solo gestione ordinaria. Cercano interlocutori competenti, capaci di orientare, semplificare e ampliare il valore della relazione.</p></article></div>
+          <div class="story-step"><article class="story-card" data-story="1"><div class="num">Step 02</div><h3>Le aziende si aspettano più servizi e più visione.</h3><p>Formazione, strumenti ricorrenti, supporto e consulenze integrate. Il mercato chiede una proposta più evoluta rispetto al passato.</p></article></div>
+          <div class="story-step"><article class="story-card" data-story="2"><div class="num">Step 03</div><h3>Molti studi hanno bisogno di una struttura di supporto.</h3><p>Non basta voler ampliare la proposta. Serve un sistema che renda il tutto leggibile, gestibile e credibile agli occhi del cliente finale.</p></article></div>
+          <div class="story-step"><article class="story-card" data-story="3"><div class="num">Step 04</div><h3>ConsulHub Pro nasce esattamente per questo.</h3><p>CHP mette insieme servizi, metodo e supporto in una piattaforma che consente allo studio di alzare il livello senza perdere il controllo.</p></article></div>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<h3>EBILP</h3>
-<p>Servizi concreti per i clienti.</p>
-<a href="ebilp.html" class="btn">Approfondisci</a>
-</div>
+    <section class="section-pad" id="pilastri">
+      <div class="container">
+        <div class="section-head in-view">
+          <div>
+            <div class="section-kicker">Servizi core</div>
+            <h2 class="section-title">FORMAZIENDA, EBILP e FISAPI restano il cuore del progetto.</h2>
+          </div>
+          <div class="section-copy">I contenuti chiave del sito attuale restano. Cambia il modo in cui vengono mostrati, con una resa più alta, più leggibile e più memorabile.</div>
+        </div>
 
-<div class="card">
-<h3>FISAPI</h3>
-<p>Protezione e struttura.</p>
-<a href="fisapi.html" class="btn">Approfondisci</a>
-</div>
+        <div class="pillar-grid">
+          <article class="pillar-card in-view">
+            <div class="pillar-art"><div class="pillar-lines"></div><div class="pillar-orb"></div></div>
+            <h3>FORMAZIENDA</h3>
+            <p>La formazione finanziata viene presentata come leva strategica per creare valore reale, utilità concreta e opportunità di crescita per studio e aziende clienti.</p>
+            <ul>
+              <li>Più valore percepito per il cliente finale</li>
+              <li>Una leva concreta e non teorica</li>
+              <li>Possibilità di ampliare la proposta dello studio</li>
+            </ul>
+            <div class="detail-links"><a class="btn btn-secondary" href="#pilastro-formazienda">Approfondisci FORMAZIENDA</a></div>
+            <span class="pillar-tag">Formazione finanziata</span>
+          </article>
 
-</div>
-</section>
+          <article class="pillar-card in-view">
+            <div class="pillar-art"><div class="pillar-lines"></div><div class="pillar-orb"></div></div>
+            <h3>EBILP</h3>
+            <p>Un servizio ricorrente e strutturato che amplia la proposta dello studio e lo rende più forte nella relazione con le imprese che segue ogni giorno.</p>
+            <ul>
+              <li>Continuità di valore nel tempo</li>
+              <li>Supporto integrabile nella proposta attuale</li>
+              <li>Maggiore utilità e continuità percepita</li>
+            </ul>
+            <div class="detail-links"><a class="btn btn-secondary" href="#pilastro-ebilp">Approfondisci EBILP</a></div>
+            <span class="pillar-tag">Servizi ricorrenti</span>
+          </article>
 
-<!-- SERVIZI -->
-<section>
-<h2>Servizi complementari</h2>
+          <article class="pillar-card in-view">
+            <div class="pillar-art"><div class="pillar-lines"></div><div class="pillar-orb"></div></div>
+            <h3>FISAPI</h3>
+            <p>Supporto, assistenza e strumenti utili che rafforzano il posizionamento dello studio e migliorano la qualità percepita del servizio offerto al cliente finale.</p>
+            <ul>
+              <li>Strumenti di supporto concreto</li>
+              <li>Maggiore profondità della proposta</li>
+              <li>Una relazione più solida con le aziende clienti</li>
+            </ul>
+            <div class="detail-links"><a class="btn btn-secondary" href="#pilastro-fisapi">Approfondisci FISAPI</a></div>
+            <span class="pillar-tag">Supporto operativo</span>
+          </article>
+        </div>
+      </div>
 
-<div class="grid">
+        <div class="section-head in-view" style="margin-top:34px;">
+          <div>
+            <div class="section-kicker">Approfondimento pilastri</div>
+            <h2 class="section-title">Ogni pilastro ha la sua sezione dedicata.</h2>
+          </div>
+          <div class="section-copy">Anche qui applichiamo la stessa logica: il visitatore clicca sulla card principale e atterra subito su un blocco introduttivo più dettagliato, ordinato e leggibile.</div>
+        </div>
 
-<div class="card">
-<h3>HR</h3>
-<a href="hr.html" class="btn">Scopri</a>
-</div>
+        <div class="service-detail-grid">
+          <article class="service-detail-card in-view" id="pilastro-formazienda"><h3>FORMAZIENDA</h3><p>FORMAZIENDA va raccontato come uno strumento concreto per trasformare la formazione in leva strategica. Non una pratica burocratica da subire, ma un’opportunità da governare con metodo per creare più valore verso le aziende clienti.</p><div class="detail-links"><a class="btn btn-secondary" href="formazione-finanziata.html">Vai alla pagina dedicata</a><a class="btn btn-primary" href="#contatti">Richiedi informazioni</a></div></article>
+          <article class="service-detail-card in-view" id="pilastro-ebilp"><h3>EBILP</h3><p>EBILP deve essere percepito come un servizio ricorrente capace di rendere la proposta dello studio più ricca e più continuativa. Il punto non è solo offrire un servizio in più, ma consolidare una relazione professionale più utile e più forte nel tempo.</p><div class="detail-links"><a class="btn btn-secondary" href="#contatti">Approfondisci EBILP</a><a class="btn btn-primary" href="https://calendly.com/giovanni-laricchiuta/" target="_blank" rel="noopener">Prenota call</a></div></article>
+          <article class="service-detail-card in-view" id="pilastro-fisapi"><h3>FISAPI</h3><p>FISAPI rafforza il posizionamento dello studio perché aggiunge supporto, assistenza e strumenti utili che migliorano la qualità percepita del servizio verso il cliente finale. Va presentato come una leva di solidità, non come semplice accessorio.</p><div class="detail-links"><a class="btn btn-secondary" href="#contatti">Richiedi dettagli</a><a class="btn btn-primary" href="checklist-studio.pdf" target="_blank" rel="noopener">Scarica la checklist</a></div></article>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<h3>AI</h3>
-<a href="ai.html" class="btn">Scopri</a>
-</div>
+    <section class="section-pad" id="ecosistema">
+      <div class="container">
+        <div class="section-head in-view">
+          <div>
+            <div class="section-kicker">Ecosistema servizi</div>
+            <h2 class="section-title">Una mappa più ordinata, chiara e davvero navigabile.</h2>
+          </div>
+          <div class="section-copy">Hai ragione: questa parte deve essere più leggibile e più utile. Per questo i servizi principali vengono organizzati in una griglia ordinata di pulsanti interattivi che portano a sezioni dedicate con una prima introduzione chiara.</div>
+        </div>
 
-<div class="card">
-<h3>IT</h3>
-<a href="it.html" class="btn">Scopri</a>
-</div>
+        <div class="ecosystem-shell in-view">
+          <div class="ecosystem-grid" style="grid-template-columns:1fr; gap:26px;">
+            <div class="ecosystem-copy">
+              <div class="section-kicker" style="color:#9ae6ff;">Navigazione servizi</div>
+              <h2 class="section-title" style="color:white; max-width:14ch;">Ogni servizio principale ha il suo punto di atterraggio.</h2>
+              <p>I pulsanti qui sotto non sono decorativi. Devono funzionare come una vera mappa di accesso ai contenuti: clicchi, atterri, capisci subito il valore del servizio e poi approfondisci.</p>
+            </div>
 
-<div class="card">
-<h3>Marketing</h3>
-<a href="marketing-lead-generation.html" class="btn">Scopri</a>
-</div>
+            <div class="services-nav-grid">
+              <a class="service-nav-btn" href="#servizio-strategia"><strong>Strategia aziendale</strong><span>Visione, organizzazione, posizionamento</span></a>
+              <a class="service-nav-btn" href="#servizio-sicurezza"><strong>Sicurezza</strong><span>Valore operativo e tutela</span></a>
+              <a class="service-nav-btn" href="#servizio-ai"><strong>AI</strong><span>Efficienza e modernità</span></a>
+              <a class="service-nav-btn" href="#servizio-siti-social"><strong>Siti e Social</strong><span>Comunicazione e presenza</span></a>
+              <a class="service-nav-btn" href="#servizio-funnel"><strong>Funnel Marketing</strong><span>Lead e conversione</span></a>
+              <a class="service-nav-btn" href="#servizio-coaching"><strong>Coaching</strong><span>Supporto alla crescita</span></a>
+              <a class="service-nav-btn" href="#servizio-hr"><strong>HR</strong><span>Supporto organizzativo</span></a>
+              <a class="service-nav-btn" href="#servizio-bandi"><strong>Bandi</strong><span>Opportunità mirate</span></a>
+              <a class="service-nav-btn" href="#servizio-welfare"><strong>Welfare</strong><span>Più utilità percepita</span></a>
+              <a class="service-nav-btn" href="#servizio-it-credito"><strong>IT e Credito</strong><span>Strumenti e supporto</span></a>
+              <a class="service-nav-btn" href="#servizio-hse-assicurativi"><strong>HSE e Assicurativi</strong><span>Tutela e solidità</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<h3>Finanza</h3>
-<a href="finanza-agevolata.html" class="btn">Scopri</a>
-</div>
+    <section class="section-pad services-section">
+      <div class="container">
+        <div class="section-head in-view">
+          <div>
+            <div class="section-kicker">Servizi integrati</div>
+            <h2 class="section-title">Tutti i contenuti che oggi fanno posizionamento restano visibili.</h2>
+          </div>
+          <div class="section-copy">Qui li rendiamo più leggibili e più ordinati, senza farli sparire dentro un layout troppo artistico o confuso.</div>
+        </div>
+        <div class="services-cloud in-view">
+          <span class="service-pill">Strategia aziendale</span>
+          <span class="service-pill">Sicurezza sul lavoro</span>
+          <span class="service-pill">AI applicata al business</span>
+          <span class="service-pill">Siti web</span>
+          <span class="service-pill">Social media</span>
+          <span class="service-pill">Contenuti digitali</span>
+          <span class="service-pill">Funnel marketing</span>
+          <span class="service-pill">Coaching</span>
+          <span class="service-pill">HR</span>
+          <span class="service-pill">Bandi</span>
+          <span class="service-pill">Welfare</span>
+          <span class="service-pill">IT</span>
+          <span class="service-pill">Credito</span>
+          <span class="service-pill">HSE</span>
+          <span class="service-pill">Assicurativi</span>
+        </div>
 
-</div>
-</section>
+        <div class="section-head in-view" style="margin-top:34px;">
+          <div>
+            <div class="section-kicker">Introduzione servizi</div>
+            <h2 class="section-title">Ogni area principale atterra su una sezione chiara e leggibile.</h2>
+          </div>
+          <div class="section-copy">Queste sezioni sono il primo livello di approfondimento. Servono per dare ordine, introdurre il valore di ogni area e poi portare a una futura pagina dedicata o a una CTA specifica.</div>
+        </div>
 
-<!-- COME FUNZIONA -->
-<section>
-<h2>Come funziona</h2>
+        <div class="service-detail-grid">
+          <article class="service-detail-card in-view" id="servizio-strategia"><h3>Strategia aziendale</h3><p>Quest’area serve a mostrare come CHP può aiutare lo studio ad affiancare il cliente anche sul piano della direzione, dell’organizzazione e delle scelte di sviluppo, aumentando la profondità della relazione professionale.</p><div class="detail-links"><a class="btn btn-secondary" href="#contatti">Richiedi informazioni</a></div></article>
+          <article class="service-detail-card in-view" id="servizio-sicurezza"><h3>Sicurezza</h3><p>La sicurezza sul lavoro è una leva ad alta concretezza. Inserita correttamente nella proposta dello studio, rafforza utilità percepita, continuità della relazione e presidio operativo verso le aziende clienti.</p><div class="detail-links"><a class="btn btn-secondary" href="#contatti">Approfondisci</a></div></article>
+          <article class="service-detail-card in-view" id="servizio-ai"><h3>AI</h3><p>L’intelligenza artificiale applicata al business non deve sembrare una moda, ma uno strumento serio per migliorare processi, produttività e capacità competitiva. CHP la presenta in modo concreto, non spettacolare.</p><div class="detail-links"><a class="btn btn-secondary" href="#contatti">Capire come applicarla</a></div></article>
+          <article class="service-detail-card in-view" id="servizio-siti-social"><h3>Siti e Social</h3><p>La comunicazione digitale serve a rafforzare presenza, credibilità e capacità di generare attenzione. In quest’area il servizio viene presentato come supporto strutturato alla visibilità del cliente finale.</p><div class="detail-links"><a class="btn btn-secondary" href="#contatti">Valutare il servizio</a></div></article>
+          <article class="service-detail-card in-view" id="servizio-funnel"><h3>Funnel Marketing</h3><p>Qui il focus è sulla trasformazione della visibilità in contatti e opportunità. Il servizio va raccontato come processo ordinato, misurabile e coerente con obiettivi concreti di crescita.</p><div class="detail-links"><a class="btn btn-secondary" href="#contatti">Richiedi una consulenza</a></div></article>
+          <article class="service-detail-card in-view" id="servizio-coaching"><h3>Coaching</h3><p>Il coaching viene introdotto come leva di crescita personale e manageriale, utile quando il cliente ha bisogno di maggiore chiarezza, focus decisionale e supporto nel cambiamento.</p><div class="detail-links"><a class="btn btn-secondary" href="#contatti">Approfondisci</a></div></article>
+          <article class="service-detail-card in-view" id="servizio-hr"><h3>HR</h3><p>L’area HR amplia il dialogo con il cliente su organizzazione, persone, selezione e gestione. È uno dei servizi che più chiaramente mostra come lo studio possa evolvere in una relazione più ricca e strategica.</p><div class="detail-links"><a class="btn btn-secondary" href="#contatti">Scopri il valore</a></div></article>
+          <article class="service-detail-card in-view" id="servizio-bandi"><h3>Bandi</h3><p>I bandi rappresentano una leva concreta per creare opportunità economiche e progettuali. Vanno presentati come servizio ad alto valore percepito, non come semplice segnalazione occasionale.</p><div class="detail-links"><a class="btn btn-secondary" href="#contatti">Capire le opportunità</a></div></article>
+          <article class="service-detail-card in-view" id="servizio-welfare"><h3>Welfare</h3><p>Il welfare aggiunge utilità tangibile per aziende e persone, rafforzando il ruolo dello studio come interlocutore che porta strumenti pratici e non solo gestione amministrativa.</p><div class="detail-links"><a class="btn btn-secondary" href="#contatti">Approfondisci il servizio</a></div></article>
+          <article class="service-detail-card in-view" id="servizio-it-credito"><h3>IT e Credito</h3><p>Questa area unisce strumenti tecnologici e supporto finanziario. Serve a comunicare che CHP può aiutare lo studio a presidiare bisogni trasversali ma molto rilevanti per le aziende clienti.</p><div class="detail-links"><a class="btn btn-secondary" href="#contatti">Valutare l’area</a></div></article>
+          <article class="service-detail-card in-view" id="servizio-hse-assicurativi"><h3>HSE e Assicurativi</h3><p>HSE e assicurativi vanno raccontati come presidi di tutela e continuità. Sono servizi che aumentano la sensazione di solidità e completezza della proposta complessiva.</p><div class="detail-links"><a class="btn btn-secondary" href="#contatti">Richiedi dettagli</a></div></article>
+        </div>
 
-<p>Individuiamo la leva giusta, definiamo il perimetro, attiviamo i partner.  
-Tu rafforzi la relazione con il cliente.</p>
-</section>
+      </div>
+    </section>
 
-<!-- CTA -->
-<section class="dark">
-<h2>Il mercato si sta muovendo.</h2>
-<p>Vuoi guidarlo o inseguirlo?</p>
+    <section class="section-pad" id="come-funziona">
+      <div class="container">
+        <div class="section-head in-view">
+          <div>
+            <div class="section-kicker">Come funziona</div>
+            <h2 class="section-title">La logica attuale resta. La resa diventa molto più forte.</h2>
+          </div>
+          <div class="section-copy">Analisi, attivazione e supporto continuo restano la base. Li presentiamo in una timeline più premium e più immediata da leggere.</div>
+        </div>
+        <div class="timeline">
+          <article class="timeline-step in-view"><div class="timeline-badge">1</div><h3>Analisi dello studio</h3><p>Si parte dalla situazione reale, dal profilo dello studio e dalle opportunità più adatte al suo posizionamento e ai suoi clienti.</p></article>
+          <article class="timeline-step in-view"><div class="timeline-badge">2</div><h3>Selezione dei servizi</h3><p>Vengono individuate le leve più utili e coerenti, trasformando l’idea di “servizio in più” in una proposta sensata e integrata.</p></article>
+          <article class="timeline-step in-view"><div class="timeline-badge">3</div><h3>Attivazione operativa</h3><p>CHP entra in gioco come supporto strutturato, con metodo, coordinamento e visione operativa orientata alla concretezza.</p></article>
+          <article class="timeline-step in-view"><div class="timeline-badge">4</div><h3>Supporto continuo</h3><p>Il vero valore nasce nella continuità, nella qualità e nella capacità di accompagnare lo studio nel tempo.</p></article>
+        </div>
+      </div>
+    </section>
 
-<a href="https://calendly.com/giovanni-laricchiuta/" class="btn">Prenota call</a>
-</section>
+    <section class="section-pad">
+      <div class="container">
+        <div class="video-shell in-view">
+          <video autoplay muted loop playsinline poster="hero.mp4">
+            <source src="hero.mp4" type="video/mp4" />
+          </video>
+          <div class="video-content">
+            <div class="video-top">
+              <div>
+                <div class="section-kicker" style="color:#9ae6ff;">Video di presentazione</div>
+                <div class="video-title">La tua clip resta. Ma diventa parte centrale dell’esperienza.</div>
+              </div>
+            </div>
+            <div class="video-points">
+              <div class="video-point"><strong>Clip originale preservata</strong>Il video che hai già realizzato non viene eliminato. Viene valorizzato meglio.</div>
+              <div class="video-point"><strong>Più impatto</strong>Il contenuto audiovisivo entra in una sezione che rafforza percezione e autorevolezza.</div>
+              <div class="video-point"><strong>Più coerenza</strong>Il video lavora insieme a layout, contenuti e CTA per spingere verso il contatto.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- FOOTER -->
-<footer>
-<p>ConsulHub Pro</p>
+    <section class="section-pad">
+      <div class="container">
+        <div class="checklist-band in-view">
+          <div>
+            <div class="section-kicker" style="color:#9ae6ff;">Checklist per lo studio</div>
+            <h2 class="section-title" style="color:white; max-width:12ch;">Un asset già esistente che deve restare leva di conversione.</h2>
+            <p>La checklist non è un allegato marginale. È uno strumento concreto da valorizzare meglio, sia nella hero che nelle sezioni di conversione.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="checklist-studio.pdf" target="_blank" rel="noopener">Scarica la checklist</a>
+              <a class="btn btn-secondary" href="#contatti">Richiedi informazioni</a>
+            </div>
+          </div>
+          <div class="checklist-card">
+            <strong style="font-size:28px; letter-spacing:-.04em;">Cosa deve trasmettere</strong>
+            <ul>
+              <li>Utilità immediata per lo studio</li>
+              <li>Approccio concreto e non teorico</li>
+              <li>Competenza reale dietro la proposta</li>
+              <li>Un motivo in più per lasciare un contatto</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<a href="https://wa.me/393383262280" class="btn">WhatsApp</a>
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-head in-view">
+          <div>
+            <div class="section-kicker">Autorevolezza</div>
+            <h2 class="section-title">Segnali chiari di struttura e ambizione.</h2>
+          </div>
+          <div class="section-copy">Anche senza inventare numeri inutili, questa parte può comunicare ordine, metodo, ecosistema e capacità di costruire valore attorno allo studio.</div>
+        </div>
+        <div class="proof-grid">
+          <article class="proof-card in-view"><strong>3</strong><span>Pilastri centrali già definiti e integrabili nella proposta dello studio.</span></article>
+          <article class="proof-card in-view"><strong>15</strong><span>Servizi complementari mostrati come ecosistema e non come semplice elenco disordinato.</span></article>
+          <article class="proof-card in-view"><strong>1</strong><span>Metodo di lavoro ordinato, leggibile e pensato per supportare davvero la struttura.</span></article>
+          <article class="proof-card in-view"><strong>100%</strong><span>Obiettivo orientato a far percepire maggiore valore, modernità e capacità operativa.</span></article>
+        </div>
+      </div>
+    </section>
 
-<p>
-<a href="privacy.html" style="color:#fff;">Privacy</a> |
-<a href="cookie.html" style="color:#fff;">Cookie</a>
-</p>
-</footer>
+    <section class="section-pad" id="contatti">
+      <div class="container">
+        <div class="section-head in-view">
+          <div>
+            <div class="section-kicker">Contatti</div>
+            <h2 class="section-title">Due strade chiare: contatto diretto o form da compilare.</h2>
+          </div>
+          <div class="section-copy">Qui conserviamo esattamente la logica che volevi: bottone WhatsApp ben visibile in alto e form completo per richiedere di essere contattati.</div>
+        </div>
 
+        <div class="contact-grid">
+          <aside class="contact-card in-view">
+            <h3 style="margin:0 0 14px; font-size:30px; letter-spacing:-.05em;">Parliamone direttamente</h3>
+            <p>Prenota una call, scrivi via email oppure contattaci su WhatsApp. La pagina deve rendere il contatto naturale e immediato, senza attriti.</p>
+            <div class="contact-points">
+              <div class="contact-point"><i>✓</i><div>Email: <a href="mailto:info@consulhubpro.it">info@consulhubpro.it</a></div></div>
+              <div class="contact-point"><i>✓</i><div>Calendly: <a href="https://calendly.com/giovanni-laricchiuta/" target="_blank" rel="noopener">Prenota una call</a></div></div>
+              <div class="contact-point"><i>✓</i><div>Checklist: <a href="checklist-studio.pdf" target="_blank" rel="noopener">Scarica il PDF</a></div></div>
+              <div class="contact-point"><i>✓</i><div>Sede: Via A. Einstein, 7 – 20047 Cusago (MI)</div></div>
+            </div>
+            <div class="form-actions">
+              <a class="btn btn-whatsapp" href="https://wa.me/393383262280" target="_blank" rel="noopener">Scrivi su WhatsApp</a>
+              <a class="btn btn-primary" href="https://calendly.com/giovanni-laricchiuta/" target="_blank" rel="noopener">Prenota call</a>
+            </div>
+          </aside>
+
+          <section class="form-card in-view" aria-labelledby="formTitle">
+            <h3 id="formTitle" style="margin:0 0 16px; font-size:30px; letter-spacing:-.05em;">Richiedi di essere contattato</h3>
+            <form action="#" method="post">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="nome">Nome e cognome</label>
+                  <input id="nome" name="nome" type="text" placeholder="Inserisci nome e cognome" required />
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" placeholder="Inserisci email" required />
+                </div>
+                <div class="field">
+                  <label for="studio">Studio</label>
+                  <input id="studio" name="studio" type="text" placeholder="Nome dello studio" />
+                </div>
+                <div class="field">
+                  <label for="telefono">Telefono</label>
+                  <input id="telefono" name="telefono" type="tel" placeholder="Inserisci telefono" />
+                </div>
+                <div class="field full">
+                  <label for="messaggio">Messaggio</label>
+                  <textarea id="messaggio" name="messaggio" placeholder="Scrivi qui la tua richiesta"></textarea>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button class="btn btn-primary" type="submit">Invia richiesta</button>
+                <a class="btn btn-secondary" href="https://calendly.com/giovanni-laricchiuta/" target="_blank" rel="noopener">Oppure prenota una call</a>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="faq">
+      <div class="container">
+        <div class="section-head in-view">
+          <div>
+            <div class="section-kicker">FAQ</div>
+            <h2 class="section-title">Le domande frequenti restano. Ma diventano più pulite e premium.</h2>
+          </div>
+          <div class="section-copy">Qui manteniamo la funzione informativa del sito attuale, con un layout più ordinato, più respirato e più coerente col nuovo livello visivo.</div>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item in-view open"><button class="faq-q" type="button"><span>ConsulHub Pro è una semplice rete commerciale?</span><span>+</span></button><div class="faq-a" style="max-height: 200px;"><div class="faq-a-inner">No. Il sito deve far percepire una piattaforma strutturata che coordina servizi, opportunità e supporto operativo con un taglio più moderno e ordinato.</div></div></article>
+          <article class="faq-item in-view"><button class="faq-q" type="button"><span>Restano i contenuti attuali del sito?</span><span>+</span></button><div class="faq-a"><div class="faq-a-inner">Sì. Il lavoro fatto non viene buttato. Il punto è trasformarlo in una presenza digitale più forte, senza perdere gli elementi utili che già esistono.</div></div></article>
+          <article class="faq-item in-view"><button class="faq-q" type="button"><span>La checklist e il video restano?</span><span>+</span></button><div class="faq-a"><div class="faq-a-inner">Sì. La checklist PDF e la clip hero.mp4 vengono preservate e valorizzate molto più di prima, invece di essere sacrificate in nome dell’estetica.</div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-head in-view">
+          <div>
+            <div class="section-kicker">Legali</div>
+            <h2 class="section-title">Privacy Policy e Cookie Policy devono restare visibili.</h2>
+          </div>
+          <div class="section-copy">Hai ragione: non sono opzionali. Anche se la gestione tecnica dei file va verificata nel repo, qui lo spazio legale resta esplicito e ben visibile.</div>
+        </div>
+        <div class="legal-grid">
+          <article class="legal-card in-view">
+            <h3>Privacy Policy</h3>
+            <p>Se il sito attuale gestisce già una sezione o una pagina dedicata, questa va mantenuta e linkata nel footer e nella parte finale della homepage.</p>
+          </article>
+          <article class="legal-card in-view">
+            <h3>Cookie Policy</h3>
+            <p>Stesso principio: deve restare disponibile e facilmente raggiungibile, senza essere nascosta o dimenticata nella nuova veste grafica.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-shell">
+        <div>
+          <div class="footer-brand">
+            <img src="logo-chp.png" alt="ConsulHub Pro" />
+            <div class="footer-copy">ConsulHub Pro · Piattaforma premium per studi professionali.</div>
+          </div>
+          <div class="footer-links" style="margin-top:16px;">
+            <a href="per-studi.html">Per Studi</a>
+            <a href="formazione-finanziata.html">Formazione Finanziata</a>
+            <a href="blog.html">Blog</a>
+            <a href="contatti.html">Contatti</a>
+            <a href="checklist-studio.pdf" target="_blank" rel="noopener">Checklist</a>
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-social">
+            <a href="https://wa.me/393383262280" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="https://www.linkedin.com/company/consulhub-pro/posts/?feedView=all" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/serviziconsulenzalavoro24/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61585127122604" target="_blank" rel="noopener">Facebook</a>
+          </div>
+          <div class="footer-links">
+            <a href="https://www.consulhubpro.it/#privacy" target="_blank" rel="noopener">Privacy Policy</a>
+            <a href="https://www.consulhubpro.it/#cookie" target="_blank" rel="noopener">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('siteHeader');
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobilePanel = document.getElementById('mobilePanel');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+
+    if (mobileToggle) {
+      mobileToggle.addEventListener('click', () => {
+        const open = mobilePanel.classList.toggle('open');
+        mobileToggle.classList.toggle('open', open);
+        mobileToggle.setAttribute('aria-expanded', String(open));
+      });
+      mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        mobilePanel.classList.remove('open');
+        mobileToggle.classList.remove('open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }));
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: .12 });
+    document.querySelectorAll('.in-view').forEach(el => io.observe(el));
+
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const button = item.querySelector('.faq-q');
+      const answer = item.querySelector('.faq-a');
+      button.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        faqItems.forEach(other => {
+          other.classList.remove('open');
+          other.querySelector('.faq-a').style.maxHeight = null;
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+
+    const storyContent = [
+      {
+        aTitle: 'Ruolo dello studio',
+        aText: 'Il consulente del lavoro viene percepito sempre più come nodo strategico e non solo come gestore di adempimenti.',
+        bTitle: 'Mercato in movimento',
+        bText: 'La domanda evolve verso servizi più ampi, integrati e utili alle aziende.',
+        cTitle: 'Nuova prospettiva',
+        cText: 'Lo studio può diventare ancora più centrale se supportato da una piattaforma credibile.'
+      },
+      {
+        aTitle: 'Più domanda',
+        aText: 'Le imprese cercano formazione, strumenti, servizi ricorrenti e capacità di orientamento.',
+        bTitle: 'Più aspettative',
+        bText: 'Non basta più eseguire. Serve anche guidare e proporre valore aggiuntivo.',
+        cTitle: 'Più opportunità',
+        cText: 'Il momento giusto è adesso, finché molti competitor si presentano ancora in modo tradizionale.'
+      },
+      {
+        aTitle: 'Struttura necessaria',
+        aText: 'Ampliare la proposta richiede metodo, chiarezza, supporto e messaggi coerenti.',
+        bTitle: 'Ordine operativo',
+        bText: 'Per questo serve una piattaforma capace di accompagnare lo studio e non solo fornirgli una brochure.',
+        cTitle: 'Supporto concreto',
+        cText: 'CHP nasce per rendere più praticabile, leggibile e credibile questo passaggio.'
+      },
+      {
+        aTitle: 'ConsulHub Pro',
+        aText: 'Una piattaforma moderna, utile e strutturata per studi che vogliono alzare davvero il proprio livello.',
+        bTitle: 'Valore amplificato',
+        bText: 'Servizi, supporto e opportunità si combinano dentro un sistema con maggiore forza percepita.',
+        cTitle: 'Evoluzione',
+        cText: 'Il risultato finale è uno studio che appare più completo, più forte e più contemporaneo.'
+      }
+    ];
+
+    const storyCards = document.querySelectorAll('.story-card');
+    const panelA = document.getElementById('storyPanelA');
+    const panelAText = document.getElementById('storyPanelAText');
+    const panelB = document.getElementById('storyPanelB');
+    const panelBText = document.getElementById('storyPanelBText');
+    const panelC = document.getElementById('storyPanelC');
+    const panelCText = document.getElementById('storyPanelCText');
+    const storyGlow = document.querySelector('.story-glow');
+
+    const storyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          storyCards.forEach(card => card.classList.remove('active'));
+          entry.target.classList.add('active');
+          const index = Number(entry.target.dataset.story);
+          const data = storyContent[index];
+          panelA.textContent = data.aTitle;
+          panelAText.textContent = data.aText;
+          panelB.textContent = data.bTitle;
+          panelBText.textContent = data.bText;
+          panelC.textContent = data.cTitle;
+          panelCText.textContent = data.cText;
+          const positions = [
+            { top: '16%', left: '10%' },
+            { top: '10%', left: '54%' },
+            { top: '44%', left: '18%' },
+            { top: '36%', left: '56%' }
+          ];
+          if (storyGlow) {
+            storyGlow.style.top = positions[index].top;
+            storyGlow.style.left = positions[index].left;
+          }
+        }
+      });
+    }, { threshold: .56 });
+    storyCards.forEach(card => storyObserver.observe(card));
+
+    const ecosystemStage = document.getElementById('ecosystemStage');
+    const ecoNodes = [
+      { title: 'Strategia', text: 'Più visione e posizionamento', angle: -112, distance: 232 },
+      { title: 'Sicurezza', text: 'Valore operativo e tutela', angle: -74, distance: 246 },
+      { title: 'AI', text: 'Efficienza e modernità', angle: -30, distance: 252 },
+      { title: 'Siti e Social', text: 'Comunicazione e presenza', angle: 14, distance: 254 },
+      { title: 'Funnel', text: 'Lead e conversione', angle: 52, distance: 244 },
+      { title: 'HR', text: 'Supporto organizzativo', angle: 92, distance: 228 },
+      { title: 'Bandi', text: 'Opportunità mirate', angle: 136, distance: 214 },
+      { title: 'Welfare', text: 'Più utilità percepita', angle: 176, distance: 202 },
+      { title: 'IT e Credito', text: 'Strumenti e supporto', angle: 214, distance: 214 },
+      { title: 'HSE e Assicurativi', text: 'Tutela e solidità', angle: 248, distance: 230 }
+    ];
+
+    if (ecosystemStage) {
+      const centerX = ecosystemStage.clientWidth / 2;
+      const centerY = ecosystemStage.clientHeight / 2;
+      ecoNodes.forEach(node => {
+        const rad = node.angle * Math.PI / 180;
+        const x = centerX + Math.cos(rad) * node.distance;
+        const y = centerY + Math.sin(rad) * node.distance;
+        const line = document.createElement('div');
+        const distance = Math.hypot(x - centerX, y - centerY);
+        const angleDeg = Math.atan2(y - centerY, x - centerX) * 180 / Math.PI;
+        line.className = 'eco-line';
+        line.style.width = distance + 'px';
+        line.style.transform = `translate(${centerX}px, ${centerY}px) rotate(${angleDeg}deg)`;
+        ecosystemStage.appendChild(line);
+
+        const item = document.createElement('div');
+        item.className = 'eco-node';
+        item.style.left = (x - 86) + 'px';
+        item.style.top = (y - 48) + 'px';
+        item.innerHTML = `<strong>${node.title}</strong><span>${node.text}</span>`;
+        ecosystemStage.appendChild(item);
+      });
+    }
+  </script>
 </body>
 </html>
