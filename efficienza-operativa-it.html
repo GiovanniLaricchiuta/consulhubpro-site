@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ConsulHub Pro | Efficienza operativa e IT per aziende e studi professionali</title>
+  <meta name="description" content="Soluzioni per efficienza operativa, digitalizzazione, IT, automazione dei processi e continuità aziendale. ConsulHub Pro coordina partner premium per interventi concreti e su misura." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://www.consulhubpro.it/efficienza-operativa-it.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ConsulHub Pro" />
+  <meta property="og:title" content="Efficienza operativa e IT | ConsulHub Pro" />
+  <meta property="og:description" content="Automazione, organizzazione dei flussi, supporto IT e digitalizzazione per imprese e studi professionali." />
+  <meta property="og:url" content="https://www.consulhubpro.it/efficienza-operativa-it.html" />
+  <meta property="og:image" content="https://www.consulhubpro.it/logo-chp.png" />
+
+  <meta name="theme-color" content="#0b1220" />
+
+  <style>
+    :root{
+      --bg:#07111f;
+      --bg-soft:#0d1b2e;
+      --card:#0f2238;
+      --card-2:#122a44;
+      --line:rgba(255,255,255,.10);
+      --text:#eef4ff;
+      --muted:#a9b8cf;
+      --primary:#38bdf8;
+      --primary-2:#22c55e;
+      --accent:#7dd3fc;
+      --shadow:0 18px 50px rgba(0,0,0,.35);
+      --radius:22px;
+      --max:1200px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(34,197,94,.10), transparent 20%),
+        linear-gradient(180deg, #07111f 0%, #0a1627 45%, #091422 100%);
+      line-height:1.6;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    video{display:block;max-width:100%}
+
+    .container{
+      width:min(var(--max), calc(100% - 32px));
+      margin-inline:auto;
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(16px);
+      background:rgba(7,17,31,.72);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      min-height:76px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+
+    .brand-mark{
+      width:44px;
+      height:44px;
+      border-radius:14px;
+      background:linear-gradient(135deg, rgba(56,189,248,.22), rgba(34,197,94,.18));
+      border:1px solid rgba(255,255,255,.10);
+      display:grid;
+      place-items:center;
+      box-shadow:var(--shadow);
+      font-weight:800;
+      color:#fff;
+      letter-spacing:.4px;
+      flex:0 0 auto;
+    }
+
+    .brand-text{
+      min-width:0;
+    }
+
+    .brand-text strong{
+      display:block;
+      font-size:1rem;
+      letter-spacing:.2px;
+    }
+
+    .brand-text span{
+      display:block;
+      color:var(--muted);
+      font-size:.88rem;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .nav-links a{
+      color:var(--muted);
+      padding:10px 14px;
+      border-radius:999px;
+      transition:.25s ease;
+      border:1px solid transparent;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active{
+      color:#fff;
+      background:rgba(255,255,255,.05);
+      border-color:rgba(255,255,255,.08);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:48px;
+      padding:0 18px;
+      border-radius:999px;
+      font-weight:700;
+      transition:.25s ease;
+      border:1px solid transparent;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg, var(--primary), #0ea5e9);
+      color:#04111d;
+      box-shadow:0 14px 35px rgba(14,165,233,.28);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-1px);
+      filter:brightness(1.03);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.04);
+      border-color:rgba(255,255,255,.10);
+      color:#fff;
+    }
+
+    .btn-secondary:hover{
+      background:rgba(255,255,255,.08);
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:34px 0 30px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .hero-copy,
+    .hero-media{
+      position:relative;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      background:linear-gradient(180deg, rgba(16,34,56,.90), rgba(10,20,34,.96));
+    }
+
+    .hero-copy{
+      padding:34px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      align-self:flex-start;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(56,189,248,.10);
+      color:#cbefff;
+      border:1px solid rgba(56,189,248,.24);
+      font-size:.86rem;
+      font-weight:700;
+      letter-spacing:.2px;
+      margin-bottom:18px;
+    }
+
+    .hero h1{
+      margin:0 0 16px;
+      font-size:clamp(2rem, 4vw, 3.6rem);
+      line-height:1.06;
+      letter-spacing:-.03em;
+    }
+
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      font-size:1.05rem;
+      max-width:760px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:28px;
+    }
+
+    .hero-points{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:28px;
+    }
+
+    .hero-point{
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;
+      padding:16px;
+    }
+
+    .hero-point strong{
+      display:block;
+      font-size:1rem;
+      margin-bottom:4px;
+    }
+
+    .hero-point span{
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    .hero-media{
+      min-height:460px;
+    }
+
+    .hero-media video{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      opacity:.34;
+    }
+
+    .hero-overlay{
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(180deg, rgba(5,10,18,.24) 0%, rgba(5,10,18,.58) 100%),
+        linear-gradient(135deg, rgba(56,189,248,.18), rgba(34,197,94,.10));
+    }
+
+    .media-card{
+      position:absolute;
+      left:22px;
+      right:22px;
+      bottom:22px;
+      background:rgba(8,18,31,.72);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:24px;
+      padding:22px;
+    }
+
+    .media-card h2{
+      margin:0 0 10px;
+      font-size:1.2rem;
+    }
+
+    .media-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:.98rem;
+    }
+
+    section{
+      padding:30px 0;
+    }
+
+    .section-head{
+      margin-bottom:22px;
+      max-width:860px;
+    }
+
+    .section-head .kicker{
+      color:var(--accent);
+      text-transform:uppercase;
+      font-size:.80rem;
+      letter-spacing:.18em;
+      font-weight:800;
+      margin-bottom:10px;
+      display:block;
+    }
+
+    .section-head h2{
+      margin:0 0 10px;
+      font-size:clamp(1.7rem, 3vw, 2.5rem);
+      line-height:1.12;
+      letter-spacing:-.02em;
+    }
+
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      font-size:1rem;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(17,35,57,.92), rgba(10,23,39,.98));
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:var(--shadow);
+      height:100%;
+    }
+
+    .card-icon{
+      width:52px;
+      height:52px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      font-size:1.2rem;
+      background:linear-gradient(135deg, rgba(56,189,248,.18), rgba(34,197,94,.16));
+      border:1px solid rgba(255,255,255,.10);
+      margin-bottom:16px;
+    }
+
+    .card h3{
+      margin:0 0 10px;
+      font-size:1.18rem;
+      line-height:1.2;
+    }
+
+    .card p{
+      margin:0 0 16px;
+      color:var(--muted);
+    }
+
+    .card ul{
+      margin:0;
+      padding-left:18px;
+      color:var(--text);
+    }
+
+    .card li{
+      margin:0 0 8px;
+    }
+
+    .card li::marker{
+      color:var(--primary);
+    }
+
+    .service-card{
+      display:flex;
+      flex-direction:column;
+      min-height:100%;
+    }
+
+    .service-card .service-footer{
+      margin-top:auto;
+      padding-top:18px;
+    }
+
+    .highlight{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+      align-items:stretch;
+    }
+
+    .visual-panel{
+      position:relative;
+      min-height:340px;
+      border-radius:28px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:var(--shadow);
+      background:
+        linear-gradient(180deg, rgba(7,17,31,.18), rgba(7,17,31,.55)),
+        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+    }
+
+    .visual-panel::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(135deg, rgba(56,189,248,.12), rgba(34,197,94,.08));
+    }
+
+    .visual-badge{
+      position:absolute;
+      left:20px;
+      bottom:20px;
+      z-index:2;
+      background:rgba(8,18,31,.72);
+      border:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(10px);
+      border-radius:18px;
+      padding:14px 16px;
+      max-width:320px;
+    }
+
+    .visual-badge strong{
+      display:block;
+      margin-bottom:6px;
+    }
+
+    .visual-badge span{
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .step{
+      position:relative;
+      padding:24px 20px;
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(17,35,57,.92), rgba(10,23,39,.98));
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:var(--shadow);
+    }
+
+    .step-num{
+      width:42px;
+      height:42px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      font-weight:800;
+      background:linear-gradient(135deg, var(--primary), #22c55e);
+      color:#04111d;
+      margin-bottom:14px;
+    }
+
+    .step h3{
+      margin:0 0 8px;
+      font-size:1.06rem;
+    }
+
+    .step p{
+      margin:0;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .cta{
+      padding:18px 0 54px;
+    }
+
+    .cta-box{
+      position:relative;
+      overflow:hidden;
+      border-radius:30px;
+      border:1px solid rgba(255,255,255,.10);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(56,189,248,.16), transparent 28%),
+        radial-gradient(circle at 85% 30%, rgba(34,197,94,.12), transparent 24%),
+        linear-gradient(135deg, #0d2036 0%, #0a1728 100%);
+      box-shadow:var(--shadow);
+      padding:34px;
+    }
+
+    .cta-box h2{
+      margin:0 0 12px;
+      font-size:clamp(1.7rem, 3vw, 2.4rem);
+      line-height:1.1;
+    }
+
+    .cta-box p{
+      margin:0;
+      color:var(--muted);
+      max-width:760px;
+      font-size:1rem;
+    }
+
+    .cta-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:24px;
+    }
+
+    .breadcrumbs{
+      padding-top:18px;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    .breadcrumbs a{
+      color:#d7e8ff;
+    }
+
+    footer{
+      border-top:1px solid rgba(255,255,255,.08);
+      padding:26px 0 34px;
+      color:var(--muted);
+    }
+
+    .footer-grid{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a:hover{
+      color:#fff;
+    }
+
+    @media (max-width: 1080px){
+      .hero-grid,
+      .highlight,
+      .grid-3,
+      .grid-2,
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .hero-points{
+        grid-template-columns:1fr;
+      }
+
+      .hero-media{
+        min-height:360px;
+      }
+    }
+
+    @media (max-width: 760px){
+      .nav{
+        padding:10px 0;
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .nav-links{
+        width:100%;
+        justify-content:flex-start;
+      }
+
+      .hero-copy{
+        padding:24px;
+      }
+
+      .cta-box{
+        padding:24px;
+      }
+
+      .media-card{
+        left:16px;
+        right:16px;
+        bottom:16px;
+        padding:18px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Efficienza operativa e IT",
+    "url":"https://www.consulhubpro.it/efficienza-operativa-it.html",
+    "description":"Soluzioni per efficienza operativa, digitalizzazione, IT, automazione dei processi e continuità aziendale.",
+    "isPartOf":{
+      "@type":"WebSite",
+      "name":"ConsulHub Pro",
+      "url":"https://www.consulhubpro.it/"
+    },
+    "about":{
+      "@type":"Service",
+      "name":"Efficienza operativa e IT",
+      "provider":{
+        "@type":"Organization",
+        "name":"ConsulHub Pro"
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Vai alla homepage di ConsulHub Pro">
+        <div class="brand-mark">CHP</div>
+        <div class="brand-text">
+          <strong>ConsulHub Pro</strong>
+          <span>Servizi integrati per imprese e studi professionali</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="servizi.html" class="active">Servizi</a>
+        <a href="contatti.html">Contatti</a>
+        <a href="contatti.html" class="btn btn-primary">Richiedi informazioni</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container breadcrumbs">
+    <a href="index.html">Home</a> / <a href="servizi.html">Servizi</a> / <span>Efficienza operativa e IT</span>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Macroarea 5 · Efficienza operativa e IT</div>
+          <h1>Digitalizzare i processi non basta.<br>Bisogna farli funzionare meglio.</h1>
+          <p>
+            ConsulHub Pro coordina interventi dedicati a organizzazione dei flussi, automazione operativa, supporto IT e strumenti digitali per aiutare aziende e studi professionali a lavorare con più continuità, più controllo e meno dispersione di tempo.
+          </p>
+
+          <div class="hero-actions">
+            <a href="contatti.html" class="btn btn-primary">Parla con noi</a>
+            <a href="servizi.html" class="btn btn-secondary">Torna ai servizi</a>
+          </div>
+
+          <div class="hero-points">
+            <div class="hero-point">
+              <strong>Più efficienza</strong>
+              <span>Processi più fluidi, meno attività dispersive e più tempo per il business.</span>
+            </div>
+            <div class="hero-point">
+              <strong>Più controllo</strong>
+              <span>Strumenti, dati e flussi organizzati per prendere decisioni migliori.</span>
+            </div>
+            <div class="hero-point">
+              <strong>Più continuità</strong>
+              <span>Supporto operativo e tecnologico per ridurre blocchi, errori e colli di bottiglia.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="hero.mp4" type="video/mp4" />
+          </video>
+          <div class="hero-overlay"></div>
+          <div class="media-card">
+            <h2>Quando i processi sono confusi, il costo non è solo tecnico</h2>
+            <p>
+              Si perde tempo, si rallentano le persone, aumentano i passaggi inutili e si riduce la capacità dell’azienda di crescere in modo ordinato. Per questo l’efficienza operativa è una leva concreta di competitività.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Approccio</span>
+          <h2>Interventi concreti, non teoria astratta</h2>
+          <p>
+            In questa macroarea rientrano tutti i servizi pensati per migliorare il modo in cui l’azienda lavora ogni giorno: organizzazione dei flussi, adozione di strumenti digitali, supporto IT, automazione operativa e semplificazione delle attività ricorrenti.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-icon">⚙️</div>
+            <h3>Efficienza reale</h3>
+            <p>
+              L’obiettivo non è introdurre strumenti a caso, ma rendere il lavoro più ordinato, più rapido e più gestibile.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🔄</div>
+            <h3>Processi più fluidi</h3>
+            <p>
+              Si interviene sui punti in cui l’operatività rallenta, si duplica o dipende troppo da passaggi manuali.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🧩</div>
+            <h3>Soluzioni su misura</h3>
+            <p>
+              Ogni intervento viene calibrato sul livello di maturità dell’organizzazione, sugli strumenti già presenti e sugli obiettivi concreti.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container highlight">
+        <div>
+          <div class="section-head">
+            <span class="kicker">Perché è strategica</span>
+            <h2>Una struttura più efficiente migliora anche vendite, persone e margini</h2>
+            <p>
+              Quando i sistemi non dialogano, i file si rincorrono, le attività si duplicano e ogni richiesta richiede troppo tempo, il problema non è solo organizzativo. Diventa un problema economico, commerciale e manageriale.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <article class="card">
+              <div class="card-icon">📉</div>
+              <h3>Riduzione delle inefficienze</h3>
+              <p>
+                Meno passaggi inutili, meno rallentamenti interni, meno dipendenza da procedure poco chiare o troppo manuali.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">📈</div>
+              <h3>Migliore scalabilità</h3>
+              <p>
+                Processi più ordinati permettono all’azienda di crescere senza aumentare in modo disordinato costi, errori e complessità.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="visual-panel" aria-hidden="true">
+          <div class="visual-badge">
+            <strong>Efficienza operativa</strong>
+            <span>Non è solo tecnologia. È organizzazione, continuità e capacità di lavorare meglio ogni giorno.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servizi-operativi">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Servizi della macroarea</span>
+          <h2>Le aree di intervento principali</h2>
+          <p>
+            Di seguito trovi i servizi che rientrano nell’area Efficienza operativa e IT. In questa fase i pulsanti portano alla pagina contatti, così il sito resta pienamente navigabile senza errori 404.
+          </p>
+        </div>
+
+        <div class="grid-3">
+
+          <article class="card service-card">
+            <div class="card-icon">🗂️</div>
+            <h3>Office automation e semplificazione dei flussi</h3>
+            <p>
+              Interventi pensati per ridurre attività ripetitive, migliorare l’organizzazione documentale e rendere più fluidi i processi interni tra uffici, persone e funzioni aziendali.
+            </p>
+            <ul>
+              <li>Analisi delle attività ricorrenti e dei colli di bottiglia</li>
+              <li>Semplificazione di passaggi manuali e approvazioni interne</li>
+              <li>Razionalizzazione dei flussi documentali e delle routine operative</li>
+            </ul>
+            <div class="service-footer">
+              <a href="contatti.html" class="btn btn-secondary">Approfondisci</a>
+            </div>
+          </article>
+
+          <article class="card service-card">
+            <div class="card-icon">🤖</div>
+            <h3>Automazione operativa e processi digitali</h3>
+            <p>
+              Soluzioni orientate a introdurre automazioni utili, concrete e sostenibili, in funzione del contesto aziendale e del ritorno operativo atteso.
+            </p>
+            <ul>
+              <li>Mappatura dei processi digitalizzabili</li>
+              <li>Riduzione delle attività a basso valore aggiunto</li>
+              <li>Supporto nell’adozione di strumenti e logiche di automazione</li>
+            </ul>
+            <div class="service-footer">
+              <a href="contatti.html" class="btn btn-secondary">Approfondisci</a>
+            </div>
+          </article>
+
+          <article class="card service-card">
+            <div class="card-icon">💻</div>
+            <h3>Supporto IT e infrastruttura operativa</h3>
+            <p>
+              Affiancamento su esigenze tecnologiche e operative legate all’ambiente di lavoro digitale, con attenzione a continuità, affidabilità e funzionalità dei sistemi.
+            </p>
+            <ul>
+              <li>Valutazione dell’assetto tecnologico esistente</li>
+              <li>Supporto nella razionalizzazione delle dotazioni operative</li>
+              <li>Interventi orientati a stabilità, ordine e continuità</li>
+            </ul>
+            <div class="service-footer">
+              <a href="contatti.html" class="btn btn-secondary">Approfondisci</a>
+            </div>
+          </article>
+
+          <article class="card service-card">
+            <div class="card-icon">🔐</div>
+            <h3>Cyber hygiene e protezione operativa di base</h3>
+            <p>
+              Attività orientate alla riduzione dei rischi più frequenti connessi a uso improprio degli strumenti, procedure deboli e scarsa consapevolezza operativa.
+            </p>
+            <ul>
+              <li>Verifica delle principali vulnerabilità organizzative</li>
+              <li>Supporto su pratiche corrette di utilizzo e gestione accessi</li>
+              <li>Maggiore attenzione alla continuità e alla protezione del lavoro quotidiano</li>
+            </ul>
+            <div class="service-footer">
+              <a href="contatti.html" class="btn btn-secondary">Approfondisci</a>
+            </div>
+          </article>
+
+          <article class="card service-card">
+            <div class="card-icon">📡</div>
+            <h3>Digital workplace e strumenti collaborativi</h3>
+            <p>
+              Interventi per migliorare collaborazione, condivisione delle informazioni e gestione del lavoro tra persone, reparti e sedi diverse.
+            </p>
+            <ul>
+              <li>Supporto nella scelta e organizzazione degli strumenti collaborativi</li>
+              <li>Migliore condivisione di file, informazioni e attività</li>
+              <li>Riduzione di confusione, duplicazioni e dispersione</li>
+            </ul>
+            <div class="service-footer">
+              <a href="contatti.html" class="btn btn-secondary">Approfondisci</a>
+            </div>
+          </article>
+
+          <article class="card service-card">
+            <div class="card-icon">🧠</div>
+            <h3>Supporto al cambiamento e adozione dei nuovi strumenti</h3>
+            <p>
+              Per ottenere risultati, non basta introdurre una piattaforma o un nuovo processo. Serve accompagnare le persone nel cambiamento e favorire l’adozione reale.
+            </p>
+            <ul>
+              <li>Affiancamento nelle fasi di transizione operativa</li>
+              <li>Migliore integrazione tra tecnologia, persone e metodo</li>
+              <li>Riduzione delle resistenze e maggiore continuità nell’uso</li>
+            </ul>
+            <div class="service-footer">
+              <a href="contatti.html" class="btn btn-secondary">Approfondisci</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Metodo</span>
+          <h2>Come lavoriamo su questa macroarea</h2>
+          <p>
+            L’intervento parte sempre dall’analisi della situazione reale. L’obiettivo non è aggiungere complessità, ma togliere attriti operativi e costruire un assetto più solido e più efficiente.
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step-num">1</div>
+            <h3>Analisi iniziale</h3>
+            <p>Osserviamo processi, strumenti in uso, criticità operative e aree dove l’azienda perde tempo o controllo.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-num">2</div>
+            <h3>Definizione priorità</h3>
+            <p>Individuiamo gli interventi con impatto concreto e valutiamo cosa conviene affrontare prima.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-num">3</div>
+            <h3>Proposta operativa</h3>
+            <p>Costruiamo una soluzione coerente con dimensione, obiettivi e livello di maturità digitale dell’organizzazione.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-num">4</div>
+            <h3>Affiancamento e sviluppo</h3>
+            <p>Coordiniamo l’intervento con logica di risultato, favorendo adozione reale e miglioramento progressivo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Vuoi capire dove la tua struttura perde tempo, efficienza e controllo?</h2>
+          <p>
+            Possiamo aiutarti a leggere i punti critici, individuare le priorità e costruire un percorso concreto di miglioramento operativo, digitale e organizzativo.
+          </p>
+
+          <div class="cta-actions">
+            <a href="contatti.html" class="btn btn-primary">Richiedi un confronto</a>
+            <a href="servizi.html" class="btn btn-secondary">Esplora tutte le macroaree</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong style="color:#fff;">ConsulHub Pro</strong><br>
+        Via A. Einstein, 7 – 20047 Cusago (MI)
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="servizi.html">Servizi</a>
+        <a href="contatti.html">Contatti</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
