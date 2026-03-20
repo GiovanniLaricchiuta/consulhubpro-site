@@ -19,18 +19,474 @@
   <meta name="twitter:title" content="ConsulHub Pro | Contatti: richiedi informazioni e definisci i prossimi passi" />
   <meta name="twitter:description" content="Contatta ConsulHub Pro: richiedi informazioni su pilastri e servizi premium. Email, form e WhatsApp. Prenota una call." />
   <meta name="twitter:image" content="https://www.consulhubpro.it/logo-chp.png" />
+  <meta name="theme-color" content="#f5f8fc" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root{
+      --bg:#f5f8fc;
+      --bg-soft:#eef4fb;
+      --surface:#ffffff;
+      --surface-2:#f8fbff;
+      --text:#0f172a;
+      --muted:#5b6b82;
+      --line:rgba(15,23,42,.08);
+      --primary:#1d9bf0;
+      --primary-2:#0b6bcb;
+      --pill:#eaf4ff;
+      --shadow:0 16px 42px rgba(15,23,42,.08);
+      --radius:24px;
+      --max:1200px;
+    }
 
-  <script>
-    window.CHP_DETAILS = {"p1": {"t": "FORMAZIENDA — Pilastro 01", "d": "Formazione finanziata attivabile subito: lo Studio resta il riferimento, noi gestiamo la delivery con processo ordinato.", "l": ["Attivazione rapida, senza numero minimo di partecipanti.", "Percorsi impostati su obiettivi, tempi e impatto.", "Gestione documentale chiara e tracciabile."]}, "p2": {"t": "EBILP — Pilastro 02", "d": "Ente bilaterale alternativo: onboarding guidato e perimetro definito, con approccio snello e leggibile.", "l": ["Perimetro definito e onboarding guidato.", "Riduzione frizioni operative per Studio e azienda.", "Processo lineare e comunicazione ordinata."]}, "p3": {"t": "FISAPI — Pilastro 03", "d": "Assistenza sindacale e contrattuale semplice e riconosciuta, utile per gestire la parte sensibile senza stress.", "l": ["Supporto su tematiche contrattuali con interlocutore strutturato.", "Coerenza e continuità: riduzione rischi interpretativi.", "Operatività a carico del partner, con presidio dello Studio."]}, "s1": {"t": "Strategia aziendale e sviluppo PMI", "d": "Analisi, priorità e piano operativo per far crescere l’azienda con obiettivi misurabili.", "l": ["Audit rapido e identificazione priorità", "Roadmap 30/60/90 giorni", "KPI, responsabilità e deliverable chiari"]}, "s2": {"t": "Sicurezza sul lavoro", "d": "Consulenza e corsi: gestione ordinata degli adempimenti e della formazione.", "l": ["Mappatura obblighi e scadenze", "Corsi e attestati", "Riduzione rischio e caos documentale"]}, "s3": {"t": "AI applicata al business", "d": "Progetti pratici e personalizzati per aumentare produttività e qualità dei processi.", "l": ["Use-case selezionati e misurabili", "Automazioni e procedure operative", "Formazione mirata al team"]}, "s4": {"t": "Siti web, social media e contenuti digitali", "d": "Presenza online coerente e moderna, orientata a credibilità e lead generation.", "l": ["Struttura e copy orientati a conversione", "Piano contenuti e pubblicazione", "CTA, form e tracking"]}, "s5": {"t": "Funnel marketing e lead generation", "d": "Canali e messaggi per trasformare visibilità in richieste reali e profilate.", "l": ["Offerta, messaging e target", "Landing + automazioni contatto", "Ottimizzazione su dati"]}, "s6": {"t": "Accesso a fondi, bandi e incentivi fiscali", "d": "Valutazione opportunità, requisiti e percorso di attivazione con perimetro chiaro.", "l": ["Screening requisiti e fattibilità", "Raccolta documenti guidata", "Aggiornamenti e milestone"]}};
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(29,155,240,.08), transparent 24%),
+        linear-gradient(180deg, #f7fbff 0%, #f2f6fb 100%);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    button,input,textarea{font:inherit}
+
+    .container{
+      width:min(var(--max), calc(100% - 32px));
+      margin-inline:auto;
+    }
+
+    .skip{
+      position:absolute;
+      left:-9999px;
+      top:auto;
+    }
+
+    .skip:focus{
+      left:16px;
+      top:16px;
+      z-index:1000;
+      background:#fff;
+      color:#000;
+      padding:10px 14px;
+      border-radius:10px;
+      box-shadow:var(--shadow);
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(15,23,42,.06);
+    }
+
+    .nav{
+      min-height:86px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+
+    .brand img{
+      width:48px;
+      height:48px;
+      object-fit:contain;
+      border-radius:14px;
+      background:#fff;
+      box-shadow:var(--shadow);
+      padding:4px;
+      flex:0 0 auto;
+    }
+
+    .brand .name strong{
+      display:block;
+      font-size:1.02rem;
+    }
+
+    .brand .name span{
+      display:block;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    .links{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .links a{
+      padding:12px 16px;
+      border-radius:999px;
+      color:#233247;
+      transition:.22s ease;
+    }
+
+    .links a:hover,
+    .links a.active{
+      background:#f1f6fc;
+      box-shadow:inset 0 0 0 1px rgba(15,23,42,.06);
+    }
+
+    .actions{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .menu{
+      display:none;
+      min-height:44px;
+      padding:0 16px;
+      border:none;
+      border-radius:999px;
+      background:#f1f6fc;
+      color:#223146;
+      cursor:pointer;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:50px;
+      padding:0 22px;
+      border-radius:999px;
+      font-weight:800;
+      transition:.22s ease;
+      border:1px solid transparent;
+      cursor:pointer;
+    }
+
+    .btn.primary{
+      background:linear-gradient(135deg,var(--primary),var(--primary-2));
+      color:#fff;
+      box-shadow:0 16px 34px rgba(29,155,240,.22);
+    }
+
+    .btn.secondary{
+      background:#fff;
+      color:var(--text);
+      border-color:rgba(15,23,42,.10);
+    }
+
+    .btn:hover{transform:translateY(-1px)}
+
+    .mobile{
+      display:none;
+      padding-bottom:14px;
+    }
+
+    .mobile .inner{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      padding:16px;
+      border-radius:20px;
+      background:#fff;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(15,23,42,.06);
+    }
+
+    .mobile .inner a{
+      padding:10px 12px;
+      border-radius:12px;
+    }
+
+    .mobile .inner a:hover{
+      background:#f3f7fc;
+    }
+
+    .breadcrumbs{
+      padding:26px 0 18px;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .breadcrumbs a{color:#223146}
+
+    main section{
+      padding:12px 0 28px;
+    }
+
+    .hero-card,
+    .form-card,
+    .info-card,
+    .cta-card{
+      background:linear-gradient(180deg,#ffffff 0%, #f8fbff 100%);
+      border:1px solid rgba(15,23,42,.06);
+      border-radius:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-card{
+      padding:38px;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:var(--pill);
+      color:#1266b3;
+      font-weight:800;
+      font-size:.92rem;
+      box-shadow:inset 0 0 0 1px rgba(29,155,240,.14);
+      margin-bottom:18px;
+    }
+
+    h1{
+      margin:0 0 14px;
+      font-size:clamp(2.3rem,5vw,4.2rem);
+      line-height:1;
+      letter-spacing:-.04em;
+    }
+
+    .lead{
+      margin:0;
+      font-size:1.06rem;
+      color:#314257;
+      max-width:860px;
+    }
+
+    .hero-ctas{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:24px;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:24px;
+      align-items:start;
+    }
+
+    .form-card,
+    .info-card{
+      padding:30px;
+    }
+
+    .section-title{
+      margin:0 0 8px;
+      font-size:clamp(1.8rem,3vw,2.6rem);
+      line-height:1.08;
+      letter-spacing:-.03em;
+    }
+
+    .section-text{
+      margin:0 0 22px;
+      color:#51637a;
+    }
+
+    .field{
+      margin-bottom:16px;
+    }
+
+    .field label{
+      display:block;
+      margin-bottom:8px;
+      font-weight:700;
+      color:#223146;
+    }
+
+    .field input,
+    .field textarea{
+      width:100%;
+      padding:14px 16px;
+      border-radius:14px;
+      border:1px solid rgba(15,23,42,.12);
+      background:#fff;
+      color:#0f172a;
+      outline:none;
+      transition:.2s ease;
+    }
+
+    .field input:focus,
+    .field textarea:focus{
+      border-color:rgba(29,155,240,.55);
+      box-shadow:0 0 0 4px rgba(29,155,240,.10);
+    }
+
+    .info-list{
+      display:grid;
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .info-item{
+      padding:18px;
+      border-radius:18px;
+      background:#f7fbff;
+      border:1px solid rgba(15,23,42,.06);
+    }
+
+    .info-item strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:1rem;
+    }
+
+    .info-item span,
+    .info-item a{
+      color:#4f6177;
+    }
+
+    .cta-card{
+      padding:32px;
+      background:
+        radial-gradient(circle at left top, rgba(29,155,240,.10), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f4f9ff 100%);
+    }
+
+    .footer{
+      padding:28px 0 36px;
+      border-top:1px solid rgba(15,23,42,.06);
+      color:#61738a;
+      background:rgba(255,255,255,.4);
+      margin-top:18px;
+    }
+
+    .foot{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .foot-brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .foot-brand img{
+      width:52px;
+      height:52px;
+      object-fit:contain;
+      border-radius:14px;
+      background:#fff;
+      box-shadow:var(--shadow);
+      padding:4px;
+    }
+
+    .foot-links{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .social-float,
+    .modal,
+    .toast{
+      display:none !important;
+    }
+
+    @media (max-width:900px){
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+
+      .links{
+        display:none;
+      }
+
+      .menu{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+      }
+
+      .mobile.open{
+        display:block;
+      }
+    }
+
+    @media (max-width:760px){
+      .nav{
+        min-height:auto;
+        padding:14px 0;
+      }
+
+      .hero-card,
+      .form-card,
+      .info-card,
+      .cta-card{
+        padding:22px;
+      }
+
+      .actions{
+        margin-left:auto;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .hero-ctas{
+        flex-direction:column;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "name":"ConsulHub Pro",
+        "url":"https://www.consulhubpro.it/",
+        "logo":"https://www.consulhubpro.it/logo-chp.png",
+        "email":"info@consulhubpro.it",
+        "sameAs":[
+          "https://www.facebook.com/profile.php?id=61585127122604",
+          "https://www.linkedin.com/company/consulhub-pro/posts/?feedView=all",
+          "https://www.instagram.com/serviziconsulenzalavoro24?igsh=aG8xcDQ3eDgxd3J2"
+        ],
+        "contactPoint":[
+          {
+            "@type":"ContactPoint",
+            "contactType":"customer support",
+            "telephone":"+39 338 326 2280",
+            "availableLanguage":["it"],
+            "url":"https://wa.me/393383262280"
+          }
+        ]
+      },
+      {
+        "@type":"WebPage",
+        "name":"ConsulHub Pro | Contatti",
+        "url":"https://www.consulhubpro.it/contatti.html",
+        "inLanguage":"it",
+        "description":"Contatta ConsulHub Pro: richiedi informazioni su pilastri e servizi premium. Email, form e WhatsApp. Prenota una call."
+      }
+    ]
+  }
   </script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "ConsulHub Pro", "url": "https://www.consulhubpro.it/", "logo": "https://www.consulhubpro.it/logo-chp.png", "email": "info@consulhubpro.it", "sameAs": ["https://www.facebook.com/profile.php?id=61585127122604", "https://www.linkedin.com/company/consulhub-pro/posts/?feedView=all", "https://www.instagram.com/serviziconsulenzalavoro24?igsh=aG8xcDQ3eDgxd3J2"], "contactPoint": [{"@type": "ContactPoint", "contactType": "customer support", "telephone": "+39 338 326 2280", "availableLanguage": ["it"], "url": "https://wa.me/393383262280"}]}, {"@type": "WebSite", "name": "ConsulHub Pro", "url": "https://www.consulhubpro.it/", "inLanguage": "it"}, {"@context": "https://schema.org", "@type": "WebPage", "name": "ConsulHub Pro | Contatti: richiedi informazioni e definisci i prossimi passi", "url": "https://www.consulhubpro.it/contatti.html", "inLanguage": "it", "description": "Contatta ConsulHub Pro: richiedi informazioni su pilastri e servizi premium. Email, form e WhatsApp. Prenota una call.", "isPartOf": {"@type": "WebSite", "name": "ConsulHub Pro", "url": "https://www.consulhubpro.it/"}, "about": {"@type": "Organization", "name": "ConsulHub Pro", "url": "https://www.consulhubpro.it/"}}]}</script>
 </head>
 <body>
   <a class="skip" href="#contenuto">Vai al contenuto</a>
 
-  <header>
+  <header class="topbar">
     <div class="container">
       <div class="nav" role="navigation" aria-label="Navigazione principale">
         <a class="brand" href="index.html" aria-label="ConsulHub Pro, Home">
@@ -46,7 +502,7 @@
           <a href="formazione-finanziata.html">Formazione</a>
           <a href="servizi.html">Servizi</a>
           <a href="blog.html">Blog</a>
-          <a href="contatti.html">Contatti</a>
+          <a href="contatti.html" class="active">Contatti</a>
         </nav>
 
         <div class="actions">
@@ -67,74 +523,115 @@
     </div>
   </header>
 
-  <main id="contenuto">
+  <div class="container breadcrumbs">
+    <a href="index.html">Home</a> / <span>Contatti</span>
+  </div>
 
-    <section class="hero">
+  <main id="contenuto">
+    <section>
       <div class="container">
-        <div class="panel glow reveal">
-          <div class="hero-copy">
-            <div class="kicker">Contatto rapido, prossimi passi ordinati</div>
-            <h1>Contatti</h1>
-            <p class="lead">Richiedi informazioni. Ti rispondiamo con i prossimi passi e, se serve, una call di inquadramento.</p>
-            <div class="hero-ctas">
-              <a class="btn secondary" href="https://wa.me/393383262280" target="_blank" rel="noopener">WhatsApp diretto</a>
-              <a class="btn secondary" href="checklist-studio.pdf" target="_blank" rel="noopener">Checklist</a>
-            </div>
+        <div class="hero-card">
+          <div class="kicker">Contatto rapido, prossimi passi ordinati</div>
+          <h1>Contatti</h1>
+          <p class="lead">Richiedi informazioni. Ti rispondiamo con i prossimi passi e, se serve, una call di inquadramento.</p>
+
+          <div class="hero-ctas">
+            <a class="btn primary" href="https://wa.me/393383262280" target="_blank" rel="noopener">WhatsApp diretto</a>
+            <a class="btn secondary" href="checklist-studio.pdf" target="_blank" rel="noopener">Checklist</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="reveal">
+    <section>
+      <div class="container contact-grid">
+        <div class="form-card">
+          <h2 class="section-title">Scrivici</h2>
+          <p class="section-text">Compila il form e ti ricontatteremo con i prossimi passi in modo chiaro e ordinato.</p>
+
+          <form action="https://formsubmit.co/marketing@bstservice.it" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Nuova richiesta ConsulHub Pro">
+
+            <div class="field">
+              <label for="nome">Nome e Cognome</label>
+              <input id="nome" type="text" name="nome" required>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" required>
+            </div>
+
+            <div class="field">
+              <label for="azienda">Studio / Azienda</label>
+              <input id="azienda" type="text" name="azienda">
+            </div>
+
+            <div class="field">
+              <label for="telefono">Telefono</label>
+              <input id="telefono" type="text" name="telefono">
+            </div>
+
+            <div class="field">
+              <label for="messaggio">Messaggio</label>
+              <textarea id="messaggio" name="messaggio" rows="6"></textarea>
+            </div>
+
+            <button type="submit" class="btn primary">Richiedi informazioni</button>
+          </form>
+        </div>
+
+        <aside class="info-card">
+          <h2 class="section-title">Contatto diretto</h2>
+          <p class="section-text">Se preferisci, puoi contattarci direttamente via WhatsApp oppure prenotare una call di primo inquadramento.</p>
+
+          <div class="info-list">
+            <div class="info-item">
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/393383262280" target="_blank" rel="noopener">+39 338 326 2280</a>
+            </div>
+
+            <div class="info-item">
+              <strong>Email</strong>
+              <a href="mailto:info@consulhubpro.it">info@consulhubpro.it</a>
+            </div>
+
+            <div class="info-item">
+              <strong>Call di primo confronto</strong>
+              <a href="https://calendly.com/giovanni-laricchiuta/30min" target="_blank" rel="noopener">Prenota una call</a>
+            </div>
+
+            <div class="info-item">
+              <strong>Checklist</strong>
+              <a href="checklist-studio.pdf" target="_blank" rel="noopener">Scarica la checklist studio</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section>
       <div class="container">
-        <div class="head">
-          <h2>Scrivici</h2>
-          <form action="https://formsubmit.co/marketing@bstservice.it" method="POST" style="max-width:600px;margin-top:30px;">
-
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_subject" value="Nuova richiesta ConsulHub Pro">
-
-  <div style="margin-bottom:15px;">
-    <label>Nome e Cognome</label><br>
-    <input type="text" name="nome" required style="width:100%;padding:12px;border-radius:8px;border:1px solid #ccc;">
-  </div>
-
-  <div style="margin-bottom:15px;">
-    <label>Email</label><br>
-    <input type="email" name="email" required style="width:100%;padding:12px;border-radius:8px;border:1px solid #ccc;">
-  </div>
-
-  <div style="margin-bottom:15px;">
-    <label>Studio / Azienda</label><br>
-    <input type="text" name="azienda" style="width:100%;padding:12px;border-radius:8px;border:1px solid #ccc;">
-  </div>
-
-  <div style="margin-bottom:15px;">
-    <label>Telefono</label><br>
-    <input type="text" name="telefono" style="width:100%;padding:12px;border-radius:8px;border:1px solid #ccc;">
-  </div>
-
-  <div style="margin-bottom:20px;">
-    <label>Messaggio</label><br>
-    <textarea name="messaggio" rows="5" style="width:100%;padding:12px;border-radius:8px;border:1px solid #ccc;"></textarea>
-  </div>
-
-  <button type="submit" style="background:#0A2540;color:#fff;padding:14px 24px;border:none;border-radius:8px;font-weight:bold;cursor:pointer;">
-    Richiedi informazioni
-  </button>
-
-</form>
-</section>
-
+        <div class="cta-card">
+          <h2 class="section-title">Hai già chiaro il tema da affrontare?</h2>
+          <p class="section-text">Scrivici indicando l’area di interesse e la situazione attuale. Ti aiutiamo a capire il percorso più sensato da attivare.</p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="servizi.html">Vai ai servizi</a>
+            <a class="btn secondary" href="per-studi.html">Scopri l’area Per Studi</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="container">
       <div class="foot">
         <div class="foot-brand">
           <img src="logo-chp.png" alt="Logo ConsulHub Pro" />
           <div class="foot-meta">
-            <div><strong>ConsulHub Pro</strong></div>
+            <div><strong style="color:#0f172a;">ConsulHub Pro</strong></div>
             <div>info@consulhubpro.it</div>
           </div>
         </div>
@@ -152,28 +649,16 @@
     </div>
   </footer>
 
-  <div class="social-float" aria-label="Contatti rapidi">
-    <a href="https://wa.me/393383262280" target="_blank" rel="noopener">WhatsApp</a>
-    <a href="https://www.instagram.com/serviziconsulenzalavoro24?igsh=aG8xcDQ3eDgxd3J2" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://www.linkedin.com/company/consulhub-pro/posts/?feedView=all" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://www.facebook.com/profile.php?id=61585127122604" target="_blank" rel="noopener">Facebook</a>
-  </div>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobilePanel = document.getElementById('mobilePanel');
 
-  <div class="modal" id="modal">
-    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="mTitle">
-      <div class="modal-top">
-        <div>
-          <h3 id="mTitle"></h3>
-          <p id="mDesc"></p>
-        </div>
-        <button class="x" id="mClose" type="button">Chiudi</button>
-      </div>
-      <ul class="modal-list" id="mList"></ul>
-    </div>
-  </div>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <script src="assets/js/site.js" defer></script>
+    if(menuBtn && mobilePanel){
+      menuBtn.addEventListener('click', () => {
+        const isOpen = mobilePanel.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
+  </script>
 </body>
 </html>
