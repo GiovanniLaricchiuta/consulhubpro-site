@@ -3,84 +3,787 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ConsulHub Pro | Assistenza contrattuale: struttura, tutela e continuità</title>
-  <meta name="description" content="Supporto contrattuale per PMI e Studi: gestione chiara, riduzione rischi e continuità operativa attraverso servizi strutturati e affidabili." />
+  <title>ConsulHub Pro | Assistenza contrattuale: più presidio, più chiarezza, più continuità</title>
+  <meta name="description" content="Assistenza contrattuale per studi e aziende: più presidio sui temi sensibili, maggiore chiarezza operativa e una relazione professionale più solida e continua." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://www.consulhubpro.it/assistenza-contrattuale-fisapi.html" />
-</head>
 
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ConsulHub Pro" />
+  <meta property="og:title" content="Assistenza contrattuale: più presidio, più chiarezza, più continuità" />
+  <meta property="og:description" content="Un pilastro pensato per rafforzare la gestione dei temi contrattuali e sindacali in modo più ordinato, leggibile e professionale." />
+  <meta property="og:url" content="https://www.consulhubpro.it/assistenza-contrattuale-fisapi.html" />
+  <meta property="og:image" content="https://www.consulhubpro.it/logo-chp.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Assistenza contrattuale: più presidio, più chiarezza, più continuità" />
+  <meta name="twitter:description" content="Supporto contrattuale e sindacale per studi e aziende con una logica più strutturata, continua e professionale." />
+  <meta name="twitter:image" content="https://www.consulhubpro.it/logo-chp.png" />
+  <meta name="theme-color" content="#f5f8fc" />
+
+  <style>
+    :root{
+      --bg:#f5f8fc;
+      --bg-soft:#eef4fb;
+      --surface:#ffffff;
+      --surface-2:#f8fbff;
+      --text:#0f172a;
+      --muted:#5b6b82;
+      --line:rgba(15,23,42,.08);
+      --primary:#1d9bf0;
+      --primary-2:#0b6bcb;
+      --pill:#eaf4ff;
+      --shadow:0 16px 42px rgba(15,23,42,.08);
+      --radius:24px;
+      --max:1200px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(29,155,240,.08), transparent 24%),
+        linear-gradient(180deg, #f7fbff 0%, #f2f6fb 100%);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    button,input,textarea{font:inherit}
+
+    .container{
+      width:min(var(--max), calc(100% - 32px));
+      margin-inline:auto;
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(15,23,42,.06);
+    }
+
+    .nav{
+      min-height:86px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+
+    .brand img{
+      width:48px;
+      height:48px;
+      object-fit:contain;
+      border-radius:14px;
+      background:#fff;
+      box-shadow:var(--shadow);
+      padding:4px;
+      flex:0 0 auto;
+    }
+
+    .brand .name strong{
+      display:block;
+      font-size:1.02rem;
+    }
+
+    .brand .name span{
+      display:block;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    .links{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .links a{
+      padding:12px 16px;
+      border-radius:999px;
+      color:#233247;
+      transition:.22s ease;
+    }
+
+    .links a:hover,
+    .links a.active{
+      background:#f1f6fc;
+      box-shadow:inset 0 0 0 1px rgba(15,23,42,.06);
+    }
+
+    .actions{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .menu{
+      display:none;
+      min-height:44px;
+      padding:0 16px;
+      border:none;
+      border-radius:999px;
+      background:#f1f6fc;
+      color:#223146;
+      cursor:pointer;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:50px;
+      padding:0 22px;
+      border-radius:999px;
+      font-weight:800;
+      transition:.22s ease;
+      border:1px solid transparent;
+      cursor:pointer;
+    }
+
+    .btn.primary{
+      background:linear-gradient(135deg,var(--primary),var(--primary-2));
+      color:#fff;
+      box-shadow:0 16px 34px rgba(29,155,240,.22);
+    }
+
+    .btn.secondary{
+      background:#fff;
+      color:var(--text);
+      border-color:rgba(15,23,42,.10);
+    }
+
+    .btn:hover{transform:translateY(-1px)}
+
+    .mobile{
+      display:none;
+      padding-bottom:14px;
+    }
+
+    .mobile .inner{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      padding:16px;
+      border-radius:20px;
+      background:#fff;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(15,23,42,.06);
+    }
+
+    .mobile .inner a{
+      padding:10px 12px;
+      border-radius:12px;
+    }
+
+    .mobile .inner a:hover{
+      background:#f3f7fc;
+    }
+
+    .breadcrumbs{
+      padding:26px 0 18px;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .breadcrumbs a{color:#223146}
+
+    section{
+      padding:14px 0 28px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:24px;
+      align-items:center;
+    }
+
+    .hero-card,
+    .card,
+    .cta-card,
+    .faq-card{
+      background:linear-gradient(180deg,#ffffff 0%, #f8fbff 100%);
+      border:1px solid rgba(15,23,42,.06);
+      border-radius:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-card{
+      padding:38px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:var(--pill);
+      color:#1266b3;
+      font-weight:800;
+      font-size:.92rem;
+      box-shadow:inset 0 0 0 1px rgba(29,155,240,.14);
+      margin-bottom:18px;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+    }
+
+    h1{
+      margin:0 0 14px;
+      font-size:clamp(2.2rem,4.8vw,4rem);
+      line-height:1.02;
+      letter-spacing:-.04em;
+    }
+
+    .lead{
+      margin:0;
+      font-size:1.06rem;
+      color:#314257;
+      max-width:720px;
+    }
+
+    .hero-ctas{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:24px;
+    }
+
+    .hero-note{
+      margin-top:16px;
+      color:#42546a;
+      font-size:1rem;
+    }
+
+    .hero-visual{
+      position:relative;
+      min-height:420px;
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(15,23,42,.06);
+      background:
+        linear-gradient(180deg, rgba(16,45,70,.10), rgba(16,45,70,.14)),
+        url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+    }
+
+    .visual-badge{
+      position:absolute;
+      left:24px;
+      bottom:24px;
+      max-width:340px;
+      padding:18px 20px;
+      border-radius:20px;
+      background:rgba(255,255,255,.86);
+      backdrop-filter:blur(10px);
+      box-shadow:var(--shadow);
+      border:1px solid rgba(15,23,42,.06);
+    }
+
+    .visual-badge strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:1.05rem;
+    }
+
+    .visual-badge span{
+      color:#53657c;
+    }
+
+    .section-head{
+      margin-bottom:18px;
+      max-width:840px;
+    }
+
+    .section-head h2{
+      margin:0 0 10px;
+      font-size:clamp(1.8rem,3vw,2.7rem);
+      line-height:1.08;
+      letter-spacing:-.03em;
+    }
+
+    .section-head p{
+      margin:0;
+      color:#4b5d74;
+    }
+
+    .grid-2,
+    .grid-3{
+      display:grid;
+      gap:22px;
+    }
+
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+
+    .card{
+      padding:28px;
+      height:100%;
+    }
+
+    .icon{
+      width:52px;
+      height:52px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      font-size:1.2rem;
+      background:#eef6ff;
+      box-shadow:inset 0 0 0 1px rgba(29,155,240,.12);
+      margin-bottom:16px;
+    }
+
+    .card h3{
+      margin:0 0 10px;
+      font-size:1.18rem;
+      line-height:1.2;
+    }
+
+    .card p{
+      margin:0 0 14px;
+      color:#54657b;
+    }
+
+    .card ul{
+      margin:0;
+      padding-left:18px;
+    }
+
+    .card li{
+      margin:0 0 8px;
+      color:#203045;
+    }
+
+    .pill-link{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:20px 22px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid rgba(15,23,42,.08);
+      box-shadow:var(--shadow);
+      font-weight:800;
+    }
+
+    .pill-link small{
+      display:block;
+      color:#64758b;
+      font-weight:700;
+      font-size:.82rem;
+      text-transform:uppercase;
+      letter-spacing:.05em;
+    }
+
+    .pill-link span{
+      color:#0f172a;
+    }
+
+    .cta-card{
+      padding:32px;
+      background:
+        radial-gradient(circle at left top, rgba(29,155,240,.10), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f4f9ff 100%);
+    }
+
+    .faq-card{
+      padding:30px;
+    }
+
+    .faq-item{
+      border-top:1px solid rgba(15,23,42,.08);
+      padding:16px 0;
+    }
+
+    .faq-item:first-of-type{
+      border-top:none;
+      padding-top:0;
+    }
+
+    .faq-q{
+      font-weight:800;
+      color:#142237;
+      margin-bottom:8px;
+    }
+
+    .faq-a{
+      color:#55677d;
+    }
+
+    footer{
+      padding:28px 0 36px;
+      border-top:1px solid rgba(15,23,42,.06);
+      color:#61738a;
+      background:rgba(255,255,255,.4);
+      margin-top:18px;
+    }
+
+    .foot{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .foot-brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .foot-brand img{
+      width:52px;
+      height:52px;
+      object-fit:contain;
+      border-radius:14px;
+      background:#fff;
+      box-shadow:var(--shadow);
+      padding:4px;
+    }
+
+    .foot-links{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width:980px){
+      .hero-grid,
+      .grid-2,
+      .grid-3{
+        grid-template-columns:1fr;
+      }
+
+      .links{
+        display:none;
+      }
+
+      .menu{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+      }
+
+      .mobile.open{
+        display:block;
+      }
+    }
+
+    @media (max-width:760px){
+      .nav{
+        min-height:auto;
+        padding:14px 0;
+      }
+
+      .hero-card,
+      .card,
+      .cta-card,
+      .faq-card{
+        padding:22px;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .hero-ctas{
+        flex-direction:column;
+      }
+
+      .hero-visual{
+        min-height:300px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "name":"ConsulHub Pro",
+        "url":"https://www.consulhubpro.it/",
+        "logo":"https://www.consulhubpro.it/logo-chp.png",
+        "email":"info@consulhubpro.it"
+      },
+      {
+        "@type":"WebPage",
+        "name":"Assistenza contrattuale: più presidio, più chiarezza, più continuità",
+        "url":"https://www.consulhubpro.it/assistenza-contrattuale-fisapi.html",
+        "inLanguage":"it",
+        "description":"Supporto contrattuale e sindacale per studi e aziende con una logica più strutturata, continua e professionale."
+      }
+    ]
+  }
+  </script>
+</head>
 <body>
 
-<header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="per-studi.html">Per Studi</a>
-    <a href="servizi.html">Servizi</a>
-    <a href="blog.html">Blog</a>
-    <a href="contatti.html">Contatti</a>
-  </nav>
-</header>
+  <header class="topbar">
+    <div class="container">
+      <div class="nav" role="navigation" aria-label="Navigazione principale">
+        <a class="brand" href="index.html" aria-label="ConsulHub Pro, Home">
+          <img src="logo-chp.png" alt="Logo ConsulHub Pro" />
+          <div class="name">
+            <strong>ConsulHub Pro</strong>
+            <span>Per Studi di Consulenza del Lavoro</span>
+          </div>
+        </a>
 
-<section style="padding:80px 20px; max-width:1000px; margin:auto;">
+        <nav class="links" aria-label="Sezioni">
+          <a href="per-studi.html">Per Studi</a>
+          <a href="formazione-finanziata.html">Formazione</a>
+          <a href="servizi.html">Servizi</a>
+          <a href="blog.html">Blog</a>
+          <a href="contatti.html">Contatti</a>
+        </nav>
 
-  <h1>Assistenza contrattuale: struttura, tutela e continuità</h1>
+        <div class="actions">
+          <button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
+          <a class="btn primary" href="https://calendly.com/giovanni-laricchiuta/30min" target="_blank" rel="noopener">Prenota call</a>
+        </div>
+      </div>
 
-  <p>
-    L’assistenza contrattuale non è solo un adempimento, ma uno strumento strategico per rafforzare la relazione tra Studio e cliente.
-    Quando è gestita con metodo, permette di ridurre rischi, chiarire i rapporti e aumentare la percezione di affidabilità.
-  </p>
+      <div class="mobile" id="mobilePanel" aria-label="Menu mobile">
+        <div class="inner">
+          <a href="per-studi.html">Per Studi</a>
+          <a href="formazione-finanziata.html">Formazione</a>
+          <a href="servizi.html">Servizi</a>
+          <a href="blog.html">Blog</a>
+          <a href="contatti.html">Contatti</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-  <h2>Cosa significa per lo Studio</h2>
-
-  <p>
-    Integrare servizi di assistenza contrattuale consente allo Studio di presidiare ambiti delicati, spesso trascurati o gestiti in modo frammentato.
-    Il risultato è una gestione più strutturata e una maggiore autorevolezza nei confronti delle aziende clienti.
-  </p>
-
-  <ul>
-    <li>Maggiore controllo sui temi contrattuali e sindacali</li>
-    <li>Riduzione delle aree di incertezza nella gestione del personale</li>
-    <li>Più continuità e qualità nella relazione con il cliente</li>
-  </ul>
-
-  <h2>Valore per l’azienda</h2>
-
-  <p>
-    Le imprese ottengono un supporto concreto e continuativo, che permette di affrontare le dinamiche contrattuali con maggiore sicurezza.
-    Non si tratta solo di risolvere problemi, ma di prevenirli.
-  </p>
-
-  <ul>
-    <li>Supporto operativo chiaro e costante</li>
-    <li>Maggiore comprensione delle dinamiche contrattuali</li>
-    <li>Riduzione del rischio di errori e contenziosi</li>
-  </ul>
-
-  <h2>Come viene erogato il servizio</h2>
-
-  <p>
-    Il servizio è gestito attraverso partner qualificati, con esperienza specifica in ambito contrattuale e relazioni sindacali.
-    Lo Studio mantiene il controllo della relazione, mentre l’operatività viene affidata a strutture competenti.
-  </p>
-
-  <ul>
-    <li>Modello organizzato e replicabile</li>
-    <li>Supporto tecnico-specialistico</li>
-    <li>Integrazione con l’attività dello Studio</li>
-  </ul>
-
-  <h2>Il risultato</h2>
-
-  <p>
-    Un servizio percepito come concreto, utile e continuo, che rafforza la posizione dello Studio e aumenta il valore della relazione con il cliente.
-  </p>
-
-  <div style="margin-top:40px;">
-    <a href="contatti.html" style="padding:12px 20px; background:#007BFF; color:#fff; text-decoration:none; border-radius:6px;">
-      Richiedi informazioni
-    </a>
+  <div class="container breadcrumbs">
+    <a href="index.html">Home</a> / <a href="index.html#pilastri">Pilastri</a> / <span>Assistenza contrattuale</span>
   </div>
 
-</section>
+  <main>
+    <section>
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <div class="eyebrow">Pilastro 3 · Assistenza contrattuale</div>
+          <h1>Più presidio, più chiarezza, più continuità.</h1>
+          <p class="lead">
+            Un pilastro pensato per rafforzare la gestione dei temi contrattuali e sindacali in modo più ordinato, leggibile e professionale, aumentando la qualità della relazione tra studio e azienda.
+          </p>
 
+          <div class="hero-ctas">
+            <a class="btn primary" href="contatti.html">Richiedi informazioni</a>
+            <a class="btn secondary" href="checklist-studio.pdf" target="_blank" rel="noopener">Apri la checklist</a>
+          </div>
+
+          <div class="hero-note">
+            Quando i temi contrattuali vengono affrontati solo in chiave reattiva o amministrativa, lo studio rischia di perdere autorevolezza e continuità percepita. Questo pilastro serve a dare più struttura, più presidio e più qualità alla gestione di un’area sensibile, che incide direttamente sulla fiducia del cliente.
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-badge">
+            <strong>Supporto più strutturato</strong>
+            <span>Un presidio professionale sui temi contrattuali che rafforza credibilità, ordine e continuità operativa.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Perché questo pilastro conta davvero</h2>
+          <p>I temi contrattuali e sindacali sono tra quelli che più facilmente generano incertezza, incomprensioni o aree grigie nella relazione con il cliente. Quando vengono gestiti con maggiore struttura, il beneficio non è solo tecnico, ma anche relazionale e strategico.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="icon">📘</div>
+            <h3>Più chiarezza</h3>
+            <p>Lo studio dispone di un supporto che rende più leggibile e più ordinata la gestione dei temi più delicati.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🛡️</div>
+            <h3>Più presidio</h3>
+            <p>Le situazioni sensibili vengono affrontate con una logica più strutturata, meno improvvisata e più credibile.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🤝</div>
+            <h3>Più continuità</h3>
+            <p>La relazione con il cliente si rafforza perché il supporto percepito diventa più costante, affidabile e professionale.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Cosa cambia per lo studio</h2>
+          <p>Questo pilastro aiuta lo studio a non trovarsi scoperto su un’area che richiede attenzione, metodo e capacità di inquadramento.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <div class="icon">🏢</div>
+            <h3>Valore interno</h3>
+            <ul>
+              <li>Maggiore presidio dei temi contrattuali e sindacali</li>
+              <li>Riduzione delle aree di incertezza nella gestione del cliente</li>
+              <li>Supporto più credibile nelle situazioni che richiedono struttura</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="icon">📈</div>
+            <h3>Valore percepito dal cliente</h3>
+            <ul>
+              <li>Maggiore continuità nella relazione professionale</li>
+              <li>Più chiarezza su temi complessi o sensibili</li>
+              <li>Percezione di uno studio più presente, ordinato e affidabile</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Perché non è un servizio marginale</h2>
+          <p>Molte realtà sottovalutano questa area finché non emergono problemi, dubbi o tensioni. Proprio per questo, offrire un supporto più strutturato su questi temi aumenta il livello di fiducia e la solidità percepita dello studio.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <div class="icon">⚠️</div>
+            <h3>Meno approccio reattivo</h3>
+            <p>Non si interviene solo quando emerge un problema. Si costruisce una base più solida di supporto e orientamento.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">📍</div>
+            <h3>Più presenza professionale</h3>
+            <p>Lo studio si posiziona in modo più autorevole su un’area che il cliente percepisce come delicata e importante.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Pilastro collegato</h2>
+          <p>Accedi alla scheda dedicata del pilastro per inquadrarne meglio il ruolo nel modello ConsulHub Pro.</p>
+        </div>
+
+        <a class="pill-link" href="index.html#pilastri">
+          <div>
+            <small>Pilastro 03</small>
+            <span>FISAPI</span>
+          </div>
+          <div>Supporto contrattuale più leggibile e continuativo</div>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="faq-card">
+          <div class="section-head" style="margin-bottom:10px;">
+            <h2>FAQ</h2>
+            <p>Risposte rapide alle domande più frequenti.</p>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Questo pilastro serve solo in casi problematici?</div>
+            <div class="faq-a">No. Il suo valore non è solo nella gestione delle criticità, ma nella capacità di dare continuità, chiarezza e maggiore struttura alla relazione professionale.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Il cliente finale percepisce davvero la differenza?</div>
+            <div class="faq-a">Sì, perché quando i temi sensibili vengono affrontati con ordine e presenza professionale, il livello di fiducia cresce in modo concreto.</div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Per lo studio significa caricarsi più complessità?</div>
+            <div class="faq-a">No. Il senso del pilastro è proprio aumentare il presidio e la qualità percepita senza trasformare tutto in un peso operativo ingestibile.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta-card">
+          <div class="section-head" style="margin-bottom:0;">
+            <h2>Vuoi capire se questo pilastro può rafforzare la relazione con i tuoi clienti?</h2>
+            <p>Possiamo aiutarti a valutare dove crea più valore, come presentarlo bene e come inserirlo nel tuo modello di servizio in modo chiaro e credibile.</p>
+          </div>
+
+          <div class="hero-ctas">
+            <a class="btn primary" href="contatti.html">Parliamone</a>
+            <a class="btn secondary" href="servizi.html">Vai ai servizi</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="foot">
+        <div class="foot-brand">
+          <img src="logo-chp.png" alt="Logo ConsulHub Pro" />
+          <div class="foot-meta">
+            <div><strong style="color:#0f172a;">ConsulHub Pro</strong></div>
+            <div>info@consulhubpro.it</div>
+          </div>
+        </div>
+
+        <div class="foot-links" aria-label="Link rapidi">
+          <a href="per-studi.html">Per Studi</a>
+          <a href="formazione-finanziata.html">Formazione</a>
+          <a href="servizi.html">Servizi</a>
+          <a href="blog.html">Blog</a>
+          <a href="contatti.html">Contatti</a>
+          <a href="index.html#privacy">Privacy</a>
+          <a href="index.html#cookie">Cookie</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobilePanel = document.getElementById('mobilePanel');
+
+    if(menuBtn && mobilePanel){
+      menuBtn.addEventListener('click', () => {
+        const isOpen = mobilePanel.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
+  </script>
 </body>
 </html>
