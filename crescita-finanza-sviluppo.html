@@ -1,470 +1,680 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Crescita, finanza e sviluppo | ConsulHub Pro</title>
-  <meta name="description" content="Servizi di crescita, finanza e sviluppo per PMI e Studi: bandi e finanza agevolata, strategia e sviluppo PMI, coaching e sviluppo imprenditoriale." />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="description" content="Macroarea ConsulHub Pro dedicata a crescita, finanza e sviluppo: bandi e finanza agevolata, strategia e sviluppo PMI, leasing e flotte, servizi assicurativi." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://www.consulhubpro.it/crescita-finanza-sviluppo.html" />
+  <link rel="icon" href="favicon.ico" />
 
-  <meta property="og:title" content="Crescita, finanza e sviluppo | ConsulHub Pro" />
-  <meta property="og:description" content="Una macroarea costruita per accompagnare le PMI in percorsi di sviluppo più ordinati, sostenibili e strategici." />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ConsulHub Pro" />
+  <meta property="og:title" content="Crescita, finanza e sviluppo | ConsulHub Pro" />
+  <meta property="og:description" content="Una macroarea pensata per accompagnare le imprese in percorsi di crescita più ordinati, leggibili e attivabili." />
   <meta property="og:url" content="https://www.consulhubpro.it/crescita-finanza-sviluppo.html" />
   <meta property="og:image" content="https://www.consulhubpro.it/logo-chp.png" />
 
-  <link rel="icon" href="favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <script type="text/javascript" src="https://embeds.iubenda.com/widgets/ff65dfa4-bd4d-478e-bac9-43a70683b4cf.js"></script>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Crescita, finanza e sviluppo | ConsulHub Pro" />
+  <meta name="twitter:description" content="Servizi per sostenere sviluppo, opportunità e direzione d’impresa." />
+  <meta name="twitter:image" content="https://www.consulhubpro.it/logo-chp.png" />
 
   <style>
     :root{
-      --bg:#f5f7fb;
-      --bg-soft:#eef3fb;
+      --bg:#eef3f8;
       --surface:#ffffff;
-      --surface-2:#f8fbff;
-      --text:#0f172a;
-      --muted:#475569;
-      --line:rgba(15,23,42,.08);
-      --primary:#155eef;
-      --primary-2:#14b8ff;
-      --accent:#7c3aed;
-      --shadow:0 18px 60px rgba(15,23,42,.08);
-      --shadow-lg:0 30px 90px rgba(21,94,239,.14);
-      --radius:24px;
+      --surface-2:#f5f8fc;
+      --text:#0d1733;
+      --muted:#5b6b84;
+      --line:#d8e3f0;
+      --blue-1:#071a4b;
+      --blue-2:#0b2f7b;
+      --blue-3:#1d8fff;
+      --blue-4:#39c0ff;
+      --chip:#e9f1ff;
+      --shadow:0 20px 50px rgba(12,30,66,.12);
+      --radius-xl:32px;
+      --radius-lg:24px;
+      --radius-md:18px;
       --max:1240px;
-      --header-h:82px;
     }
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family:'Inter',sans-serif;
-      background:
-        radial-gradient(circle at 10% 10%, rgba(20,184,255,.14), transparent 26%),
-        radial-gradient(circle at 85% 18%, rgba(124,58,237,.10), transparent 24%),
-        linear-gradient(180deg,#f8fbff 0%, #f4f7fc 42%, #f8fbff 100%);
+      font-family:Arial, Helvetica, sans-serif;
+      background:linear-gradient(180deg,#f3f7fb 0%, #edf2f8 100%);
       color:var(--text);
-      overflow-x:hidden;
+      line-height:1.55;
     }
 
     a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    video{display:block}
-    .container{width:min(calc(100% - 32px), var(--max));margin:0 auto}
-    .section{padding:96px 0;position:relative}
-    .section-tight{padding:72px 0}
-    .eyebrow{
-      display:inline-flex;align-items:center;gap:10px;
-      font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
-      color:#0b5dd7;
-      padding:10px 14px;border-radius:999px;
-      background:rgba(21,94,239,.08);
-      border:1px solid rgba(21,94,239,.10);
-      backdrop-filter:blur(8px);
-    }
-    .eyebrow::before{
-      content:"";
-      width:8px;height:8px;border-radius:50%;
-      background:linear-gradient(135deg,var(--primary),var(--primary-2));
-      box-shadow:0 0 0 6px rgba(21,94,239,.08);
-    }
-    .section-head{
-      display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:end;
-      margin-bottom:30px;
-    }
-    .section-head h2{
-      margin:14px 0 0;
-      font-size:clamp(34px,4vw,56px);
-      line-height:1.02;
-      letter-spacing:-.04em;
-    }
-    .section-head p{
-      margin:0;
-      font-size:18px;
-      line-height:1.75;
-      color:var(--muted);
-      max-width:620px;
-    }
+    img{display:block;max-width:100%}
 
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      padding:15px 22px;border-radius:999px;font-weight:800;font-size:15px;
-      transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease;
-      border:1px solid transparent;cursor:pointer;white-space:nowrap;
-    }
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{
-      color:#fff;
-      background:linear-gradient(135deg,var(--primary),var(--primary-2));
-      box-shadow:0 18px 44px rgba(21,94,239,.25);
-    }
-    .btn-secondary{
-      color:var(--text);
-      background:rgba(255,255,255,.8);
-      border:1px solid rgba(15,23,42,.10);
-      backdrop-filter:blur(14px);
-    }
-    .btn-dark{
-      color:#fff;background:#0f172a;border-color:#0f172a;
-      box-shadow:0 16px 34px rgba(15,23,42,.18);
+    .container{
+      width:min(var(--max), 92%);
+      margin:0 auto;
     }
 
     .site-header{
-      position:fixed;top:0;left:0;width:100%;z-index:1000;
-      transition:background .25s ease, box-shadow .25s ease, backdrop-filter .25s ease, border-color .25s ease;
-      border-bottom:1px solid transparent;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(245,248,252,.9);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(13,23,51,.06);
     }
-    .site-header.scrolled{
-      background:rgba(255,255,255,.78);
-      backdrop-filter:blur(18px);
-      box-shadow:0 10px 30px rgba(15,23,42,.06);
-      border-color:rgba(15,23,42,.06);
+
+    .header-row{
+      min-height:88px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
     }
-    .header-inner{
-      min-height:var(--header-h);
-      display:flex;align-items:center;justify-content:space-between;gap:22px;
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      font-weight:800;
+      font-size:1.05rem;
+      color:var(--text);
     }
-    .brand{display:flex;align-items:center;gap:14px}
-    .brand img{height:44px;width:auto}
-    .nav{display:flex;align-items:center;gap:20px}
+
+    .brand img{
+      width:52px;
+      height:52px;
+      object-fit:contain;
+      border-radius:14px;
+      background:#fff;
+      padding:7px;
+      box-shadow:0 10px 24px rgba(15,42,88,.08);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      gap:34px;
+      flex-wrap:wrap;
+    }
+
     .nav a{
-      font-size:15px;font-weight:700;color:#0f172a;opacity:.88;
-      transition:opacity .2s ease,color .2s ease;
+      font-weight:700;
+      font-size:1rem;
+      color:var(--text);
+      opacity:.88;
     }
-    .nav a:hover{opacity:1;color:var(--primary)}
-    .header-cta{display:flex;align-items:center;gap:12px}
-    .menu-toggle{display:none}
+
+    .nav a:hover,
+    .nav a.active{
+      opacity:1;
+    }
+
+    .header-cta{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:54px;
+      padding:0 24px;
+      border-radius:999px;
+      font-weight:800;
+      transition:.2s ease;
+      border:1px solid transparent;
+      cursor:pointer;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+    }
+
+    .btn-primary{
+      color:#fff;
+      background:linear-gradient(135deg, var(--blue-3), #1b6fff 55%, var(--blue-4));
+      box-shadow:0 14px 30px rgba(31,123,255,.22);
+    }
+
+    .btn-secondary{
+      color:var(--text);
+      background:#fff;
+      border-color:rgba(13,23,51,.08);
+      box-shadow:0 10px 24px rgba(13,23,51,.06);
+    }
 
     .hero{
       position:relative;
-      min-height:78svh;
-      padding-top:calc(var(--header-h) + 30px);
-      display:flex;align-items:center;
-      overflow:hidden;isolation:isolate;
-    }
-    .hero-bg{
-      position:absolute;inset:0;z-index:-3;overflow:hidden;
-    }
-    .hero-bg video{
-      width:100%;height:100%;object-fit:cover;object-position:center center;
-      filter:saturate(1.05) contrast(1.03);
-    }
-    .hero::before{
-      content:"";
-      position:absolute;inset:0;z-index:-2;
+      overflow:hidden;
+      padding:44px 0 32px;
       background:
-        linear-gradient(115deg, rgba(4,10,25,.80) 0%, rgba(11,22,52,.66) 42%, rgba(17,24,39,.34) 70%, rgba(17,24,39,.58) 100%);
+        radial-gradient(circle at 20% 25%, rgba(60,192,255,.24), rgba(60,192,255,0) 34%),
+        radial-gradient(circle at 80% 20%, rgba(72,111,255,.22), rgba(72,111,255,0) 30%),
+        linear-gradient(135deg, #041538 0%, #072860 42%, #0a4f98 72%, #061530 100%);
     }
-    .hero::after{
+
+    .hero:before{
       content:"";
-      position:absolute;inset:0;z-index:-1;
+      position:absolute;
+      inset:0;
       background:
-        radial-gradient(circle at 15% 20%, rgba(20,184,255,.22), transparent 22%),
-        radial-gradient(circle at 85% 15%, rgba(124,58,237,.20), transparent 24%),
-        radial-gradient(circle at 70% 85%, rgba(21,94,239,.14), transparent 25%);
-      mix-blend-mode:screen;
-      opacity:.9;
+        linear-gradient(115deg, rgba(255,255,255,.06) 0 18%, transparent 18% 32%, rgba(255,255,255,.04) 32% 52%, transparent 52% 100%);
+      pointer-events:none;
+      opacity:.55;
     }
+
     .hero-grid{
-      display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;
-      padding:38px 0 54px;
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns:1.18fr .82fr;
+      gap:34px;
+      align-items:start;
+      padding:20px 0 26px;
     }
-    .hero-copy{color:#fff;max-width:760px}
-    .hero-copy .eyebrow{
-      color:#d7ecff;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12)
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.14);
+      color:#dbe9ff;
+      font-weight:800;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-size:.88rem;
+      margin-bottom:22px;
     }
-    .hero-copy h1{
-      margin:20px 0 18px;
-      font-size:clamp(44px,6vw,76px);
-      line-height:.98;
-      letter-spacing:-.06em;
+
+    .eyebrow:before{
+      content:"";
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      background:#36a3ff;
+      box-shadow:0 0 0 5px rgba(54,163,255,.18);
+    }
+
+    .hero h1{
+      margin:0 0 22px;
+      font-size:clamp(2.6rem, 6vw, 5.2rem);
+      line-height:.96;
+      letter-spacing:-.04em;
+      color:#fff;
+      max-width:800px;
+    }
+
+    .hero p{
+      margin:0 0 28px;
+      font-size:1.18rem;
+      color:rgba(255,255,255,.86);
       max-width:820px;
     }
-    .hero-copy p{
-      font-size:20px;line-height:1.7;color:rgba(255,255,255,.88);
-      margin:0 0 26px;max-width:690px;
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-bottom:26px;
     }
-    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:22px}
-    .hero-note{
-      display:flex;flex-wrap:wrap;gap:14px;
-      color:rgba(255,255,255,.76);font-size:14px;font-weight:700;
+
+    .hero-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
     }
-    .hero-note span{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:10px 12px;border-radius:999px;
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      min-height:44px;
+      padding:0 18px;
+      border-radius:999px;
+      color:#e9f3ff;
       background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.10);
-      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,.14);
+      font-weight:700;
     }
 
     .hero-panel{
-      position:relative;
-      padding:26px;
-      border-radius:28px;
-      background:linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.06));
-      border:1px solid rgba(255,255,255,.14);
-      backdrop-filter:blur(20px);
-      box-shadow:0 30px 80px rgba(0,0,0,.18);
-      color:#fff;
-      justify-self:end;
-      width:min(100%, 470px);
-    }
-    .hero-panel::before{
-      content:"";
-      position:absolute;inset:12px;border-radius:22px;
-      border:1px solid rgba(255,255,255,.10);pointer-events:none;
-    }
-    .hero-panel h3{
-      margin:0 0 12px;font-size:26px;line-height:1.08;letter-spacing:-.03em
-    }
-    .hero-panel p{
-      margin:0 0 18px;color:rgba(255,255,255,.82);line-height:1.75;font-size:16px
-    }
-    .hero-panel ul{
-      list-style:none;padding:0;margin:0;display:grid;gap:10px
-    }
-    .hero-panel li{
-      padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.10);font-weight:700;font-size:14px
-    }
-
-    .split{
-      display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:stretch;
-    }
-    .card{
-      position:relative;
-      background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.88));
-      border:1px solid rgba(15,23,42,.08);
-      box-shadow:var(--shadow);
+      background:linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
+      border:1px solid rgba(255,255,255,.12);
       border-radius:30px;
-      padding:32px;
-      overflow:hidden;
-    }
-    .card::before{
-      content:"";
-      position:absolute;top:-40px;right:-40px;width:140px;height:140px;border-radius:50%;
-      background:radial-gradient(circle, rgba(20,184,255,.15) 0%, transparent 70%);
-      pointer-events:none;
-    }
-    .card h3{
-      margin:14px 0 14px;
-      font-size:34px;line-height:1.02;letter-spacing:-.04em;
-    }
-    .card p{
-      margin:0 0 20px;color:var(--muted);line-height:1.82;font-size:16px;
-    }
-    .list{
-      list-style:none;padding:0;margin:0;display:grid;gap:12px
-    }
-    .list li{
-      position:relative;padding-left:28px;line-height:1.7;color:#0f172a;font-weight:600
-    }
-    .list li::before{
-      content:"";position:absolute;left:0;top:10px;width:12px;height:12px;border-radius:50%;
-      background:linear-gradient(135deg,var(--primary),var(--primary-2));
-      box-shadow:0 0 0 6px rgba(21,94,239,.08)
+      padding:28px;
+      box-shadow:0 30px 80px rgba(0,0,0,.18);
+      backdrop-filter:blur(8px);
     }
 
-    .media-box{
-      position:relative;border-radius:30px;overflow:hidden;min-height:420px;
+    .hero-panel h2{
+      margin:0 0 14px;
+      color:#fff;
+      font-size:1.15rem;
+      line-height:1.15;
+    }
+
+    .hero-panel p{
+      margin:0 0 18px;
+      font-size:1rem;
+      color:rgba(255,255,255,.82);
+    }
+
+    .bullet-stack{
+      display:grid;
+      gap:12px;
+    }
+
+    .bullet{
+      min-height:58px;
+      display:flex;
+      align-items:center;
+      padding:0 18px;
+      border-radius:18px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.10);
+      color:#fff;
+      font-weight:800;
+    }
+
+    .section{
+      padding:70px 0;
+    }
+
+    .intro-grid{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .white-card{
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(214,225,239,.8);
+      border-radius:32px;
+      padding:38px;
+      box-shadow:var(--shadow);
+    }
+
+    .white-card h2{
+      margin:0 0 18px;
+      font-size:clamp(2rem, 4vw, 3rem);
+      line-height:1.02;
+      letter-spacing:-.03em;
+    }
+
+    .white-card p{
+      margin:0 0 24px;
+      color:var(--muted);
+      font-size:1.06rem;
+    }
+
+    .check-list{
+      display:grid;
+      gap:16px;
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+
+    .check-list li{
+      display:flex;
+      gap:16px;
+      align-items:flex-start;
+      font-weight:800;
+      color:var(--text);
+      font-size:1rem;
+    }
+
+    .check-list li:before{
+      content:"";
+      flex:0 0 12px;
+      width:12px;
+      height:12px;
+      margin-top:7px;
+      border-radius:999px;
+      background:#2b93ff;
+      box-shadow:0 0 0 6px rgba(43,147,255,.15);
+    }
+
+    .visual-card{
+      position:relative;
+      min-height:100%;
+      border-radius:32px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(214,225,239,.8);
       background:
-        linear-gradient(160deg, rgba(7,16,40,.30), rgba(7,16,40,.72)),
-        radial-gradient(circle at 18% 20%, rgba(20,184,255,.34), transparent 24%),
-        radial-gradient(circle at 84% 18%, rgba(124,58,237,.26), transparent 22%),
-        radial-gradient(circle at 72% 82%, rgba(21,94,239,.24), transparent 26%),
-        url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-      box-shadow:var(--shadow-lg);
+        linear-gradient(180deg, rgba(8,18,46,.18), rgba(8,18,46,.62)),
+        linear-gradient(135deg, #a8b8c8 0%, #7f95aa 42%, #536d8b 100%);
     }
-    .media-content{
-      position:absolute;left:0;right:0;bottom:0;padding:28px;color:#fff;
+
+    .visual-card:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 70% 30%, rgba(255,255,255,.16), transparent 20%),
+        linear-gradient(135deg, transparent 0 55%, rgba(255,255,255,.10) 55% 68%, transparent 68% 100%);
+      opacity:.9;
     }
-    .media-note{
-      display:inline-flex;padding:8px 12px;border-radius:999px;
-      background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.14);
-      font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+
+    .visual-inner{
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      padding:34px;
+      z-index:1;
+      color:#fff;
+    }
+
+    .visual-kicker{
+      display:inline-flex;
+      align-items:center;
+      min-height:38px;
+      padding:0 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.14);
+      font-weight:800;
+      font-size:.88rem;
+      letter-spacing:.04em;
+      text-transform:uppercase;
       margin-bottom:14px;
     }
-    .media-content h3{
-      margin:0 0 8px;font-size:30px;line-height:1.04;letter-spacing:-.04em;
-    }
-    .media-content p{
-      margin:0;color:rgba(255,255,255,.84);line-height:1.7;font-size:15px;
+
+    .visual-inner h3{
+      margin:0 0 10px;
+      font-size:clamp(1.9rem, 3vw, 3.1rem);
+      line-height:1.02;
+      letter-spacing:-.03em;
     }
 
-    .service-grid{
-      display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+    .visual-inner p{
+      margin:0;
+      font-size:1.05rem;
+      color:rgba(255,255,255,.88);
+      max-width:520px;
     }
+
+    .services-head{
+      display:grid;
+      grid-template-columns:1fr .78fr;
+      gap:28px;
+      align-items:end;
+      margin-bottom:34px;
+    }
+
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      min-height:46px;
+      padding:0 18px;
+      border-radius:999px;
+      background:var(--chip);
+      border:1px solid #cfe0ff;
+      color:#2167dd;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:.9rem;
+      margin-bottom:18px;
+    }
+
+    .chip:before{
+      content:"";
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      background:#3298ff;
+      box-shadow:0 0 0 6px rgba(50,152,255,.15);
+    }
+
+    .services-head h2{
+      margin:0;
+      font-size:clamp(2rem, 4vw, 4rem);
+      line-height:.98;
+      letter-spacing:-.04em;
+    }
+
+    .services-head p{
+      margin:0;
+      color:var(--muted);
+      font-size:1.06rem;
+      max-width:560px;
+    }
+
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:26px;
+    }
+
     .service-card{
-      position:relative;
-      background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.88));
-      border:1px solid rgba(15,23,42,.08);
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(214,225,239,.9);
+      border-radius:28px;
+      padding:30px;
       box-shadow:var(--shadow);
-      border-radius:26px;
-      padding:28px;
-      overflow:hidden;
-      transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
     }
-    .service-card:hover{
-      transform:translateY(-5px);
-      box-shadow:var(--shadow-lg);
-      border-color:rgba(21,94,239,.18);
+
+    .service-label{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      min-height:44px;
+      padding:0 16px;
+      border-radius:999px;
+      background:var(--chip);
+      border:1px solid #cfe0ff;
+      color:#2167dd;
+      font-size:.88rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin-bottom:20px;
     }
+
+    .service-label:before{
+      content:"";
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      background:#3298ff;
+      box-shadow:0 0 0 6px rgba(50,152,255,.15);
+    }
+
     .service-card h3{
-      margin:14px 0 12px;font-size:28px;line-height:1.04;letter-spacing:-.04em;
+      margin:0 0 14px;
+      font-size:2rem;
+      line-height:1.02;
+      letter-spacing:-.03em;
     }
+
     .service-card p{
-      margin:0 0 20px;color:var(--muted);line-height:1.8;font-size:16px;
+      margin:0 0 24px;
+      color:var(--muted);
+      font-size:1.05rem;
+      min-height:120px;
+    }
+
+    .service-card .btn{
+      min-height:52px;
+      padding:0 22px;
     }
 
     .closing{
-      border-radius:34px;overflow:hidden;
-      background:linear-gradient(135deg,#0f172a 0%, #163778 48%, #10214c 100%);
-      color:#fff;padding:40px;border:1px solid rgba(255,255,255,.10);
-      box-shadow:0 30px 80px rgba(15,23,42,.18)
-    }
-    .closing-grid{
-      display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center
-    }
-    .closing h2{
-      margin:0 0 14px;font-size:clamp(34px,4vw,54px);line-height:1;letter-spacing:-.05em
-    }
-    .closing p{
-      margin:0;color:rgba(255,255,255,.84);line-height:1.82;font-size:18px;max-width:720px
-    }
-    .closing-actions{
-      display:flex;flex-wrap:wrap;gap:14px;justify-content:flex-end
-    }
-    .closing .btn-secondary{
-      color:#fff;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14)
+      padding-top:8px;
     }
 
-    .footer{
-      padding:34px 0 46px;
-      border-top:1px solid rgba(15,23,42,.08);
-      background:linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,.78));
-      backdrop-filter:blur(12px);
+    .closing-box{
+      background:linear-gradient(135deg, #081b49 0%, #0d327d 55%, #1ea4ff 100%);
+      border-radius:34px;
+      padding:38px;
+      color:#fff;
+      box-shadow:0 24px 60px rgba(10,39,98,.22);
     }
-    .footer-grid{
-      display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:start
+
+    .closing-box h2{
+      margin:0 0 14px;
+      font-size:clamp(2rem, 4vw, 3rem);
+      line-height:1.02;
+      letter-spacing:-.03em;
     }
-    .footer-brand img{height:48px;width:auto;margin-bottom:14px}
-    .footer-brand p{
-      margin:0;max-width:660px;color:var(--muted);line-height:1.78;font-size:15px
+
+    .closing-box p{
+      margin:0 0 24px;
+      color:rgba(255,255,255,.88);
+      max-width:860px;
+      font-size:1.05rem;
     }
+
+    footer{
+      padding:34px 0 52px;
+      color:#6b7b94;
+      font-size:.96rem;
+    }
+
+    .footer-row{
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+      align-items:center;
+      border-top:1px solid rgba(13,23,51,.08);
+      padding-top:24px;
+    }
+
     .footer-links{
-      display:grid;grid-template-columns:repeat(3,1fr);gap:20px
-    }
-    .footer-links h4{
-      margin:0 0 12px;font-size:14px;text-transform:uppercase;letter-spacing:.10em;color:#0b5dd7
-    }
-    .footer-links a{
-      display:block;margin:0 0 10px;color:#0f172a;font-weight:700;opacity:.82
-    }
-    .footer-links a:hover{opacity:1;color:var(--primary)}
-    .footer-bottom{
-      margin-top:24px;padding-top:20px;border-top:1px solid rgba(15,23,42,.08);
-      display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:14px
+      display:flex;
+      flex-wrap:wrap;
+      gap:18px;
     }
 
-    @media (max-width:1180px){
-      .hero-grid,.section-head,.split,.closing-grid,.footer-grid{grid-template-columns:1fr}
-      .hero-panel{justify-self:start;width:min(100%,560px)}
-      .service-grid{grid-template-columns:1fr}
-      .closing-actions{justify-content:flex-start}
+    .footer-links a:hover{
+      color:var(--text);
     }
 
-    @media (max-width:920px){
-      .nav,.header-cta{display:none}
-      .menu-toggle{
-        display:inline-flex;align-items:center;justify-content:center;
-        width:48px;height:48px;border-radius:14px;border:1px solid rgba(15,23,42,.08);
-        background:rgba(255,255,255,.84);font-size:20px;font-weight:900;color:#0f172a;cursor:pointer
+    @media (max-width: 1100px){
+      .hero-grid,
+      .intro-grid,
+      .services-head,
+      .services-grid{
+        grid-template-columns:1fr;
       }
-      .mobile-nav{
-        position:fixed;top:calc(var(--header-h) + 8px);left:16px;right:16px;z-index:999;
-        background:rgba(255,255,255,.94);backdrop-filter:blur(18px);
-        border:1px solid rgba(15,23,42,.08);border-radius:24px;box-shadow:var(--shadow);
-        padding:18px;display:none
+
+      .service-card p{
+        min-height:auto;
       }
-      .mobile-nav.open{display:block}
-      .mobile-nav a{
-        display:block;padding:14px 8px;font-weight:800;border-bottom:1px solid rgba(15,23,42,.06)
-      }
-      .mobile-nav a:last-child{border-bottom:none}
-      .footer-links{grid-template-columns:1fr 1fr}
     }
 
-    @media (max-width:640px){
-      :root{--header-h:74px}
-      .section{padding:78px 0}
-      .section-tight{padding:62px 0}
-      .container{width:min(calc(100% - 22px), var(--max))}
-      .hero{min-height:auto;padding-top:calc(var(--header-h) + 28px)}
-      .hero-grid{padding:30px 0 44px}
-      .hero-copy p{font-size:17px}
-      .hero-actions{flex-direction:column;align-items:flex-start}
-      .hero-actions .btn{width:100%}
-      .hero-panel,.card,.service-card,.closing{padding:22px}
-      .footer-links{grid-template-columns:1fr}
+    @media (max-width: 860px){
+      .header-row{
+        min-height:auto;
+        padding:16px 0;
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .nav{
+        gap:18px;
+      }
+
+      .header-cta{
+        width:100%;
+      }
+
+      .hero{
+        padding-top:24px;
+      }
+
+      .white-card,
+      .service-card,
+      .hero-panel,
+      .closing-box{
+        padding:24px;
+      }
+
+      .hero h1{
+        font-size:clamp(2.2rem, 12vw, 4rem);
+      }
+    }
+
+    @media (max-width: 640px){
+      .btn{
+        width:100%;
+      }
+
+      .hero-actions,
+      .header-cta{
+        flex-direction:column;
+        align-items:stretch;
+      }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Crescita, finanza e sviluppo",
+    "url":"https://www.consulhubpro.it/crescita-finanza-sviluppo.html",
+    "description":"Macroarea ConsulHub Pro dedicata a crescita, finanza e sviluppo con focus su bandi e finanza agevolata, strategia e sviluppo PMI, leasing e flotte e servizi assicurativi.",
+    "isPartOf":{
+      "@type":"WebSite",
+      "name":"ConsulHub Pro",
+      "url":"https://www.consulhubpro.it/"
+    }
+  }
+  </script>
 </head>
 <body>
 
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="index.html" class="brand" aria-label="ConsulHub Pro">
-        <img src="logo-chp.png" alt="ConsulHub Pro">
+  <header class="site-header">
+    <div class="container header-row">
+      <a href="index.html" class="brand" aria-label="ConsulHub Pro home">
+        <img src="logo-chp.png" alt="Logo ConsulHub Pro">
+        <span>ConsulHub Pro</span>
       </a>
 
       <nav class="nav" aria-label="Navigazione principale">
         <a href="index.html">Home</a>
         <a href="per-studi.html">Per Studi</a>
-        <a href="pilastri.html">Pilastri</a>
-        <a href="servizi.html">Servizi</a>
+        <a href="index.html#pilastri">Pilastri</a>
+        <a href="servizi.html" class="active">Servizi</a>
         <a href="blog.html">Blog</a>
         <a href="contatti.html">Contatti</a>
       </nav>
 
       <div class="header-cta">
-        <a class="btn btn-secondary" href="https://wa.me/393383262280" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a class="btn btn-secondary" href="https://wa.me/" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         <a class="btn btn-primary" href="https://calendly.com/giovanni-laricchiuta/" target="_blank" rel="noopener noreferrer">Prenota call</a>
       </div>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="Apri menu">☰</button>
-    </div>
-
-    <div class="mobile-nav" id="mobileNav">
-      <a href="index.html">Home</a>
-      <a href="per-studi.html">Per Studi</a>
-      <a href="pilastri.html">Pilastri</a>
-      <a href="servizi.html">Servizi</a>
-      <a href="blog.html">Blog</a>
-      <a href="contatti.html">Contatti</a>
-      <a href="https://wa.me/393383262280" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-      <a href="https://calendly.com/giovanni-laricchiuta/" target="_blank" rel="noopener noreferrer">Prenota call</a>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-bg" aria-hidden="true">
-        <video autoplay muted loop playsinline poster="logo-chp.png">
-          <source src="hero.mp4" type="video/mp4">
-        </video>
-      </div>
-
       <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">Macroarea 1</span>
+        <div>
+          <div class="eyebrow">Macroarea 1</div>
           <h1>Crescita, finanza e sviluppo.</h1>
           <p>
-            Le imprese spesso hanno bisogno di crescere, strutturarsi meglio, cogliere opportunità e rafforzare il proprio sviluppo, ma si fermano davanti a complessità, mancanza di visione o assenza di un coordinamento chiaro. Questa macroarea nasce per trasformare queste esigenze in percorsi concreti e attivabili.
+            Le imprese spesso hanno bisogno di crescere, strutturarsi meglio, cogliere opportunità e rafforzare il proprio sviluppo,
+            ma si fermano davanti a complessità, mancanza di visione o assenza di un coordinamento chiaro.
+            Questa macroarea nasce per trasformare queste esigenze in percorsi più concreti, ordinati e attivabili.
           </p>
 
           <div class="hero-actions">
@@ -472,184 +682,145 @@
             <a class="btn btn-secondary" href="contatti.html">Richiedi informazioni</a>
           </div>
 
-          <div class="hero-note">
-            <span>Crescita ordinata</span>
-            <span>Più opportunità attivabili</span>
-            <span>Sviluppo più leggibile</span>
+          <div class="hero-tags">
+            <span class="tag">Crescita ordinata</span>
+            <span class="tag">Più opportunità attivabili</span>
+            <span class="tag">Sviluppo più leggibile</span>
           </div>
         </div>
 
         <aside class="hero-panel">
-          <h3>Crescere bene richiede visione, metodo e direzione.</h3>
+          <h2>Crescere bene richiede visione, metodo e direzione.</h2>
           <p>
-            È l’area dedicata ai servizi che aiutano le PMI a svilupparsi con più struttura, visione e capacità di trasformare il potenziale in risultati più concreti.
+            È l’area dedicata ai servizi che aiutano le PMI a svilupparsi con più struttura,
+            più visione e maggiore capacità di trasformare il potenziale in risultati concreti.
           </p>
-          <ul>
-            <li>Opportunità da intercettare con metodo</li>
-            <li>Supporto alla crescita e allo sviluppo</li>
-            <li>Servizi attivabili con regia CHP</li>
-            <li>Più valore per lo Studio e per l’impresa cliente</li>
-          </ul>
+
+          <div class="bullet-stack">
+            <div class="bullet">Opportunità da intercettare con metodo</div>
+            <div class="bullet">Supporto alla crescita e allo sviluppo</div>
+            <div class="bullet">Servizi attivabili con regia CHP</div>
+            <div class="bullet">Più valore per lo Studio e per l’impresa cliente</div>
+          </div>
         </aside>
       </div>
     </section>
 
     <section class="section">
-      <div class="container split">
-        <div class="card">
-          <span class="eyebrow">Perché esiste questa area</span>
-          <h3>Non basta voler crescere. Serve una direzione che renda la crescita attivabile.</h3>
+      <div class="container intro-grid">
+        <div class="white-card">
+          <div class="chip">Perché esiste questa area</div>
+          <h2>Non basta voler crescere. Serve una direzione che renda la crescita attivabile.</h2>
           <p>
-            Molte imprese hanno margini di sviluppo, possibilità di accedere a opportunità e bisogno di rafforzare la propria struttura, ma spesso non dispongono di una regia che trasformi queste esigenze in percorsi ordinati. È qui che questa macroarea acquista valore.
+            Molte imprese hanno margini di sviluppo, possibilità di accedere a opportunità e bisogno di rafforzare la propria struttura,
+            ma spesso non dispongono di una regia che trasformi queste esigenze in percorsi ordinati. È qui che questa macroarea acquista valore.
           </p>
-          <ul class="list">
+
+          <ul class="check-list">
             <li>Aiuta a leggere meglio opportunità e priorità di crescita.</li>
             <li>Permette di attivare servizi ad alto valore senza dispersioni.</li>
             <li>Rende il percorso più credibile, più concreto e più orientato al risultato.</li>
           </ul>
         </div>
 
-        <div class="media-box">
-          <div class="media-content">
-            <span class="media-note">Sviluppo • finanza • visione</span>
+        <div class="visual-card">
+          <div class="visual-inner">
+            <div class="visual-kicker">Sviluppo • Finanza • Visione</div>
             <h3>Più struttura per crescere meglio.</h3>
-            <p>Una macroarea costruita per accompagnare le PMI in percorsi di sviluppo più strategici, sostenibili e leggibili.</p>
+            <p>
+              Una macroarea costruita per accompagnare le PMI in percorsi di sviluppo più strategici,
+              sostenibili e leggibili.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-tight" id="servizi-area">
+    <section class="section" id="servizi-area">
       <div class="container">
-        <div class="section-head">
+        <div class="services-head">
           <div>
-            <span class="eyebrow">Servizi inclusi</span>
-            <h2>Tre servizi per sostenere sviluppo, opportunità e direzione d’impresa.</h2>
+            <div class="chip">Servizi inclusi</div>
+            <h2>Quattro servizi per sostenere sviluppo, opportunità e direzione d’impresa.</h2>
           </div>
           <p>
-            Ogni servizio qui sotto avrà la sua pagina dedicata. Così eliminiamo i 404 e costruiamo un sito coerente, navigabile e davvero utile anche sul piano commerciale.
+            Qui trovi i quattro servizi che compongono davvero questa macroarea.
+            Ogni blocco è coerente con il tema “Crescita, finanza e sviluppo” e avrà la sua sottopagina dedicata,
+            così eliminiamo i 404 e rendiamo il sito più ordinato anche dal punto di vista commerciale.
           </p>
         </div>
 
-        <div class="service-grid">
+        <div class="services-grid">
           <article class="service-card">
-            <span class="eyebrow">Servizio 1</span>
+            <div class="service-label">Servizio 1</div>
             <h3>Bandi e finanza agevolata</h3>
             <p>
-              Un servizio pensato per aiutare l’impresa a individuare opportunità di sostegno, accesso a misure e strumenti utili a finanziare progetti, investimenti o percorsi di crescita.
+              Un supporto pensato per aiutare l’impresa a leggere meglio bandi, misure e opportunità di sostegno,
+              valutando in modo più concreto ciò che può davvero sostenere investimenti, sviluppo o crescita.
             </p>
             <a class="btn btn-primary" href="bandi-finanza-agevolata.html">Approfondisci</a>
           </article>
 
           <article class="service-card">
-            <span class="eyebrow">Servizio 2</span>
+            <div class="service-label">Servizio 2</div>
             <h3>Strategia e sviluppo PMI</h3>
             <p>
-              Un supporto dedicato alle aziende che vogliono crescere con maggiore chiarezza, migliorare direzione, priorità e struttura delle decisioni, evitando approcci frammentati o casuali.
+              Un servizio dedicato alle aziende che vogliono crescere con maggiore chiarezza, metodo e visione,
+              rafforzando direzione, priorità e struttura delle decisioni senza approcci frammentati o casuali.
             </p>
             <a class="btn btn-primary" href="strategia-sviluppo-pmi.html">Approfondisci</a>
           </article>
 
           <article class="service-card">
-            <span class="eyebrow">Servizio 3</span>
-            <h3>Coaching e sviluppo imprenditoriale</h3>
+            <div class="service-label">Servizio 3</div>
+            <h3>Leasing e flotte</h3>
             <p>
-              Un percorso utile per rafforzare visione, leadership, capacità decisionale e sviluppo manageriale, soprattutto nelle fasi in cui l’impresa ha bisogno di evolvere.
+              Un’area utile per supportare imprese e professionisti nella valutazione di soluzioni legate a mezzi,
+              strumenti e mobilità aziendale, con un approccio più ordinato, sostenibile e coerente con il business.
             </p>
-            <a class="btn btn-primary" href="coaching-sviluppo-imprenditoriale.html">Approfondisci</a>
+            <a class="btn btn-primary" href="leasing-flotte.html">Approfondisci</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-label">Servizio 4</div>
+            <h3>Servizi assicurativi</h3>
+            <p>
+              Un supporto per leggere meglio esigenze di tutela, continuità e protezione,
+              così da integrare la crescita dell’impresa con soluzioni assicurative più coerenti e ragionate.
+            </p>
+            <a class="btn btn-primary" href="servizi-assicurativi.html">Approfondisci</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-tight">
+    <section class="section closing">
       <div class="container">
-        <div class="closing">
-          <div class="closing-grid">
-            <div>
-              <h2>Una macroarea pensata per trasformare potenziale e intenzioni in sviluppo più concreto.</h2>
-              <p>
-                ConsulHub Pro coordina questa area con una logica chiara: meno dispersione, più orientamento, più possibilità di attivare servizi che aiutano davvero l’impresa a crescere in modo più strutturato.
-              </p>
-            </div>
-
-            <div class="closing-actions">
-              <a class="btn btn-primary" href="contatti.html">Richiedi informazioni</a>
-              <a class="btn btn-secondary" href="servizi.html">Torna ai servizi</a>
-            </div>
+        <div class="closing-box">
+          <h2>Vuoi capire quale di questi servizi è più adatto alla tua impresa o ai clienti del tuo Studio?</h2>
+          <p>
+            Possiamo partire da un confronto iniziale per capire il contesto, le priorità e l’area di sviluppo più sensata da attivare,
+            così da costruire un percorso più ordinato, più leggibile e realmente utile.
+          </p>
+          <div class="hero-actions" style="margin-bottom:0;">
+            <a class="btn btn-secondary" href="servizi.html">Torna a tutti i servizi</a>
+            <a class="btn btn-primary" href="contatti.html">Contattaci</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="logo-chp.png" alt="ConsulHub Pro">
-          <p>
-            ConsulHub Pro è una regia di servizi integrati per Studi di consulenza del lavoro e PMI. Coordina l’attivazione di soluzioni ad alto valore attraverso partner qualificati, con una struttura orientata a efficienza, chiarezza e crescita.
-          </p>
-        </div>
-
-        <div class="footer-links">
-          <div>
-            <h4>Navigazione</h4>
-            <a href="index.html">Home</a>
-            <a href="per-studi.html">Per Studi</a>
-            <a href="pilastri.html">Pilastri</a>
-            <a href="servizi.html">Servizi</a>
-          </div>
-
-          <div>
-            <h4>Approfondimenti</h4>
-            <a href="blog.html">Blog</a>
-            <a href="contatti.html">Contatti</a>
-            <a href="checklist-studio.pdf" target="_blank" rel="noopener noreferrer">Checklist Studio</a>
-            <a href="formazione-finanziata.html">Formazione finanziata</a>
-          </div>
-
-          <div>
-            <h4>Contatti e policy</h4>
-            <a href="https://calendly.com/giovanni-laricchiuta/" target="_blank" rel="noopener noreferrer">Prenota call</a>
-            <a href="https://wa.me/393383262280" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            <a href="https://www.linkedin.com/company/consulhub-pro/posts/?feedView=all" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://www.instagram.com/serviziconsulenzalavoro24/" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://www.facebook.com/profile.php?id=61585127122604" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href="https://www.iubenda.com/privacy-policy/78495644" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-            <a href="https://www.iubenda.com/privacy-policy/78495644/cookie-policy" target="_blank" rel="noopener noreferrer">Cookie Policy</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <span>© ConsulHub Pro. Tutti i diritti riservati.</span>
-        <span>Un unico coordinamento. Più servizi. Più valore. Zero dispersione.</span>
+  <footer>
+    <div class="container footer-row">
+      <div>© ConsulHub Pro</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="servizi.html">Servizi</a>
+        <a href="contatti.html">Contatti</a>
       </div>
     </div>
   </footer>
 
-  <script>
-    const header = document.getElementById('siteHeader');
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileNav = document.getElementById('mobileNav');
-
-    const onScroll = () => {
-      if(window.scrollY > 18){
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    };
-    onScroll();
-    window.addEventListener('scroll', onScroll);
-
-    if(menuToggle){
-      menuToggle.addEventListener('click', () => {
-        mobileNav.classList.toggle('open');
-      });
-    }
-  </script>
 </body>
 </html>
