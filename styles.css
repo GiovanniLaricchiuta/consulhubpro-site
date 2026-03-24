@@ -461,3 +461,15 @@ small{color: rgba(11,18,32,.62)}
   .grid{grid-template-columns: 1fr}
   .form{grid-template-columns: 1fr}
 }
+.macroarea-3-fix .service-content ul{
+  gap:10px;
+}
+
+.macroarea-3-fix .service-content li{
+  padding:10px 14px;
+  line-height:1.15;
+}
+
+.macroarea-3-fix .btn{
+  margin-top:10px;
+}
