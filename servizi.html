@@ -260,15 +260,25 @@
     .service-copy p{
       margin:0 0 22px;color:var(--muted);line-height:1.82;font-size:16px;
     }
-    .service-list{
-      display:grid;gap:12px;margin:22px 0 24px;
-    }
+   .service-list{
+  display:grid;
+  gap:14px;
+  margin:22px 0 24px;
+}
     .service-list a{
-      display:flex;justify-content:space-between;align-items:center;gap:14px;
-      padding:14px 16px;border-radius:16px;background:#fff;
-      border:1px solid rgba(15,23,42,.08);font-weight:800;
-      transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
-    }
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+  padding:14px 16px;
+  min-height:60px;
+  border-radius:16px;
+  background:#fff;
+  border:1px solid rgba(15,23,42,.08);
+  font-weight:800;
+  line-height:1.2;
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
     .service-list a:hover{
       transform:translateY(-2px);
       border-color:rgba(21,94,239,.20);
@@ -633,10 +643,10 @@
                 </p>
 
                 <div class="service-list">
-                  <a href="sicurezza-sul-lavoro.html"><span>Sicurezza sul lavoro</span><span>→</span></a>
-                  <a href="compliance-aziendale.html"><span>Compliance aziendale</span><span>→</span></a>
-                  <a href="sostenibilita-esg.html"><span>Sostenibilità ed ESG</span><span>→</span></a>
-                  <a href="gestione-del-rischio.html"><span>Gestione del rischio</span><span>→</span></a>
+                 <a class="macro-link" href="sicurezza-compliance-sostenibilita.html">Sicurezza sul lavoro</a>
+                 <a class="macro-link" href="sicurezza-compliance-sostenibilita.html">Compliance aziendale</a>
+                 <a class="macro-link" href="sicurezza-compliance-sostenibilita.html">Sostenibilità</a>
+                 <a class="macro-link" href="sicurezza-compliance-sostenibilita.html">Gestione del rischio</a>
                 </div>
 
                 <div class="service-actions">
