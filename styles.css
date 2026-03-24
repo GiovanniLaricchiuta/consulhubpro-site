@@ -473,3 +473,6 @@ small{color: rgba(11,18,32,.62)}
 .macroarea-3-fix .btn{
   margin-top:10px;
 }
+.macroarea-3-fix{
+  min-height: 760px;
+}
