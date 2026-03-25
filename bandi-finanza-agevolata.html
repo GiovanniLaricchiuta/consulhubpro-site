@@ -2,38 +2,41 @@
 <html lang="it">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Finanza Agevolata | ConsulHub Pro</title>
-  <meta name="description" content="ConsulHub Pro supporta studi professionali e aziende nell’accesso a bandi, contributi e opportunità di finanza agevolata con un approccio concreto, selettivo e orientato al risultato." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bandi e finanza agevolata | ConsulHub Pro</title>
+  <meta name="description" content="ConsulHub Pro aiuta studi professionali e PMI a individuare bandi, contributi e strumenti di finanza agevolata, con un approccio operativo, selettivo e orientato al risultato." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="canonical" href="https://www.consulhubpro.it/finanza-agevolata.html" />
+  <link rel="canonical" href="https://www.consulhubpro.it/bandi-finanza-agevolata.html" />
   <link rel="icon" href="favicon.ico" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ConsulHub Pro" />
-  <meta property="og:title" content="Finanza Agevolata | ConsulHub Pro" />
-  <meta property="og:description" content="Bandi, contributi e misure agevolative per accompagnare la crescita delle imprese con partner specializzati e visione strategica." />
-  <meta property="og:url" content="https://www.consulhubpro.it/finanza-agevolata.html" />
+  <meta property="og:title" content="Bandi e finanza agevolata | ConsulHub Pro" />
+  <meta property="og:description" content="Un supporto concreto per intercettare opportunità di finanza agevolata, contributi e incentivi utili alla crescita delle imprese." />
+  <meta property="og:url" content="https://www.consulhubpro.it/bandi-finanza-agevolata.html" />
   <meta property="og:image" content="https://www.consulhubpro.it/logo-chp.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Finanza Agevolata | ConsulHub Pro" />
-  <meta name="twitter:description" content="Bandi, contributi e misure agevolative per supportare investimenti, innovazione e sviluppo." />
+  <meta name="twitter:title" content="Bandi e finanza agevolata | ConsulHub Pro" />
+  <meta name="twitter:description" content="Analisi delle opportunità, selezione dei bandi più coerenti e affiancamento operativo per studi e imprese." />
   <meta name="twitter:image" content="https://www.consulhubpro.it/logo-chp.png" />
 
   <style>
     :root{
-      --bg:#071520;
-      --bg2:#0c2233;
-      --card:#0f2b3f;
+      --bg:#07111f;
+      --bg-soft:#0d1b2d;
+      --card:#0f2238;
+      --card-2:#132b46;
       --line:rgba(255,255,255,.10);
-      --text:#eef4f8;
-      --muted:#b8c7d3;
-      --brand:#4fd1c5;
-      --brand2:#2b6cb0;
+      --text:#e9f1fb;
+      --muted:#a9bbcf;
+      --primary:#7cc7ff;
+      --primary-2:#5aa9e6;
+      --accent:#d8ecff;
       --white:#ffffff;
-      --shadow:0 18px 40px rgba(0,0,0,.28);
-      --radius:20px;
+      --shadow:0 20px 50px rgba(0,0,0,.30);
+      --radius:22px;
+      --radius-sm:16px;
       --max:1180px;
     }
 
@@ -41,9 +44,12 @@
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family:Arial,Helvetica,sans-serif;
+      font-family:Arial, Helvetica, sans-serif;
       color:var(--text);
-      background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);
+      background:
+        radial-gradient(circle at top right, rgba(124,199,255,.12), transparent 26%),
+        radial-gradient(circle at top left, rgba(90,169,230,.10), transparent 22%),
+        linear-gradient(180deg, #08111d 0%, #0b1727 100%);
       line-height:1.6;
     }
 
@@ -51,308 +57,418 @@
     img{max-width:100%;display:block}
 
     .container{
-      width:min(var(--max),92%);
+      width:min(var(--max), calc(100% - 32px));
       margin:0 auto;
     }
 
     .topbar{
       position:sticky;
       top:0;
-      z-index:1000;
-      backdrop-filter:blur(10px);
-      background:rgba(7,21,32,.78);
-      border-bottom:1px solid rgba(255,255,255,.08);
+      z-index:50;
+      backdrop-filter:blur(14px);
+      background:rgba(7,17,31,.78);
+      border-bottom:1px solid var(--line);
     }
 
-    .nav{
+    .topbar-inner{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:20px;
-      min-height:78px;
+      gap:18px;
+      min-height:76px;
     }
 
     .brand{
       display:flex;
       align-items:center;
       gap:14px;
-      font-weight:700;
-      letter-spacing:.2px;
+      min-width:0;
     }
 
     .brand img{
-      width:48px;
-      height:48px;
+      width:44px;
+      height:44px;
       object-fit:contain;
-      border-radius:12px;
+      border-radius:10px;
       background:rgba(255,255,255,.04);
       padding:6px;
     }
 
-    .nav-links{
+    .brand-text{
+      min-width:0;
+    }
+
+    .brand-text strong{
+      display:block;
+      font-size:1rem;
+      letter-spacing:.2px;
+    }
+
+    .brand-text span{
+      display:block;
+      color:var(--muted);
+      font-size:.88rem;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .nav{
       display:flex;
       align-items:center;
-      gap:18px;
+      gap:10px;
       flex-wrap:wrap;
+      justify-content:flex-end;
     }
 
-    .nav-links a{
+    .nav a{
+      padding:10px 14px;
+      border-radius:999px;
       color:var(--muted);
-      font-size:.96rem;
+      transition:.2s ease;
+      border:1px solid transparent;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active{
+    .nav a:hover{
       color:var(--white);
+      border-color:var(--line);
+      background:rgba(255,255,255,.04);
+    }
+
+    .nav .cta{
+      color:#07111f;
+      background:linear-gradient(135deg, var(--primary), #b5e0ff);
+      font-weight:700;
+      border:none;
+    }
+
+    .hero{
+      padding:64px 0 32px;
+    }
+
+    .breadcrumbs{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      font-size:.92rem;
+      color:var(--muted);
+      margin-bottom:22px;
+    }
+
+    .breadcrumbs a:hover{color:var(--white)}
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:26px;
+      align-items:stretch;
+    }
+
+    .hero-copy,
+    .hero-side{
+      background:linear-gradient(180deg, rgba(19,43,70,.96), rgba(10,22,37,.96));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .hero-copy{
+      padding:34px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(124,199,255,.10);
+      color:#cfe9ff;
+      border:1px solid rgba(124,199,255,.16);
+      font-size:.88rem;
+      font-weight:700;
+      letter-spacing:.2px;
+      margin-bottom:18px;
+    }
+
+    h1{
+      margin:0 0 16px;
+      font-size:clamp(2rem, 4vw, 3.4rem);
+      line-height:1.1;
+      letter-spacing:-.02em;
+    }
+
+    .lead{
+      font-size:1.08rem;
+      color:var(--accent);
+      margin:0 0 24px;
+      max-width:760px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin:24px 0 0;
     }
 
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      gap:10px;
-      padding:13px 20px;
+      gap:8px;
+      min-height:50px;
+      padding:0 18px;
       border-radius:999px;
       font-weight:700;
-      transition:.25s ease;
-      border:1px solid transparent;
+      transition:.2s ease;
+      border:1px solid var(--line);
     }
 
     .btn-primary{
-      background:linear-gradient(135deg,var(--brand),var(--brand2));
-      color:var(--white);
-      box-shadow:var(--shadow);
+      background:linear-gradient(135deg, var(--primary), #b7e2ff);
+      color:#07111f;
+      border:none;
     }
-
-    .btn-primary:hover{transform:translateY(-1px)}
 
     .btn-secondary{
-      border:1px solid rgba(255,255,255,.16);
+      background:rgba(255,255,255,.04);
       color:var(--white);
-      background:rgba(255,255,255,.03);
     }
 
-    .btn-secondary:hover{
-      background:rgba(255,255,255,.06);
+    .btn:hover{
+      transform:translateY(-1px);
     }
 
-    .hero{
-      padding:84px 0 48px;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .hero:before{
-      content:"";
-      position:absolute;
-      inset:auto -140px -120px auto;
-      width:420px;
-      height:420px;
-      background:radial-gradient(circle, rgba(79,209,197,.22) 0%, rgba(79,209,197,0) 70%);
-      pointer-events:none;
-    }
-
-    .breadcrumb{
+    .hero-side{
+      padding:28px;
       display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      color:var(--muted);
-      font-size:.92rem;
-      margin-bottom:22px;
+      flex-direction:column;
+      justify-content:center;
+      gap:16px;
     }
 
-    .breadcrumb a:hover{color:var(--white)}
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.15fr .85fr;
-      gap:32px;
-      align-items:start;
-    }
-
-    h1{
-      margin:0 0 18px;
-      font-size:clamp(2rem,4vw,3.5rem);
-      line-height:1.08;
-      letter-spacing:-.02em;
-    }
-
-    .lead{
-      font-size:1.08rem;
-      color:var(--muted);
-      max-width:760px;
-      margin:0 0 28px;
-    }
-
-    .hero-card{
-      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));
+    .mini-card{
+      background:rgba(255,255,255,.03);
       border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:26px;
-      box-shadow:var(--shadow);
+      border-radius:18px;
+      padding:18px;
     }
 
-    .hero-card h3{
-      margin:0 0 14px;
-      font-size:1.1rem;
+    .mini-card strong{
+      display:block;
+      font-size:1rem;
+      margin-bottom:6px;
     }
 
-    .hero-card ul{
+    .mini-card p{
       margin:0;
-      padding-left:18px;
       color:var(--muted);
+      font-size:.96rem;
     }
 
-    .hero-card li+li{margin-top:10px}
-
-    .section{
-      padding:28px 0 72px;
+    section{
+      padding:34px 0;
     }
 
-    .section h2{
-      font-size:clamp(1.55rem,2.4vw,2.3rem);
-      margin:0 0 14px;
+    .section-head{
+      max-width:820px;
+      margin-bottom:24px;
+    }
+
+    .section-head h2{
+      margin:0 0 10px;
+      font-size:clamp(1.6rem, 3vw, 2.4rem);
       line-height:1.15;
     }
 
-    .section-intro{
+    .section-head p{
+      margin:0;
       color:var(--muted);
-      margin:0 0 28px;
-      max-width:850px;
+      font-size:1rem;
     }
 
-    .cards{
+    .grid-2{
       display:grid;
-      grid-template-columns:repeat(3,1fr);
+      grid-template-columns:1fr 1fr;
       gap:22px;
     }
 
     .card{
-      background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.025));
+      background:linear-gradient(180deg, rgba(17,34,56,.96), rgba(11,23,39,.96));
       border:1px solid var(--line);
       border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px;
+    }
+
+    .card h3{
+      margin:0 0 14px;
+      font-size:1.25rem;
+    }
+
+    .card p{
+      margin:0 0 14px;
+      color:var(--muted);
+    }
+
+    .list{
+      display:grid;
+      gap:12px;
+      margin-top:16px;
+    }
+
+    .list div{
+      padding:14px 16px;
+      border-radius:16px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      color:var(--accent);
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:18px;
+    }
+
+    .step{
+      background:linear-gradient(180deg, rgba(19,43,70,.96), rgba(11,23,39,.96));
+      border:1px solid var(--line);
+      border-radius:20px;
       padding:24px;
       box-shadow:var(--shadow);
     }
 
-    .card h3{
-      margin:0 0 12px;
+    .step-number{
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      font-weight:800;
+      color:#07111f;
+      background:linear-gradient(135deg, var(--primary), #c7e9ff);
+      margin-bottom:14px;
+    }
+
+    .step h3{
+      margin:0 0 10px;
       font-size:1.08rem;
     }
 
-    .card p{
+    .step p{
       margin:0;
       color:var(--muted);
+      font-size:.96rem;
     }
 
-    .two-col{
+    .highlight{
       display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:24px;
-      align-items:start;
+      grid-template-columns:1.1fr .9fr;
+      gap:22px;
+      align-items:stretch;
     }
 
-    .list{
-      margin:0;
-      padding-left:20px;
+    .faq{
+      display:grid;
+      gap:14px;
+    }
+
+    details{
+      background:linear-gradient(180deg, rgba(17,34,56,.96), rgba(11,23,39,.96));
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px 20px;
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:700;
+      list-style:none;
+    }
+
+    summary::-webkit-details-marker{
+      display:none;
+    }
+
+    details p{
+      margin:12px 0 0;
       color:var(--muted);
     }
-
-    .list li+li{margin-top:10px}
 
     .cta-box{
-      margin-top:18px;
-      background:linear-gradient(135deg,rgba(79,209,197,.12),rgba(43,108,176,.16));
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:24px;
       padding:30px;
+      border-radius:24px;
+      background:linear-gradient(135deg, rgba(124,199,255,.12), rgba(255,255,255,.03));
+      border:1px solid rgba(124,199,255,.18);
       box-shadow:var(--shadow);
+    }
+
+    .cta-box h2{
+      margin:0 0 12px;
+      font-size:clamp(1.7rem, 3vw, 2.3rem);
     }
 
     .cta-box p{
       margin:0 0 20px;
-      color:var(--muted);
-      max-width:850px;
-    }
-
-    .cta-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-    }
-
-    .mini-nav{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
-      margin-top:18px;
-    }
-
-    .mini-link{
-      display:block;
-      padding:18px 20px;
-      border-radius:18px;
-      background:rgba(255,255,255,.03);
-      border:1px solid var(--line);
-      color:var(--white);
-      font-weight:700;
-    }
-
-    .mini-link span{
-      display:block;
-      font-weight:400;
-      color:var(--muted);
-      font-size:.94rem;
-      margin-top:6px;
+      color:var(--accent);
+      max-width:820px;
     }
 
     footer{
-      border-top:1px solid rgba(255,255,255,.08);
-      padding:26px 0 42px;
+      padding:26px 0 50px;
       color:var(--muted);
-      font-size:.95rem;
     }
 
-    .footer-grid{
+    .footer-box{
+      border-top:1px solid var(--line);
+      padding-top:22px;
       display:flex;
+      flex-wrap:wrap;
       justify-content:space-between;
-      gap:18px;
-      flex-wrap:wrap;
+      gap:14px;
     }
 
-    .footer-links{
-      display:flex;
-      gap:16px;
-      flex-wrap:wrap;
-    }
-
-    .footer-links a:hover{color:var(--white)}
-
-    @media (max-width: 980px){
+    @media (max-width: 1100px){
       .hero-grid,
-      .cards,
-      .two-col,
-      .mini-nav{
+      .grid-2,
+      .highlight{
         grid-template-columns:1fr;
       }
 
-      .nav{
-        min-height:auto;
-        padding:14px 0;
-        align-items:flex-start;
-        flex-direction:column;
-      }
-
-      .nav-links{
-        width:100%;
+      .steps{
+        grid-template-columns:1fr 1fr;
       }
     }
 
-    @media (max-width: 640px){
-      .hero{padding:68px 0 38px}
-      .card,.hero-card,.cta-box{padding:22px}
-      .btn{width:100%}
-      .cta-actions{flex-direction:column}
+    @media (max-width: 760px){
+      .topbar-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:14px 0;
+      }
+
+      .nav{
+        width:100%;
+        justify-content:flex-start;
+      }
+
+      .hero{
+        padding-top:38px;
+      }
+
+      .hero-copy,
+      .hero-side,
+      .card,
+      .step,
+      .cta-box{
+        padding:22px;
+      }
+
+      .steps{
+        grid-template-columns:1fr;
+      }
     }
   </style>
 
@@ -360,15 +476,15 @@
   {
     "@context":"https://schema.org",
     "@type":"Service",
-    "name":"Finanza Agevolata",
-    "serviceType":"Consulenza su bandi, contributi e agevolazioni",
+    "name":"Bandi e finanza agevolata",
+    "serviceType":"Consulenza su bandi, incentivi e finanza agevolata",
     "provider":{
       "@type":"Organization",
       "name":"ConsulHub Pro",
-      "url":"https://www.consulhubpro.it/"
+      "url":"https://www.consulhubpro.it"
     },
-    "url":"https://www.consulhubpro.it/finanza-agevolata.html",
-    "description":"Servizio di supporto per individuare opportunità di finanza agevolata, valutare requisiti di accesso e accompagnare studi e aziende lungo il percorso di candidatura e sviluppo progettuale.",
+    "url":"https://www.consulhubpro.it/bandi-finanza-agevolata.html",
+    "description":"ConsulHub Pro supporta studi professionali e imprese nell'individuazione e nella valorizzazione di opportunità di finanza agevolata, bandi e contributi coerenti con gli obiettivi di crescita.",
     "areaServed":"IT"
   }
   </script>
@@ -376,17 +492,20 @@
 <body>
 
   <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="index.html" aria-label="ConsulHub Pro Home">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html" aria-label="Vai alla homepage di ConsulHub Pro">
         <img src="logo-chp.png" alt="Logo ConsulHub Pro" />
-        <span>ConsulHub Pro</span>
+        <div class="brand-text">
+          <strong>ConsulHub Pro</strong>
+          <span>Servizi ad alto valore per studi professionali e imprese</span>
+        </div>
       </a>
 
-      <nav class="nav-links" aria-label="Navigazione principale">
+      <nav class="nav" aria-label="Navigazione principale">
         <a href="index.html">Home</a>
-        <a href="servizi.html" class="active">Servizi</a>
         <a href="crescita-finanza-sviluppo.html">Macroarea</a>
         <a href="contatti.html">Contatti</a>
+        <a class="cta" href="contatti.html">Richiedi un confronto</a>
       </nav>
     </div>
   </header>
@@ -394,174 +513,202 @@
   <main>
     <section class="hero">
       <div class="container">
-        <div class="breadcrumb" aria-label="Breadcrumb">
+        <div class="breadcrumbs">
           <a href="index.html">Home</a>
-          <span>›</span>
-          <a href="servizi.html">Servizi</a>
-          <span>›</span>
-          <a href="crescita-finanza-sviluppo.html">Crescita, Finanza &amp; Sviluppo</a>
-          <span>›</span>
-          <span>Finanza Agevolata</span>
+          <span>•</span>
+          <a href="crescita-finanza-sviluppo.html">Crescita, finanza e sviluppo</a>
+          <span>•</span>
+          <span>Bandi e finanza agevolata</span>
         </div>
 
         <div class="hero-grid">
-          <div>
-            <h1>Finanza Agevolata</h1>
+          <div class="hero-copy">
+            <div class="eyebrow">Servizio 1 di 19</div>
+            <h1>Bandi e finanza agevolata</h1>
             <p class="lead">
-              Individuare il bando giusto non basta. Serve capire se l’opportunità è davvero coerente con l’azienda,
-              con il timing, con gli investimenti previsti e con la capacità reale di trasformare un’agevolazione in crescita concreta.
-              ConsulHub Pro affianca studi professionali e imprese in un percorso selettivo, strategico e orientato al risultato.
+              Intercettare le opportunità giuste non significa inseguire ogni bando disponibile, ma capire quali strumenti siano davvero utili per sostenere investimenti, crescita, innovazione e sviluppo dell’impresa.
+            </p>
+            <p class="lead" style="font-size:1rem;color:var(--muted);margin-top:-6px;">
+              ConsulHub Pro affianca studi professionali e aziende con un approccio selettivo, concreto e orientato al risultato, trasformando la finanza agevolata da tema teorico a leva operativa.
             </p>
 
-            <div class="cta-actions">
-              <a class="btn btn-primary" href="contatti.html">Richiedi un confronto</a>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="contatti.html">Parla con noi</a>
               <a class="btn btn-secondary" href="crescita-finanza-sviluppo.html">Torna alla macroarea</a>
             </div>
           </div>
 
-          <aside class="hero-card">
-            <h3>Cosa supportiamo</h3>
-            <ul>
-              <li>Analisi preliminare di bandi, avvisi e misure agevolative</li>
-              <li>Valutazione di coerenza tra opportunità e progetto aziendale</li>
-              <li>Impostazione del percorso documentale e progettuale</li>
-              <li>Supporto nel coordinamento con partner specialistici</li>
-              <li>Visione integrata con sviluppo, organizzazione e sostenibilità economica</li>
-            </ul>
+          <aside class="hero-side">
+            <div class="mini-card">
+              <strong>Per chi è utile</strong>
+              <p>Studi professionali che vogliono ampliare il valore offerto ai clienti e imprese che desiderano valutare opportunità di investimento con maggiore metodo.</p>
+            </div>
+            <div class="mini-card">
+              <strong>Cosa cambia davvero</strong>
+              <p>Meno dispersione, più selezione. Meno ipotesi generiche, più coerenza tra progetto aziendale, requisiti e reali possibilità di accesso.</p>
+            </div>
+            <div class="mini-card">
+              <strong>Approccio ConsulHub Pro</strong>
+              <p>Analisi del contesto, lettura del fabbisogno, valutazione delle misure disponibili e supporto nel coordinare il percorso più sensato.</p>
+            </div>
           </aside>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section>
       <div class="container">
-        <h2>Un servizio pensato per chi vuole usare bene le opportunità disponibili</h2>
-        <p class="section-intro">
-          Troppo spesso la finanza agevolata viene trattata come una semplice caccia al bando. In realtà, quando è gestita bene,
-          diventa uno strumento di accelerazione per investimenti, innovazione, assunzioni, digitalizzazione e crescita.
-          Il nostro approccio parte da una domanda semplice: questa opportunità serve davvero all’azienda oppure no?
-        </p>
-
-        <div class="cards">
-          <div class="card">
-            <h3>Analisi selettiva</h3>
-            <p>
-              Non tutte le misure sono utili per tutti. Valutiamo la reale pertinenza dell’opportunità rispetto a obiettivi,
-              struttura, dimensione e sostenibilità del progetto.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Approccio concreto</h3>
-            <p>
-              Evitiamo candidature improvvisate, bandi rincorsi solo perché disponibili e percorsi che assorbono tempo senza ritorno reale.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Coordinamento operativo</h3>
-            <p>
-              Accompagniamo il cliente nel dialogo con specialisti e partner tecnici, creando un processo più ordinato, leggibile e gestibile.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="two-col">
-          <div class="card">
-            <h2>Cosa comprende il supporto</h2>
-            <ul class="list">
-              <li>lettura del fabbisogno aziendale e degli obiettivi di investimento</li>
-              <li>prima valutazione delle opportunità attivabili a livello territoriale, settoriale o nazionale</li>
-              <li>verifica preliminare dei requisiti di accesso</li>
-              <li>supporto nell’impostazione del progetto e nella raccolta delle informazioni utili</li>
-              <li>affiancamento nel percorso di candidatura e sviluppo, insieme ai partner competenti</li>
-              <li>visione integrata con altri servizi CHP, quando il progetto coinvolge persone, processi, marketing o tecnologia</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h2>Per chi è utile</h2>
-            <ul class="list">
-              <li>studi professionali che vogliono offrire maggiore valore ai propri clienti</li>
-              <li>PMI che intendono investire in crescita, innovazione o riorganizzazione</li>
-              <li>aziende che vogliono valutare bandi senza disperdere energie su opportunità marginali</li>
-              <li>realtà che cercano una regia più chiara tra visione strategica e supporto specialistico</li>
-              <li>imprese che vogliono collegare finanza agevolata e sviluppo concreto, non solo ottenere un contributo</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>Il valore aggiunto di ConsulHub Pro</h2>
-        <p class="section-intro">
-          Il punto non è solo trovare misure disponibili. Il punto è far emergere quelle che hanno senso dentro una strategia più ampia.
-          Per questo il servizio non viene trattato come un’attività isolata, ma come parte di un progetto di crescita che può coinvolgere
-          finanza, organizzazione, digitalizzazione, welfare, compliance o sviluppo commerciale.
-        </p>
-
-        <div class="two-col">
-          <div class="card">
-            <h3>Visione trasversale</h3>
-            <p>
-              Quando un’azienda investe, raramente ha bisogno di una risposta unica. Spesso servono interventi collegati tra loro.
-              Il nostro ruolo è leggere il quadro complessivo e favorire un percorso più coerente.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Partner specializzati</h3>
-            <p>
-              I servizi vengono sviluppati con il supporto di partner qualificati e competenti nelle rispettive aree,
-              così da garantire serietà operativa e maggiore affidabilità nell’esecuzione.
-            </p>
-          </div>
-        </div>
-
-        <div class="cta-box">
-          <h2>Vuoi capire se esistono opportunità realmente utili per i tuoi clienti o per la tua azienda?</h2>
+        <div class="section-head">
+          <h2>Un supporto che parte dalla realtà dell’impresa</h2>
           <p>
-            Possiamo partire da un confronto iniziale per valutare il contesto, gli obiettivi e il tipo di investimento in programma,
-            così da capire se la finanza agevolata può diventare un acceleratore concreto oppure no.
+            La finanza agevolata funziona quando è collegata a un progetto concreto. Per questo il lavoro non parte dal bando, ma dagli obiettivi dell’azienda: investimenti da sostenere, percorsi di crescita, esigenze organizzative, innovazione, sviluppo commerciale o tecnologico.
           </p>
-          <div class="cta-actions">
-            <a class="btn btn-primary" href="contatti.html">Contattaci</a>
-            <a class="btn btn-secondary" href="servizi.html">Vedi tutti i servizi</a>
-          </div>
         </div>
 
-        <div class="mini-nav">
-          <a class="mini-link" href="accesso-al-credito.html">
-            Accesso al Credito
-            <span>Il servizio successivo della stessa macroarea</span>
-          </a>
-          <a class="mini-link" href="controllo-di-gestione.html">
-            Controllo di Gestione
-            <span>Approccio economico e manageriale per decisioni migliori</span>
-          </a>
-          <a class="mini-link" href="crescita-finanza-sviluppo.html">
-            Torna alla Macroarea
-            <span>Panoramica completa di crescita, finanza e sviluppo</span>
-          </a>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Cosa facciamo</h3>
+            <p>
+              Analizziamo il quadro generale e aiutiamo a comprendere se esistano opportunità coerenti con il momento aziendale, evitando approcci improvvisati o puramente opportunistici.
+            </p>
+            <div class="list">
+              <div>Analisi preliminare di obiettivi, investimenti e priorità</div>
+              <div>Valutazione di bandi, contributi e strumenti compatibili</div>
+              <div>Selezione delle opportunità realmente pertinenti</div>
+              <div>Affiancamento nel coordinamento del percorso operativo</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Cosa evitiamo</h3>
+            <p>
+              Uno degli errori più frequenti è rincorrere misure poco adatte, solo perché sembrano interessanti sulla carta. Il nostro approccio riduce dispersione, aspettative sbagliate e tempo perso.
+            </p>
+            <div class="list">
+              <div>Candidature forzate su misure non coerenti</div>
+              <div>Valutazioni superficiali dei requisiti</div>
+              <div>Progetti costruiti solo per inseguire il contributo</div>
+              <div>Perdita di tempo su opportunità con bassa aderenza reale</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Come lavoriamo</h2>
+          <p>
+            Un percorso lineare, chiaro e professionale, pensato per dare agli studi un servizio credibile verso i propri clienti e alle imprese una valutazione seria delle opportunità disponibili.
+          </p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Ascolto e analisi</h3>
+            <p>Raccogliamo le informazioni essenziali per capire il contesto, il progetto e la direzione strategica dell’azienda.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Selezione delle opportunità</h3>
+            <p>Valutiamo le misure potenzialmente coerenti, distinguendo ciò che è davvero utile da ciò che non merita tempo e risorse.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Impostazione del percorso</h3>
+            <p>Definiamo il perimetro più sensato, chiarendo priorità, requisiti, fattibilità e livello di interesse concreto.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Affiancamento operativo</h3>
+            <p>Supportiamo il processo con una logica coordinata, per aiutare studio e impresa a gestire il percorso con maggiore consapevolezza.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="highlight">
+          <div class="card">
+            <h3>Perché interessa anche agli studi professionali</h3>
+            <p>
+              Per uno studio, offrire un presidio serio su bandi e finanza agevolata significa aumentare il valore percepito della relazione con il cliente e aprire nuove possibilità di sviluppo senza appesantire la struttura interna.
+            </p>
+            <p>
+              ConsulHub Pro si inserisce proprio in questo spazio: rendere accessibili competenze specialistiche in modo ordinato, credibile e facilmente integrabile nell’offerta dello studio.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Quando questo servizio ha più senso</h3>
+            <div class="list">
+              <div>Quando l’azienda sta pianificando investimenti o sviluppo</div>
+              <div>Quando serve capire se esistono misure utili e realistiche</div>
+              <div>Quando lo studio vuole offrire un servizio in più al cliente</div>
+              <div>Quando si vuole valutare un’opportunità con metodo, non per tentativi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Domande frequenti</h2>
+          <p>Le risposte più utili per comprendere come impostiamo il servizio.</p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Vi occupate solo della ricerca bandi?</summary>
+            <p>No. Il valore non sta nel segnalare genericamente opportunità, ma nel valutare la coerenza tra misura disponibile, obiettivi dell’impresa e reale convenienza del percorso.</p>
+          </details>
+
+          <details>
+            <summary>Il servizio è utile anche per uno studio professionale?</summary>
+            <p>Sì. È particolarmente utile quando lo studio vuole ampliare il livello di supporto al cliente con un presidio specialistico, senza dover strutturare internamente tutte le competenze necessarie.</p>
+          </details>
+
+          <details>
+            <summary>Ha senso attivarlo anche se non c’è ancora un progetto definito?</summary>
+            <p>Sì, purché ci sia almeno un’esigenza concreta da valutare. In molti casi il primo passo utile è proprio chiarire se esistano le condizioni per trasformare un’intenzione in un percorso sensato.</p>
+          </details>
+
+          <details>
+            <summary>L’obiettivo è trovare contributi a tutti i costi?</summary>
+            <p>No. L’obiettivo è capire se esistano opportunità coerenti e realmente utili. Forzare una candidatura senza presupposti solidi genera solo tempo perso e aspettative sbagliate.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta-box">
+          <h2>Vuoi capire se questo servizio può essere utile per il tuo studio o per un tuo cliente?</h2>
+          <p>
+            Confrontiamoci sul contesto, sugli obiettivi e sulle opportunità da valutare. Nessun approccio standard, nessuna proposta generica: solo una verifica seria di ciò che può avere davvero senso.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="contatti.html">Richiedi informazioni</a>
+            <a class="btn btn-secondary" href="crescita-finanza-sviluppo.html">Vedi la macroarea</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-grid">
+    <div class="container footer-box">
       <div>© ConsulHub Pro</div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="servizi.html">Servizi</a>
-        <a href="contatti.html">Contatti</a>
-      </div>
+      <div>Servizio: Bandi e finanza agevolata</div>
     </div>
   </footer>
 
