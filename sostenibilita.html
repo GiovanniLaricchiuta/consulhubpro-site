@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sostenibilità | ConsulHub Pro</title>
+  <meta name="description" content="Sostenibilità per PMI e Studi: un supporto concreto per integrare criteri ambientali, sociali e organizzativi in modo credibile, graduale e coerente con il business." />
+  <link rel="canonical" href="https://www.consulhubpro.it/sostenibilita.html" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ConsulHub Pro" />
+  <meta property="og:title" content="Sostenibilità | ConsulHub Pro" />
+  <meta property="og:description" content="Un approccio concreto alla sostenibilità, pensato per aiutare l’impresa a crescere con più credibilità, più ordine e una visione più solida nel tempo." />
+  <meta property="og:url" content="https://www.consulhubpro.it/sostenibilita.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=1600&q=80" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sostenibilità | ConsulHub Pro" />
+  <meta name="twitter:description" content="Sostenibilità concreta per PMI: meno slogan, più coerenza, più credibilità e più struttura." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=1600&q=80" />
+
+  <link rel="icon" href="favicon.ico" />
+
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --surface:#ffffff;
+      --surface-2:#f0f4fa;
+      --text:#132033;
+      --muted:#5b6b80;
+      --line:#dbe4f0;
+      --primary:#153a66;
+      --primary-2:#1e4f88;
+      --accent:#d9e8ff;
+      --shadow:0 18px 45px rgba(16,34,64,.08);
+      --radius-xl:24px;
+      --radius-lg:18px;
+      --radius-md:14px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:linear-gradient(180deg,#eef3f9 0%,#f7f9fc 100%);
+      line-height:1.6;
+    }
+
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+
+    .container{
+      width:min(var(--max),calc(100% - 32px));
+      margin:0 auto;
+    }
+
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(14px);
+      background:rgba(245,247,251,.82);
+      border-bottom:1px solid rgba(219,228,240,.85);
+    }
+
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      min-height:78px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:700;
+      letter-spacing:-.02em;
+    }
+
+    .brand img{
+      width:42px;
+      height:42px;
+      object-fit:contain;
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .nav a{
+      color:var(--muted);
+      font-weight:600;
+      font-size:.96rem;
+    }
+
+    .nav a:hover{color:var(--primary)}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:48px;
+      padding:0 20px;
+      border-radius:999px;
+      font-weight:700;
+      transition:.2s ease;
+      border:1px solid transparent;
+    }
+
+    .btn-primary{
+      background:var(--primary);
+      color:#fff;
+      box-shadow:var(--shadow);
+    }
+
+    .btn-primary:hover{background:var(--primary-2)}
+
+    .btn-secondary{
+      background:#fff;
+      color:var(--primary);
+      border-color:var(--line);
+    }
+
+    .btn-secondary:hover{
+      border-color:#b8c8dc;
+      background:#f9fbfe;
+    }
+
+    .hero{
+      padding:54px 0 28px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .hero-copy,
+    .hero-media{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--radius-xl);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .hero-copy{
+      padding:38px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      width:max-content;
+      padding:8px 14px;
+      border-radius:999px;
+      background:var(--surface-2);
+      color:var(--primary);
+      font-size:.84rem;
+      font-weight:800;
+      letter-spacing:.02em;
+      text-transform:uppercase;
+    }
+
+    h1,h2,h3{
+      margin:0 0 14px;
+      line-height:1.12;
+      letter-spacing:-.03em;
+    }
+
+    h1{font-size:clamp(2rem,4vw,3.4rem)}
+    h2{font-size:clamp(1.55rem,2.4vw,2.35rem)}
+    h3{font-size:1.2rem}
+
+    .lead{
+      font-size:1.08rem;
+      color:var(--muted);
+      max-width:62ch;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:22px;
+    }
+
+    .hero-points{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:26px;
+    }
+
+    .point{
+      padding:16px 14px;
+      border-radius:16px;
+      background:var(--surface-2);
+      border:1px solid var(--line);
+    }
+
+    .point strong{
+      display:block;
+      font-size:1rem;
+      margin-bottom:4px;
+      color:var(--primary);
+    }
+
+    .point span{
+      display:block;
+      color:var(--muted);
+      font-size:.95rem;
+      line-height:1.45;
+    }
+
+    .hero-media{
+      position:relative;
+      min-height:100%;
+    }
+
+    .hero-media img{
+      width:100%;
+      height:100%;
+      min-height:520px;
+      object-fit:cover;
+    }
+
+    .media-badge{
+      position:absolute;
+      left:22px;
+      bottom:22px;
+      background:rgba(19,32,51,.78);
+      color:#fff;
+      padding:14px 16px;
+      border-radius:16px;
+      max-width:320px;
+      backdrop-filter:blur(10px);
+    }
+
+    .media-badge strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:1rem;
+    }
+
+    section{
+      padding:28px 0;
+    }
+
+    .section-card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--radius-xl);
+      box-shadow:var(--shadow);
+      padding:36px;
+    }
+
+    .intro-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      align-items:start;
+    }
+
+    .stat-row{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:22px;
+    }
+
+    .stat{
+      background:var(--surface-2);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:20px;
+    }
+
+    .stat strong{
+      display:block;
+      color:var(--primary);
+      font-size:1.02rem;
+      margin-bottom:6px;
+    }
+
+    .stat span{
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:22px;
+    }
+
+    .list-card,
+    .quote-card{
+      background:var(--surface-2);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:24px;
+    }
+
+    .check-list{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:14px;
+    }
+
+    .check-list li{
+      position:relative;
+      padding-left:28px;
+      color:var(--text);
+    }
+
+    .check-list li::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:.6em;
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:var(--primary);
+    }
+
+    .quote-card{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      min-height:100%;
+    }
+
+    .quote-card p{
+      margin:0;
+      font-size:1.08rem;
+      color:var(--text);
+    }
+
+    .quote-card strong{
+      margin-top:18px;
+      color:var(--primary);
+      font-size:.95rem;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .service-box{
+      background:var(--surface-2);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:24px;
+      min-height:100%;
+    }
+
+    .service-box .num{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:38px;
+      height:38px;
+      border-radius:999px;
+      background:var(--accent);
+      color:var(--primary);
+      font-weight:800;
+      margin-bottom:14px;
+    }
+
+    .service-box p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .path{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:20px;
+    }
+
+    .step{
+      background:var(--surface-2);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:24px;
+    }
+
+    .step small{
+      display:block;
+      margin-bottom:10px;
+      font-weight:800;
+      color:var(--primary);
+      text-transform:uppercase;
+      letter-spacing:.04em;
+    }
+
+    .cta{
+      text-align:center;
+      background:linear-gradient(135deg,#153a66 0%,#244f86 100%);
+      color:#fff;
+      border-radius:var(--radius-xl);
+      padding:42px 28px;
+      box-shadow:var(--shadow);
+    }
+
+    .cta p{
+      max-width:760px;
+      margin:0 auto 22px;
+      color:rgba(255,255,255,.88);
+      font-size:1.05rem;
+    }
+
+    .cta-actions{
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .cta .btn-primary{
+      background:#fff;
+      color:var(--primary);
+    }
+
+    .cta .btn-secondary{
+      background:transparent;
+      color:#fff;
+      border-color:rgba(255,255,255,.26);
+    }
+
+    .site-footer{
+      padding:22px 0 40px;
+    }
+
+    .footer-card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:22px;
+      box-shadow:var(--shadow);
+      padding:24px;
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+      color:var(--primary);
+    }
+
+    .footer-brand img{
+      width:42px;
+      height:42px;
+      object-fit:contain;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    @media (max-width: 1080px){
+      .hero-grid,
+      .intro-grid,
+      .two-col{
+        grid-template-columns:1fr;
+      }
+
+      .grid-3{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .path{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .hero-media img{
+        min-height:360px;
+      }
+    }
+
+    @media (max-width: 720px){
+      .nav{
+        display:none;
+      }
+
+      .hero-copy,
+      .section-card{
+        padding:26px;
+      }
+
+      .hero-points,
+      .stat-row,
+      .grid-3,
+      .path{
+        grid-template-columns:1fr;
+      }
+
+      .container{
+        width:min(var(--max),calc(100% - 20px));
+      }
+
+      .footer-card{
+        padding:20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="ConsulHub Pro home">
+        <img src="logo-chp.png" alt="Logo ConsulHub Pro">
+        <span>ConsulHub Pro</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="servizi.html">Servizi</a>
+        <a href="sicurezza-compliance-sostenibilita.html">Macroarea</a>
+        <a href="contatti.html">Contatti</a>
+      </nav>
+
+      <a class="btn btn-primary" href="contatti.html">Richiedi informazioni</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Servizio specialistico CHP</span>
+          <h1>Sostenibilità</h1>
+          <p class="lead">
+            Un supporto concreto per aiutare l’impresa a integrare criteri ambientali, sociali e organizzativi in modo credibile, graduale e coerente con la propria realtà, evitando approcci di facciata e costruendo invece una visione più solida nel tempo.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="contatti.html">Richiedi informazioni</a>
+            <a class="btn btn-secondary" href="sicurezza-compliance-sostenibilita.html">Torna alla macroarea</a>
+          </div>
+
+          <div class="hero-points">
+            <div class="point">
+              <strong>Più credibilità</strong>
+              <span>Un posizionamento più serio e coerente verso clienti, partner e stakeholder.</span>
+            </div>
+            <div class="point">
+              <strong>Più visione</strong>
+              <span>Scelte più consapevoli, meno improvvisazione e più direzione nel medio periodo.</span>
+            </div>
+            <div class="point">
+              <strong>Più valore</strong>
+              <span>La sostenibilità diventa leva strategica, non semplice messaggio da comunicare.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=1600&q=80" alt="Paesaggio sostenibile con edifici moderni e verde urbano">
+          <div class="media-badge">
+            <strong>Sostenibilità concreta</strong>
+            <span>Quando è impostata con metodo, rafforza immagine, organizzazione e visione d’impresa.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-card">
+          <div class="intro-grid">
+            <div>
+              <span class="eyebrow">Perché questo servizio</span>
+              <h2>La sostenibilità non è uno slogan. È un modo più evoluto di guidare l’impresa.</h2>
+              <p class="lead">
+                Sempre più aziende si trovano a confrontarsi con richieste, aspettative e sensibilità nuove da parte di clienti, partner, collaboratori e mercato. Ma affrontare il tema in modo superficiale o solo comunicativo rischia di generare confusione, poca credibilità e nessun vero beneficio.
+              </p>
+            </div>
+            <div>
+              <p class="lead">
+                Per questo serve un approccio pratico e coerente con la dimensione aziendale. L’obiettivo non è complicare l’impresa, ma aiutarla a leggere meglio le proprie scelte, rafforzare la propria identità e costruire nel tempo una struttura più responsabile, più ordinata e più credibile.
+              </p>
+            </div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat">
+              <strong>Più coerenza</strong>
+              <span>Azioni, comunicazione e organizzazione diventano più allineate tra loro.</span>
+            </div>
+            <div class="stat">
+              <strong>Più reputazione</strong>
+              <span>Un’impresa più attenta ai temi di sostenibilità viene percepita come più affidabile.</span>
+            </div>
+            <div class="stat">
+              <strong>Più continuità</strong>
+              <span>Le scelte sostenibili, se ben impostate, producono valore nel tempo e non solo nell’immediato.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-card">
+          <div class="two-col">
+            <div class="list-card">
+              <span class="eyebrow">Cosa aiuta a fare</span>
+              <h2>Un percorso per rendere la sostenibilità più leggibile, più credibile e più utile all’impresa.</h2>
+              <ul class="check-list">
+                <li>Leggere con maggiore chiarezza il posizionamento dell’azienda rispetto ai temi ESG.</li>
+                <li>Individuare aree di miglioramento concrete senza appesantire l’operatività.</li>
+                <li>Rendere più coerente il rapporto tra valori dichiarati, organizzazione interna e comunicazione esterna.</li>
+                <li>Rafforzare la credibilità dell’impresa verso clienti, partner, stakeholder e mercato.</li>
+                <li>Impostare una traiettoria di crescita più moderna, più responsabile e più sostenibile nel tempo.</li>
+              </ul>
+            </div>
+
+            <div class="quote-card">
+              <p>
+                La sostenibilità vera non si misura da quanto se ne parla, ma da quanto l’impresa riesce a tradurla in scelte coerenti, credibili e sostenibili anche per sé stessa.
+              </p>
+              <strong>ConsulHub Pro</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-card">
+          <span class="eyebrow">Dove genera valore</span>
+          <h2>Sei aree in cui la sostenibilità può rafforzare concretamente l’impresa.</h2>
+
+          <div class="grid-3" style="margin-top:22px;">
+            <div class="service-box">
+              <div class="num">01</div>
+              <h3>Reputazione più solida</h3>
+              <p>Un’azienda che affronta la sostenibilità con serietà migliora la propria immagine e rafforza la fiducia degli interlocutori esterni.</p>
+            </div>
+
+            <div class="service-box">
+              <div class="num">02</div>
+              <h3>Scelte più coerenti</h3>
+              <p>Aiuta a collegare meglio valori, organizzazione, gestione e comunicazione, riducendo contraddizioni e messaggi deboli.</p>
+            </div>
+
+            <div class="service-box">
+              <div class="num">03</div>
+              <h3>Maggiore attrattività</h3>
+              <p>La sostenibilità può contribuire a rendere l’azienda più interessante per clienti, partner, collaboratori e nuove opportunità.</p>
+            </div>
+
+            <div class="service-box">
+              <div class="num">04</div>
+              <h3>Più visione strategica</h3>
+              <p>Consente di leggere il presente con uno sguardo più evoluto, preparando l’impresa a richieste e sensibilità che stanno già crescendo.</p>
+            </div>
+
+            <div class="service-box">
+              <div class="num">05</div>
+              <h3>Meno improvvisazione</h3>
+              <p>Un approccio guidato permette di evitare interventi casuali, iniziative estemporanee o azioni poco credibili agli occhi del mercato.</p>
+            </div>
+
+            <div class="service-box">
+              <div class="num">06</div>
+              <h3>Crescita più responsabile</h3>
+              <p>La sostenibilità diventa una base utile per costruire sviluppo, continuità e valore con una logica più matura e duratura.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-card">
+          <span class="eyebrow">Come si sviluppa il percorso</span>
+          <h2>Un approccio graduale, concreto e coerente con la realtà aziendale.</h2>
+
+          <div class="path">
+            <div class="step">
+              <small>Fase 1</small>
+              <h3>Lettura del contesto</h3>
+              <p>Si parte dall’azienda reale, dal suo modello operativo e dalla percezione attuale verso il mercato e gli stakeholder.</p>
+            </div>
+
+            <div class="step">
+              <small>Fase 2</small>
+              <h3>Individuazione delle priorità</h3>
+              <p>Si identificano le aree in cui la sostenibilità può generare più valore e più coerenza, senza dispersioni inutili.</p>
+            </div>
+
+            <div class="step">
+              <small>Fase 3</small>
+              <h3>Impostazione del percorso</h3>
+              <p>Si definisce una direzione sostenibile per l’impresa, concreta, progressiva e compatibile con la sua struttura.</p>
+            </div>
+
+            <div class="step">
+              <small>Fase 4</small>
+              <h3>Consolidamento della visione</h3>
+              <p>L’obiettivo finale è rendere la sostenibilità una componente credibile della crescita aziendale, non un messaggio vuoto.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta">
+          <h2>Vuoi capire come rendere la sostenibilità un valore reale per la tua impresa?</h2>
+          <p>
+            Possiamo partire da un confronto iniziale per leggere il contesto, individuare le aree più rilevanti e costruire un approccio sostenibile che sia credibile, utile e coerente con la tua realtà aziendale.
+          </p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="contatti.html">Contattaci</a>
+            <a class="btn btn-secondary" href="servizi.html">Torna a tutti i servizi</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-card">
+        <div class="footer-brand">
+          <img src="logo-chp.png" alt="Logo ConsulHub Pro">
+          <div>
+            <div>ConsulHub Pro</div>
+            <div style="font-size:.92rem;color:var(--muted);font-weight:600;">info@consulhubpro.it</div>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="servizi.html">Servizi</a>
+          <a href="sicurezza-compliance-sostenibilita.html">Macroarea</a>
+          <a href="contatti.html">Contatti</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Sostenibilità",
+    "serviceType":"Sostenibilità per PMI",
+    "provider":{
+      "@type":"Organization",
+      "name":"ConsulHub Pro",
+      "url":"https://www.consulhubpro.it/",
+      "logo":"https://www.consulhubpro.it/logo-chp.png",
+      "email":"info@consulhubpro.it"
+    },
+    "areaServed":"IT",
+    "url":"https://www.consulhubpro.it/sostenibilita.html",
+    "description":"Servizio di sostenibilità per aiutare le imprese a integrare criteri ambientali, sociali e organizzativi in modo credibile, graduale e coerente con il business."
+  }
+  </script>
+
+</body>
+</html>
