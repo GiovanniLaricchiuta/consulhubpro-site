@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ricerca personale | ConsulHub Pro</title>
+  <meta name="description" content="ConsulHub Pro supporta studi professionali e imprese nella ricerca del personale, aiutando a definire meglio il fabbisogno, il profilo da inserire e la coerenza tra ruolo, struttura e obiettivi aziendali." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://www.consulhubpro.it/ricerca-personale.html" />
+  <link rel="icon" href="favicon.ico" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ConsulHub Pro" />
+  <meta property="og:title" content="Ricerca personale | ConsulHub Pro" />
+  <meta property="og:description" content="Un supporto utile per impostare meglio la ricerca del personale e aumentare la qualità delle scelte di inserimento." />
+  <meta property="og:url" content="https://www.consulhubpro.it/ricerca-personale.html" />
+  <meta property="og:image" content="https://www.consulhubpro.it/logo-chp.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ricerca personale | ConsulHub Pro" />
+  <meta name="twitter:description" content="Supporto per leggere meglio il fabbisogno aziendale e impostare in modo più efficace la ricerca di nuove risorse." />
+  <meta name="twitter:image" content="https://www.consulhubpro.it/logo-chp.png" />
+
+  <style>
+    :root{
+      --bg:#eef4fb;
+      --bg-soft:#f6f9fd;
+      --white:#ffffff;
+      --text:#0f1b4d;
+      --muted:#5f7192;
+      --line:#d9e4f2;
+      --primary:#2f80ed;
+      --primary-2:#39b8ff;
+      --pill-bg:#eaf2ff;
+      --pill-text:#2c6de2;
+      --shadow:0 18px 40px rgba(31,78,145,.08);
+      --radius-xl:28px;
+      --radius-lg:22px;
+      --radius-md:18px;
+      --max:1280px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .container{
+      width:min(var(--max), calc(100% - 48px));
+      margin:0 auto;
+    }
+
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(15,27,77,.06);
+    }
+
+    .header-inner{
+      min-height:92px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      font-weight:800;
+      font-size:1.1rem;
+      color:var(--text);
+    }
+
+    .brand-badge{
+      width:58px;
+      height:58px;
+      border-radius:16px;
+      background:#fff;
+      box-shadow:0 10px 24px rgba(31,78,145,.08);
+      display:grid;
+      place-items:center;
+      flex:0 0 auto;
+      border:1px solid rgba(15,27,77,.05);
+    }
+
+    .brand-badge img{
+      width:34px;
+      height:34px;
+      object-fit:contain;
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .nav a{
+      font-size:1rem;
+      font-weight:700;
+      color:var(--text);
+      opacity:.96;
+    }
+
+    .nav a:hover{
+      color:var(--primary);
+    }
+
+    .header-cta{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      min-height:56px;
+      padding:0 24px;
+      border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      font-size:1rem;
+      transition:.2s ease;
+      border:none;
+      cursor:pointer;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+    }
+
+    .btn-light{
+      background:#fff;
+      color:var(--text);
+      box-shadow:var(--shadow);
+    }
+
+    .btn-primary{
+      background:linear-gradient(90deg, var(--primary), var(--primary-2));
+      color:#fff;
+      box-shadow:0 14px 34px rgba(47,128,237,.24);
+    }
+
+    .btn-outline{
+      background:transparent;
+      color:var(--text);
+      border:1px solid #cfdcf0;
+    }
+
+    .hero{
+      padding:54px 0 30px;
+    }
+
+    .breadcrumbs{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:24px;
+      color:var(--muted);
+      font-size:.96rem;
+    }
+
+    .breadcrumbs a:hover{
+      color:var(--primary);
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:var(--pill-bg);
+      color:var(--pill-text);
+      border:1px solid #cfe0ff;
+      border-radius:999px;
+      padding:12px 18px;
+      font-size:1rem;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      margin-bottom:22px;
+    }
+
+    .eyebrow-dot{
+      width:14px;
+      height:14px;
+      border-radius:50%;
+      background:#44a6ff;
+      box-shadow:0 0 0 5px rgba(68,166,255,.12);
+      flex:0 0 auto;
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(2.6rem, 5.4vw, 5rem);
+      line-height:.98;
+      letter-spacing:-.04em;
+      color:var(--text);
+    }
+
+    .hero-copy p{
+      margin:28px 0 0;
+      font-size:1.05rem;
+      color:var(--muted);
+      max-width:780px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
+    .visual-card{
+      background:var(--white);
+      border:1px solid #dde8f5;
+      border-radius:var(--radius-xl);
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+
+    .visual-wrap{
+      border-radius:22px;
+      overflow:hidden;
+      background:#dfeaf8;
+      border:1px solid #d7e4f8;
+      min-height:420px;
+      padding:0;
+      height:420px;
+    }
+
+    .visual-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .section{
+      padding:18px 0 38px;
+    }
+
+    .section-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+    }
+
+    .card{
+      background:var(--white);
+      border:1px solid #dde8f5;
+      border-radius:var(--radius-xl);
+      padding:32px;
+      box-shadow:var(--shadow);
+    }
+
+    .card h2,
+    .card h3{
+      margin:0 0 14px;
+      color:var(--text);
+      line-height:1.1;
+      letter-spacing:-.02em;
+    }
+
+    .card h2{
+      font-size:clamp(1.8rem, 3vw, 2.6rem);
+    }
+
+    .card h3{
+      font-size:1.45rem;
+    }
+
+    .card p{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size:1.02rem;
+    }
+
+    .list{
+      display:grid;
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .list-item{
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+      padding:14px 16px;
+      border-radius:16px;
+      background:var(--bg-soft);
+      border:1px solid #dce8f6;
+      color:var(--text);
+      font-weight:600;
+    }
+
+    .list-item::before{
+      content:"";
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:linear-gradient(180deg, var(--primary), var(--primary-2));
+      flex:0 0 auto;
+      margin-top:8px;
+    }
+
+    .full{
+      grid-column:1 / -1;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:18px;
+      margin-top:10px;
+    }
+
+    .step{
+      background:var(--white);
+      border:1px solid #dde8f5;
+      border-radius:24px;
+      padding:26px 22px;
+      box-shadow:var(--shadow);
+    }
+
+    .step-num{
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(90deg, var(--primary), var(--primary-2));
+      color:#fff;
+      font-weight:800;
+      font-size:1.05rem;
+      margin-bottom:18px;
+    }
+
+    .step h3{
+      margin:0 0 10px;
+      font-size:1.14rem;
+      color:var(--text);
+    }
+
+    .step p{
+      margin:0;
+      color:var(--muted);
+      font-size:.98rem;
+    }
+
+    .cta-box{
+      background:linear-gradient(135deg,#ffffff 0%,#eef6ff 100%);
+      border:1px solid #dbe7f5;
+      border-radius:28px;
+      padding:34px;
+      box-shadow:var(--shadow);
+    }
+
+    .cta-box h2{
+      margin:0 0 12px;
+      font-size:clamp(1.9rem, 3vw, 2.8rem);
+      line-height:1.05;
+      letter-spacing:-.03em;
+    }
+
+    .cta-box p{
+      margin:0 0 22px;
+      color:var(--muted);
+      max-width:850px;
+      font-size:1.03rem;
+    }
+
+    footer{
+      padding:10px 0 42px;
+    }
+
+    .footer-inner{
+      border-top:1px solid #d8e4f2;
+      padding-top:20px;
+      color:var(--muted);
+      font-size:.95rem;
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width: 1180px){
+      .hero-grid,
+      .section-grid{
+        grid-template-columns:1fr;
+      }
+
+      .steps{
+        grid-template-columns:repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 860px){
+      .header-inner{
+        padding:18px 0;
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .nav,
+      .header-cta{
+        width:100%;
+      }
+
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .container{
+        width:min(var(--max), calc(100% - 26px));
+      }
+
+      .card,
+      .cta-box,
+      .visual-card{
+        padding:24px;
+      }
+
+      .visual-wrap{
+        min-height:320px;
+        height:320px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Ricerca personale",
+    "serviceType":"Supporto alla ricerca e selezione del personale per imprese",
+    "provider":{
+      "@type":"Organization",
+      "name":"ConsulHub Pro",
+      "url":"https://www.consulhubpro.it"
+    },
+    "url":"https://www.consulhubpro.it/ricerca-personale.html",
+    "description":"Supporto per studi professionali e imprese nella definizione del fabbisogno, del profilo da ricercare e nell'impostazione più efficace della ricerca personale.",
+    "areaServed":"IT"
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Vai alla homepage di ConsulHub Pro">
+        <span class="brand-badge">
+          <img src="logo-chp.png" alt="Logo ConsulHub Pro">
+        </span>
+        <span>ConsulHub Pro</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="per-studi.html">Per Studi</a>
+        <a href="index.html#pilastri">Pilastri</a>
+        <a href="index.html#servizi">Servizi</a>
+        <a href="blog.html">Blog</a>
+        <a href="contatti.html">Contatti</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-light" href="https://wa.me/" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a class="btn btn-primary" href="https://calendly.com/giovanni-laricchiuta/" target="_blank" rel="noopener noreferrer">Prenota call</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <a href="hr-organizzazione.html">HR e organizzazione</a>
+          <span>›</span>
+          <span>Ricerca personale</span>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">
+              <span class="eyebrow-dot"></span>
+              Servizio 6
+            </div>
+
+            <h1>Ricerca personale</h1>
+
+            <p>
+              Un supporto pensato per aiutare imprese e studi professionali a impostare meglio la ricerca di nuove risorse, partendo da una domanda semplice ma decisiva: chi serve davvero, per fare cosa, in quale contesto e con quale impatto sull’organizzazione.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="contatti.html">Richiedi un confronto</a>
+              <a class="btn btn-outline" href="hr-organizzazione.html">Torna alla macroarea</a>
+            </div>
+          </div>
+
+          <div class="visual-card">
+            <div class="visual-wrap visual-photo">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" alt="Colloquio e valutazione candidature per ricerca personale in azienda">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-grid">
+          <div class="card">
+            <h2>Un servizio pensato per rendere più efficace la scelta delle persone</h2>
+            <p>
+              Cercare personale non significa solo aprire una posizione. Significa comprendere bene il fabbisogno, chiarire le responsabilità del ruolo, leggere il contesto in cui la nuova risorsa dovrà inserirsi e capire quali competenze siano davvero necessarie.
+            </p>
+            <p>
+              Quando questi elementi non sono definiti con precisione, aumentano errori, tempi persi, candidature non in linea e inserimenti poco efficaci. Il nostro supporto serve proprio a evitare questo.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Cosa supportiamo</h3>
+            <div class="list">
+              <div class="list-item">Definizione più chiara del fabbisogno aziendale</div>
+              <div class="list-item">Messa a fuoco del profilo realmente utile</div>
+              <div class="list-item">Lettura del ruolo in funzione dell’organizzazione esistente</div>
+              <div class="list-item">Maggiore coerenza tra ricerca, responsabilità e obiettivi</div>
+              <div class="list-item">Supporto nell’impostazione del percorso di ricerca</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Perché interessa anche agli studi professionali</h3>
+            <p>
+              Per uno studio, presidiare il tema della ricerca personale significa aiutare il cliente su una leva concreta di crescita, efficienza e continuità operativa.
+            </p>
+            <p>
+              È un servizio che rafforza la relazione perché consente di affrontare con maggiore qualità una delle esigenze più frequenti e più delicate per le imprese: inserire la persona giusta nel momento giusto.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Cosa evitiamo</h3>
+            <div class="list">
+              <div class="list-item">Ricerche avviate senza una chiara definizione del ruolo</div>
+              <div class="list-item">Candidature poco pertinenti rispetto al bisogno reale</div>
+              <div class="list-item">Inserimenti che non reggono nel contesto aziendale</div>
+              <div class="list-item">Confusione tra urgenza operativa e reale necessità organizzativa</div>
+            </div>
+          </div>
+
+          <div class="full">
+            <div class="card">
+              <h2>Come lavoriamo</h2>
+              <div class="steps">
+                <div class="step">
+                  <div class="step-num">1</div>
+                  <h3>Analisi del fabbisogno</h3>
+                  <p>Partiamo dal contesto aziendale, dal ruolo da coprire e dal problema che l’inserimento dovrebbe risolvere o migliorare.</p>
+                </div>
+
+                <div class="step">
+                  <div class="step-num">2</div>
+                  <h3>Definizione del profilo</h3>
+                  <p>Aiutiamo a chiarire competenze, responsabilità, seniority e caratteristiche realmente utili per quel contesto.</p>
+                </div>
+
+                <div class="step">
+                  <div class="step-num">3</div>
+                  <h3>Impostazione della ricerca</h3>
+                  <p>Strutturiamo il percorso in modo più coerente, evitando genericità e dispersione nelle candidature.</p>
+                </div>
+
+                <div class="step">
+                  <div class="step-num">4</div>
+                  <h3>Affiancamento al percorso</h3>
+                  <p>Supportiamo studio e impresa nel dare maggiore ordine, qualità e concretezza al processo di ricerca.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="full">
+            <div class="cta-box">
+              <h2>Vuoi capire se questo servizio può essere utile per il tuo studio o per un tuo cliente?</h2>
+              <p>
+                Confrontiamoci sul ruolo da inserire, sulle reali esigenze dell’impresa e sulle aree in cui serve più chiarezza per impostare una ricerca efficace.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="contatti.html">Richiedi informazioni</a>
+                <a class="btn btn-outline" href="hr-organizzazione.html">Torna alla macroarea</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© ConsulHub Pro</div>
+      <div>Servizio: Ricerca personale</div>
+    </div>
+  </footer>
+
+</body>
+</html>
