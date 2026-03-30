@@ -1436,7 +1436,17 @@
     const header = document.getElementById('siteHeader');
     const menuToggle = document.getElementById('menuToggle');
     const mobileNav = document.getElementById('mobileNav');
+<script>
+  document.querySelectorAll('#mobileNav a').forEach(link => {
+    link.addEventListener('click', () => {
+      const mobileNav = document.getElementById('mobileNav');
+      const menuToggle = document.getElementById('menuToggle');
 
+      mobileNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
     const onScroll = () => {
       if(window.scrollY > 18){
         header.classList.add('scrolled');
