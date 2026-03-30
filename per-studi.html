@@ -2,217 +2,887 @@
 <html lang="it">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ConsulHub Pro | Per Studi di Consulenza del Lavoro</title>
-  <meta name="description" content="ConsulHub Pro aiuta gli Studi di Consulenza del Lavoro ad aumentare servizi, marginalità e posizionamento senza appesantire il team interno." />
+  <meta name="description" content="ConsulHub Pro aiuta gli Studi di Consulenza del Lavoro ad ampliare l’offerta verso i clienti, aumentare il valore percepito e attivare nuovi servizi in modo ordinato e sostenibile." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://www.consulhubpro.it/per-studi.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ConsulHub Pro" />
+  <meta property="og:title" content="ConsulHub Pro | Per Studi di Consulenza del Lavoro" />
+  <meta property="og:description" content="Un modello ordinato per aiutare gli Studi a crescere senza appesantire il team interno." />
+  <meta property="og:url" content="https://www.consulhubpro.it/per-studi.html" />
+  <meta property="og:image" content="https://www.consulhubpro.it/logo-chp.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ConsulHub Pro | Per Studi di Consulenza del Lavoro" />
+  <meta name="twitter:description" content="Più valore, più ordine, più opportunità per gli Studi di Consulenza del Lavoro." />
+  <meta name="twitter:image" content="https://www.consulhubpro.it/logo-chp.png" />
 
   <style>
+    :root{
+      --bg:#f5f8fc;
+      --bg-soft:#edf3fa;
+      --panel:rgba(255,255,255,.72);
+      --panel-strong:rgba(255,255,255,.88);
+      --line:rgba(24,58,97,.10);
+      --text:#18314f;
+      --text-soft:#4f6480;
+      --title:#0f2744;
+      --blue:#2490ff;
+      --blue-dark:#1f6fc1;
+      --chip:#eaf4ff;
+      --shadow:0 16px 40px rgba(16,43,76,.10);
+      --radius:26px;
+      --radius-sm:18px;
+      --max:1240px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family:Arial, sans-serif;
-      background:#07111f;
-      color:#fff;
+      font-family:Inter, Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(36,144,255,.08), transparent 18%),
+        radial-gradient(circle at top right, rgba(36,144,255,.06), transparent 20%),
+        linear-gradient(180deg, #f8fbff 0%, #f2f7fc 100%);
       line-height:1.6;
     }
 
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
     .container{
-      width:90%;
-      max-width:1100px;
-      margin:auto;
+      width:min(var(--max), calc(100% - 40px));
+      margin:0 auto;
     }
 
-    h1,h2,h3{
-      line-height:1.2;
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:60;
+      backdrop-filter:blur(16px);
+      background:rgba(255,255,255,.74);
+      border-bottom:1px solid rgba(24,58,97,.08);
     }
 
-    .hero{
-      padding:80px 0;
-      background:linear-gradient(135deg,#0c1b31,#07111f);
+    .nav{
+      min-height:82px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
     }
 
-    .hero h1{
-      font-size:42px;
-      margin-bottom:20px;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+      color:var(--title);
+      white-space:nowrap;
     }
 
-    .hero p{
-      font-size:18px;
-      color:#cfd8e3;
-      max-width:700px;
+    .brand img{
+      width:42px;
+      height:42px;
+      object-fit:contain;
     }
 
-    .section{
-      padding:60px 0;
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      flex-wrap:wrap;
     }
 
-    .grid{
-      display:grid;
-      gap:20px;
+    .menu a{
+      font-weight:600;
+      color:var(--text-soft);
+      transition:.2s ease;
     }
 
-    .grid-3{
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    .menu a:hover,
+    .menu a.active{
+      color:var(--title);
     }
 
-    .card{
-      background:#0c1b31;
-      padding:25px;
-      border-radius:15px;
-      border:1px solid rgba(255,255,255,0.1);
-    }
-
-    .card h3{
-      margin-top:0;
-    }
-
-    .highlight{
-      background:#0f2748;
-      padding:30px;
-      border-radius:15px;
-      margin-top:30px;
-    }
-
-    .cta{
-      text-align:center;
-      padding:60px 0;
+    .cta-group{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
     }
 
     .btn{
-      display:inline-block;
-      padding:15px 25px;
-      background:#2793ff;
-      color:#fff;
-      border-radius:50px;
-      text-decoration:none;
-      font-weight:bold;
-      margin:10px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:0 20px;
+      border-radius:999px;
+      font-weight:800;
+      border:1px solid transparent;
+      transition:.2s ease;
+      cursor:pointer;
     }
 
-    .btn.secondary{
-      background:#1c2d45;
+    .btn-primary{
+      background:linear-gradient(135deg, var(--blue), var(--blue-dark));
+      color:#fff;
+      box-shadow:0 10px 24px rgba(36,144,255,.22);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-1px);
+    }
+
+    .btn-secondary{
+      background:#fff;
+      color:var(--title);
+      border-color:rgba(24,58,97,.10);
+    }
+
+    .btn-secondary:hover{
+      background:#f7fbff;
+    }
+
+    .hero{
+      position:relative;
+      padding:72px 0 34px;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(90deg, rgba(245,248,252,.96) 0%, rgba(245,248,252,.88) 45%, rgba(245,248,252,.70) 100%),
+        url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      z-index:-2;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:auto 0 0 0;
+      height:140px;
+      background:linear-gradient(180deg, rgba(245,248,252,0) 0%, rgba(245,248,252,1) 100%);
+      z-index:-1;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.16fr .84fr;
+      gap:28px;
+      align-items:end;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(24,58,97,.08);
+      color:var(--title);
+      font-size:.88rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      box-shadow:var(--shadow);
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--blue);
+      box-shadow:0 0 0 6px rgba(36,144,255,.10);
+    }
+
+    .hero h1{
+      margin:22px 0 18px;
+      font-size:clamp(2.6rem, 5.4vw, 5rem);
+      line-height:.98;
+      letter-spacing:-.045em;
+      color:var(--title);
+      max-width:860px;
+    }
+
+    .hero p.lead{
+      margin:0 0 28px;
+      max-width:780px;
+      font-size:1.14rem;
+      color:var(--text-soft);
+    }
+
+    .hero-panel{
+      background:var(--panel);
+      border:1px solid rgba(24,58,97,.10);
+      border-radius:28px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-panel h2{
+      margin:0 0 12px;
+      font-size:1.8rem;
+      line-height:1.08;
+      color:var(--title);
+    }
+
+    .hero-panel p{
+      margin:0 0 18px;
+      color:var(--text-soft);
+    }
+
+    .mini-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .mini-card{
+      background:rgba(255,255,255,.74);
+      border:1px solid rgba(24,58,97,.08);
+      border-radius:18px;
+      padding:16px;
+    }
+
+    .mini-card .kicker{
+      display:block;
+      margin-bottom:7px;
+      color:var(--blue-dark);
+      font-size:.8rem;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+    }
+
+    .mini-card strong{
+      display:block;
+      color:var(--title);
+      line-height:1.35;
+    }
+
+    .section{
+      padding:30px 0;
+    }
+
+    .section-head{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:20px;
+      margin-bottom:22px;
+      flex-wrap:wrap;
+    }
+
+    .section-head h2{
+      margin:0;
+      font-size:2.1rem;
+      line-height:1.05;
+      letter-spacing:-.03em;
+      color:var(--title);
+    }
+
+    .section-head p{
+      margin:0;
+      max-width:760px;
+      color:var(--text-soft);
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:20px;
+    }
+
+    .card{
+      padding:26px;
+      border-radius:24px;
+      background:var(--panel-strong);
+      border:1px solid rgba(24,58,97,.10);
+      box-shadow:var(--shadow);
+    }
+
+    .card h3{
+      margin:0 0 10px;
+      font-size:1.35rem;
+      line-height:1.15;
+      color:var(--title);
+      letter-spacing:-.02em;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--text-soft);
+    }
+
+    .highlight{
+      margin-top:22px;
+      padding:26px 28px;
+      border-radius:24px;
+      background:linear-gradient(135deg, #eaf5ff, #f8fbff);
+      border:1px solid rgba(36,144,255,.18);
+      box-shadow:var(--shadow);
+    }
+
+    .highlight strong{
+      display:block;
+      color:var(--title);
+      font-size:1.2rem;
+      margin-bottom:8px;
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      align-items:stretch;
+    }
+
+    .text-panel,
+    .list-panel{
+      padding:30px;
+      border-radius:26px;
+      background:var(--panel-strong);
+      border:1px solid rgba(24,58,97,.10);
+      box-shadow:var(--shadow);
+    }
+
+    .text-panel h2,
+    .list-panel h2{
+      margin:0 0 14px;
+      font-size:2rem;
+      line-height:1.06;
+      color:var(--title);
+      letter-spacing:-.03em;
+    }
+
+    .text-panel p,
+    .list-panel p{
+      margin:0 0 14px;
+      color:var(--text-soft);
+    }
+
+    .list{
+      display:grid;
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .list-item{
+      padding:16px 18px;
+      border-radius:18px;
+      background:#f8fbff;
+      border:1px solid rgba(24,58,97,.08);
+    }
+
+    .list-item strong{
+      display:block;
+      color:var(--title);
+      margin-bottom:4px;
+    }
+
+    .pillars{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:20px;
+    }
+
+    .pillar{
+      padding:28px;
+      border-radius:24px;
+      background:linear-gradient(180deg, #ffffff, #f8fbff);
+      border:1px solid rgba(24,58,97,.10);
+      box-shadow:var(--shadow);
+    }
+
+    .pillar .num{
+      display:inline-flex;
+      width:42px;
+      height:42px;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      margin-bottom:16px;
+      background:var(--chip);
+      color:var(--blue-dark);
+      font-weight:800;
+    }
+
+    .pillar h3{
+      margin:0 0 10px;
+      color:var(--title);
+      font-size:1.35rem;
+      line-height:1.15;
+    }
+
+    .pillar p{
+      margin:0 0 18px;
+      color:var(--text-soft);
+    }
+
+    .pillar a{
+      font-weight:800;
+      color:var(--blue-dark);
+    }
+
+    .when{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .when .card{
+      min-height:100%;
+    }
+
+    .bottom-cta{
+      padding:24px 0 72px;
+    }
+
+    .bottom-panel{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:24px;
+      align-items:center;
+      padding:34px;
+      border-radius:30px;
+      background:
+        linear-gradient(90deg, rgba(248,251,255,.94), rgba(248,251,255,.84)),
+        url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      border:1px solid rgba(24,58,97,.10);
+      box-shadow:var(--shadow);
+    }
+
+    .bottom-panel h2{
+      margin:0 0 12px;
+      font-size:2rem;
+      line-height:1.06;
+      color:var(--title);
+      letter-spacing:-.03em;
+    }
+
+    .bottom-panel p{
+      margin:0;
+      color:var(--text-soft);
+      max-width:760px;
+    }
+
+    .bottom-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      justify-content:flex-start;
+    }
+
+    .site-footer{
+      border-top:1px solid rgba(24,58,97,.08);
+      background:rgba(255,255,255,.68);
+      backdrop-filter:blur(10px);
+    }
+
+    .footer-inner{
+      min-height:84px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+      color:var(--text-soft);
+      font-size:.96rem;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a:hover{
+      color:var(--title);
+    }
+
+    @media (max-width: 1080px){
+      .hero-grid,
+      .split,
+      .bottom-panel,
+      .when{
+        grid-template-columns:1fr;
+      }
+
+      .menu{
+        display:none;
+      }
+    }
+
+    @media (max-width: 780px){
+      .grid-3,
+      .pillars,
+      .mini-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding-top:64px;
+      }
+
+      .card,
+      .text-panel,
+      .list-panel,
+      .pillar,
+      .bottom-panel,
+      .hero-panel{
+        padding:24px;
+      }
+
+      .hero h1{
+        max-width:100%;
+      }
     }
   </style>
 
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Per Studi di Consulenza del Lavoro | ConsulHub Pro",
+    "url":"https://www.consulhubpro.it/per-studi.html",
+    "description":"ConsulHub Pro aiuta gli Studi di Consulenza del Lavoro ad ampliare il proprio valore verso i clienti in modo ordinato e sostenibile.",
+    "about":{
+      "@type":"Organization",
+      "name":"ConsulHub Pro",
+      "url":"https://www.consulhubpro.it"
+    }
+  }
+  </script>
 </head>
-
 <body>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Sei uno Studio di Consulenza del Lavoro.<br>Ma stai sfruttando davvero il tuo potenziale?</h1>
-      <p>
-        Hai già clienti, dati, relazioni. Eppure spesso il modello resta fermo su servizi standard.
-        Il problema non è la domanda. È come viene gestita.
-      </p>
-    </div>
-  </section>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="ConsulHub Pro Home">
+        <img src="logo-chp.png" alt="Logo ConsulHub Pro">
+        <span>ConsulHub Pro</span>
+      </a>
 
-  <section class="section">
-    <div class="container">
-      <h2>La realtà che molti Studi vivono ogni giorno</h2>
+      <nav class="menu" aria-label="Menu principale">
+        <a href="index.html">Home</a>
+        <a href="per-studi.html" class="active">Per Studi</a>
+        <a href="formazione-finanziata.html">Pilastri</a>
+        <a href="servizi.html">Servizi</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#referenze">Referenze</a>
+        <a href="contatti.html">Contatti</a>
+      </nav>
 
-      <div class="grid grid-3">
-        <div class="card">
-          <h3>Margini compressi</h3>
-          <p>I servizi core sono sempre più standardizzati e competitivi.</p>
-        </div>
-
-        <div class="card">
-          <h3>Tempo limitato</h3>
-          <p>Il team è già pieno. Inserire nuovi servizi sembra impossibile.</p>
-        </div>
-
-        <div class="card">
-          <h3>Opportunità non sfruttate</h3>
-          <p>I clienti hanno bisogni, ma spesso restano inespressi o non attivati.</p>
-        </div>
-      </div>
-
-      <div class="highlight">
-        <strong>Il punto non è lavorare di più.</strong><br><br>
-        Il punto è attivare meglio ciò che già esiste.
+      <div class="cta-group">
+        <a class="btn btn-secondary" href="https://wa.me/393383262280" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-primary" href="https://calendly.com/giovanni-laricchiuta/" target="_blank" rel="noopener">Prenota call</a>
       </div>
     </div>
-  </section>
+  </header>
 
-  <section class="section">
-    <div class="container">
-      <h2>Il modello ConsulHub Pro</h2>
+  <main>
 
-      <p>
-        ConsulHub Pro non è un servizio. È una struttura.
-        Permette allo Studio di attivare nuovi servizi senza diventare operativo su tutto.
-      </p>
-
-      <div class="grid grid-3">
-
-        <div class="card">
-          <h3>Tu resti il riferimento</h3>
-          <p>La relazione con il cliente rimane tua. Non perdi controllo.</p>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Pagina dedicata agli Studi</span>
+          <h1>Non tutti gli Studi devono offrire di più. Ma quelli che vogliono crescere non possono restare fermi.</h1>
+          <p class="lead">
+            ConsulHub Pro nasce per aiutare gli Studi di Consulenza del Lavoro ad ampliare il proprio valore verso i clienti
+            in modo ordinato, credibile e sostenibile. Senza appesantire il team interno. Senza creare confusione.
+            Senza trasformarsi in qualcosa che non sono.
+          </p>
+          <div class="cta-group">
+            <a class="btn btn-primary" href="#pilastri">Scopri i pilastri</a>
+            <a class="btn btn-secondary" href="contatti.html">Richiedi un confronto</a>
+          </div>
         </div>
 
-        <div class="card">
-          <h3>Servizi attivati in modo ordinato</h3>
-          <p>Ogni servizio ha perimetro chiaro, processo definito e delivery gestita.</p>
+        <aside class="hero-panel">
+          <h2>Perché questa pagina conta davvero</h2>
+          <p>
+            Il tuo Studio ha già una cosa che altri non hanno: la relazione continuativa con l’azienda cliente.
+            Il punto non è aggiungere attività a caso. Il punto è trasformare meglio quella relazione
+            in un’offerta più forte, più leggibile e più remunerativa.
+          </p>
+
+          <div class="mini-grid">
+            <div class="mini-card">
+              <span class="kicker">Valore</span>
+              <strong>Più autorevolezza verso il cliente finale</strong>
+            </div>
+            <div class="mini-card">
+              <span class="kicker">Metodo</span>
+              <strong>Più servizi attivabili senza caos interno</strong>
+            </div>
+            <div class="mini-card">
+              <span class="kicker">Business</span>
+              <strong>Più occasioni di sviluppo e marginalità</strong>
+            </div>
+            <div class="mini-card">
+              <span class="kicker">Posizionamento</span>
+              <strong>Meno ruolo esecutivo, più percezione strategica</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Il punto non è il lavoro. È il valore.</h2>
+            <p>
+              Molti Studi lavorano bene, hanno clienti consolidati e una posizione di fiducia costruita nel tempo.
+              Eppure, spesso, questo patrimonio non viene tradotto in una proposta più ampia e più forte.
+            </p>
+          </div>
         </div>
 
-        <div class="card">
-          <h3>Partner qualificati</h3>
-          <p>Non devi creare competenze interne. Le attivi quando servono.</p>
+        <div class="split">
+          <div class="text-panel">
+            <h2>Dove oggi si perde terreno</h2>
+            <p>
+              Il problema non è l’assenza di bisogni nelle aziende clienti. I bisogni ci sono già.
+              Formazione, bilateralità, supporto contrattuale, organizzazione, sviluppo di nuovi servizi...
+              ciò che manca, quasi sempre, è un modello semplice per attivarli senza compromettere equilibrio e controllo.
+            </p>
+            <p>
+              Il risultato è che lo Studio continua a presidiare bene l’ordinario,
+              ma fatica a trasformare la relazione in qualcosa di più strategico, più riconoscibile e più remunerativo.
+            </p>
+          </div>
+
+          <div class="list-panel">
+            <h2>Perché molti Studi si bloccano</h2>
+            <div class="list">
+              <div class="list-item">
+                <strong>Saturazione operativa</strong>
+                Ogni nuovo servizio viene percepito come un ulteriore carico sul team.
+              </div>
+              <div class="list-item">
+                <strong>Mancanza di perimetro</strong>
+                Senza un processo chiaro, anche un servizio valido rischia di generare confusione.
+              </div>
+              <div class="list-item">
+                <strong>Timore di perdere controllo</strong>
+                Se la delivery non è leggibile, la relazione col cliente può indebolirsi.
+              </div>
+            </div>
+          </div>
         </div>
 
+        <div class="highlight">
+          <strong>La verità è semplice</strong>
+          Non serve lavorare di più. Serve attivare meglio ciò che già esiste, con un modello che non complichi lo Studio ma ne rafforzi il ruolo.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Cosa cambia con ConsulHub Pro</h2>
+            <p>
+              CHP non è un catalogo di servizi. È una struttura commerciale e operativa che permette allo Studio
+              di fare un salto di livello senza snaturarsi e senza inseguire complessità inutili.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Lo Studio resta il riferimento</h3>
+            <p>
+              Il cliente continua a percepire nello Studio il proprio interlocutore di fiducia. La relazione resta tua.
+              Questo è il punto di partenza, non un dettaglio.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>I servizi entrano in modo ordinato</h3>
+            <p>
+              Ogni attivazione avviene dentro un perimetro chiaro, con processi definiti, ruoli leggibili
+              e una delivery gestita senza dispersione.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Non devi internalizzare tutto</h3>
+            <p>
+              Lo Studio non deve diventare generalista. Deve diventare più forte nel presidiare ciò che conta:
+              regia, fiducia, continuità e valore riconosciuto.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Cosa ottiene concretamente uno Studio</h2>
+            <p>
+              Quando il modello è giusto, il cambiamento è tangibile. Non solo in termini di servizi attivati,
+              ma soprattutto nella percezione che il cliente ha dello Studio.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Più valore percepito</h3>
+            <p>
+              Lo Studio smette di essere visto solo come esecutore dell’ordinario
+              e viene percepito come riferimento più ampio e più strutturato.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Più opportunità commerciali</h3>
+            <p>
+              Si aprono conversazioni nuove con i clienti, più evolute, più interessanti
+              e con un maggiore potenziale di continuità.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Più marginalità senza moltiplicare la struttura</h3>
+            <p>
+              L’ampliamento dell’offerta non richiede necessariamente nuove risorse interne
+              o un cambio di identità dello Studio.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pilastri">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>I 3 pilastri</h2>
+            <p>
+              Tre direttrici chiare. Nessuna dispersione. Nessuna sovrapposizione inutile.
+              Solo servizi coerenti con il target e con la logica di crescita dello Studio.
+            </p>
+          </div>
+        </div>
+
+        <div class="pillars">
+          <article class="pillar">
+            <span class="num">01</span>
+            <h3>Formazione finanziata</h3>
+            <p>
+              Per attivare percorsi concreti e sostenibili senza caricare lo Studio di complessità tecnica
+              o di lavoro operativo superfluo.
+            </p>
+            <a href="formazione-finanziata.html">Approfondisci</a>
+          </article>
+
+          <article class="pillar">
+            <span class="num">02</span>
+            <h3>Bilateralità</h3>
+            <p>
+              Per valorizzare strumenti spesso sottoutilizzati ma ad alto potenziale,
+              rendendoli leggibili e attivabili per aziende e lavoratori.
+            </p>
+            <a href="bilateralita-ebilp.html">Approfondisci</a>
+          </article>
+
+          <article class="pillar">
+            <span class="num">03</span>
+            <h3>Assistenza contrattuale e sindacale</h3>
+            <p>
+              Per presidiare bisogni reali delle aziende con più struttura,
+              più credibilità e una proposta più ordinata.
+            </p>
+            <a href="assistenza-contrattuale-fisapi.html">Approfondisci</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Quando ha davvero senso</h2>
+            <p>
+              ConsulHub Pro non è per tutti. Ha senso solo per gli Studi che vogliono rafforzare
+              il proprio ruolo e non limitarsi a fare più lavoro dello stesso tipo.
+            </p>
+          </div>
+        </div>
+
+        <div class="when">
+          <article class="card">
+            <h3>CHP ha senso se...</h3>
+            <p>
+              Vuoi aumentare il valore medio per cliente, attivare opportunità oggi non presidiate,
+              crescere senza appesantire il team e consolidare nel tempo il posizionamento dello Studio.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>CHP non ha senso se...</h3>
+            <p>
+              Cerchi solo altro lavoro da aggiungere al lavoro già esistente, senza una logica di ordine,
+              di perimetro o di crescita reale della relazione con il cliente.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-cta">
+      <div class="container">
+        <div class="bottom-panel">
+          <div>
+            <h2>Se hai già clienti, dati e relazioni, il problema non è trovare altro lavoro.</h2>
+            <p>
+              Il punto è trasformare meglio ciò che hai già in un’offerta più forte, più leggibile e più remunerativa.
+              Se vuoi capire quali pilastri o servizi hanno davvero senso per il tuo Studio, partiamo da lì.
+            </p>
+          </div>
+
+          <div class="bottom-actions">
+            <a class="btn btn-primary" href="contatti.html">Richiedi un confronto</a>
+            <a class="btn btn-secondary" href="servizi.html">Scopri i servizi</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© ConsulHub Pro. Regia di servizi integrati per Studi e PMI.</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="per-studi.html">Per Studi</a>
+        <a href="servizi.html">Servizi</a>
+        <a href="blog.html">Blog</a>
+        <a href="contatti.html">Contatti</a>
       </div>
     </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2>Cosa cambia davvero per lo Studio</h2>
-
-      <div class="grid grid-3">
-
-        <div class="card">
-          <h3>Più valore per cliente</h3>
-          <p>Passi da fornitore a partner strategico.</p>
-        </div>
-
-        <div class="card">
-          <h3>Più marginalità</h3>
-          <p>Nuovi servizi senza aumentare la struttura.</p>
-        </div>
-
-        <div class="card">
-          <h3>Più solidità</h3>
-          <p>Relazioni più forti e meno sostituibili.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2>Quando ha senso attivare ConsulHub Pro</h2>
-
-      <div class="card">
-        <p>
-          Quando hai clienti che potrebbero fare di più, ma non vuoi complicare il tuo studio.<br><br>
-          Quando senti che il tuo modello può crescere, ma non vuoi aumentare il carico interno.<br><br>
-          Quando vuoi offrire servizi evoluti senza perdere controllo e credibilità.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta">
-    <div class="container">
-      <h2>Vuoi capire se ha senso per il tuo Studio?</h2>
-
-      <a href="contatti.html" class="btn">Richiedi informazioni</a>
-      <a href="servizi.html" class="btn secondary">Vedi i servizi</a>
-    </div>
-  </section>
+  </footer>
 
 </body>
 </html>
