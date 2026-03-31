@@ -476,9 +476,3 @@ small{color: rgba(11,18,32,.62)}
 .macroarea-3-fix{
   min-height: 760px;
 }
-.hero-media img {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  display: block;
-}
