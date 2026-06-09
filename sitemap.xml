@@ -8,14 +8,7 @@
     <priority>1.0</priority>
   </url>
 
-  <url>
-    <loc>https://www.consulhubpro.it/index.html</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
+    <url>
     <loc>https://www.consulhubpro.it/per-studi.html</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
