@@ -5,36 +5,29 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <title>Perché molti Studi lavorano di più ma guadagnano meno | ConsulHub Pro</title>
-  <meta name="description" content="Analisi strategica per Studi di Consulenza del Lavoro: perché la marginalità si riduce, quali errori evitare e come aumentare valore per cliente senza appesantire la struttura interna." />
+  <meta name="description" content="Analisi strategica per Studi di Consulenza del Lavoro: perché la marginalità si riduce, quali errori evitare e come aumentare valore per cliente senza aumentare personale." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://www.consulhubpro.it/aumentare-marginalita-studio-consulenza-lavoro.html" />
   <link rel="icon" href="favicon.ico" />
 
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ConsulHub Pro" />
-  <meta property="og:title" content="Perché molti Studi di Consulenza del Lavoro lavorano di più ma guadagnano meno" />
-  <meta property="og:description" content="Le cause che comprimono la marginalità degli Studi e il metodo per aumentare valore senza assumere personale o moltiplicare complessità." />
+  <meta property="og:title" content="Perché molti Studi lavorano di più ma guadagnano meno" />
+  <meta property="og:description" content="Come aumentare marginalità e valore percepito dello Studio senza creare nuovo carico operativo interno." />
   <meta property="og:url" content="https://www.consulhubpro.it/aumentare-marginalita-studio-consulenza-lavoro.html" />
-  <meta property="og:image" content="https://www.consulhubpro.it/logo-chp.png" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80" />
 
   <style>
     :root{
       --bg:#eef3f8;
-      --surface:#ffffff;
-      --surface-2:#f5f8fc;
+      --white:#ffffff;
       --text:#0d1733;
       --muted:#5b6b84;
       --line:#d8e3f0;
-      --blue-1:#071a4b;
-      --blue-2:#0b2f7b;
-      --blue-3:#1d8fff;
-      --blue-4:#39c0ff;
-      --chip:#e9f1ff;
-      --chip-border:#cfe0ff;
+      --blue1:#071a4b;
+      --blue2:#0b2f7b;
+      --blue3:#1d8fff;
       --shadow:0 20px 50px rgba(12,30,66,.12);
-      --radius-xl:32px;
-      --radius-lg:24px;
-      --radius-md:18px;
       --max:1240px;
     }
 
@@ -42,21 +35,21 @@
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background:linear-gradient(180deg,#f3f7fb 0%, #edf2f8 100%);
+      font-family:Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#f3f7fb 0%,#edf2f8 100%);
       color:var(--text);
       line-height:1.65;
     }
 
-    a{color:inherit;text-decoration:none}
+    a{text-decoration:none;color:inherit}
     img{max-width:100%;display:block}
-    .container{width:min(var(--max), calc(100% - 40px));margin:0 auto}
+    .container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
 
     .site-header{
       position:sticky;
       top:0;
       z-index:1000;
-      background:rgba(245,248,252,.92);
+      background:rgba(245,248,252,.94);
       backdrop-filter:blur(12px);
       border-bottom:1px solid rgba(13,23,51,.06);
     }
@@ -69,43 +62,47 @@
       gap:24px;
     }
 
-    .brand{display:flex;align-items:center;gap:14px;font-weight:800;color:var(--text);white-space:nowrap}
-    .brand img{width:52px;height:52px;object-fit:contain;border-radius:14px;background:#fff;padding:7px;box-shadow:0 10px 24px rgba(15,42,88,.08)}
-    .brand span{font-size:1.08rem}
-    .menu{display:flex;align-items:center;gap:30px;flex-wrap:wrap}
-    .menu a{color:var(--text);opacity:.88;font-weight:700;transition:.2s ease}
-    .menu a:hover,.menu a.active{opacity:1}
-
-    .btn{
-      display:inline-flex;
+    .brand{
+      display:flex;
       align-items:center;
-      justify-content:center;
-      min-height:54px;
-      padding:0 24px;
-      border-radius:999px;
+      gap:14px;
       font-weight:800;
-      border:1px solid transparent;
-      transition:.2s ease;
+      white-space:nowrap;
     }
 
-    .btn.primary{color:#fff;background:linear-gradient(135deg,var(--blue-2),var(--blue-3));box-shadow:0 14px 30px rgba(29,143,255,.22)}
-    .btn.light{background:#fff;color:var(--blue-1);border-color:rgba(255,255,255,.45)}
+    .brand img{
+      width:52px;
+      height:52px;
+      object-fit:contain;
+      border-radius:14px;
+      background:#fff;
+      padding:7px;
+      box-shadow:0 10px 24px rgba(15,42,88,.08);
+    }
+
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:28px;
+      flex-wrap:wrap;
+      font-weight:700;
+    }
+
+    .menu a{opacity:.88}
+    .menu a:hover,.menu a.active{opacity:1}
 
     .hero{
-      position:relative;
-      overflow:hidden;
-      padding:86px 0 64px;
-      background:
-        radial-gradient(circle at 78% 18%, rgba(57,192,255,.22), transparent 32%),
-        radial-gradient(circle at 12% 12%, rgba(29,143,255,.18), transparent 34%),
-        linear-gradient(135deg,#071a4b 0%, #0b2f7b 56%, #071a4b 100%);
+      padding:88px 0 72px;
       color:#fff;
+      background:
+        radial-gradient(circle at 80% 18%,rgba(57,192,255,.22),transparent 32%),
+        linear-gradient(135deg,#071a4b 0%,#0b2f7b 58%,#071a4b 100%);
     }
 
     .hero-grid{
       display:grid;
-      grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr);
-      gap:44px;
+      grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);
+      gap:46px;
       align-items:center;
     }
 
@@ -123,39 +120,72 @@
 
     h1{
       margin:0 0 24px;
-      font-size:clamp(2.5rem,5.4vw,5.25rem);
-      line-height:.98;
-      letter-spacing:-.055em;
-      max-width:940px;
+      font-size:clamp(2.45rem,5.1vw,5rem);
+      line-height:1;
+      letter-spacing:-.05em;
     }
 
-    .lead{margin:0;color:#eaf3ff;font-size:1.2rem;max-width:900px}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
-
-    .visual-card{
-      background:rgba(255,255,255,.10);
-      border:1px solid rgba(255,255,255,.20);
-      border-radius:32px;
-      padding:26px;
-      box-shadow:0 24px 80px rgba(0,0,0,.18);
-      backdrop-filter:blur(10px);
+    .lead{
+      margin:0;
+      color:#eaf3ff;
+      font-size:1.2rem;
+      max-width:900px;
     }
 
-    .visual-card h2{margin:0 0 12px;color:#fff;font-size:1.55rem;line-height:1.15}
-    .visual-card p{margin:0 0 20px;color:#eaf3ff;font-size:1.02rem}
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:30px;
+    }
 
-    .hero-visual{
-      width:100%;
-      min-height:310px;
-      border-radius:26px;
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:54px;
+      padding:0 24px;
+      border-radius:999px;
+      font-weight:800;
+      border:1px solid transparent;
+    }
+
+    .btn.primary{
+      color:#fff;
+      background:linear-gradient(135deg,var(--blue2),var(--blue3));
+      box-shadow:0 14px 30px rgba(29,143,255,.22);
+    }
+
+    .btn.light{
       background:#fff;
+      color:var(--blue1);
+    }
+
+    .hero-image{
+      border-radius:32px;
       overflow:hidden;
-      box-shadow:0 20px 54px rgba(0,0,0,.20);
+      box-shadow:0 28px 90px rgba(0,0,0,.28);
+      border:1px solid rgba(255,255,255,.22);
+      background:#fff;
+    }
+
+    .hero-image img{
+      width:100%;
+      height:430px;
+      object-fit:cover;
+    }
+
+    .hero-image figcaption{
+      padding:18px 22px;
+      background:#fff;
+      color:var(--muted);
+      font-weight:700;
+      font-size:.95rem;
     }
 
     main{padding:62px 0}
 
-    .article-layout{
+    .layout{
       display:grid;
       grid-template-columns:280px minmax(0,1fr);
       gap:34px;
@@ -165,15 +195,23 @@
     .toc{
       position:sticky;
       top:112px;
-      background:rgba(255,255,255,.92);
-      border:1px solid rgba(216,227,240,.95);
+      background:#fff;
+      border:1px solid var(--line);
       border-radius:24px;
       padding:22px;
       box-shadow:0 14px 36px rgba(12,30,66,.08);
     }
 
-    .toc strong{display:block;margin-bottom:12px;font-size:1rem}
-    .toc a{display:block;padding:9px 0;color:var(--muted);font-weight:700;font-size:.95rem;border-bottom:1px solid rgba(216,227,240,.7)}
+    .toc strong{display:block;margin-bottom:12px}
+    .toc a{
+      display:block;
+      padding:9px 0;
+      color:var(--muted);
+      font-weight:700;
+      font-size:.95rem;
+      border-bottom:1px solid rgba(216,227,240,.7);
+    }
+
     .toc a:last-child{border-bottom:0}
 
     article{
@@ -184,14 +222,54 @@
       box-shadow:var(--shadow);
     }
 
-    .article-meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;color:var(--muted);font-weight:800;font-size:.95rem}
-    .tag{display:inline-flex;padding:8px 12px;border-radius:999px;background:var(--chip);border:1px solid var(--chip-border);color:var(--blue-2)}
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:26px;
+      color:var(--muted);
+      font-weight:800;
+      font-size:.95rem;
+    }
 
-    article h2{margin:44px 0 14px;font-size:clamp(1.75rem,3.4vw,2.55rem);line-height:1.12;letter-spacing:-.035em}
-    article h3{margin:30px 0 10px;font-size:1.35rem;line-height:1.25}
-    article p{margin:0 0 17px;color:#22314f;font-size:1.08rem}
-    article ul{margin:0 0 20px 22px;padding:0;color:#22314f}
-    article li{margin-bottom:11px;font-size:1.06rem}
+    .tag{
+      display:inline-flex;
+      padding:8px 12px;
+      border-radius:999px;
+      background:#e9f1ff;
+      border:1px solid #cfe0ff;
+      color:var(--blue2);
+    }
+
+    article h2{
+      margin:44px 0 14px;
+      font-size:clamp(1.75rem,3.2vw,2.45rem);
+      line-height:1.15;
+      letter-spacing:-.03em;
+    }
+
+    article h3{
+      margin:30px 0 10px;
+      font-size:1.35rem;
+      line-height:1.25;
+    }
+
+    article p{
+      margin:0 0 17px;
+      color:#22314f;
+      font-size:1.08rem;
+    }
+
+    article ul{
+      margin:0 0 20px 22px;
+      padding:0;
+      color:#22314f;
+    }
+
+    article li{
+      margin-bottom:11px;
+      font-size:1.06rem;
+    }
 
     .article-image{
       margin:34px 0;
@@ -199,7 +277,13 @@
       overflow:hidden;
       border:1px solid var(--line);
       box-shadow:0 18px 44px rgba(12,30,66,.10);
-      background:#f8fbff;
+      background:#fff;
+    }
+
+    .article-image img{
+      width:100%;
+      height:390px;
+      object-fit:cover;
     }
 
     .article-image figcaption{
@@ -211,14 +295,55 @@
       border-top:1px solid var(--line);
     }
 
-    .note{margin:30px 0;padding:24px;border-radius:24px;background:linear-gradient(180deg,#f5f8fc,#eef5ff);border:1px solid var(--line)}
-    .note strong{display:block;margin-bottom:8px;color:var(--blue-1);font-size:1.08rem}
-    .quote{margin:32px 0;padding:24px 26px;border-radius:22px;background:#f5f8fc;border-left:6px solid var(--blue-3)}
-    .quote p{margin:0;color:var(--text);font-size:1.16rem;font-weight:800}
+    .note{
+      margin:30px 0;
+      padding:24px;
+      border-radius:24px;
+      background:linear-gradient(180deg,#f5f8fc,#eef5ff);
+      border:1px solid var(--line);
+    }
 
-    .matrix{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:26px 0 8px}
-    .matrix-card{padding:22px;border-radius:22px;background:#f8fbff;border:1px solid var(--line)}
-    .matrix-card strong{display:block;color:var(--blue-2);margin-bottom:8px}
+    .note strong{
+      display:block;
+      margin-bottom:8px;
+      color:var(--blue1);
+      font-size:1.08rem;
+    }
+
+    .quote{
+      margin:32px 0;
+      padding:24px 26px;
+      border-radius:22px;
+      background:#f5f8fc;
+      border-left:6px solid var(--blue3);
+    }
+
+    .quote p{
+      margin:0;
+      color:var(--text);
+      font-size:1.16rem;
+      font-weight:800;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:16px;
+      margin:26px 0 8px;
+    }
+
+    .card{
+      padding:22px;
+      border-radius:22px;
+      background:#f8fbff;
+      border:1px solid var(--line);
+    }
+
+    .card strong{
+      display:block;
+      color:var(--blue2);
+      margin-bottom:8px;
+    }
 
     .inline-cta{
       display:grid;
@@ -233,43 +358,80 @@
       box-shadow:0 18px 46px rgba(7,26,75,.20);
     }
 
-    .inline-cta h2{margin:0 0 8px;color:#fff;font-size:1.55rem;letter-spacing:-.02em}
-    .inline-cta p{margin:0;color:#eaf3ff}
+    .inline-cta h2{
+      margin:0 0 8px;
+      color:#fff;
+      font-size:1.55rem;
+      letter-spacing:-.02em;
+    }
+
+    .inline-cta p{
+      margin:0;
+      color:#eaf3ff;
+    }
 
     .final-cta{
       margin-top:46px;
       padding:38px;
       border-radius:32px;
       background:
-        radial-gradient(circle at 82% 10%, rgba(57,192,255,.24), transparent 34%),
+        radial-gradient(circle at 82% 10%,rgba(57,192,255,.24),transparent 34%),
         linear-gradient(135deg,#071a4b,#0b2f7b);
       color:#fff;
       box-shadow:0 20px 58px rgba(7,26,75,.22);
     }
 
-    .final-cta h2{margin:0 0 12px;color:#fff;font-size:2rem}
-    .final-cta p{color:#eaf3ff;max-width:860px}
+    .final-cta h2{
+      margin:0 0 12px;
+      color:#fff;
+      font-size:2rem;
+    }
 
-    .related{margin-top:28px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-    .related a{display:block;padding:18px;border-radius:18px;background:#f8fbff;border:1px solid var(--line);color:var(--blue-2);font-weight:800}
+    .final-cta p{
+      color:#eaf3ff;
+      max-width:860px;
+    }
 
-    footer{padding:38px 0;color:var(--muted);font-size:.95rem}
+    .related{
+      margin-top:28px;
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+    }
+
+    .related a{
+      display:block;
+      padding:18px;
+      border-radius:18px;
+      background:#f8fbff;
+      border:1px solid var(--line);
+      color:var(--blue2);
+      font-weight:800;
+    }
+
+    footer{
+      padding:38px 0;
+      color:var(--muted);
+      font-size:.95rem;
+    }
 
     @media (max-width:980px){
       .hero-grid{grid-template-columns:1fr}
-      .article-layout{grid-template-columns:1fr}
+      .layout{grid-template-columns:1fr}
       .toc{position:static}
       .inline-cta{grid-template-columns:1fr}
       .related{grid-template-columns:1fr}
     }
 
     @media (max-width:680px){
-      .container{width:min(100% - 28px, var(--max))}
+      .container{width:min(100% - 28px,var(--max))}
       .nav{align-items:flex-start;flex-direction:column;padding:16px 0}
       .menu{gap:16px}
       .hero{padding:58px 0 44px}
+      .hero-image img{height:280px}
       article{padding:28px}
-      .matrix{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      .article-image img{height:260px}
     }
   </style>
 
@@ -278,11 +440,11 @@
     "@context":"https://schema.org",
     "@type":"Article",
     "headline":"Perché molti Studi di Consulenza del Lavoro lavorano di più ma guadagnano meno",
-    "description":"Analisi strategica per Studi di Consulenza del Lavoro: perché la marginalità si riduce, quali errori evitare e come aumentare valore per cliente senza appesantire la struttura interna.",
+    "description":"Analisi strategica per Studi di Consulenza del Lavoro: perché la marginalità si riduce, quali errori evitare e come aumentare valore per cliente senza aumentare personale.",
     "author":{"@type":"Organization","name":"ConsulHub Pro"},
     "publisher":{"@type":"Organization","name":"ConsulHub Pro","logo":{"@type":"ImageObject","url":"https://www.consulhubpro.it/logo-chp.png"}},
     "mainEntityOfPage":"https://www.consulhubpro.it/aumentare-marginalita-studio-consulenza-lavoro.html",
-    "image":"https://www.consulhubpro.it/logo-chp.png",
+    "image":"https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80",
     "inLanguage":"it-IT"
   }
   </script>
@@ -319,44 +481,22 @@
       </p>
 
       <div class="hero-actions">
-        <a class="btn primary" href="contatti.html">Richiedi un confronto</a>
-        <a class="btn light" href="servizi.html">Vedi i servizi CHP</a>
+        <a class="btn primary" href="contatti.html">Richiedi una Mappatura Studio</a>
+        <a class="btn light" href="servizi.html">Vedi le macroaree CHP</a>
       </div>
     </div>
 
-    <aside class="visual-card">
-      <h2>Da presidio operativo a piattaforma di valore</h2>
-      <p>Il punto cieco di molti Studi: tanta fiducia ricevuta dai clienti, ma poca capacità di trasformarla in marginalità ordinata.</p>
-
-      <div class="hero-visual">
-        <svg viewBox="0 0 760 520" width="100%" height="100%" role="img" aria-label="Schema strategico sulla marginalità degli Studi professionali">
-          <rect width="760" height="520" fill="#f5f8fc"/>
-          <circle cx="620" cy="80" r="170" fill="#d9edff"/>
-          <circle cx="120" cy="430" r="190" fill="#e9f1ff"/>
-          <rect x="70" y="80" width="260" height="110" rx="26" fill="#071a4b"/>
-          <text x="100" y="128" fill="#fff" font-size="25" font-weight="700">Molto lavoro</text>
-          <text x="100" y="160" fill="#bce8ff" font-size="17">scadenze, urgenze, clienti</text>
-          <rect x="430" y="80" width="260" height="110" rx="26" fill="#ffffff" stroke="#d8e3f0" stroke-width="3"/>
-          <text x="460" y="128" fill="#071a4b" font-size="25" font-weight="700">Margine basso</text>
-          <text x="460" y="160" fill="#5b6b84" font-size="17">valore non monetizzato</text>
-          <path d="M345 135 C375 135 390 135 420 135" stroke="#1d8fff" stroke-width="8" fill="none" stroke-linecap="round"/>
-          <path d="M405 118 L428 135 L405 152" stroke="#1d8fff" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <rect x="180" y="280" width="400" height="130" rx="32" fill="#0b2f7b"/>
-          <text x="225" y="330" fill="#fff" font-size="28" font-weight="700">Regia CHP</text>
-          <text x="225" y="365" fill="#cfeaff" font-size="18">selezione, metodo, partner</text>
-          <text x="225" y="392" fill="#cfeaff" font-size="18">valore senza nuovo caos interno</text>
-          <path d="M300 205 C300 240 320 255 355 280" stroke="#39c0ff" stroke-width="7" fill="none" stroke-linecap="round"/>
-          <path d="M460 205 C460 240 440 255 405 280" stroke="#39c0ff" stroke-width="7" fill="none" stroke-linecap="round"/>
-        </svg>
-      </div>
-    </aside>
+    <figure class="hero-image">
+      <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80" alt="Professionisti in riunione strategica con documenti e dati aziendali">
+      <figcaption>Lo Studio conosce problemi, persone e dinamiche delle aziende clienti. La sfida è trasformare questa posizione in valore riconosciuto.</figcaption>
+    </figure>
   </div>
 </section>
 
 <main>
-  <div class="container article-layout">
+  <div class="container layout">
 
-    <aside class="toc" aria-label="Indice articolo">
+    <aside class="toc">
       <strong>Indice</strong>
       <a href="#problema">Il problema reale</a>
       <a href="#urgenza">La trappola dell’urgenza</a>
@@ -368,7 +508,7 @@
     </aside>
 
     <article>
-      <div class="article-meta">
+      <div class="meta">
         <span class="tag">Strategia per Studi</span>
         <span>Marginalità</span>
         <span>Sviluppo clienti</span>
@@ -380,31 +520,12 @@
       </p>
 
       <p>
-        Il cliente chiama lo Studio per un’assunzione urgente, una contestazione disciplinare, un dubbio contrattuale, un problema con un dipendente, un inquadramento, una trasformazione, una cessazione, una verifica ispettiva, un tema sindacale, una richiesta su welfare, formazione o riorganizzazione. Lo Studio risponde. Risolve. Assorbe pressione. Spesso previene danni che il cliente nemmeno vede.
+        Il cliente chiama lo Studio per un’assunzione urgente, una contestazione disciplinare, un dubbio contrattuale, un problema con un dipendente, un inquadramento, una trasformazione, una cessazione, una verifica ispettiva, un tema sindacale, una richiesta su welfare, formazione o riorganizzazione.
       </p>
 
       <p>
-        Eppure, quando arriva il momento di riconoscere economicamente quel valore, lo Studio viene ancora letto come un costo amministrativo ricorrente. Necessario, certo. Importante, spesso. Ma non sempre percepito come leva strategica.
+        Lo Studio risponde. Risolve. Assorbe pressione. Spesso previene danni che il cliente nemmeno vede. Eppure, quando arriva il momento di riconoscere economicamente quel valore, lo Studio viene ancora letto come un costo amministrativo ricorrente.
       </p>
-
-      <figure class="article-image">
-        <svg viewBox="0 0 1100 440" width="100%" role="img" aria-label="Grafico concettuale tra carico operativo e valore percepito">
-          <rect width="1100" height="440" fill="#f8fbff"/>
-          <line x1="120" y1="340" x2="980" y2="340" stroke="#d8e3f0" stroke-width="4"/>
-          <line x1="120" y1="340" x2="120" y2="80" stroke="#d8e3f0" stroke-width="4"/>
-          <text x="110" y="385" fill="#5b6b84" font-size="22">basso</text>
-          <text x="900" y="385" fill="#5b6b84" font-size="22">alto</text>
-          <text x="390" y="418" fill="#0d1733" font-size="25" font-weight="700">carico operativo dello Studio</text>
-          <text x="30" y="70" fill="#0d1733" font-size="25" font-weight="700" transform="rotate(-90 30,70)">valore percepito dal cliente</text>
-          <path d="M140 300 C300 260 450 230 610 180 C760 135 880 115 970 95" fill="none" stroke="#1d8fff" stroke-width="9" stroke-linecap="round"/>
-          <path d="M140 300 C320 305 510 315 700 322 C830 328 910 332 970 335" fill="none" stroke="#071a4b" stroke-width="9" stroke-linecap="round" stroke-dasharray="16 16"/>
-          <rect x="640" y="74" width="330" height="72" rx="22" fill="#071a4b"/>
-          <text x="670" y="118" fill="#fff" font-size="22" font-weight="700">Valore governato e monetizzato</text>
-          <rect x="580" y="286" width="390" height="72" rx="22" fill="#ffffff" stroke="#d8e3f0" stroke-width="3"/>
-          <text x="610" y="330" fill="#071a4b" font-size="22" font-weight="700">Operatività assorbita e data per scontata</text>
-        </svg>
-        <figcaption>Il nodo critico: quando il carico operativo cresce ma il valore percepito resta basso, la marginalità dello Studio si comprime.</figcaption>
-      </figure>
 
       <div class="quote">
         <p>Il punto non è lavorare di più. Il punto è smettere di regalare valore strategico dentro attività percepite come ordinarie.</p>
@@ -423,6 +544,11 @@
       <p>
         Conosce le difficoltà nel reperire personale, le tensioni tra soci, la scarsa organizzazione interna, le carenze formative, i rischi contrattuali, i problemi di produttività, le esigenze di investimento, i segnali di un passaggio generazionale complicato. Ma se tutto questo resta conversazione informale, consiglio gratuito o supporto assorbito nella quotidianità, non genera marginalità.
       </p>
+
+      <figure class="article-image">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80" alt="Dashboard aziendale con analisi di performance e indicatori di crescita">
+        <figcaption>Il nodo critico: distinguere tra fatturato, carico operativo e marginalità reale generata dal portafoglio clienti.</figcaption>
+      </figure>
 
       <div class="note">
         <strong>Il paradosso dello Studio</strong>
@@ -488,35 +614,16 @@
       </p>
 
       <figure class="article-image">
-        <svg viewBox="0 0 1100 420" width="100%" role="img" aria-label="Schema del modello CHP per gli Studi professionali">
-          <rect width="1100" height="420" fill="#f8fbff"/>
-          <rect x="70" y="135" width="250" height="150" rx="28" fill="#071a4b"/>
-          <text x="112" y="195" fill="#fff" font-size="28" font-weight="700">Studio</text>
-          <text x="112" y="232" fill="#bce8ff" font-size="19">fiducia e relazione</text>
-          <rect x="425" y="115" width="250" height="190" rx="28" fill="#0b2f7b"/>
-          <text x="474" y="182" fill="#fff" font-size="28" font-weight="700">CHP</text>
-          <text x="474" y="219" fill="#bce8ff" font-size="19">regia, metodo</text>
-          <text x="474" y="248" fill="#bce8ff" font-size="19">partner qualificati</text>
-          <rect x="780" y="135" width="250" height="150" rx="28" fill="#ffffff" stroke="#d8e3f0" stroke-width="3"/>
-          <text x="822" y="195" fill="#071a4b" font-size="28" font-weight="700">Cliente</text>
-          <text x="822" y="232" fill="#5b6b84" font-size="19">valore e soluzioni</text>
-          <path d="M330 210 L410 210" stroke="#1d8fff" stroke-width="9" stroke-linecap="round"/>
-          <path d="M395 190 L420 210 L395 230" stroke="#1d8fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M685 210 L765 210" stroke="#1d8fff" stroke-width="9" stroke-linecap="round"/>
-          <path d="M750 190 L775 210 L750 230" stroke="#1d8fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="155" y="335" fill="#0d1733" font-size="21" font-weight="700">Lo Studio resta centrale</text>
-          <text x="455" y="355" fill="#0d1733" font-size="21" font-weight="700">CHP coordina</text>
-          <text x="820" y="335" fill="#0d1733" font-size="21" font-weight="700">Il cliente riceve valore</text>
-        </svg>
-        <figcaption>Il modello corretto non sposta la relazione fuori dallo Studio: la rafforza, con CHP come sistema di regia e attivazione.</figcaption>
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80" alt="Team professionale durante una riunione strategica">
+        <figcaption>Il modello corretto non sostituisce lo Studio: lo rafforza, mantenendo la relazione al centro e attivando competenze specialistiche quando servono.</figcaption>
       </figure>
 
-      <div class="matrix">
-        <div class="matrix-card">
+      <div class="cards">
+        <div class="card">
           <strong>Approccio debole</strong>
           <p>Lo Studio segnala fornitori in modo occasionale, senza metodo, senza controllo e senza una vera tutela della relazione.</p>
         </div>
-        <div class="matrix-card">
+        <div class="card">
           <strong>Approccio corretto</strong>
           <p>Lo Studio resta regista della relazione e attiva partner qualificati solo quando il bisogno del cliente è reale e coerente.</p>
         </div>
@@ -617,6 +724,11 @@
         Il partner deve essere selezionato, affidabile e coerente con il livello dello Studio. Non basta avere un fornitore. Serve un modello di collaborazione chiaro, con ruoli, responsabilità, comunicazione, tutela della relazione e continuità.
       </p>
 
+      <figure class="article-image">
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1600&q=80" alt="Professionisti che analizzano una strategia aziendale su tavolo riunioni">
+        <figcaption>Il valore non nasce dal proporre tutto a tutti, ma dal selezionare le opportunità giuste per i clienti giusti.</figcaption>
+      </figure>
+
       <div class="inline-cta">
         <div>
           <h2>CHP nasce per questo ruolo di regia</h2>
@@ -662,15 +774,20 @@
         Non serve vendere tutto. Serve saper leggere i bisogni giusti, nel momento giusto, con i partner giusti.
       </p>
 
+      <figure class="article-image">
+        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1600&q=80" alt="Professionisti che collaborano su un progetto di crescita aziendale">
+        <figcaption>Lo Studio del futuro non è quello che fa tutto, ma quello che sa orchestrare valore intorno ai clienti migliori.</figcaption>
+      </figure>
+
       <div class="final-cta">
-        <h2>Vuoi capire quali opportunità possono generare nuova marginalità per il tuo Studio?</h2>
+        <h2>Quante opportunità stanno passando oggi sotto gli occhi del tuo Studio?</h2>
         <p>
-          ConsulHub Pro affianca gli Studi di Consulenza del Lavoro nella costruzione di un sistema ordinato di servizi, partner e opportunità per aumentare valore verso i clienti senza appesantire la struttura interna.
+          ConsulHub Pro aiuta gli Studi di Consulenza del Lavoro a trasformare relazioni già esistenti in nuove opportunità di valore, mantenendo il controllo della relazione con il cliente e senza appesantire la struttura interna.
         </p>
-        <a class="btn light" href="contatti.html">Richiedi un confronto con CHP</a>
+        <a class="btn light" href="contatti.html">Richiedi una Mappatura Studio</a>
       </div>
 
-      <div class="related" aria-label="Approfondimenti collegati">
+      <div class="related">
         <a href="per-studi.html">Come CHP lavora con gli Studi</a>
         <a href="pilastri.html">I tre pilastri operativi</a>
         <a href="servizi.html">Le macroaree di servizio</a>
