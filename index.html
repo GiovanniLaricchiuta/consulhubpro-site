@@ -511,9 +511,20 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       list-style:none;padding:0;margin:0;display:grid;gap:10px
     }
     .service li{
-      padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.10);
-      border:1px solid rgba(255,255,255,.10);font-size:14px;font-weight:700
+      padding:0;border-radius:14px;background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.10);font-size:14px;font-weight:700;
+      transition:transform .2s ease,background .2s ease,border-color .2s ease
     }
+    .service li:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,.15);
+      border-color:rgba(255,255,255,.18)
+    }
+    .service li a{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:10px 12px;color:#fff;text-decoration:none
+    }
+    .service li a span:last-child{font-size:17px;line-height:1;opacity:.92}
     .service a{color:#fff}
     .service .btn-secondary{
       color:#fff;background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.14)
@@ -1087,32 +1098,34 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
                 <h3>Crescita, finanza e sviluppo</h3>
                 <p>Per aziende che vogliono crescere con più visione, più ordine e strumenti concreti di supporto operativo e finanziario.</p>
                 <ul>
-                  <li>Bandi e finanza agevolata</li>
-                  <li>Strategia e sviluppo PMI</li>
-                  <li>Noleggio flotte e furgoni attrezzati</li>
-                  <li>Protezione e coperture aziendali</li>
+                  <li><a href="bandi-finanza-agevolata.html"><span>Bandi, finanza agevolata e fundraising</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="strategia-sviluppo-pmi.html"><span>Strategia e sviluppo PMI</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="leasing-flotte.html"><span>Noleggio flotte e furgoni attrezzati</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="servizi-assicurativi.html"><span>Protezione e coperture aziendali</span><span aria-hidden="true">→</span></a></li>
                 </ul>
               </div>
               <a class="btn btn-secondary" href="crescita-finanza-sviluppo.html">Scopri l’area</a>
             </div>
           </article>
+
           <article class="service reveal macroarea-3-fix" style="min-height:730px;">
-  <div class="service-bg"></div>
-  <div class="service-content">
-    <div>
-      <span class="mini">Macroarea 2</span>
-      <h3>Operazioni strategiche e continuità d’impresa</h3>
-      <p>Per aziende che affrontano passaggi evoluti: acquisizioni, apertura a nuovi mercati, continuità generazionale, governance patrimoniale e operazioni straordinarie.</p>
-      <ul>
-        <li>M&A e operazioni straordinarie</li>
-        <li>Internazionalizzazione</li>
-        <li>Passaggio generazionale</li>
-        <li>Family Office</li>
-      </ul>
-    </div>
-    <a class="btn btn-secondary" href="operazioni-strategiche-continuita.html">Scopri l’area</a>
-  </div>
-</article>
+            <div class="service-bg"></div>
+            <div class="service-content">
+              <div>
+                <span class="mini">Macroarea 2</span>
+                <h3>Operazioni strategiche e continuità d’impresa</h3>
+                <p>Per aziende che affrontano acquisizioni, governance, ingresso di soci e investitori, nuove iniziative, internazionalizzazione e continuità d’impresa.</p>
+                <ul>
+                  <li><a href="ma-operazioni-straordinarie.html"><span>M&amp;A, governance e operazioni societarie</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="startup-spin-off-open-innovation.html"><span>Startup, spin off e open innovation</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="internazionalizzazione.html"><span>Internazionalizzazione</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="passaggio-generazionale.html"><span>Passaggio generazionale</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="family-office.html"><span>Family Office</span><span aria-hidden="true">→</span></a></li>
+                </ul>
+              </div>
+              <a class="btn btn-secondary" href="operazioni-strategiche-continuita.html">Scopri l’area</a>
+            </div>
+          </article>
 
           <article class="service reveal">
             <div class="service-bg"></div>
@@ -1122,9 +1135,9 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
                 <h3>HR e organizzazione</h3>
                 <p>Per strutturare persone, ruoli, ricerca e sviluppo del capitale umano con una logica più efficace e meno dispersiva.</p>
                 <ul>
-                  <li>Coaching e team building</li>
-                  <li>Ricerca personale</li>
-                  <li>Consulenza HR</li>
+                  <li><a href="coaching-team-building.html"><span>Coaching e team building</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="ricerca-personale.html"><span>Ricerca personale</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="consulenza-hr.html"><span>Consulenza HR</span><span aria-hidden="true">→</span></a></li>
                 </ul>
               </div>
               <a class="btn btn-secondary" href="hr-organizzazione.html">Scopri l’area</a>
@@ -1139,52 +1152,52 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
                 <h3>Marketing e digitale</h3>
                 <p>Per aiutare aziende e Studi a comunicare meglio, farsi trovare, generare opportunità e rafforzare il posizionamento.</p>
                 <ul>
-                  <li>Siti web</li>
-                  <li>Social media</li>
-                  <li>Contenuti digitali</li>
-                  <li>Funnel marketing</li>
-                  <li>Lead generation</li>
+                  <li><a href="siti-web.html"><span>Siti web</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="social-media.html"><span>Social media</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="contenuti-digitali.html"><span>Contenuti digitali</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="funnel-marketing.html"><span>Funnel marketing</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="lead-generation.html"><span>Lead generation</span><span aria-hidden="true">→</span></a></li>
                 </ul>
               </div>
               <a class="btn btn-secondary" href="marketing-digitale.html">Scopri l’area</a>
             </div>
           </article>
-<article class="service reveal">
+
+          <article class="service reveal">
             <div class="service-bg"></div>
             <div class="service-content">
               <div>
                 <span class="mini">Macroarea 5</span>
                 <h3>Efficienza operativa e IT</h3>
-                <p>Per digitalizzare, automatizzare e semplificare flussi, attività e processi con una logica concreta e orientata all’efficienza.</p>
+                <p>Per digitalizzare, automatizzare e semplificare flussi, infrastrutture e comunicazioni aziendali con una logica concreta.</p>
                 <ul>
-  <li>AI e automazioni</li>
-  <li>Office automation</li>
-  <li>IT e digitalizzazione</li>
-  <li>Cyber Security</li>
-</ul>
+                  <li><a href="ai-automazioni.html"><span>AI e automazioni</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="it-digitalizzazione.html"><span>Connettività, cloud e servizi IT</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="office-automation.html"><span>Office automation, stampa e gestione documentale</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="cyber-security.html"><span>Cyber Security</span><span aria-hidden="true">→</span></a></li>
+                </ul>
               </div>
               <a class="btn btn-secondary" href="efficienza-operativa-it.html">Scopri l’area</a>
             </div>
           </article>
+
           <article class="service reveal macroarea-3-fix">
             <div class="service-bg"></div>
             <div class="service-content">
               <div>
                 <span class="mini">Macroarea 6</span>
                 <h3>Sicurezza, compliance e sostenibilità</h3>
-                <p>Per proteggere l’azienda, ridurre il rischio e costruire processi più solidi, più coerenti e più leggibili.</p>
+                <p>Per proteggere l’azienda, ridurre il rischio e costruire processi più solidi, coerenti e professionalmente presidiati.</p>
                 <ul>
-  <li>Sicurezza sul lavoro</li>
-  <li>Compliance aziendale</li>
-  <li>Sostenibilità</li>
-  <li>Gestione del rischio</li>
-</ul>
+                  <li><a href="sicurezza-sul-lavoro.html"><span>Sicurezza sul lavoro</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="compliance-aziendale.html"><span>Compliance, contratti e tutela degli asset</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="sostenibilita.html"><span>Sostenibilità</span><span aria-hidden="true">→</span></a></li>
+                  <li><a href="gestione-del-rischio.html"><span>Gestione del rischio</span><span aria-hidden="true">→</span></a></li>
+                </ul>
               </div>
               <a class="btn btn-secondary" href="sicurezza-compliance-sostenibilita.html">Scopri l’area</a>
             </div>
           </article>
-
-          
         </div>
 
         <div style="margin-top:22px" class="reveal">
