@@ -1,0 +1,4 @@
+/* Keep the existing consent shortcut clear of the approved conversion bar. */
+body.complete-home>.iubenda-tp-btn[data-tp-float="bottom-right"],body.complete-inner>.iubenda-tp-btn[data-tp-float="bottom-right"]{bottom:92px!important;right:12px!important}
+/* The unified footer panel retains both tracking and US privacy controls. Avoid a duplicate in-flow US shortcut shrinking the page grid. */
+body.complete-home>.iub__us-widget,body.complete-inner>.iub__us-widget{display:none!important}

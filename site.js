@@ -18,7 +18,7 @@ if(!isHome){
  menu?.addEventListener('close',()=>{trigger.setAttribute('aria-expanded','false');scroller.style.overflow='';trigger.focus({preventScroll:true})});
  let frame=false;scroller.addEventListener('scroll',()=>{if(frame)return;frame=true;requestAnimationFrame(()=>{frame=false;$('.site-header')?.classList.toggle('scrolled',scroller.scrollTop>40)})},{passive:true});
 }
-const privacy=$('#privacy-panel');$$('[data-privacy-open]').forEach(b=>b.addEventListener('click',()=>privacy.showModal()));
+const privacy=$('#privacy-panel');$$('[data-privacy-open]').forEach(b=>b.addEventListener('click',()=>{if(window._iub?.cs?.api?.openPreferences)window._iub.cs.api.openPreferences();else privacy.showModal()}));
 for(const dialog of $$('dialog')){
  dialog.addEventListener('click',e=>{if(e.target!==dialog)return;const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()});
  // Native modal dialogs contain keyboard focus and return it to their invoker.
