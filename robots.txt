@@ -1,4 +1,3 @@
-# deploy retry
 User-agent: *
 Allow: /
 

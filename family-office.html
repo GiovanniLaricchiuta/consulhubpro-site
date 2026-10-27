@@ -1,615 +1,20 @@
-<!doctype html>
-<html lang="it">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Family Office | ConsulHub Pro</title>
-  <meta name="description" content="Servizio Family Office per aziende clienti degli Studi: tutela patrimoniale, governance familiare, continuità d’impresa, pianificazione e coordinamento di competenze specialistiche." />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="canonical" href="https://www.consulhubpro.it/family-office.html" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="ConsulHub Pro" />
-  <meta property="og:title" content="Family Office | ConsulHub Pro" />
-  <meta property="og:description" content="Supporto qualificato per imprenditori, famiglie imprenditoriali e aziende che vogliono organizzare patrimonio, continuità, governance e protezione nel tempo." />
-  <meta property="og:url" content="https://www.consulhubpro.it/family-office.html" />
-  <meta property="og:image" content="https://www.consulhubpro.it/logo-chp.png" />
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EQZX301RVR"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-EQZX301RVR');
-  </script>
-
-  <script type="text/javascript" src="https://embeds.iubenda.com/widgets/ff65dfa4-bd44-478e-bac9-43a70683b4cf.js"></script>
-
-  <style>
-    :root{
-      --bg:#f5f8fc;
-      --surface:#ffffff;
-      --surface-soft:#f8fbff;
-      --text:#0f172a;
-      --muted:#475569;
-      --line:rgba(15,23,42,.10);
-      --primary:#155eef;
-      --primary-2:#14b8ff;
-      --shadow:0 24px 70px rgba(15,23,42,.08);
-      --shadow-strong:0 32px 95px rgba(15,23,42,.13);
-      --radius:28px;
-    }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at 8% 0%, rgba(21,94,239,.08), transparent 28%),
-        radial-gradient(circle at 88% 8%, rgba(20,184,255,.08), transparent 30%),
-        var(--bg);
-      color:var(--text);
-      line-height:1.65;
-    }
-
-    a{color:inherit;text-decoration:none}
-    img{display:block;max-width:100%}
-
-    .container{
-      width:min(1280px, calc(100% - 42px));
-      margin:0 auto;
-    }
-
-    .site-header{
-      position:sticky;
-      top:0;
-      z-index:50;
-      background:rgba(255,255,255,.90);
-      backdrop-filter:blur(18px);
-      border-bottom:1px solid var(--line);
-    }
-
-    .nav{
-      min-height:86px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:13px;
-      min-width:235px;
-    }
-
-    .brand img{
-      width:52px;
-      height:52px;
-      object-fit:contain;
-      border-radius:16px;
-      background:#fff;
-      box-shadow:0 10px 30px rgba(15,23,42,.08);
-    }
-
-    .brand strong{
-      display:block;
-      font-size:17px;
-      color:#0f172a;
-      line-height:1.1;
-    }
-
-    .brand span{
-      display:block;
-      margin-top:4px;
-      color:#64748b;
-      font-size:13px;
-      line-height:1.25;
-    }
-
-    .links{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:20px;
-      font-weight:800;
-      color:#253247;
-      font-size:15px;
-      white-space:nowrap;
-      flex:1;
-    }
-
-    .links a.active,
-    .links a:hover{
-      color:#0f172a;
-    }
-
-    .actions{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      white-space:nowrap;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:50px;
-      padding:0 22px;
-      border-radius:999px;
-      font-weight:900;
-      border:1px solid var(--line);
-      transition:.2s ease;
-      white-space:nowrap;
-    }
-
-    .btn.primary{
-      background:linear-gradient(135deg,var(--primary),var(--primary-2));
-      color:#fff;
-      border-color:transparent;
-      box-shadow:0 18px 45px rgba(21,94,239,.22);
-    }
-
-    .btn.secondary{
-      background:#fff;
-      color:#0f172a;
-    }
-
-    .btn:hover{
-      transform:translateY(-1px);
-      box-shadow:0 20px 55px rgba(15,23,42,.14);
-    }
-
-    .menu{
-      display:none;
-      border:1px solid var(--line);
-      background:#fff;
-      border-radius:16px;
-      min-height:46px;
-      padding:0 16px;
-      font-weight:900;
-      color:#0f172a;
-    }
-
-    .mobile{
-      display:none;
-      border-top:1px solid var(--line);
-      background:#fff;
-    }
-
-    .mobile.open{display:block}
-
-    .mobile .inner{
-      width:min(1280px, calc(100% - 42px));
-      margin:0 auto;
-      padding:18px 0 24px;
-      display:grid;
-      gap:12px;
-    }
-
-    .mobile a{
-      padding:12px 14px;
-      border-radius:14px;
-      background:var(--surface-soft);
-      font-weight:800;
-    }
-
-    .breadcrumbs{
-      padding:24px 0 0;
-      color:#64748b;
-      font-size:15px;
-    }
-
-    .breadcrumbs a{
-      color:#0f172a;
-      font-weight:800;
-    }
-
-    .hero{
-      padding:46px 0 70px;
-    }
-
-    .hero-wrap{
-      display:grid;
-      grid-template-columns:1fr .92fr;
-      gap:34px;
-      align-items:stretch;
-    }
-
-    .hero-copy{
-      background:rgba(255,255,255,.92);
-      border:1px solid var(--line);
-      border-radius:34px;
-      padding:54px;
-      box-shadow:var(--shadow-strong);
-    }
-
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:9px;
-      padding:8px 16px;
-      border-radius:999px;
-      background:#eaf3ff;
-      border:1px solid rgba(21,94,239,.13);
-      color:#1260c9;
-      font-size:13px;
-      font-weight:950;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-    }
-
-    .eyebrow:before{
-      content:"";
-      width:9px;
-      height:9px;
-      border-radius:50%;
-      background:var(--primary-2);
-      box-shadow:0 0 0 6px rgba(20,184,255,.14);
-    }
-
-    h1,h2,h3,p{margin:0}
-
-    h1{
-      margin-top:24px;
-      font-size:clamp(44px,6vw,76px);
-      line-height:.98;
-      letter-spacing:-.06em;
-      max-width:780px;
-    }
-
-    .lead{
-      margin-top:24px;
-      font-size:20px;
-      color:#334155;
-      max-width:760px;
-    }
-
-    .hero-actions{
-      margin-top:34px;
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-    }
-
-    .hero-image{
-      position:relative;
-      border-radius:34px;
-      overflow:hidden;
-      min-height:560px;
-      box-shadow:var(--shadow-strong);
-      border:1px solid var(--line);
-      background:#0f172a;
-    }
-
-    .hero-image img{
-      width:100%;
-      height:100%;
-      min-height:560px;
-      object-fit:cover;
-      filter:saturate(.92) contrast(1.02);
-      opacity:.84;
-    }
-
-    .image-card{
-      position:absolute;
-      left:28px;
-      right:28px;
-      bottom:28px;
-      padding:26px;
-      border-radius:24px;
-      background:rgba(15,23,42,.74);
-      color:#fff;
-      backdrop-filter:blur(14px);
-      border:1px solid rgba(255,255,255,.16);
-    }
-
-    .image-card h3{
-      font-size:26px;
-      line-height:1.15;
-      letter-spacing:-.035em;
-      margin-bottom:12px;
-    }
-
-    .image-card p{
-      color:rgba(255,255,255,.82);
-      font-size:17px;
-    }
-
-    .section{
-      padding:76px 0;
-    }
-
-    .section-tight{
-      padding-top:40px;
-    }
-
-    .section-head{
-      display:grid;
-      grid-template-columns:1fr .88fr;
-      gap:44px;
-      align-items:end;
-      margin-bottom:34px;
-    }
-
-    .section-head h2{
-      margin-top:18px;
-      font-size:clamp(34px,4.8vw,58px);
-      line-height:1;
-      letter-spacing:-.055em;
-    }
-
-    .section-head p{
-      color:#42526b;
-      font-size:19px;
-    }
-
-    .grid-3{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:22px;
-    }
-
-    .card{
-      background:rgba(255,255,255,.94);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:30px;
-      box-shadow:var(--shadow);
-      min-height:260px;
-    }
-
-    .card .label{
-      display:block;
-      color:#1260c9;
-      font-weight:950;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      font-size:13px;
-      margin-bottom:14px;
-    }
-
-    .card h3{
-      font-size:25px;
-      line-height:1.15;
-      letter-spacing:-.025em;
-      margin-bottom:14px;
-    }
-
-    .card p{
-      color:#4b5b73;
-      font-size:17px;
-    }
-
-    .process{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:18px;
-      counter-reset:step;
-    }
-
-    .step{
-      counter-increment:step;
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:24px;
-      padding:26px;
-      min-height:230px;
-      box-shadow:var(--shadow);
-    }
-
-    .step:before{
-      content:counter(step);
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:42px;
-      height:42px;
-      border-radius:14px;
-      background:#eaf3ff;
-      color:#1260c9;
-      font-weight:950;
-      margin-bottom:18px;
-    }
-
-    .step h3{
-      font-size:21px;
-      line-height:1.2;
-      letter-spacing:-.02em;
-      margin-bottom:10px;
-    }
-
-    .step p{
-      color:#4b5b73;
-      font-size:16px;
-    }
-
-    .cta{
-      background:linear-gradient(135deg,#0f172a,#1e3a8a);
-      color:#fff;
-      border-radius:34px;
-      padding:46px;
-      display:grid;
-      grid-template-columns:1fr auto;
-      gap:28px;
-      align-items:center;
-      box-shadow:0 30px 90px rgba(15,23,42,.22);
-    }
-
-    .cta h2{
-      font-size:clamp(32px,4.6vw,54px);
-      line-height:1;
-      letter-spacing:-.055em;
-    }
-
-    .cta p{
-      margin-top:16px;
-      color:rgba(255,255,255,.76);
-      font-size:18px;
-      max-width:760px;
-    }
-
-    .cta .btn.secondary{
-      color:#0f172a;
-    }
-
-    .site-footer{
-      padding:48px 0;
-      border-top:1px solid var(--line);
-      background:rgba(255,255,255,.72);
-    }
-
-    .footer-inner{
-      display:grid;
-      grid-template-columns:1fr 1.4fr;
-      gap:40px;
-      align-items:start;
-    }
-
-    .foot-brand{
-      display:flex;
-      gap:14px;
-      align-items:center;
-    }
-
-    .foot-brand img{
-      width:48px;
-      height:48px;
-      object-fit:contain;
-      border-radius:14px;
-      background:#fff;
-      box-shadow:0 10px 30px rgba(15,23,42,.08);
-    }
-
-    .foot-meta strong{
-      color:#0f172a;
-      display:block;
-      font-size:17px;
-    }
-
-    .foot-meta div{
-      color:#64748b;
-      font-size:15px;
-      margin-top:3px;
-    }
-
-    .foot-links{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-      gap:14px 22px;
-      color:#334155;
-      font-weight:750;
-    }
-
-    .footer-bottom{
-      margin-top:34px;
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
-      color:#64748b;
-      font-size:14px;
-    }
-
-    @media (max-width:1120px){
-      .links{display:none}
-      .menu{display:inline-flex;align-items:center}
-      .hero-wrap{grid-template-columns:1fr}
-      .hero-image,
-      .hero-image img{min-height:430px}
-      .section-head{grid-template-columns:1fr}
-      .grid-3,.process{grid-template-columns:1fr}
-      .cta{grid-template-columns:1fr}
-      .footer-inner{grid-template-columns:1fr}
-      .foot-links{justify-content:flex-start}
-    }
-
-    @media (max-width:640px){
-      .container{width:min(100% - 26px,1280px)}
-      .nav{min-height:82px}
-      .brand span{display:none}
-      .actions .btn.secondary{display:none}
-      .hero-copy{padding:30px;border-radius:26px}
-      .hero-image,
-      .hero-image img{min-height:360px}
-      .image-card{left:18px;right:18px;bottom:18px;padding:22px}
-      .section{padding:58px 0}
-      .card,.step{padding:24px}
-      .cta{padding:30px;border-radius:26px}
-    }
-  </style>
-</head>
-
-<body>
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="index.html" aria-label="ConsulHub Pro">
-      <img src="logo-chp.png" alt="Logo ConsulHub Pro" />
-      <div>
-        <strong>ConsulHub Pro</strong>
-        <span>Per Studi di Consulenza del Lavoro</span>
-      </div>
-    </a>
-
-    <nav class="links" aria-label="Sezioni">
-      <a href="index.html">Home</a>
-      <a href="per-studi.html">Per Studi</a>
-      <a href="pilastri.html">Pilastri</a>
-      <a href="servizi.html" class="active">Servizi</a>
-      <a href="blog.html">Blog</a>
-      <a href="perche-chp.html">Perché CHP</a>
-      <a href="contatti.html">Contatti</a>
-    </nav>
-
-    <div class="actions">
-      <a class="btn secondary" href="https://wa.me/393383262280" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-      <a class="btn primary" href="https://calendly.com/giovanni-laricchiuta/" target="_blank" rel="noopener noreferrer">Prenota call</a>
-      <button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
-    </div>
-  </div>
-
-  <div class="mobile" id="mobilePanel" aria-label="Menu mobile">
-    <div class="inner">
-      <a href="index.html">Home</a>
-      <a href="per-studi.html">Per Studi</a>
-      <a href="pilastri.html">Pilastri</a>
-      <a href="servizi.html">Servizi</a>
-      <a href="blog.html">Blog</a>
-      <a href="perche-chp.html">Perché CHP</a>
-      <a href="contatti.html">Contatti</a>
-    </div>
-  </div>
-</header>
-
-<div class="container breadcrumbs">
-  <a href="index.html">Home</a> / <a href="servizi.html">Servizi</a> / <span>Family Office</span>
-</div>
-
-<main>
-  <section class="hero">
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index,follow"><meta name="theme-color" content="#f3f3ed"><title>Family Office | ConsulHub Pro</title><meta name="description" content="Quando impresa, famiglia e patrimonio si intrecciano, una singola decisione può coinvolgere più equilibri. Il confronto richiede uno sguardo coordinato."><link rel="canonical" href="https://www.consulhubpro.it/family-office.html"><link rel="icon" href="assets/favicon.ico"><meta property="og:type" content="website"><meta property="og:title" content="Family Office"><meta property="og:description" content="Quando impresa, famiglia e patrimonio si intrecciano, una singola decisione può coinvolgere più equilibri. Il confronto richiede uno sguardo coordinato."><meta property="og:url" content="https://www.consulhubpro.it/family-office.html"><meta property="og:image" content="https://www.consulhubpro.it/logo-chp.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Family Office"><meta name="twitter:description" content="Quando impresa, famiglia e patrimonio si intrecciano, una singola decisione può coinvolgere più equilibri. Il confronto richiede uno sguardo coordinato."><meta name="twitter:image" content="https://www.consulhubpro.it/logo-chp.png"><link rel="preload" href="assets/fonts/manrope-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/manrope-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="full.css"><script type="module" src="site.js"></script><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.consulhubpro.it/#organization","name":"Consulting Advanced S.r.l.","vatID":"IT12234360969","url":"https://ca.ae7.it/","brand":{"@type":"Brand","name":"ConsulHub Pro"}},{"@type":"WebPage","url":"https://www.consulhubpro.it/family-office.html","name":"Family Office","inLanguage":"it-IT"},{"@type":"Service","name":"Family Office","url":"https://www.consulhubpro.it/family-office.html","description":"Quando impresa, famiglia e patrimonio si intrecciano, una singola decisione può coinvolgere più equilibri. Il confronto richiede uno sguardo coordinato.","provider":{"@id":"https://www.consulhubpro.it/#organization"},"areaServed":"IT"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.consulhubpro.it/"},{"@type":"ListItem","position":2,"name":"Operazioni strategiche e continuità d’impresa","item":"https://www.consulhubpro.it/operazioni-strategiche-continuita.html"},{"@type":"ListItem","position":3,"name":"Family Office","item":"https://www.consulhubpro.it/family-office.html"}]}]}</script></head><body class="complete-inner kind-servizio family-1" data-page="family-office.html"><div class="page-scroll" id="page-scroll" tabindex="-1"><a class="skip" href="#contenuto">Vai al contenuto</a><header class="site-header"><a class="brand" href="index.html" aria-label="ConsulHub Pro, homepage"><img src="assets/logo-chp.png" width="500" height="380" alt="ConsulHub Pro, logo originale con rete di connessioni"></a><nav class="desktop-nav" aria-label="Navigazione principale"><a href="per-studi.html">Per Studi</a><a href="servizi.html">Servizi</a><a href="blog.html">Blog</a></nav><a class="header-call" href="https://calendly.com/giovanni-laricchiuta/" target="_self" rel="noopener noreferrer">Prenota una call conoscitiva <span aria-hidden="true">↗</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="menu-panel">Menu <span aria-hidden="true">+</span></button></header><nav class="mobile-shortcuts" aria-label="Accessi diretti"><a href="servizi.html#servizi">Servizi · 25</a><a href="blog.html#articoli">Blog</a><a href="index.html#faq">Q&A</a></nav><dialog id="menu-panel" aria-label="Menu di navigazione"><div class="menu-top"><span>CONSULHUB PRO</span><button class="close-menu">Chiudi ×</button></div><nav aria-label="Menu completo"><a href="per-studi.html"><small>01</small> Per Studi</a><a href="pilastri.html"><small>02</small> Pilastri</a><a href="servizi.html"><small>03</small> Servizi</a><a href="blog.html"><small>04</small> Blog</a><a href="perche-chp.html"><small>05</small> Perché CHP</a><a href="contatti.html"><small>06</small> Contatti</a></nav><div class="menu-additional"><a href="index.html#faq">Q&A — Domande e risposte ↗</a><a href="index.html#esperienze">Esperienze degli Studi ↗</a></div><p>Prima della prossima richiesta,<br>conosciamo il tuo Studio.</p></dialog><main id="contenuto"><section class="inner-hero variant-servizio family-1"><nav class="breadcrumbs" aria-label="Percorso di navigazione"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="operazioni-strategiche-continuita.html">Operazioni strategiche e continuità d’impresa</a><span aria-hidden="true">/</span><span aria-current="page">Il servizio</span></nav><div class="inner-hero-kicker"><span class="eyebrow">CONSULHUB PRO / SERVIZIO</span><span class="eyebrow">ASSETTI E CONTINUITÀ</span></div><div class="inner-hero-grid"><div><h1>Family Office</h1><p class="inner-hook">Quando impresa, famiglia e patrimonio si intrecciano, una singola decisione può coinvolgere più equilibri. Il confronto richiede uno sguardo coordinato.</p><div class="inner-actions"><a class="button primary" href="https://calendly.com/giovanni-laricchiuta/" target="_self" rel="noopener noreferrer">Prenota una call conoscitiva <span aria-hidden="true">↗</span></a><a class="underlink" href="#lettura">Scopri il percorso <span aria-hidden="true">↗</span></a></div></div><div class="inner-visual"><svg class="family-glyph" viewBox="0 0 60 60" aria-hidden="true" data-family="continuita"><path d="M8 18h31l-6-6m6 6-6 6M48 42H17l6 6m-6-6 6-6"/><path class="accent" d="M16 18v24m24-24v24"/><circle class="service-node" cx="24" cy="44" r="3"/></svg><figure class="page-photo hero-photo"><img src="media/family-office-audit03-1200.webp" srcset="media/family-office-audit03-640.webp 640w, media/family-office-audit03-1200.webp 1200w" sizes="(max-width:800px) 100vw, 65vw" width="1200" height="800" fetchpriority="high" alt="Più interlocutori esaminano documenti con un professionista"><figcaption><a href="https://www.pexels.com/photo/a-couple-listening-to-the-person-explaining-the-details-of-the-documents-on-the-table-7979438/" target="_blank" rel="noopener noreferrer">Kindel Media / Pexels</a> · Repertorio, non team o clienti CHP.</figcaption></figure></div></div><div class="inner-hero-base"><span>CONTESTO → COMPETENZE → CONFRONTO</span><a href="#lettura">CONTINUA A ESPLORARE ↓</a></div></section><div id="scopri" class="anchor-alias"></div><section class="reading-layout section-pad" id="lettura"><aside class="reading-rail"><span class="eyebrow">IN QUESTO APPROFONDIMENTO</span><nav aria-label="Indice dell’approfondimento"><a href="#lettura-1">Quando impresa, famiglia e patrimonio si intrecciano, serve una regia più ampia.</a><a href="#lettura-2">Dare ordine a patrimonio, continuità e governance dell’imprenditore.</a><a href="#lettura-3">Quando il Family Office merita un primo approfondimento.</a><a href="#lettura-4">Una leva ad alto valore per clienti imprenditoriali evoluti.</a><a href="#lettura-5">Hai clienti imprenditori con esigenze patrimoniali, familiari o societarie evolute?</a></nav><div class="reading-progress" aria-hidden="true"><span></span></div><button class="underlink" data-copy-reading-link>Copia il link ↗</button><p class="copy-reading-status" role="status"></p></aside><article class="technical-copy " aria-label="Approfondimento tecnico">
+  <section class="">
     <div class="container">
       <div class="hero-wrap">
         <div class="hero-copy">
           <span class="eyebrow">Operazioni strategiche e continuità d’impresa</span>
-          <h1>Family Office.</h1>
+          
           <p class="lead">
             Un servizio dedicato a imprenditori, famiglie imprenditoriali e aziende che vogliono organizzare patrimonio, governance, continuità e protezione nel tempo, coordinando competenze specialistiche in modo ordinato e riservato.
           </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="contatti.html">Richiedi informazioni</a>
-            <a class="btn secondary" href="servizi.html">Torna ai servizi</a>
-          </div>
+          
         </div>
 
         <div class="hero-image">
-          <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=1300&q=80" alt="Consulenza patrimoniale e pianificazione strategica per imprenditori" />
+          
           <div class="image-card">
-            <h3>Quando impresa, famiglia e patrimonio si intrecciano, serve una regia più ampia.</h3>
+            <h2 id="lettura-1">Quando impresa, famiglia e patrimonio si intrecciano, serve una regia più ampia.</h2>
             <p>
               CHP aiuta lo Studio a intercettare bisogni patrimoniali evoluti e ad attivare competenze qualificate senza perdere il presidio della relazione.
             </p>
@@ -619,12 +24,12 @@
     </div>
   </section>
 
-  <section class="section section-tight">
+  <section class="section-tight">
     <div class="container">
       <div class="section-head">
         <div>
           <span class="eyebrow">Obiettivo del servizio</span>
-          <h2>Dare ordine a patrimonio, continuità e governance dell’imprenditore.</h2>
+          <h2 id="lettura-2">Dare ordine a patrimonio, continuità e governance dell’imprenditore.</h2>
         </div>
         <p>
           Il Family Office non è un servizio finanziario generico. È un modello di coordinamento che aiuta imprenditori e famiglie imprenditoriali a gestire con maggiore lucidità temi patrimoniali, societari, successori e di continuità nel tempo.
@@ -653,12 +58,12 @@
     </div>
   </section>
 
-  <section class="section section-tight">
+  <section class="section-tight">
     <div class="container">
       <div class="section-head">
         <div>
           <span class="eyebrow">Quando attivarlo</span>
-          <h2>Quando il Family Office merita un primo approfondimento.</h2>
+          <h2 id="lettura-3">Quando il Family Office merita un primo approfondimento.</h2>
         </div>
         <p>
           Alcuni segnali indicano che l’imprenditore o la famiglia imprenditoriale hanno bisogno di una regia più ampia, capace di coordinare aspetti fiscali, societari, patrimoniali, successori e strategici.
@@ -705,12 +110,12 @@
     </div>
   </section>
 
-  <section class="section section-tight">
+  <section class="section-tight">
     <div class="container">
       <div class="section-head">
         <div>
           <span class="eyebrow">Valore per lo Studio</span>
-          <h2>Una leva ad alto valore per clienti imprenditoriali evoluti.</h2>
+          <h2 id="lettura-4">Una leva ad alto valore per clienti imprenditoriali evoluti.</h2>
         </div>
         <p>
           Lo Studio spesso conosce prima di altri le dinamiche patrimoniali, societarie e familiari dell’imprenditore. CHP consente di trasformare queste esigenze in un percorso qualificato, mantenendo lo Studio al centro della relazione.
@@ -741,65 +146,17 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="">
     <div class="container">
       <div class="cta">
         <div>
-          <h2>Hai clienti imprenditori con esigenze patrimoniali, familiari o societarie evolute?</h2>
+          <h2 id="lettura-5">Hai clienti imprenditori con esigenze patrimoniali, familiari o societarie evolute?</h2>
           <p>
             Possiamo valutare insieme se esistono le condizioni per attivare un primo confronto su Family Office, governance patrimoniale, continuità e protezione del valore.
           </p>
         </div>
-        <div class="hero-actions">
-          <a class="btn primary" href="contatti.html">Richiedi informazioni</a>
-          <a class="btn secondary" href="https://wa.me/393383262280" target="_blank" rel="noopener noreferrer">WhatsApp diretto</a>
-        </div>
+        
       </div>
     </div>
   </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-inner">
-      <div class="foot-brand">
-        <img src="logo-chp.png" alt="Logo ConsulHub Pro" />
-        <div class="foot-meta">
-          <strong>ConsulHub Pro</strong>
-          <div>info@consulhubpro.it</div>
-        </div>
-      </div>
-
-      <div class="foot-links" aria-label="Link rapidi">
-        <a href="index.html">Home</a>
-        <a href="per-studi.html">Per Studi</a>
-        <a href="pilastri.html">Pilastri</a>
-        <a href="servizi.html">Servizi</a>
-        <a href="blog.html">Blog</a>
-        <a href="perche-chp.html">Perché CHP</a>
-        <a href="contatti.html">Contatti</a>
-        <a href="https://www.iubenda.com/privacy-policy/78495644" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-        <a href="https://www.iubenda.com/privacy-policy/78495644/cookie-policy" target="_blank" rel="noopener noreferrer">Cookie Policy</a>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <span>© ConsulHub Pro. Tutti i diritti riservati.</span>
-      <span>Operazioni strategiche e continuità d’impresa.</span>
-    </div>
-  </div>
-</footer>
-
-<script>
-  const menuBtn = document.getElementById('menuBtn');
-  const mobilePanel = document.getElementById('mobilePanel');
-
-  if (menuBtn && mobilePanel) {
-    menuBtn.addEventListener('click', () => {
-      const open = mobilePanel.classList.toggle('open');
-      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  }
-</script>
-</body>
-</html>
+</article></section><section class="prepare-call" aria-labelledby="prepare-heading"><div><span class="eyebrow">DAL SERVIZIO AL CONFRONTO</span><h2 id="prepare-heading">Cosa vuoi<br><em>mettere a fuoco?</em></h2><p>Puoi preparare il tema della call senza inserire dati dei tuoi clienti.</p></div><div><fieldset class="prepare-checks"><legend>Per il primo confronto</legend><label><input type="checkbox" name="tema-0" value="Il contesto e il bisogno dell’azienda"><span>Il contesto e il bisogno dell’azienda</span></label><label><input type="checkbox" name="tema-1" value="Le priorità e le eventuali scadenze"><span>Le priorità e le eventuali scadenze</span></label><label><input type="checkbox" name="tema-2" value="I ruoli e le competenze da coinvolgere"><span>I ruoli e le competenze da coinvolgere</span></label></fieldset><button class="button primary" data-save-topic="Family Office" aria-pressed="false">Porta questo tema alla call <span aria-hidden="true">+</span></button><p class="preparation-status" role="status"></p></div></section><section class="related-section section-pad"><div class="section-label"><span>LE COMPETENZE SI COLLEGANO</span><span>CONTINUA A ESPLORARE</span></div><div class="related-grid"><a href="operazioni-strategiche-continuita.html"><span class="eyebrow">01 / APPROFONDIMENTO</span><svg class="family-glyph" viewBox="0 0 60 60" aria-hidden="true" data-family="continuita"><path d="M8 18h31l-6-6m6 6-6 6M48 42H17l6 6m-6-6 6-6"/><path class="accent" d="M16 18v24m24-24v24"/><circle class="service-node" cx="24" cy="28" r="3"/></svg><h3>Operazioni strategiche e continuità d’impresa</h3><span aria-hidden="true">↗</span></a><a href="ma-operazioni-straordinarie.html"><span class="eyebrow">02 / APPROFONDIMENTO</span><svg class="family-glyph" viewBox="0 0 60 60" aria-hidden="true" data-family="continuita"><path d="M8 18h31l-6-6m6 6-6 6M48 42H17l6 6m-6-6 6-6"/><path class="accent" d="M16 18v24m24-24v24"/><circle class="service-node" cx="36" cy="44" r="3"/></svg><h3>M&A, governance e operazioni societarie</h3><span aria-hidden="true">↗</span></a><a href="startup-spin-off-open-innovation.html"><span class="eyebrow">03 / APPROFONDIMENTO</span><svg class="family-glyph" viewBox="0 0 60 60" aria-hidden="true" data-family="continuita"><path d="M8 18h31l-6-6m6 6-6 6M48 42H17l6 6m-6-6 6-6"/><path class="accent" d="M16 18v24m24-24v24"/><circle class="service-node" cx="48" cy="12" r="3"/></svg><h3>Startup, spin off e open innovation</h3><span aria-hidden="true">↗</span></a><a href="internazionalizzazione.html"><span class="eyebrow">04 / APPROFONDIMENTO</span><svg class="family-glyph" viewBox="0 0 60 60" aria-hidden="true" data-family="continuita"><path d="M8 18h31l-6-6m6 6-6 6M48 42H17l6 6m-6-6 6-6"/><path class="accent" d="M16 18v24m24-24v24"/><circle class="service-node" cx="12" cy="28" r="3"/></svg><h3>Internazionalizzazione</h3><span aria-hidden="true">↗</span></a><a href="passaggio-generazionale.html"><span class="eyebrow">05 / APPROFONDIMENTO</span><svg class="family-glyph" viewBox="0 0 60 60" aria-hidden="true" data-family="continuita"><path d="M8 18h31l-6-6m6 6-6 6M48 42H17l6 6m-6-6 6-6"/><path class="accent" d="M16 18v24m24-24v24"/><circle class="service-node" cx="24" cy="44" r="3"/></svg><h3>Passaggio generazionale</h3><span aria-hidden="true">↗</span></a></div></section><section class="inner-call section-pad" id="conosciamoci"><div class="section-label"><span>IL PROSSIMO PASSO</span><span>ANCHE SENZA UN CASO CONCRETO</span></div><div><h2>Conosciamoci<br><em>prima che serva.</em></h2><div><p>Puoi partire da una domanda su family office, oppure semplicemente dal modo in cui lavora il tuo Studio.</p><p>La relazione resta al tuo Studio. Chiariremo insieme come si coinvolgono gli specialisti e cosa coordina CHP.</p><a class="button primary" href="https://calendly.com/giovanni-laricchiuta/" target="_self" rel="noopener noreferrer">Prenota una call conoscitiva <span aria-hidden="true">↗</span></a><a class="underlink" href="https://wa.me/393383262280" target="_blank" rel="noopener noreferrer">Hai una richiesta? Parliamone su WhatsApp ↗</a><div class="saved-topics" hidden><span class="eyebrow">I TEMI CHE HAI SELEZIONATO</span><p data-saved-topics></p><a class="underlink" href="contatti.html#modulo">Ritrovali nel primo contatto <span aria-hidden="true">↗</span></a></div></div></div></section></main><footer class="site-footer section-pad"><div class="footer-top"><a href="index.html"><img class="footer-logo" src="assets/logo-chp.png" width="500" height="380" loading="lazy" alt="ConsulHub Pro, rete di connessioni"></a><p>Le domande si affrontano meglio<br>quando le competenze si parlano.</p><a class="underlink" href="mailto:info@consulhubpro.it">info@consulhubpro.it ↗</a></div><div class="footer-sitemap"><a class="underlink" href="per-studi.html">Per Studi <span aria-hidden="true">↗</span></a><a class="underlink" href="pilastri.html">Pilastri <span aria-hidden="true">↗</span></a><a class="underlink" href="servizi.html">Servizi <span aria-hidden="true">↗</span></a><a class="underlink" href="blog.html">Blog <span aria-hidden="true">↗</span></a><a class="underlink" href="perche-chp.html">Perché CHP <span aria-hidden="true">↗</span></a><a class="underlink" href="contatti.html">Contatti <span aria-hidden="true">↗</span></a></div><div class="footer-links"><nav aria-label="Social ConsulHub Pro"><a href="https://www.linkedin.com/company/consulhub-pro/posts/?feedView=all" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://www.facebook.com/profile.php?id=61585127122604" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a href="https://www.instagram.com/serviziconsulenzalavoro24/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></nav><a href="index.html#partner">Alcuni tra i nostri partners ↗</a><button type="button" data-privacy-open>Privacy e cookie</button></div><div class="footer-legal"><div><small class="powered">Powered by CA</small><p>ConsulHub Pro è un’iniziativa di <strong>CONSULTING ADVANCED S.R.L.</strong><br>P. IVA 12234360969<br>Sede legale: Via Vallazze, 100 — 20131 Milano<br>Sede operativa CHP presso Consulting Advanced:<br>AE7 Building, Via Albert Einstein, 7 — 20043 Cusago (MI)</p></div><div><p>Fotografie e filmati di repertorio: non ritraggono il team o i clienti CHP. Crediti nelle singole pagine.</p><a href="https://www.iubenda.com/privacy-policy/78495644" target="_blank" rel="noopener noreferrer">Informativa privacy ↗</a></div></div></footer></div><div class="dock-rail"><div class="contact-dock" aria-label="Contatti rapidi"><a class="dock-call" href="https://calendly.com/giovanni-laricchiuta/" target="_self" rel="noopener noreferrer">Prenota una call conoscitiva <span aria-hidden="true">↗</span></a><a class="dock-wa" href="https://wa.me/393383262280" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a></div></div><dialog id="privacy-panel" aria-labelledby="privacy-heading"><form method="dialog"><button class="close-privacy" aria-label="Chiudi informazioni privacy">Chiudi ×</button><h2 id="privacy-heading">Prima di proseguire.</h2><p>Questo sito non carica strumenti di analisi, pixel pubblicitari o contenuti incorporati da Calendly e social. I video e i font sono ospitati localmente.</p><p>I collegamenti esterni si aprono quando li scegli. Il modulo invia i dati inseriti a FormSubmit solo alla tua richiesta; non inserire dati o documenti dei clienti.</p><a href="https://www.iubenda.com/privacy-policy/78495644" target="_blank" rel="noopener noreferrer">Informativa privacy CHP ↗</a><a href="https://www.iubenda.com/privacy-policy/78495644/cookie-policy" target="_blank" rel="noopener noreferrer">Cookie policy CHP ↗</a></form></dialog></body></html>

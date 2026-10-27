@@ -1,0 +1,8 @@
+/* Keep the approved curve and its motion; let it pass behind the image so it cannot cross faces. */
+.complete-home .hero-thread{z-index:1}
+.complete-home .hero-film{z-index:2}
+.complete-home .film-inner video{filter:none}
+.complete-home .review-provenance a{display:inline-block;margin-left:14px;text-decoration:underline;text-underline-offset:4px;min-height:28px;padding:5px 0}
+/* This intermediate composition needs room below the headline for the new close-up. */
+@media(min-width:601px) and (max-width:1000px){.complete-home .hero-film{margin-top:55px}.complete-home .hero-composition{margin-bottom:90px}}
+@media(max-width:600px){.complete-home .review-provenance a{display:block;margin-left:0;width:fit-content;min-height:44px;padding:12px 0}}

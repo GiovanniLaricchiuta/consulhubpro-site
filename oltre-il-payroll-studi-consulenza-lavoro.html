@@ -1,517 +1,13 @@
-<!doctype html>
-<html lang="it">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-  <title>Perché gli Studi di Consulenza del Lavoro devono andare oltre il payroll | ConsulHub Pro</title>
-  <meta name="description" content="Il payroll resta centrale, ma oggi gli Studi di Consulenza del Lavoro devono ampliare il valore offerto alle aziende clienti. La visione ConsulHub Pro." />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="canonical" href="https://www.consulhubpro.it/oltre-il-payroll-studi-consulenza-lavoro.html" />
-  <link rel="icon" href="favicon.ico" />
-
-  <meta property="og:type" content="article" />
-  <meta property="og:site_name" content="ConsulHub Pro" />
-  <meta property="og:title" content="Perché gli Studi di Consulenza del Lavoro devono andare oltre il payroll" />
-  <meta property="og:description" content="Il futuro dello Studio non si gioca solo sull’elaborazione paghe, ma sulla capacità di diventare un punto di riferimento più ampio per le aziende clienti." />
-  <meta property="og:url" content="https://www.consulhubpro.it/oltre-il-payroll-studi-consulenza-lavoro.html" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80" />
-
-  <style>
-    :root{
-      --bg:#eef3f8;
-      --white:#ffffff;
-      --text:#0d1733;
-      --muted:#5b6b84;
-      --line:#d8e3f0;
-      --blue1:#071a4b;
-      --blue2:#0b2f7b;
-      --blue3:#1d8fff;
-      --shadow:0 20px 50px rgba(12,30,66,.12);
-      --max:1240px;
-    }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      background:linear-gradient(180deg,#f3f7fb 0%,#edf2f8 100%);
-      color:var(--text);
-      line-height:1.65;
-    }
-
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
-    .container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
-
-    .site-header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(245,248,252,.94);
-      backdrop-filter:blur(12px);
-      border-bottom:1px solid rgba(13,23,51,.06);
-    }
-
-    .nav{
-      min-height:88px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:24px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      font-weight:800;
-      white-space:nowrap;
-    }
-
-    .brand img{
-      width:52px;
-      height:52px;
-      object-fit:contain;
-      border-radius:14px;
-      background:#fff;
-      padding:7px;
-      box-shadow:0 10px 24px rgba(15,42,88,.08);
-    }
-
-    .menu{
-      display:flex;
-      align-items:center;
-      gap:28px;
-      flex-wrap:wrap;
-      font-weight:700;
-    }
-
-    .menu a{opacity:.88}
-    .menu a:hover,.menu a.active{opacity:1}
-
-    .hero{
-      padding:88px 0 72px;
-      color:#fff;
-      background:
-        radial-gradient(circle at 80% 18%,rgba(57,192,255,.22),transparent 32%),
-        linear-gradient(135deg,#071a4b 0%,#0b2f7b 58%,#071a4b 100%);
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);
-      gap:46px;
-      align-items:center;
-    }
-
-    .eyebrow{
-      display:inline-flex;
-      margin-bottom:18px;
-      padding:9px 14px;
-      border-radius:999px;
-      background:rgba(255,255,255,.12);
-      border:1px solid rgba(255,255,255,.18);
-      color:#bce8ff;
-      font-weight:800;
-      font-size:.95rem;
-    }
-
-    h1{
-      margin:0 0 24px;
-      font-size:clamp(2.45rem,5.1vw,5rem);
-      line-height:1;
-      letter-spacing:-.05em;
-    }
-
-    .lead{
-      margin:0;
-      color:#eaf3ff;
-      font-size:1.2rem;
-      max-width:900px;
-    }
-
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      margin-top:30px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:54px;
-      padding:0 24px;
-      border-radius:999px;
-      font-weight:800;
-      border:1px solid transparent;
-    }
-
-    .btn.primary{
-      color:#fff;
-      background:linear-gradient(135deg,var(--blue2),var(--blue3));
-      box-shadow:0 14px 30px rgba(29,143,255,.22);
-    }
-
-    .btn.light{
-      background:#fff;
-      color:var(--blue1);
-    }
-
-    .hero-image{
-      border-radius:32px;
-      overflow:hidden;
-      box-shadow:0 28px 90px rgba(0,0,0,.28);
-      border:1px solid rgba(255,255,255,.22);
-      background:#fff;
-    }
-
-    .hero-image img{
-      width:100%;
-      height:430px;
-      object-fit:cover;
-    }
-
-    .hero-image figcaption{
-      padding:18px 22px;
-      background:#fff;
-      color:var(--muted);
-      font-weight:700;
-      font-size:.95rem;
-    }
-
-    main{padding:62px 0}
-
-    .layout{
-      display:grid;
-      grid-template-columns:280px minmax(0,1fr);
-      gap:34px;
-      align-items:start;
-    }
-
-    .toc{
-      position:sticky;
-      top:112px;
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:24px;
-      padding:22px;
-      box-shadow:0 14px 36px rgba(12,30,66,.08);
-    }
-
-    .toc strong{display:block;margin-bottom:12px}
-    .toc a{
-      display:block;
-      padding:9px 0;
-      color:var(--muted);
-      font-weight:700;
-      font-size:.95rem;
-      border-bottom:1px solid rgba(216,227,240,.7);
-    }
-
-    .toc a:last-child{border-bottom:0}
-
-    article{
-      background:#fff;
-      border:1px solid rgba(214,225,239,.92);
-      border-radius:32px;
-      padding:46px;
-      box-shadow:var(--shadow);
-    }
-
-    .meta{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-bottom:26px;
-      color:var(--muted);
-      font-weight:800;
-      font-size:.95rem;
-    }
-
-    .tag{
-      display:inline-flex;
-      padding:8px 12px;
-      border-radius:999px;
-      background:#e9f1ff;
-      border:1px solid #cfe0ff;
-      color:var(--blue2);
-    }
-
-    article h2{
-      margin:44px 0 14px;
-      font-size:clamp(1.75rem,3.2vw,2.45rem);
-      line-height:1.15;
-      letter-spacing:-.03em;
-    }
-
-    article h3{
-      margin:30px 0 10px;
-      font-size:1.35rem;
-      line-height:1.25;
-    }
-
-    article p{
-      margin:0 0 17px;
-      color:#22314f;
-      font-size:1.08rem;
-    }
-
-    article ul{
-      margin:0 0 20px 22px;
-      padding:0;
-      color:#22314f;
-    }
-
-    article li{
-      margin-bottom:11px;
-      font-size:1.06rem;
-    }
-
-    .article-image{
-      margin:34px 0;
-      border-radius:28px;
-      overflow:hidden;
-      border:1px solid var(--line);
-      box-shadow:0 18px 44px rgba(12,30,66,.10);
-      background:#fff;
-    }
-
-    .article-image img{
-      width:100%;
-      height:390px;
-      object-fit:cover;
-    }
-
-    .article-image figcaption{
-      padding:14px 20px;
-      color:var(--muted);
-      font-size:.95rem;
-      font-weight:700;
-      background:#fff;
-      border-top:1px solid var(--line);
-    }
-
-    .note{
-      margin:30px 0;
-      padding:24px;
-      border-radius:24px;
-      background:linear-gradient(180deg,#f5f8fc,#eef5ff);
-      border:1px solid var(--line);
-    }
-
-    .note strong{
-      display:block;
-      margin-bottom:8px;
-      color:var(--blue1);
-      font-size:1.08rem;
-    }
-
-    .quote{
-      margin:32px 0;
-      padding:24px 26px;
-      border-radius:22px;
-      background:#f5f8fc;
-      border-left:6px solid var(--blue3);
-    }
-
-    .quote p{
-      margin:0;
-      color:var(--text);
-      font-size:1.16rem;
-      font-weight:800;
-    }
-
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:16px;
-      margin:26px 0 8px;
-    }
-
-    .card{
-      padding:22px;
-      border-radius:22px;
-      background:#f8fbff;
-      border:1px solid var(--line);
-    }
-
-    .card strong{
-      display:block;
-      color:var(--blue2);
-      margin-bottom:8px;
-    }
-
-    .inline-cta{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) auto;
-      gap:22px;
-      align-items:center;
-      margin:38px 0;
-      padding:28px;
-      border-radius:28px;
-      background:linear-gradient(135deg,#071a4b,#0b2f7b);
-      color:#fff;
-      box-shadow:0 18px 46px rgba(7,26,75,.20);
-    }
-
-    .inline-cta h2{
-      margin:0 0 8px;
-      color:#fff;
-      font-size:1.55rem;
-      letter-spacing:-.02em;
-    }
-
-    .inline-cta p{
-      margin:0;
-      color:#eaf3ff;
-    }
-
-    .final-cta{
-      margin-top:46px;
-      padding:38px;
-      border-radius:32px;
-      background:
-        radial-gradient(circle at 82% 10%,rgba(57,192,255,.24),transparent 34%),
-        linear-gradient(135deg,#071a4b,#0b2f7b);
-      color:#fff;
-      box-shadow:0 20px 58px rgba(7,26,75,.22);
-    }
-
-    .final-cta h2{
-      margin:0 0 12px;
-      color:#fff;
-      font-size:2rem;
-    }
-
-    .final-cta p{
-      color:#eaf3ff;
-      max-width:860px;
-    }
-
-    .related{
-      margin-top:28px;
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:14px;
-    }
-
-    .related a{
-      display:block;
-      padding:18px;
-      border-radius:18px;
-      background:#f8fbff;
-      border:1px solid var(--line);
-      color:var(--blue2);
-      font-weight:800;
-    }
-
-    footer{
-      padding:38px 0;
-      color:var(--muted);
-      font-size:.95rem;
-    }
-
-    @media (max-width:980px){
-      .hero-grid{grid-template-columns:1fr}
-      .layout{grid-template-columns:1fr}
-      .toc{position:static}
-      .inline-cta{grid-template-columns:1fr}
-      .related{grid-template-columns:1fr}
-    }
-
-    @media (max-width:680px){
-      .container{width:min(100% - 28px,var(--max))}
-      .nav{align-items:flex-start;flex-direction:column;padding:16px 0}
-      .menu{gap:16px}
-      .hero{padding:58px 0 44px}
-      .hero-image img{height:280px}
-      article{padding:28px}
-      .cards{grid-template-columns:1fr}
-      .article-image img{height:260px}
-    }
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Article",
-    "headline":"Perché gli Studi di Consulenza del Lavoro devono andare oltre il payroll",
-    "description":"Il payroll resta centrale, ma oggi gli Studi di Consulenza del Lavoro devono ampliare il valore offerto alle aziende clienti. La visione ConsulHub Pro.",
-    "author":{"@type":"Organization","name":"ConsulHub Pro"},
-    "publisher":{"@type":"Organization","name":"ConsulHub Pro","logo":{"@type":"ImageObject","url":"https://www.consulhubpro.it/logo-chp.png"}},
-    "mainEntityOfPage":"https://www.consulhubpro.it/oltre-il-payroll-studi-consulenza-lavoro.html",
-    "image":"https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80",
-    "inLanguage":"it-IT"
-  }
-  </script>
-</head>
-
-<body>
-
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="index.html" aria-label="ConsulHub Pro Home">
-      <img src="logo-chp.png" alt="ConsulHub Pro">
-      <span>ConsulHub Pro</span>
-    </a>
-
-    <nav class="menu" aria-label="Navigazione principale">
-      <a href="index.html">Home</a>
-      <a href="per-studi.html">Per Studi</a>
-      <a href="pilastri.html">Pilastri</a>
-      <a href="servizi.html">Servizi</a>
-      <a class="active" href="blog.html">Blog</a>
-      <a href="perche-chp.html">Perché CHP</a>
-      <a href="contatti.html">Contatti</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="eyebrow">Approfondimento strategico per Studi di Consulenza del Lavoro</div>
-      <h1>Perché gli Studi devono andare oltre il payroll</h1>
-      <p class="lead">
-        Il futuro dello Studio non si gioca solo sull’elaborazione paghe, ma sulla capacità di diventare un punto di riferimento più ampio per le aziende clienti.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn primary" href="contatti.html">Richiedi una Mappatura Studio</a>
-        <a class="btn light" href="servizi.html">Vedi le macroaree CHP</a>
-      </div>
-    </div>
-
-    <figure class="hero-image">
-      <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80" alt="Documenti aziendali e professionisti durante una valutazione strategica">
-      <figcaption>Il payroll resta centrale, ma intorno alla relazione con il cliente può nascere un modello di valore più ampio.</figcaption>
-    </figure>
-  </div>
-</section>
-
-<main>
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index,follow"><meta name="theme-color" content="#f3f3ed"><title>Oltre il payroll, con la stessa centralità professionale. | ConsulHub Pro</title><meta name="description" content="Presidiare la relazione e coinvolgere le competenze specialistiche quando servono."><link rel="canonical" href="https://www.consulhubpro.it/oltre-il-payroll-studi-consulenza-lavoro.html"><link rel="icon" href="assets/favicon.ico"><meta property="og:type" content="article"><meta property="og:title" content="Oltre il payroll, con la stessa centralità professionale."><meta property="og:description" content="Presidiare la relazione e coinvolgere le competenze specialistiche quando servono."><meta property="og:url" content="https://www.consulhubpro.it/oltre-il-payroll-studi-consulenza-lavoro.html"><meta property="og:image" content="https://www.consulhubpro.it/logo-chp.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Oltre il payroll, con la stessa centralità professionale."><meta name="twitter:description" content="Presidiare la relazione e coinvolgere le competenze specialistiche quando servono."><meta name="twitter:image" content="https://www.consulhubpro.it/logo-chp.png"><link rel="preload" href="assets/fonts/manrope-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/manrope-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="full.css"><script type="module" src="site.js"></script><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.consulhubpro.it/#organization","name":"Consulting Advanced S.r.l.","vatID":"IT12234360969","url":"https://ca.ae7.it/","brand":{"@type":"Brand","name":"ConsulHub Pro"}},{"@type":"WebPage","url":"https://www.consulhubpro.it/oltre-il-payroll-studi-consulenza-lavoro.html","name":"Oltre il payroll, con la stessa centralità professionale.","inLanguage":"it-IT"},{"@type":"Article","headline":"Oltre il payroll, con la stessa centralità professionale.","description":"Presidiare la relazione e coinvolgere le competenze specialistiche quando servono.","author":{"@type":"Organization","name":"ConsulHub Pro"},"publisher":{"@type":"Organization","name":"ConsulHub Pro","logo":{"@type":"ImageObject","url":"https://www.consulhubpro.it/logo-chp.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.consulhubpro.it/oltre-il-payroll-studi-consulenza-lavoro.html"},"image":"https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80","inLanguage":"it-IT","url":"https://www.consulhubpro.it/oltre-il-payroll-studi-consulenza-lavoro.html"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.consulhubpro.it/"},{"@type":"ListItem","position":2,"name":"Oltre il payroll, con la stessa centralità professionale.","item":"https://www.consulhubpro.it/oltre-il-payroll-studi-consulenza-lavoro.html"}]}]}</script></head><body class="complete-inner kind-articolo family-0" data-page="oltre-il-payroll-studi-consulenza-lavoro.html"><div class="page-scroll" id="page-scroll" tabindex="-1"><a class="skip" href="#contenuto">Vai al contenuto</a><header class="site-header"><a class="brand" href="index.html" aria-label="ConsulHub Pro, homepage"><img src="assets/logo-chp.png" width="500" height="380" alt="ConsulHub Pro, logo originale con rete di connessioni"></a><nav class="desktop-nav" aria-label="Navigazione principale"><a href="per-studi.html">Per Studi</a><a href="servizi.html">Servizi</a><a href="blog.html">Blog</a></nav><a class="header-call" href="https://calendly.com/giovanni-laricchiuta/" target="_self" rel="noopener noreferrer">Prenota una call conoscitiva <span aria-hidden="true">↗</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="menu-panel">Menu <span aria-hidden="true">+</span></button></header><nav class="mobile-shortcuts" aria-label="Accessi diretti"><a href="servizi.html#servizi">Servizi · 25</a><a href="blog.html#articoli">Blog</a><a href="index.html#faq">Q&A</a></nav><dialog id="menu-panel" aria-label="Menu di navigazione"><div class="menu-top"><span>CONSULHUB PRO</span><button class="close-menu">Chiudi ×</button></div><nav aria-label="Menu completo"><a href="per-studi.html"><small>01</small> Per Studi</a><a href="pilastri.html"><small>02</small> Pilastri</a><a href="servizi.html"><small>03</small> Servizi</a><a href="blog.html"><small>04</small> Blog</a><a href="perche-chp.html"><small>05</small> Perché CHP</a><a href="contatti.html"><small>06</small> Contatti</a></nav><div class="menu-additional"><a href="index.html#faq">Q&A — Domande e risposte ↗</a><a href="index.html#esperienze">Esperienze degli Studi ↗</a></div><p>Prima della prossima richiesta,<br>conosciamo il tuo Studio.</p></dialog><main id="contenuto"><section class="inner-hero variant-articolo family-0"><nav class="breadcrumbs" aria-label="Percorso di navigazione"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="blog.html">Blog</a><span aria-hidden="true">/</span><span aria-current="page">L’approfondimento</span></nav><div class="inner-hero-kicker"><span class="eyebrow">CONSULHUB PRO / IL BLOG</span><span class="eyebrow">LA RELAZIONE RESTA AL TUO STUDIO</span></div><div class="inner-hero-grid"><div><h1>Oltre il payroll, con la stessa centralità professionale.</h1><p class="inner-hook">Presidiare la relazione e coinvolgere le competenze specialistiche quando servono.</p><div class="inner-actions"><a class="button primary" href="https://calendly.com/giovanni-laricchiuta/" target="_self" rel="noopener noreferrer">Prenota una call conoscitiva <span aria-hidden="true">↗</span></a><a class="underlink" href="#lettura">Entra nell’approfondimento <span aria-hidden="true">↗</span></a></div></div><div class="inner-visual"><svg class="family-glyph" viewBox="0 0 60 60" aria-hidden="true" data-family="crescita"><path d="M12 48V18h12v30m8 0V10h12v38M7 51h44"/><path class="accent" d="M13 34 25 22l8 8 15-18"/></svg><figure class="page-photo article-cover"><img src="media/oltre-il-payroll-studi-consulenza-lavoro-1200.webp" srcset="media/oltre-il-payroll-studi-consulenza-lavoro-640.webp 640w, media/oltre-il-payroll-studi-consulenza-lavoro-1200.webp 1200w" sizes="(max-width:800px) 100vw, 65vw" width="1200" height="800" fetchpriority="high" alt="Professionisti confrontano documenti durante una riunione"><figcaption><a href="https://www.pexels.com/photo/business-partners-having-a-meeting-at-the-office-7433874/" target="_blank" rel="noopener noreferrer">Vlada Karpovich / Pexels</a> · Repertorio, non team o clienti CHP.</figcaption></figure></div></div><div class="inner-hero-base"><span>UN APPROFONDIMENTO DELL’ARCHIVIO CHP</span><a href="#lettura">CONTINUA A ESPLORARE ↓</a></div></section><div id="scopri" class="anchor-alias"></div><section class="reading-layout section-pad" id="lettura"><aside class="reading-rail"><span class="eyebrow">IN QUESTO ARTICOLO</span><nav aria-label="Indice dell’approfondimento"><a href="#payroll">Il payroll resta fondamentale, ma non basta più</a><a href="#aziende">Le aziende hanno bisogno di più supporto, anche quando non lo chiedono bene</a><a href="#lettura-3">Lo Studio conosce già molti bisogni del cliente</a><a href="#rischio">Dare struttura al supporto professionale</a><a href="#evoluzione">La vera evoluzione: ampliare il valore senza snaturare lo Studio</a><a href="#leve">Formazione, bilateralità e servizi integrativi: leve già presenti nel rapporto con il cliente</a><a href="#lettura-7">Non serve forzare la vendita. Serve far emergere bisogni reali.</a><a href="#lettura-8">Il cliente non cerca altri fornitori. Cerca qualcuno che lo aiuti a orientarsi</a><a href="#modello">Il modello CHP: lo Studio resta al centro, ma non resta solo</a><a href="#conclusione">Andare oltre il payroll non significa abbandonare il payroll</a><a href="#lettura-11">Vuoi capire quali opportunità può attivare il tuo Studio?</a></nav><div class="reading-progress" aria-hidden="true"><span></span></div><button class="underlink" data-copy-reading-link>Copia il link ↗</button><p class="copy-reading-status" role="status"></p></aside><article class="technical-copy article-reading" aria-label="Approfondimento tecnico">
   <div class="container layout">
 
-    <aside class="toc">
-      <strong>Indice</strong>
-      <a href="#payroll">Il payroll resta centrale</a>
-      <a href="#aziende">Le aziende chiedono più supporto</a>
-      <a href="#rischio">Il rischio per gli Studi</a>
-      <a href="#evoluzione">Ampliare valore senza snaturarsi</a>
-      <a href="#leve">Formazione e servizi integrativi</a>
-      <a href="#modello">Il modello CHP</a>
-      <a href="#conclusione">Conclusione</a>
-    </aside>
+    
 
     <article>
       <div class="meta">
         <span class="tag">Sviluppo Studio</span>
         <span>Payroll</span>
-        <span>Marginalità</span>
+        
         <span>ConsulHub Pro</span>
       </div>
 
@@ -549,9 +45,7 @@
         Quando funziona, il cliente raramente ne percepisce tutto il valore. Quando qualcosa non funziona, invece, il problema diventa immediatamente visibile.
       </p>
 
-      <p>
-        Questo crea una dinamica delicata: lo Studio sostiene responsabilità elevate, gestisce complessità crescenti, affronta continue urgenze operative, ma non sempre riesce a trasformare questa centralità in maggiore marginalità o maggiore riconoscimento strategico.
-      </p>
+      
 
       <p>
         Molti Studi lavorano di più, seguono clienti più esigenti, affrontano normative sempre più complesse, ma faticano a far percepire il proprio valore oltre l’adempimento.
@@ -562,7 +56,7 @@
       </p>
 
       <figure class="article-image">
-        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80" alt="Documenti amministrativi e analisi economica su tavolo professionale">
+        
         <figcaption>Il cedolino resta una base essenziale. Il valore strategico nasce da ciò che lo Studio riesce a costruire intorno alla relazione con il cliente.</figcaption>
       </figure>
 
@@ -605,21 +99,19 @@
 
       <div class="inline-cta">
         <div>
-          <h2>Lo Studio conosce già molti bisogni del cliente</h2>
+          <h2 id="lettura-3">Lo Studio conosce già molti bisogni del cliente</h2>
           <p>CHP aiuta a trasformare segnali già presenti nelle aziende in opportunità ordinate, concrete e presidiate.</p>
         </div>
         <a class="btn light" href="per-studi.html">Scopri il modello per Studi</a>
       </div>
 
-      <h2 id="rischio">Il rischio per gli Studi: più lavoro, meno marginalità</h2>
+      <h2 id="rischio">Dare struttura al supporto professionale</h2>
 
       <p>
         Molti Studi vivono già una contraddizione evidente.
       </p>
 
-      <p>
-        Sono centrali per il cliente, ma non sempre vengono remunerati in modo coerente con il valore che generano.
-      </p>
+      
 
       <p>
         Sono consultati su molte decisioni, ma spesso senza un perimetro chiaro di servizio.
@@ -629,9 +121,7 @@
         Sono coinvolti in problemi che vanno oltre il payroll, ma non sempre hanno il tempo, la struttura o i partner per trasformare quelle richieste in opportunità.
       </p>
 
-      <p>
-        Il risultato è pericoloso: più telefonate, più richieste, più urgenze, più responsabilità, ma non necessariamente più redditività.
-      </p>
+      
 
       <div class="quote">
         <p>Non basta aggiungere servizi in modo disordinato. Serve un modello che protegga lo Studio, la relazione con il cliente e la sostenibilità operativa.</p>
@@ -642,7 +132,7 @@
       </p>
 
       <figure class="article-image">
-        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80" alt="Professionisti in riunione strategica con documenti e dati aziendali">
+        
         <figcaption>Il rischio non è offrire più servizi. Il rischio è farlo senza metodo, senza selezione e senza una regia chiara.</figcaption>
       </figure>
 
@@ -731,13 +221,13 @@
 
       <div class="inline-cta">
         <div>
-          <h2>Non serve forzare la vendita. Serve far emergere bisogni reali.</h2>
+          <h2 id="lettura-7">Non serve forzare la vendita. Serve far emergere bisogni reali.</h2>
           <p>La forza dello Studio è già nella relazione fiduciaria. CHP aiuta a renderla più produttiva, ordinata e sostenibile.</p>
         </div>
         <a class="btn light" href="pilastri.html">Approfondisci i pilastri</a>
       </div>
 
-      <h2>Il cliente non cerca altri fornitori. Cerca qualcuno che lo aiuti a orientarsi</h2>
+      <h2 id="lettura-8">Il cliente non cerca altri fornitori. Cerca qualcuno che lo aiuti a orientarsi</h2>
 
       <p>
         Un imprenditore non ha bisogno dell’ennesimo soggetto che gli propone un servizio isolato.
@@ -766,7 +256,7 @@
       </p>
 
       <figure class="article-image">
-        <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1600&q=80" alt="Professionisti che analizzano una strategia aziendale su tavolo riunioni">
+        
         <figcaption>Lo Studio del futuro non è quello che fa tutto, ma quello che sa orchestrare le competenze giuste intorno ai clienti migliori.</figcaption>
       </figure>
 
@@ -842,7 +332,7 @@
       </div>
 
       <div class="final-cta">
-        <h2>Vuoi capire quali opportunità può attivare il tuo Studio?</h2>
+        <h2 id="lettura-11">Vuoi capire quali opportunità può attivare il tuo Studio?</h2>
         <p>
           ConsulHub Pro affianca gli Studi di Consulenza del Lavoro nella costruzione di un’offerta integrata di servizi per le aziende clienti, partendo da aree ad alto potenziale come formazione finanziata, bilateralità, assistenza contrattuale e servizi specialistici per la crescita d’impresa.
         </p>
@@ -854,19 +344,10 @@
 
       <div class="related">
         <a href="formazione-finanziata.html">Formazione finanziata</a>
-        <a href="bilateralita-ebilp.html">Bilateralità EBILP</a>
-        <a href="assistenza-contrattuale-fisapi.html">Assistenza contrattuale FISAPI</a>
+        <a href="bilateralita-ebilp.html">Ente bilaterale</a>
+        <a href="assistenza-contrattuale-fisapi.html">Assistenza contrattuale il supporto contrattuale specialistico</a>
       </div>
 
     </article>
   </div>
-</main>
-
-<footer>
-  <div class="container">
-    © ConsulHub Pro · Servizi integrati per Studi professionali e imprese clienti · Via A. Einstein, 7 · 20047 Cusago (MI)
-  </div>
-</footer>
-
-</body>
-</html>
+</article></section><section class="related-section section-pad"><div class="section-label"><span>LE COMPETENZE SI COLLEGANO</span><span>CONTINUA A ESPLORARE</span></div><div class="related-grid"><a href="formazione-finanziata-opportunita-studi.html"><span class="eyebrow">01 / DAL BLOG</span><svg class="family-glyph" viewBox="0 0 60 60" aria-hidden="true" data-family="crescita"><path d="M12 48V18h12v30m8 0V10h12v38M7 51h44"/><path class="accent" d="M13 34 25 22l8 8 15-18"/><circle class="service-node" cx="24" cy="28" r="3"/></svg><h3>Riconoscere un bisogno formativo, prima di scegliere un percorso.</h3><span aria-hidden="true">↗</span></a><a href="aumentare-valore-cliente-senza-assumere.html"><span class="eyebrow">02 / DAL BLOG</span><svg class="family-glyph" viewBox="0 0 60 60" aria-hidden="true" data-family="crescita"><path d="M12 48V18h12v30m8 0V10h12v38M7 51h44"/><path class="accent" d="M13 34 25 22l8 8 15-18"/><circle class="service-node" cx="36" cy="44" r="3"/></svg><h3>Affiancare il cliente senza internalizzare ogni competenza.</h3><span aria-hidden="true">↗</span></a><a href="aumentare-marginalita-studio-consulenza-lavoro.html"><span class="eyebrow">03 / DAL BLOG</span><svg class="family-glyph" viewBox="0 0 60 60" aria-hidden="true" data-family="crescita"><path d="M12 48V18h12v30m8 0V10h12v38M7 51h44"/><path class="accent" d="M13 34 25 22l8 8 15-18"/><circle class="service-node" cx="48" cy="12" r="3"/></svg><h3>Dalla richiesta al percorso: il valore del coordinamento.</h3><span aria-hidden="true">↗</span></a></div></section><section class="inner-call section-pad" id="conosciamoci"><div class="section-label"><span>IL PROSSIMO PASSO</span><span>ANCHE SENZA UN CASO CONCRETO</span></div><div><h2>Conosciamoci<br><em>prima che serva.</em></h2><div><p>Raccontaci il tuo Studio e le domande che incontri più spesso. Il primo confronto serve a conoscere ruoli, ambiti e modalità di coordinamento.</p><p>La relazione resta al tuo Studio. Chiariremo insieme come si coinvolgono gli specialisti e cosa coordina CHP.</p><a class="button primary" href="https://calendly.com/giovanni-laricchiuta/" target="_self" rel="noopener noreferrer">Prenota una call conoscitiva <span aria-hidden="true">↗</span></a><a class="underlink" href="https://wa.me/393383262280" target="_blank" rel="noopener noreferrer">Hai una richiesta? Parliamone su WhatsApp ↗</a><div class="saved-topics" hidden><span class="eyebrow">I TEMI CHE HAI SELEZIONATO</span><p data-saved-topics></p><a class="underlink" href="contatti.html#modulo">Ritrovali nel primo contatto <span aria-hidden="true">↗</span></a></div></div></div></section></main><footer class="site-footer section-pad"><div class="footer-top"><a href="index.html"><img class="footer-logo" src="assets/logo-chp.png" width="500" height="380" loading="lazy" alt="ConsulHub Pro, rete di connessioni"></a><p>Le domande si affrontano meglio<br>quando le competenze si parlano.</p><a class="underlink" href="mailto:info@consulhubpro.it">info@consulhubpro.it ↗</a></div><div class="footer-sitemap"><a class="underlink" href="per-studi.html">Per Studi <span aria-hidden="true">↗</span></a><a class="underlink" href="pilastri.html">Pilastri <span aria-hidden="true">↗</span></a><a class="underlink" href="servizi.html">Servizi <span aria-hidden="true">↗</span></a><a class="underlink" href="blog.html">Blog <span aria-hidden="true">↗</span></a><a class="underlink" href="perche-chp.html">Perché CHP <span aria-hidden="true">↗</span></a><a class="underlink" href="contatti.html">Contatti <span aria-hidden="true">↗</span></a></div><div class="footer-links"><nav aria-label="Social ConsulHub Pro"><a href="https://www.linkedin.com/company/consulhub-pro/posts/?feedView=all" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://www.facebook.com/profile.php?id=61585127122604" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a href="https://www.instagram.com/serviziconsulenzalavoro24/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></nav><a href="index.html#partner">Alcuni tra i nostri partners ↗</a><button type="button" data-privacy-open>Privacy e cookie</button></div><div class="footer-legal"><div><small class="powered">Powered by CA</small><p>ConsulHub Pro è un’iniziativa di <strong>CONSULTING ADVANCED S.R.L.</strong><br>P. IVA 12234360969<br>Sede legale: Via Vallazze, 100 — 20131 Milano<br>Sede operativa CHP presso Consulting Advanced:<br>AE7 Building, Via Albert Einstein, 7 — 20043 Cusago (MI)</p></div><div><p>Fotografie e filmati di repertorio: non ritraggono il team o i clienti CHP. Crediti nelle singole pagine.</p><a href="https://www.iubenda.com/privacy-policy/78495644" target="_blank" rel="noopener noreferrer">Informativa privacy ↗</a></div></div></footer></div><div class="dock-rail"><div class="contact-dock" aria-label="Contatti rapidi"><a class="dock-call" href="https://calendly.com/giovanni-laricchiuta/" target="_self" rel="noopener noreferrer">Prenota una call conoscitiva <span aria-hidden="true">↗</span></a><a class="dock-wa" href="https://wa.me/393383262280" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a></div></div><dialog id="privacy-panel" aria-labelledby="privacy-heading"><form method="dialog"><button class="close-privacy" aria-label="Chiudi informazioni privacy">Chiudi ×</button><h2 id="privacy-heading">Prima di proseguire.</h2><p>Questo sito non carica strumenti di analisi, pixel pubblicitari o contenuti incorporati da Calendly e social. I video e i font sono ospitati localmente.</p><p>I collegamenti esterni si aprono quando li scegli. Il modulo invia i dati inseriti a FormSubmit solo alla tua richiesta; non inserire dati o documenti dei clienti.</p><a href="https://www.iubenda.com/privacy-policy/78495644" target="_blank" rel="noopener noreferrer">Informativa privacy CHP ↗</a><a href="https://www.iubenda.com/privacy-policy/78495644/cookie-policy" target="_blank" rel="noopener noreferrer">Cookie policy CHP ↗</a></form></dialog></body></html>

@@ -1,0 +1,22 @@
+/* Keep the approved composition. Reserve physical space for the contact bar. */
+html{height:100%;overflow:hidden}
+body.complete-home,body.complete-inner{height:100dvh;display:grid;grid-template-rows:minmax(0,1fr) auto;overflow:hidden}
+.page-scroll{min-height:0;overflow:auto;scroll-behavior:smooth;scroll-padding-top:130px;overscroll-behavior-y:contain}
+.dock-rail{position:relative;background:var(--paper);border-top:1px solid var(--line);padding:8px 22px;display:flex;justify-content:flex-end;z-index:40}
+.complete-home .contact-dock,.complete-inner .contact-dock{position:static!important;inset:auto!important;margin:0!important;width:auto;max-width:none;box-shadow:none;border-radius:40px}
+.site-footer{padding-bottom:45px!important}
+.mobile-shortcuts{display:none}
+.menu-additional{display:flex;gap:25px;flex-wrap:wrap;margin:25px 0}.menu-additional a{font-size:13px;border-bottom:1px solid var(--line);padding:10px 0}
+.area-direct{display:block;width:max-content;max-width:100%;margin:0 0 22px 100px;font-size:12px;color:var(--blue);border-bottom:1px solid currentColor;padding:7px 0}
+.area-detail li a{text-decoration:underline;text-underline-offset:4px;display:inline-block;padding:7px 0}
+.complete-home #film-control{top:auto;right:auto;bottom:62px;left:24px;background:#102a35ee;color:#fff}
+.complete-home #film-control:hover,.complete-home #film-control:focus-visible{background:#fff;color:#102a35}
+.complete-home .film-caption{bottom:112px;pointer-events:none}
+.complete-home .film-index{margin-top:24px;min-height:62px}
+#film-status{display:block;font-size:10px;letter-spacing:0;text-transform:none;margin-top:8px}#film-status a{text-decoration:underline}
+.qa-section{background:#fff;border-radius:40px 40px 0 0}.qa-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px}.qa-groups h3{font-size:29px;line-height:1.2;margin-bottom:25px}.qa-groups details{border-top:1px solid var(--line);padding:20px 0}.qa-groups summary{font-size:15px;line-height:1.6;font-weight:600;cursor:pointer}.qa-groups p{font-size:14px;line-height:1.85;margin:18px 0}.qa-groups .underlink{font-size:12px;line-height:1.6}
+.experiences-section{background:#e5eef0}.experiences-section .section-intro{margin:0}.experiences-section .section-intro>div{max-width:430px}.experiences-section p{font-size:14px;line-height:1.9;margin-bottom:25px}.experiences-section .underlink{font-size:12px}
+.qa-model{max-width:850px;margin-bottom:60px}.qa-model h3{font-size:32px;margin-bottom:25px}.qa-model details{border-top:1px solid var(--line);padding:22px 0}.qa-model summary{font-size:17px;line-height:1.6;font-weight:600;cursor:pointer}.qa-model p{font-size:15px;line-height:1.85;margin:20px 0}.qa-model .underlink{font-size:12px}
+@media(max-width:800px){.page-scroll{scroll-padding-top:105px}.mobile-shortcuts{display:flex;justify-content:space-between;padding:9px var(--gutter) 15px;border-bottom:1px solid var(--line);font-size:12px;gap:20px}.mobile-shortcuts a{padding:8px 0;min-height:38px}.dock-rail{padding:7px 12px max(7px,env(safe-area-inset-bottom))}.contact-dock{flex:1;justify-content:space-between}.contact-dock a{white-space:normal}.qa-groups{grid-template-columns:1fr;gap:32px}.qa-groups h3{font-size:28px}.qa-groups summary{font-size:15px;min-height:44px}.experiences-section .section-intro{display:block}.experiences-section .section-intro>div{margin-top:30px;max-width:none}.area-direct{margin-left:70px;font-size:12px}.complete-home .film-caption{bottom:45px;font-size:8px}.complete-home #film-control{top:10px;right:10px;font-size:11px;min-height:40px}.complete-home .film-index{font-size:8px}.complete-home .hero-bottom{margin-top:25px}}
+@media(max-width:800px){.complete-home #film-control{top:auto;right:auto;bottom:43px;left:12px}.complete-home .film-caption{display:none}}
+@media(prefers-reduced-motion:reduce){.page-scroll{scroll-behavior:auto}}
