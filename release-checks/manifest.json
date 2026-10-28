@@ -77,7 +77,7 @@
     "coaching-team-building.html": "39a25006659e467f6162f6f4b4aadb4a848dbc153c90adcf5071207aba092fb1",
     "compliance-aziendale.html": "9a0c3a041ca6d7dfec63eae41f3e6efebf37b4d61f4992216721982717601103",
     "consulenza-hr.html": "c057026d950e2cd8733c3c09bce4fb98c1826acdb4d1c2ab7f6a5cf023eda5b4",
-    "contatti.html": "95ec4603e3389f0b04f21104aca9cfc551ab83ea7f5dd1ebd1b633d8a1d5bdd5",
+    "contatti.html": "e3cfe149de3416c8b1753d849f2c120dfceac4848540030558ce0af131d63062",
     "contenuti-digitali.html": "67d0f50d391e50c3c273bb54723d7fc9a9454a5f7d2d15c0816b2499769ffdcb",
     "corrections.css": "7acc86aa9727e2ebb89cf01f8e026f969c91a9804f582fbc669ef1c6a0db8917",
     "crescita-finanza-sviluppo.html": "4e8f09ef2386188f1333b4cecea849c84daddf6f4c37d73ae6eecf6243291118",
@@ -104,7 +104,7 @@
     "film/hero-mobile.mp4": "5bb292e5457c09852570d8b424b9e4644dee12ef8abcd24bbaa61e93be1c3eca",
     "film/hero-poster-mobile.webp": "f2e625d6037dc57bcb420224ddcc4605ac8525602a2a39204349a2bcfe1b3440",
     "film/hero-poster.webp": "768ed20a4c713a2f5ca79a61952f626cc5bb8a220239ab9a797380c0ee5d141e",
-    "fine-tuning-01.css": "07aafb8b4969f849b4615a9d53b81d016c1fadc3d9c0cebeac9d22d247d4cf5e",
+    "fine-tuning-01.css": "5711413856aa735f97bd66685b49662ff6d4a6b8c4f46cd571eb0f739f7769de",
     "fine-tuning-01.js": "685dcf6a612fb84c5bc2b4ac30f40a73f20ab7f85f2a5b97a31a449a154c13e1",
     "fine-tuning-02.css": "9fdee65f8971f8b66582852e950560da4c612467773dbd1f21ca51b24d0c754f",
     "formazione-finanziata-opportunita-studi.html": "af1649891348c4fc9aa0bd7e4ab829a526e5c26be4e140dc32f503f3a9952d82",
@@ -117,7 +117,7 @@
     "hero-originale.css": "eb42348c95b5bc001db97f815615af94da58825d30bccfb80ac5302f5b5acf01",
     "home.js": "e5869b2b659969ae13cd5c0322b1ffecac907a6dda0842c4830abbe1b9f745b1",
     "hr-organizzazione.html": "ab9565ec8674ae35dc5f138df0794928f5e7b68ac0f3e3ebe5a61598329cedc1",
-    "index.html": "d10c31f573f321832648217301afef91687797c06f919ec96274c9f7c4009ddf",
+    "index.html": "18e5a651d333e8d423568a1c6eb9bbc862547d0d6cfa6cb758eec03b16885a8a",
     "inner-lenses.js": "33677c2cd405ad89965b7964b4b4b52ce68e6a0717f0cea050520eed7cac996f",
     "internazionalizzazione.html": "8b409e0dd1a93daccd8d7eee77166cfab93edae85fbf1f15c06e9472ea70a43c",
     "it-digitalizzazione.html": "874ef88128c89feb277d22c2c1a1cd84df00b17af1b526131609276d9cae646e",
@@ -249,6 +249,6 @@
     "assistenza-contrattuale.html": "a87522d7aeaeab323848bb2d9e25aba6c2c795bd4659b03ef4cced8339c00552",
     "media/assistenza-contrattuale-640.webp": "f51e6b011f43705c12e29cd54c1b8805f2945baf7338a0a46644653341219cdc",
     "media/assistenza-contrattuale-1200.webp": "08cc30c2b8014f1e6c9fbb564ccc3acdfb6d6acbc4b9999e12c32b320ad2ba5d",
-    "iubenda-compat.css": "6a3cb224ca0d987875fa6abf1822b6ee83ea097f9d6510069ed3fdcde896a380"
+    "iubenda-compat.css": "550de77e4b415d0b049c82d3bed0a1a4dee0d29400610451dc259e521298a4b6"
   }
 }

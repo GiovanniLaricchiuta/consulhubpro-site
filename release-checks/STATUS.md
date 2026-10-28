@@ -1,9 +1,9 @@
-# Verifica pre-pubblicazione CHP
+# Stato CHP — audit funzionale del 28 ottobre 2026
 
-45 pagine preservate, 159 asset identici alla versione approvata. Canonical e sitemap verificati. Anteprima di sviluppo ancora noindex; produzione index,follow. DNS/HTTPS confermati corretti dal titolare il 27 ottobre 2026.
+Versione premium approvata preservata, comprese ultime correzioni tipografiche; 45 pagine canoniche. Recuperato accesso alla Checklist originale e corretto il controllo flottante del consenso che interferiva con WhatsApp.
 
-## Blocchi prima del merge
-- FormSubmit: invio reale dal browser restituisce success:false, attivazione richiesta. Email Activate Form inviata dal servizio a info@consulhubpro.it; ricezione del messaggio di test non ancora confermata.
-- Iubenda: verificare e allineare titolare e recapiti della policy 78495644 ai dati societari verificati nel footer.
+Ricezione FormSubmit al recapito definitivo confermata dal titolare nel capitolato del 28 ottobre. Nessuna nuova attivazione o email di test inviata durante questo audit.
+
+Resta aperta la riconciliazione dei servizi nella policy iubenda. I controlli funzionali del banner rimangono attivi. LinkedIn limita il browser di collaudo con Cloudflare: URL ufficiale invariato, accesso manuale da confermare.
 
 Nessun merge o deploy autorizzato.

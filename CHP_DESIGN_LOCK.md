@@ -4,7 +4,7 @@ Questo documento registra i vincoli approvati per il sito CHP. La lista deriva d
 
 ## Decisioni protette
 
-- **Posizionamento della hero:** `BUSINESS INTEGRATOR` e `PER CONSULENTI DEL LAVORO`, preceduti da `CONSULHUB PRO`. La composizione e il colore del termine principale sono implementati da `full-premium/fine-tuning-01.mjs` e `full-premium/fine-tuning-01.css`.
+- **Posizionamento della hero, aggiornamento approvato nell'audit del 28 ottobre 2026:** `IL BUSINESS INTEGRATOR` e `DEDICATO AI CONSULENTI DEL LAVORO`, preceduti da `CONSULHUB PRO`, con la frase `Il tuo Studio resta il riferimento. Noi coordiniamo le competenze che servono ai tuoi clienti.`. Il ruolo mantiene la prevalenza sul target e la headline resta dominante. Le ultime correzioni sono conservate in `full-premium/fine-tuning-01.mjs` e `full-premium/fine-tuning-01.css`.
 - **Headline:** `Il cliente ti chiede altro.` La versione visuale è nella hero della homepage generata in `dist/completo/index.html`.
 - **Identità grafica:** mantenere l'identità premium approvata presente nella homepage del branch, inclusi i componenti e gli stili esistenti. Le fonti di build sono `premium-home/`, `full-premium/` e i relativi trasformatori.
 - **Claim:** `Le connessioni fanno la differenza.` Il concetto è espresso nella rete CHP della hero; il controllo protegge il markup e le risorse approvate della homepage.

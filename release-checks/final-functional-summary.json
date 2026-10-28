@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-28",
+  "pages": 45,
+  "qaPassed": 1390,
+  "qaFailed": 0,
+  "interactivePathsPassed": 37,
+  "supplementalInteractionsPassed": 46,
+  "homepageFormLocalChecks": 10,
+  "ownerConfirmedEmailDelivery": true,
+  "noNewRealEmailSent": true,
+  "designPreserved": true,
+  "socialLinksUnchanged": true,
+  "remaining": [
+    "Iubenda service declarations reconciliation",
+    "LinkedIn manual check due to Cloudflare",
+    "Owner review of original provisional checklist"
+  ],
+  "deployAuthorized": false
+}
