@@ -1,6 +1,6 @@
 import fs from 'node:fs';import assert from 'node:assert/strict';import crypto from 'node:crypto';
 const manifest=JSON.parse(fs.readFileSync(new URL('./manifest.json',import.meta.url)));
-const root=new URL('../',import.meta.url),hash=(b,file)=>crypto.createHash('sha256').update(manifest.hashNormalization==='lf-text-v1'&&/\.(?:html|css|js|xml|txt|md|json|svg)$/i.test(file)?b.toString('utf8').replace(/\r\n/g,'\n'):b).digest('hex');
+const root=new URL('../',import.meta.url),hash=(b,file)=>crypto.createHash('sha256').update(manifest.hashNormalization==='lf-text-v1'&&(file==='CNAME'||/\.(?:html|css|js|xml|txt|md|json|svg)$/i.test(file))?b.toString('utf8').replace(/\r\n/g,'\n'):b).digest('hex');
 for(const [file,expected] of Object.entries(manifest.files))assert.equal(hash(fs.readFileSync(new URL(file,root)),file),expected,'Approved production file changed: '+file);
 const sitemap=fs.readFileSync(new URL('sitemap.xml',root),'utf8'),robots=fs.readFileSync(new URL('robots.txt',root),'utf8');
 assert.match(robots,/Allow: \//);assert(!/Disallow:\s*\/\s*(?:\n|$)/.test(robots));assert.equal([...sitemap.matchAll(/<loc>/g)].length,45);
