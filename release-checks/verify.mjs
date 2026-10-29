@@ -16,3 +16,5 @@ function checkPublicDirectory(directory){for(const entry of fs.readdirSync(direc
  }
 }}
 checkPublicDirectory(root);console.log('PASS: zero unauthorized pillar references in all publication text files.');
+await import('./seo.mjs');
+await import('./form-taxi.mjs');

@@ -11,9 +11,15 @@
   "designPreserved": true,
   "socialLinksUnchanged": true,
   "remaining": [
-    "Iubenda service declarations reconciliation",
-    "LinkedIn manual check due to Cloudflare",
-    "Owner review of original provisional checklist"
+    "One post-deployment Form.taxi test; no repeat automatic submissions"
   ],
-  "deployAuthorized": false
+  "deployAuthorized": true,
+  "historicalEmailConfirmationProvider": "Previous provider, before Form.taxi replacement; not proof of Form.taxi delivery.",
+  "formTaxi": {
+    "endpoint": "https://form.taxi/s/33u46gb0",
+    "localMockScenariosPassed": 36,
+    "publicOriginTest": "To be performed once after deployment",
+    "receipt": "Requires owner confirmation"
+  },
+  "releaseAuthorizationDate": "2026-10-29"
 }
