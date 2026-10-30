@@ -1,0 +1,479 @@
+[
+  {
+    "page": "index.html",
+    "file": "assets/confronto-1280.webp",
+    "author": "Mikhail Nilov / Pexels",
+    "source": "",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 60110
+  },
+  {
+    "page": "index.html",
+    "file": "media/formazione-finanziata-opportunita-studi-1200.webp",
+    "author": "Airam Dato-on / Pexels",
+    "source": "https://www.pexels.com/photo/man-giving-a-presentation-to-a-group-of-people-15189552/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 81810
+  },
+  {
+    "page": "index.html",
+    "file": "media/oltre-il-payroll-studi-consulenza-lavoro-1200.webp",
+    "author": "Vlada Karpovich / Pexels",
+    "source": "https://www.pexels.com/photo/business-partners-having-a-meeting-at-the-office-7433874/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 52338
+  },
+  {
+    "page": "index.html",
+    "file": "media/aumentare-valore-cliente-senza-assumere-1200.webp",
+    "author": "Yan Krukau / Pexels",
+    "source": "https://www.pexels.com/photo/a-group-of-people-planning-7698710/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 91072
+  },
+  {
+    "page": "index.html",
+    "file": "media/aumentare-marginalita-studio-consulenza-lavoro-1200.webp",
+    "author": "Tima Miroshnichenko / Pexels",
+    "source": "https://www.pexels.com/photo/colleagues-planning-together-while-looking-at-the-screen-5685890/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 51596
+  },
+  {
+    "page": "per-studi.html",
+    "file": "sample-photos/F03-1400.webp",
+    "author": "FORTYTWO",
+    "source": "https://unsplash.com/photos/woman-in-black-long-sleeve-shirt-sitting-beside-woman-in-black-long-sleeve-shirt-ZtOV_buq_3A",
+    "license": "https://unsplash.com/license",
+    "place": "Milano, Italia — The Hero Plan, dicembre 2019",
+    "bytes": 108226
+  },
+  {
+    "page": "per-studi.html",
+    "file": "sample-photos/F02-1400.webp",
+    "author": "FORTYTWO",
+    "source": "https://unsplash.com/photos/man-in-white-dress-shirt-standing-beside-woman-in-black-shirt-V197_623ih8",
+    "license": "https://unsplash.com/license",
+    "place": "Milano, Italia — workshop ottobre 2019",
+    "bytes": 85464
+  },
+  {
+    "page": "servizi.html",
+    "file": "sample-photos/F01-1400.webp",
+    "author": "FORTYTWO",
+    "source": "https://unsplash.com/photos/a-group-of-people-sitting-around-a-table-with-papers-dEcBKGZS0P8",
+    "license": "https://unsplash.com/license",
+    "place": "Milano, Italia — workshop settembre 2019",
+    "bytes": 73924
+  },
+  {
+    "page": "servizi.html",
+    "file": "sample-photos/F04-1400.webp",
+    "author": "FORTYTWO",
+    "source": "https://unsplash.com/photos/person-holding-yellow-sticky-notes-MDu-53qRVr4",
+    "license": "https://unsplash.com/license",
+    "place": "Milano, Italia",
+    "bytes": 74360
+  },
+  {
+    "page": "servizi.html",
+    "file": "sample-photos/I04-1400.webp",
+    "author": "Arno Senoner",
+    "source": "https://unsplash.com/photos/a-group-of-people-in-a-factory-bCgsKqFzUcg",
+    "license": "https://unsplash.com/license",
+    "place": "Bergamo, provincia di Bergamo, Italia",
+    "bytes": 211318
+  },
+  {
+    "page": "ai-automazioni.html",
+    "file": "media/ai-automazioni-1200.webp",
+    "author": "Jakub Zerdzicki / Pexels",
+    "source": "https://www.pexels.com/photo/close-up-of-programmer-typing-code-on-laptop-36496927/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 45898
+  },
+  {
+    "page": "assistenza-contrattuale.html",
+    "file": "media/assistenza-contrattuale-1200.webp",
+    "author": "Tima Miroshnichenko / Pexels",
+    "source": "https://www.pexels.com/photo/man-reading-a-contract-5439449/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 39912
+  },
+  {
+    "page": "aumentare-marginalita-studio-consulenza-lavoro.html",
+    "file": "media/aumentare-marginalita-studio-consulenza-lavoro-1200.webp",
+    "author": "Tima Miroshnichenko / Pexels",
+    "source": "https://www.pexels.com/photo/colleagues-planning-together-while-looking-at-the-screen-5685890/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 51596
+  },
+  {
+    "page": "aumentare-valore-cliente-senza-assumere.html",
+    "file": "media/aumentare-valore-cliente-senza-assumere-1200.webp",
+    "author": "Yan Krukau / Pexels",
+    "source": "https://www.pexels.com/photo/a-group-of-people-planning-7698710/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 91072
+  },
+  {
+    "page": "bandi-finanza-agevolata.html",
+    "file": "media/bandi-finanza-agevolata-1200.webp",
+    "author": "Tiger Lily / Pexels",
+    "source": "https://www.pexels.com/photo/person-holding-white-printed-paper-7109277/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 90804
+  },
+  {
+    "page": "ente-bilaterale.html",
+    "file": "media/ente-bilaterale-1200.webp",
+    "author": "Mikhail Nilov / Pexels",
+    "source": "https://www.pexels.com/photo/business-people-discussing-about-documents-8297652/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 43908
+  },
+  {
+    "page": "blog.html",
+    "file": "media/formazione-finanziata-opportunita-studi-1200.webp",
+    "author": "Airam Dato-on / Pexels",
+    "source": "https://www.pexels.com/photo/man-giving-a-presentation-to-a-group-of-people-15189552/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 81810
+  },
+  {
+    "page": "blog.html",
+    "file": "media/oltre-il-payroll-studi-consulenza-lavoro-1200.webp",
+    "author": "Vlada Karpovich / Pexels",
+    "source": "https://www.pexels.com/photo/business-partners-having-a-meeting-at-the-office-7433874/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 52338
+  },
+  {
+    "page": "blog.html",
+    "file": "media/aumentare-valore-cliente-senza-assumere-1200.webp",
+    "author": "Yan Krukau / Pexels",
+    "source": "https://www.pexels.com/photo/a-group-of-people-planning-7698710/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 91072
+  },
+  {
+    "page": "blog.html",
+    "file": "media/aumentare-marginalita-studio-consulenza-lavoro-1200.webp",
+    "author": "Tima Miroshnichenko / Pexels",
+    "source": "https://www.pexels.com/photo/colleagues-planning-together-while-looking-at-the-screen-5685890/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 51596
+  },
+  {
+    "page": "coaching-team-building.html",
+    "file": "media/coaching-team-building-1200.webp",
+    "author": "Walls.io / Pexels",
+    "source": "https://www.pexels.com/photo/back-view-of-woman-and-man-writing-on-whiteboard-17724734/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 51432
+  },
+  {
+    "page": "compliance-aziendale.html",
+    "file": "media/compliance-aziendale-1200.webp",
+    "author": "Sora Shimazaki / Pexels",
+    "source": "https://www.pexels.com/photo/woman-filling-job-application-form-in-office-with-boss-5668858/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 36054
+  },
+  {
+    "page": "consulenza-hr.html",
+    "file": "media/consulenza-hr-1200.webp",
+    "author": "MART PRODUCTION / Pexels",
+    "source": "https://www.pexels.com/photo/a-woman-in-business-attire-getting-a-job-interview-7644155/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 29546
+  },
+  {
+    "page": "contenuti-digitali.html",
+    "file": "media/contenuti-digitali-1200.webp",
+    "author": "Jonathan Borba / Pexels",
+    "source": "https://www.pexels.com/photo/graphic-designer-working-on-computer-13451104/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 59994
+  },
+  {
+    "page": "crescita-finanza-sviluppo.html",
+    "file": "media/crescita-finanza-sviluppo-1200.webp",
+    "author": "Felicity Tai / Pexels",
+    "source": "https://www.pexels.com/photo/woman-working-on-business-analytics-7964426/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 42990
+  },
+  {
+    "page": "cyber-security.html",
+    "file": "media/cyber-security-1200.webp",
+    "author": "Christina Morillo / Pexels",
+    "source": "https://www.pexels.com/photo/software-engineer-standing-beside-server-racks-1181354/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 98338
+  },
+  {
+    "page": "efficienza-operativa-it.html",
+    "file": "media/efficienza-operativa-it-audit03-1200.webp",
+    "author": "Tiger Lily / Pexels",
+    "source": "https://www.pexels.com/photo/employee-looking-at-an-inventory-4484047/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 123016
+  },
+  {
+    "page": "family-office.html",
+    "file": "media/family-office-audit03-1200.webp",
+    "author": "Kindel Media / Pexels",
+    "source": "https://www.pexels.com/photo/a-couple-listening-to-the-person-explaining-the-details-of-the-documents-on-the-table-7979438/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 55906
+  },
+  {
+    "page": "formazione-finanziata-opportunita-studi.html",
+    "file": "media/formazione-finanziata-opportunita-studi-1200.webp",
+    "author": "Airam Dato-on / Pexels",
+    "source": "https://www.pexels.com/photo/man-giving-a-presentation-to-a-group-of-people-15189552/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 81810
+  },
+  {
+    "page": "formazione-finanziata.html",
+    "file": "media/formazione-finanziata-1200.webp",
+    "author": "Mikhail Nilov / Pexels",
+    "source": "https://www.pexels.com/photo/woman-giving-presentation-in-office-9301152/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 63298
+  },
+  {
+    "page": "funnel-marketing.html",
+    "file": "media/funnel-marketing-audit03-1200.webp",
+    "author": "Kindel Media / Pexels",
+    "source": "https://www.pexels.com/photo/person-s-hand-on-white-paper-7688440/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 38408
+  },
+  {
+    "page": "gestione-del-rischio.html",
+    "file": "media/gestione-del-rischio-1200.webp",
+    "author": "Werner Pfennig / Pexels",
+    "source": "https://www.pexels.com/photo/business-person-looking-at-documents-6949417/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 38056
+  },
+  {
+    "page": "hr-organizzazione.html",
+    "file": "media/hr-organizzazione-audit03-1200.webp",
+    "author": "MART PRODUCTION / Pexels",
+    "source": "https://www.pexels.com/photo/a-woman-in-business-attire-getting-a-job-interview-7644155/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 28676
+  },
+  {
+    "page": "internazionalizzazione.html",
+    "file": "media/internazionalizzazione-audit03-1200.webp",
+    "author": "Wolfgang Weiser / Pexels",
+    "source": "https://www.pexels.com/photo/view-of-the-port-in-hamburg-germany-20188726/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 103284
+  },
+  {
+    "page": "it-digitalizzazione.html",
+    "file": "media/it-digitalizzazione-1200.webp",
+    "author": "Field Engineer / Pexels",
+    "source": "https://www.pexels.com/photo/serious-ethnic-field-engineer-examining-hardware-and-working-on-laptop-442152/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 57788
+  },
+  {
+    "page": "lead-generation.html",
+    "file": "inner-media/lead-1200.webp",
+    "author": "Kindel Media / Pexels",
+    "source": "https://www.pexels.com/photo/people-working-with-documents-in-an-office-7688100/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 42326
+  },
+  {
+    "page": "leasing-flotte.html",
+    "file": "media/leasing-flotte-1200.webp",
+    "author": "Jan van der Wolf / Pexels",
+    "source": "https://www.pexels.com/photo/fleet-of-white-vans-parked-in-a-row-outdoors-31573459/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 96620
+  },
+  {
+    "page": "ma-operazioni-straordinarie.html",
+    "file": "media/ma-operazioni-straordinarie-1200.webp",
+    "author": "Vlada Karpovich / Pexels",
+    "source": "https://www.pexels.com/photo/gray-haired-man-signing-the-papers-7433919/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 67740
+  },
+  {
+    "page": "marketing-digitale.html",
+    "file": "media/marketing-digitale-audit03-1200.webp",
+    "author": "Kindel Media / Pexels",
+    "source": "https://www.pexels.com/photo/people-discuss-strategy-documents-7688106/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 64884
+  },
+  {
+    "page": "office-automation.html",
+    "file": "media/office-automation-1200.webp",
+    "author": "Tima Miroshnichenko / Pexels",
+    "source": "https://www.pexels.com/photo/printer-and-a-computer-in-an-office-9574509/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 50176
+  },
+  {
+    "page": "oltre-il-payroll-studi-consulenza-lavoro.html",
+    "file": "media/oltre-il-payroll-studi-consulenza-lavoro-1200.webp",
+    "author": "Vlada Karpovich / Pexels",
+    "source": "https://www.pexels.com/photo/business-partners-having-a-meeting-at-the-office-7433874/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 52338
+  },
+  {
+    "page": "operazioni-strategiche-continuita.html",
+    "file": "media/operazioni-strategiche-continuita-1200.webp",
+    "author": "Vlada Karpovich / Pexels",
+    "source": "https://www.pexels.com/photo/elderly-man-and-woman-discussing-business-in-a-meeting-7433853/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 53700
+  },
+  {
+    "page": "passaggio-generazionale.html",
+    "file": "media/passaggio-generazionale-audit03-1200.webp",
+    "author": "Vlada Karpovich / Pexels",
+    "source": "https://www.pexels.com/photo/elderly-man-and-woman-discussing-business-in-a-meeting-7433853/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 52948
+  },
+  {
+    "page": "perche-chp.html",
+    "file": "inner-media/model-1400.webp",
+    "author": "FORTYTWO / Unsplash",
+    "source": "https://unsplash.com/photos/man-in-white-dress-shirt-holding-yellow-and-white-labeled-pack-5NrLhyRAh-E",
+    "license": "https://unsplash.com/license",
+    "place": "Milano, dichiarato dall’autore",
+    "bytes": 76540
+  },
+  {
+    "page": "ricerca-personale.html",
+    "file": "media/ricerca-personale-1200.webp",
+    "author": "Tima Miroshnichenko / Pexels",
+    "source": "https://www.pexels.com/photo/candidate-having-an-interview-5439143/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 54414
+  },
+  {
+    "page": "servizi-assicurativi.html",
+    "file": "media/servizi-assicurativi-1200.webp",
+    "author": "Antoni Shkraba / Pexels",
+    "source": "https://www.pexels.com/photo/a-man-and-a-woman-discussing-a-document-5816300/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 112802
+  },
+  {
+    "page": "sicurezza-compliance-sostenibilita.html",
+    "file": "media/sicurezza-compliance-sostenibilita-1200.webp",
+    "author": "Gustavo Fring / Pexels",
+    "source": "https://www.pexels.com/photo/electricians-inspecting-the-solar-panels-4254169/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 108432
+  },
+  {
+    "page": "sicurezza-sul-lavoro.html",
+    "file": "media/sicurezza-sul-lavoro-1200.webp",
+    "author": "ThisIsEngineering / Pexels",
+    "source": "https://www.pexels.com/photo/factory-worker-in-a-safety-helmet-19895881/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 64898
+  },
+  {
+    "page": "siti-web.html",
+    "file": "media/siti-web-1200.webp",
+    "author": "Antoni Shkraba / Pexels",
+    "source": "https://www.pexels.com/photo/people-sitting-at-desk-working-on-laptop-in-team-6322370/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 220328
+  },
+  {
+    "page": "social-media.html",
+    "file": "media/social-media-1200.webp",
+    "author": "Kasia Palitava / Pexels",
+    "source": "https://www.pexels.com/photo/hands-holding-phone-with-social-media-app-open-10981661/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 233006
+  },
+  {
+    "page": "sostenibilita.html",
+    "file": "media/sostenibilita-1200.webp",
+    "author": "Gustavo Fring / Pexels",
+    "source": "https://www.pexels.com/photo/electricians-inspecting-the-solar-panels-4254167/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 70260
+  },
+  {
+    "page": "startup-spin-off-open-innovation.html",
+    "file": "media/startup-spin-off-open-innovation-audit03-1200.webp",
+    "author": "ThisIsEngineering / Pexels",
+    "source": "https://www.pexels.com/photo/female-engineer-designing-lights-3862602/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 71994
+  },
+  {
+    "page": "strategia-sviluppo-pmi.html",
+    "file": "media/strategia-sviluppo-pmi-audit03-1200.webp",
+    "author": "Pavel Danilyuk / Pexels",
+    "source": "https://www.pexels.com/photo/people-working-in-office-with-documents-7658322/",
+    "license": "https://www.pexels.com/license/",
+    "place": "Non documentato nella scheda utilizzata; non dedotto dall’aspetto",
+    "bytes": 76888
+  }
+]
