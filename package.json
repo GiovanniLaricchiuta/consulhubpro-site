@@ -1,0 +1,14 @@
+{
+  "name": "chp-freebuff-premium-handoff",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node design-tools/serve.mjs",
+    "build": "node design-tools/extend.mjs",
+    "check": "node release-checks/verify.mjs",
+    "check:design": "node design-tools/check.mjs",
+    "check:http": "node design-tools/http-check.mjs"
+  }
+}

@@ -1,0 +1,25 @@
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.xml text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+# Preserve the exact approved sample bytes on every platform.
+per-studi.html -text
+servizi.html -text
+samples.css -text
+samples.js -text
+# Keep existing legacy public resources unchanged.
+v2/** -text
+*.gz binary
+*.webp binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mp4 binary
+*.woff2 binary
+*.pdf binary

@@ -1,0 +1,36 @@
+{
+  "asOf": "2026-10-30",
+  "preparationOnly": true,
+  "base": "c696014",
+  "integrity": {
+    "pages": 45,
+    "updatedInnerPages": 44,
+    "localReferences": 2606,
+    "protectedUnchangedFiles": 161,
+    "homepageMatchesProduction": true,
+    "formAndPrivacyPreserved": true,
+    "seoPreserved": true,
+    "approvedSamplesPreserved": true,
+    "runtimeSourceEquivalence": "HTML LF-normalized; other runtime files byte-identical"
+  },
+  "executed": [
+    "node design-tools/extend.mjs",
+    "node release-checks/verify.mjs",
+    "node design-tools/http-check.mjs"
+  ],
+  "http": {
+    "pages": 45,
+    "privacy": true,
+    "videoRange": true,
+    "metadataBlocked": true,
+    "noLiveFormSubmission": true
+  },
+  "notClaimed": [
+    "Full desktop extension acceptance",
+    "Full mobile/tablet extension cycle",
+    "New live email receipt test",
+    "New full cookie-consent network audit"
+  ],
+  "remainingDesktopPages": 20,
+  "security": "No findings in initial current-tree and reachable public-history pattern scan; final artifact scan follows packaging."
+}

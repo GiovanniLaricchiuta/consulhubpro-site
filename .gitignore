@@ -1,0 +1,10 @@
+node_modules/
+.qa-profile*/
+.env
+.env.*
+*.log
+*.bundle
+*.zip
+artifacts/
+local-reports/
+design-tools/check-results.json
