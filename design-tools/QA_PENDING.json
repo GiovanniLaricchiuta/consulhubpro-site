@@ -1,5 +1,69 @@
 {
   "asOf": "2026-10-30",
+  "status": "Collaudo browser completato su 44 sottopagine e tre viewport; correzioni del 30 ottobre verificate con una nuova passata completa.",
+  "completedCycles": {
+    "date": "2026-10-30",
+    "pages": 44,
+    "pageSet": "Le 44 sottopagine del manifest di rilascio: 42 pagine estese più i campioni per-studi.html e servizi.html. L'homepage non è inclusa perché invariata rispetto alla base pubblicata c696014.",
+    "viewports": [
+      { "name": "desktop", "size": "1440x900" },
+      { "name": "tablet", "size": "834x1112" },
+      { "name": "mobile", "size": "390x844" }
+    ],
+    "measurements": 132,
+    "engine": "Chromium headless pilotato via DevTools Protocol, viewport emulati. Nessun dispositivo fisico, nessun Safari o Firefox.",
+    "checks": [
+      "overflow orizzontale e contenuto tagliato",
+      "contrasto del blocco CTA finale e dei testi campionati",
+      "componente dei ruoli: contrasto, tab inattivi, aria-selected e pannello",
+      "immagini caricate, srcset e testo alternativo",
+      "un solo H1 per pagina",
+      "errori JavaScript e risposte HTTP uguali o superiori a 400",
+      "microtesti sotto i 10 px",
+      "aree di tocco sotto i 24 px",
+      "sovrapposizione della barra contatti fissa sul contenuto finale",
+      "menu, indice di lettura mobile, percorso tra competenze, tab e focus da tastiera",
+      "prefers-reduced-motion"
+    ],
+    "results": {
+      "overflowOrizzontale": 0,
+      "contrastiSottoSoglia": 0,
+      "erroriJavaScript": 0,
+      "risposteHttp4xx5xx": 0,
+      "immaginiRotte": 0,
+      "immaginiSenzaAlt": 0,
+      "h1Multipli": 0,
+      "microtestiSotto10px": 0,
+      "targetToccoSotto24px": 0,
+      "barraContattiSovrapposta": 0
+    },
+    "interactions": {
+      "scope": "Campione di 8 pagine con eventi reali di tastiera e puntatore; i tab dei ruoli sono stati ripetuti dopo le correzioni CSS.",
+      "verified": [
+        "menu apri e chiudi con aria-expanded coerente",
+        "indice di lettura mobile apribile da tastiera",
+        "tab dei ruoli con aria-selected e pannello aggiornato",
+        "percorso tra competenze attivato al focus",
+        "passaggio ai capitoli con aggiornamento dell'hash",
+        "CTA finale raggiungibile con focus visibile",
+        "prefers-reduced-motion: movimento e profondità disattivati, contenuto visibile"
+      ]
+    },
+    "fixesVerified": [
+      "contrasto del blocco CTA finale su tutte le 44 pagine (prima 1,06:1, ora minimo 5,17:1)",
+      "componente dei ruoli di perche-chp.html (prima 1,05-1,19:1, ora minimo 5,45:1)",
+      "overflow orizzontale su cinque pagine a 390 px",
+      "sovrapposizione della barra contatti su smartphone e tablet",
+      "microtesti sotto i 10 px e aree di tocco sotto i 24 px, comprese le pagine campione"
+    ]
+  },
+  "notPerformed": [
+    "invio reale dal modulo Form.taxi: il provider autorizza solo il dominio pubblico e nessun invio è stato eseguito",
+    "audit di rete completo del consenso iubenda",
+    "dispositivi fisici e browser Safari o Firefox",
+    "verifica del testo della policy iubenda dentro l'account del titolare",
+    "approvazione finale del titolare e pubblicazione"
+  ],
   "historicalCompletedDesktopPages": [
     "index.html",
     "per-studi.html",
@@ -27,29 +91,9 @@
     "hr-organizzazione.html",
     "internazionalizzazione.html"
   ],
-  "extensionMobileCycleCompleted": false,
-  "extensionTabletCycleCompleted": false,
-  "note": "Historical results, not a new full acceptance test. Complete remaining desktop pages, mobile/tablet, keyboard/reduced-motion, contextual interactions and final owner approval. Do not send live contact requests without authorization.",
-  "remainingDesktopPages": [
-    "it-digitalizzazione.html",
-    "lead-generation.html",
-    "leasing-flotte.html",
-    "ma-operazioni-straordinarie.html",
-    "marketing-digitale.html",
-    "office-automation.html",
-    "oltre-il-payroll-studi-consulenza-lavoro.html",
-    "operazioni-strategiche-continuita.html",
-    "passaggio-generazionale.html",
-    "perche-chp.html",
-    "pilastri.html",
-    "ricerca-personale.html",
-    "servizi-assicurativi.html",
-    "sicurezza-compliance-sostenibilita.html",
-    "sicurezza-sul-lavoro.html",
-    "siti-web.html",
-    "social-media.html",
-    "sostenibilita.html",
-    "startup-spin-off-open-innovation.html",
-    "strategia-sviluppo-pmi.html"
-  ]
+  "extensionMobileCycleCompleted": true,
+  "extensionTabletCycleCompleted": true,
+  "extensionDesktopCycleCompleted": true,
+  "remainingDesktopPages": [],
+  "note": "Il ciclo completo del 30 ottobre 2026 sostituisce la copertura storica parziale sopra elencata, conservata solo come traccia. Restano esclusi i controlli elencati in notPerformed. Non inviare richieste reali dal modulo senza autorizzazione."
 }

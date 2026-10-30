@@ -46,3 +46,30 @@
 @media(prefers-reduced-motion:reduce){.relationship-lines .line-pulse,.competence-lines{animation:none}.samples-motion .sample-reveal:not(.sample-in){opacity:1;transform:none}.relationship-scene,.relation-node,.competence-tile,.service-card,.sample-reveal{transition:none!important;transform:none!important}}
 .sample-study .relation-detail{left:7%;top:72%;max-width:355px;padding:0}.sample-study .relation-detail p{font-size:12px;line-height:1.7}.sample-study .relation-marker{margin-bottom:10px}@media(max-width:720px){.sample-study .relation-detail{left:3%;top:48%;max-width:72%}.sample-study .specialist-node{top:83%}.sample-study .relation-detail p{font-size:12px}}
 @media(max-width:720px){.sample-study .relationship-scene{height:auto;min-height:440px;padding-top:280px}.sample-study .relationship-lines{height:260px}.sample-study .scene-orbit{height:230px;bottom:auto;top:15px}.sample-study .studio-node{top:95px}.sample-study .chp-node{top:5px}.sample-study .specialist-node{top:180px}.sample-study .relation-detail{position:relative;left:auto;top:auto;max-width:100%;padding:0 4px 18px}.sample-study .relation-detail p{font-size:12px;line-height:1.8}.sample-study .relation-detail strong{font-size:15px}}
+
+/* Correzioni di collaudo del 30 ottobre 2026 (autorizzate dal titolare).
+   Blocco CTA finale: fondo chiaro con testo che restava bianco da full.css. */
+.sample-study .inner-call,.sample-services .inner-call{color:var(--ink)}
+.sample-study .inner-call h2,.sample-services .inner-call h2,.sample-study .inner-call h2 em,.sample-services .inner-call h2 em{color:var(--ink)}
+.sample-study .inner-call p,.sample-services .inner-call p{color:#3c484a}
+.sample-study .inner-call .section-label,.sample-services .inner-call .section-label{color:#3c484a;border-color:#7f9aa2}
+.sample-study .inner-call .eyebrow,.sample-services .inner-call .eyebrow{color:#3c484a}
+.sample-study .inner-call .underlink,.sample-services .inner-call .underlink{color:var(--blue)}
+.sample-study .inner-call .button,.sample-services .inner-call .button{color:var(--ink)}
+/* Microtesti sotto la soglia leggibile. */
+.sample-photo figcaption,.sample-caption{font-size:10px;line-height:1.6}
+/* Chiusura tecnica del 30 ottobre 2026 (autorizzata dal titolare):
+   solo tipografia dei microtesti e spaziature interne ai link, per portarli
+   alla soglia leggibile e a un'area di tocco di almeno 24 px. Struttura,
+   fotografie, griglie, animazioni e componenti restano invariati. */
+:is(.sample-study,.sample-services) :is(.eyebrow,.section-label){font-size:10px}
+:is(.sample-study,.sample-services) .related-grid .eyebrow,
+:is(.sample-study,.sample-services) .service-card .eyebrow,
+:is(.sample-study,.sample-services) .reading-rail .eyebrow,
+:is(.sample-study,.sample-services) .inner-hero-kicker .eyebrow,
+:is(.sample-study,.sample-services) .inner-hero-kicker .eyebrow:last-child{font-size:10px}
+:is(.sample-study,.sample-services) .inner-hero-base{font-size:10px}
+:is(.sample-study,.sample-services) #role-panel .eyebrow{font-size:10px}
+:is(.sample-study,.sample-services) :is(.breadcrumbs a,.inner-hero-base a){display:inline-flex;align-items:center;min-height:28px;min-width:24px;padding:4px 0}
+:is(.sample-study,.sample-services) .site-footer :is(nav a,.footer-sitemap a,.footer-links a,.footer-links button,.underlink){display:inline-flex;align-items:center;min-height:32px;min-width:24px;padding:4px 0}
+:is(.sample-study,.sample-services) .site-footer .underlink{font-size:10px}

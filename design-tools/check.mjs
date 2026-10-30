@@ -4,7 +4,8 @@ process.chdir(root);
 const norm=b=>b.toString().replace(/\r\n/g,'\n'),hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 const inventory=JSON.parse(fs.readFileSync('design-tools/inventory.json')),proof=JSON.parse(fs.readFileSync('design-tools/content-proof.json')),approved=JSON.parse(fs.readFileSync('design-tools/approved-samples.json'));
 assert.equal(inventory.pages.length,42);assert.equal(base.pages.length,45);assert.equal(proof.pages.length,42);assert(proof.pages.every(p=>p.exactOriginalRecovered));
-const expectedChanged=new Set([...inventory.pages.map(p=>p.file),'per-studi.html','servizi.html']);
+// privacy-modulo.html: autorizzata dal titolare il 30 ottobre 2026 la sostituzione del recapito privacy con info@consulhubpro.it.
+const expectedChanged=new Set([...inventory.pages.map(p=>p.file),'per-studi.html','servizi.html','privacy-modulo.html']);
 let preserved=0;for(const [file,expected]of Object.entries(base.files)){if(expectedChanged.has(file))continue;assert.equal(hash(base.hashNormalization==='lf-text-v1'&&(/\.(html|css|js|xml|txt|md|json|svg)$/i.test(file)||file==='CNAME')?norm(fs.readFileSync(file)):fs.readFileSync(file)),expected,'Protected base file changed: '+file);preserved++}
 for(const [file,expected]of Object.entries(approved.hashes))assert.equal(hash(fs.readFileSync(file)),expected,'Approved sample changed: '+file);
 const issues=[],refs=[],images=[],pages=new Set(base.pages);const addIssue=(page,type,value)=>issues.push({page,type,value});

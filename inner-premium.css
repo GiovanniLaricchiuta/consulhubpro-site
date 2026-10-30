@@ -134,7 +134,8 @@
  .refined-inner .technical-copy h2{font-size:28px;line-height:1.22;margin-top:25px}.refined-inner .technical-copy h3{font-size:23px}.refined-inner .technical-copy p,.refined-articolo .technical-copy p{font-size:15px;line-height:1.9}.refined-inner .technical-copy>section{padding:22px 0 28px}.refined-inner .technical-copy>section:nth-of-type(even){padding:24px 20px;margin-block:22px}
  .refined-inner .technical-copy .hero-grid,.refined-inner .technical-copy .grid-3,.refined-inner .technical-copy .grid-2,.refined-inner .technical-copy .intro-grid,.refined-inner .technical-copy .two-col,.refined-inner .technical-copy .stat-row{grid-template-columns:1fr;gap:15px}
  .refined-inner .technical-copy .card,.refined-inner .technical-copy .list-card,.refined-inner .technical-copy .mini-card,.refined-inner .technical-copy .hero-panel{padding:22px}.refined-inner .technical-copy .bottom-cta{padding:24px 20px}
- .refined-inner .prepare-call h2{font-size:33px}.refined-inner .related-grid h3{font-size:27px}.refined-inner .inner-call h2{font-size:37px}
+ .refined-inner .prepare-call h2{font-size:33px}.refined-inner .related-grid h3{font-size:27px}
+.refined-inner .inner-call h2{font-size:37px}
  .pillars-diagram{min-height:400px;height:400px}.pillar-point{padding:19px;min-width:155px;max-width:70%}.pillar-point strong{font-size:20px}.pillar-point-1{top:120px}.pillar-point-2{top:240px;left:3%}
  .refined-pillars .pillar-index{display:block;padding-top:40px;padding-bottom:42px}.refined-pillars .pillar-index>article{padding:25px 0;display:grid;grid-template-columns:55px 1fr;border-right:0;border-bottom:1px solid #b4cbd2;gap:18px}.refined-pillars .pillar-index>article>.eyebrow{grid-column:1/-1}.refined-pillars .pillar-index .family-glyph{width:50px;height:50px}.refined-pillars .pillar-index h2{font-size:30px}
  .refined-journal .journal-grid{display:block}.refined-journal .article-card,.refined-journal .article-card:first-child{display:block;margin-bottom:42px;padding-bottom:32px;border-bottom:1px solid #bbd0d5}.refined-journal .article-card:first-child h3,.refined-journal .article-card h3{font-size:29px}.refined-journal .article-card .page-photo img,.refined-journal .article-card:nth-child(3) .page-photo img{aspect-ratio:auto;height:auto;object-fit:contain}.editorial-index strong{font-size:16px}.editorial-index a{padding:17px 0}
@@ -143,3 +144,50 @@
  .refined-contact .contact-space{padding:0;align-self:stretch}.contact-space svg{height:65px}.refined-contact .contact-introduction{padding-top:40px}.refined-contact .contact-options h2{font-size:36px}.refined-contact .contact-form input,.refined-contact .contact-form textarea{font-size:16px}
 }
 @media(prefers-reduced-motion:reduce){.inner-motion .inner-enter,.inner-motion .inner-arrived,.pillars-diagram>svg{animation:none!important}.inner-depth,.refined-inner .page-photo img,.refined-inner .service-card,.competence-route a,.pillar-point,.refined-inner .related-grid a{transform:none!important;transition:none!important}.competence-route>svg path{stroke-dashoffset:0}.refined-inner .technical-copy h2.inner-current{transition:none}}
+
+/* Correzioni di collaudo del 30 ottobre 2026 (autorizzate dal titolare).
+   1. Blocco CTA finale: il fondo era stato portato su chiaro senza ridefinire
+      il colore del testo, che restava bianco da full.css. */
+.refined-inner .inner-call{background:#deedf0;color:var(--ink)}
+.refined-inner .inner-call h2,.refined-inner .inner-call h2 em{color:var(--ink)}
+.refined-inner .inner-call p{color:#3c484a}
+.refined-inner .inner-call .section-label{color:#3c484a;border-color:#7f9aa2}
+.refined-inner .inner-call .eyebrow{color:#3c484a}
+.refined-inner .inner-call .underlink{color:var(--blue)}
+.refined-inner .inner-call .button{color:var(--ink)}
+/* 2. Componente dei ruoli su Perché CHP: fondo chiaro con testi chiari. */
+.refined-model .roles-explorer{background:#e4eff1;color:var(--ink)}
+.refined-model .roles-explorer .section-label{color:var(--muted);border-color:#7f9aa2}
+.refined-model .role-tabs button{color:var(--ink);border-color:#8fadb6;background:transparent}
+.refined-model .role-tabs button:hover{background:#d7e7eb}
+.refined-model .role-tabs [aria-selected=true]{background:var(--blue);border-color:var(--blue);color:#fff}
+.refined-model #role-panel h3{color:var(--ink)}
+.refined-model #role-panel .eyebrow{color:#0b5d6b;font-size:10px}
+.refined-model #role-panel p{color:#3c484a}
+.refined-model .role-network{border-top-color:#8fadb6}
+.refined-model .role-network span{color:var(--muted)}
+/* 3. Microtesti: nessun testo informativo sotto i 10px sulle sottopagine. */
+.refined-inner .page-photo figcaption,.refined-inner .inner-caption{font-size:10px;line-height:1.6}
+.refined-inner .breadcrumbs,.refined-inner .inner-hero-base,.refined-inner .inner-hero-base span,
+.refined-inner .inner-hero-base a,.refined-inner .inner-hero-kicker .eyebrow,
+.refined-inner .inner-hero-kicker .eyebrow:last-child,.refined-inner .related-grid .eyebrow,
+.refined-inner .related-grid a .eyebrow,.refined-inner .technical-copy .eyebrow,
+.refined-inner .reading-rail .eyebrow,.refined-inner .prepare-call .eyebrow{font-size:10px}
+.refined-inner .section-label,.refined-inner .section-label span{font-size:10px}
+.refined-inner .service-card .eyebrow,.refined-inner .area-lens .eyebrow{font-size:10px}
+.refined-inner .roles-explorer .eyebrow,.refined-inner .inner-call .eyebrow{font-size:10px}
+/* 4. Aree di tocco per i link testuali isolati, senza alterare la griglia. */
+.refined-inner .breadcrumbs a{display:inline-flex;align-items:center;justify-content:center;min-height:28px;min-width:24px;padding:4px 2px}
+.refined-inner .inner-hero-base a{display:inline-flex;align-items:center;min-height:32px;padding:6px 0}
+.refined-inner .site-footer nav a,.refined-inner .site-footer .footer-sitemap a,.refined-inner .site-footer .footer-links a,.refined-inner .site-footer .footer-links button{display:inline-flex;align-items:center;min-height:32px;min-width:24px;padding:4px 0}
+.refined-inner .site-footer .underlink{font-size:10px;display:inline-flex;align-items:center;min-height:28px;padding:4px 0}
+.refined-contact .contact-panel a{display:inline-block;min-height:28px;padding:6px 0}
+@media(max-width:1000px){
+ /* 6. Spazio finale: la barra contatti non copre più l'ultimo contenuto. */
+ .refined-inner .page-scroll{padding-bottom:96px}
+}
+@media(max-width:760px){
+ /* 5. Overflow orizzontale: la griglia a due colonne non reggeva i titoli lunghi. */
+ .refined-inner .related-grid{grid-template-columns:1fr;gap:0}
+ .refined-inner .related-grid h3{max-width:none;overflow-wrap:anywhere}
+}

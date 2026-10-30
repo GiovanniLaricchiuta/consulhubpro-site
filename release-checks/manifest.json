@@ -250,11 +250,11 @@
     "media/assistenza-contrattuale-640.webp": "f51e6b011f43705c12e29cd54c1b8805f2945baf7338a0a46644653341219cdc",
     "media/assistenza-contrattuale-1200.webp": "08cc30c2b8014f1e6c9fbb564ccc3acdfb6d6acbc4b9999e12c32b320ad2ba5d",
     "iubenda-compat.css": "7b607408a26111c640f8caad1c115e305503a1549f3694b9797aef11ec7626eb",
-    "privacy-modulo.html": "afb5eb62be76b30e4b36a0e7a32540d07a6464566a224b1aebf8e0e76417044e",
+    "privacy-modulo.html": "71698042dddabf75aed69631370c58ab43947a0a78d73d72b53cbb57f56d50f5",
     "v3/index.html": "bc8daffb6a59baf9b96fadc27d39567771d630b232c68eda49d11ded06f818b6",
-    "samples.css": "003ed2f6ae404e62adfbdcab796f4a2495329f3217877367441c97e34f09abc7",
+    "samples.css": "1e209fd64f605d614a6433e358b2ec78df9b5e8aa77f499554bc9227dffc07b7",
     "samples.js": "32c394ea50b071a497e0b7c282ea3296e39bf4a80d15ec50696cfecd569487d2",
-    "inner-premium.css": "0c5c357975f18569a796cc78fd73dbac53c51d97c4016a6ebad735d7e61df251",
+    "inner-premium.css": "db924758e2918e4db58ae54b32288a892a8cc86d96b6c4c2260d2f93123cf7cd",
     "inner-premium.js": "7a5ae72166f477d1884b9802ad09e09e5c00a66d1a1378cfd50061802abbbb25",
     "sample-photos/F01-1400.webp": "47a1a7db3b32c79203812a642a846c87c5934fb26bed1018808ae932352eafe2",
     "sample-photos/F01-640.webp": "12a8f4b4a0cedef4fff126a9d3442638721c26636dfc5ad34973294266ae1341",
@@ -279,5 +279,17 @@
     "updatedInnerPages": 44,
     "homepageFrozen": true,
     "approvedSamplesFrozen": true
-  }
+  },
+  "authorizedChanges": [
+    {
+      "date": "2026-10-30",
+      "authorization": "Istruzione del titolare: eliminare le anomalie del rapporto di collaudo (contrasto CTA e ruoli, overflow mobile, barra flottante, leggibilità microtesti, aree di tocco), completare le pagine campione e aggiornare il recapito privacy.",
+      "files": [
+        "inner-premium.css",
+        "samples.css",
+        "privacy-modulo.html"
+      ],
+      "scope": "Solo CSS delle sottopagine e delle pagine campione, più il recapito in privacy-modulo.html; homepage, SEO, modulo Form.taxi, iubenda, contenuti commerciali e struttura delle pagine invariati."
+    }
+  ]
 }

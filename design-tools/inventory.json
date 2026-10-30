@@ -510,6 +510,6 @@
     "servizi.html"
   ],
   "homepageUnchanged": true,
-  "privacyDocumentUnchanged": true,
+  "privacyDocumentUnchanged": false,
   "faqReviewsPartners": "Existing homepage sections preserved, no duplicate pages"
 }

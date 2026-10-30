@@ -3,7 +3,7 @@
   "hashes": {
     "per-studi.html": "4fe1c3bc0ca5f73b5f9fcc07aef164f4e13c065cea4c656333f462eae937d428",
     "servizi.html": "373f72b5a5caa3717c2ee9eef74453b7cfc6b240e0e48e02c91d38a613b9fbc4",
-    "samples.css": "7cde4b5c1db8c8dba69f8ee9bd30e77e40bdb00baefaf7770bfc6ac9d3a37ec7",
+    "samples.css": "1e209fd64f605d614a6433e358b2ec78df9b5e8aa77f499554bc9227dffc07b7",
     "samples.js": "32c394ea50b071a497e0b7c282ea3296e39bf4a80d15ec50696cfecd569487d2",
     "sample-photos/F01-1400.webp": "47a1a7db3b32c79203812a642a846c87c5934fb26bed1018808ae932352eafe2",
     "sample-photos/F01-640.webp": "12a8f4b4a0cedef4fff126a9d3442638721c26636dfc5ad34973294266ae1341",
@@ -15,5 +15,13 @@
     "sample-photos/F04-640.webp": "07b7729e6b55afb33c84d8bc7e092b9c467a4d3c66aff7fe08b872941e9189b1",
     "sample-photos/I04-1400.webp": "da71415c8a7593ad34cd315ace28f6d94b17009ce22a40a8678b38c762794cb1",
     "sample-photos/I04-640.webp": "8e74fe9b663487d65e1a12752035db651c4eb11eb0a000080e709712af3bff62"
-  }
+  },
+  "authorizedChanges": [
+    {
+      "date": "2026-10-30",
+      "authorization": "Correzione del contrasto del blocco CTA, dei microtesti e delle aree di tocco, richiesta dal titolare dopo il collaudo.",
+      "file": "samples.css",
+      "note": "Le pagine campione per-studi.html e servizi.html, samples.js e le fotografie restano congelati con le impronte originali."
+    }
+  ]
 }
